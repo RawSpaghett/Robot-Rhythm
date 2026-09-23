@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b24c24501683149a45efae86805697, type: 3}
+  m_Name: UiTheme
+  m_EditorClassIdentifier: RobotRhythm.UI::RobotRhythm.UI.UiTheme
+  displayFont: {fileID: 12800000, guid: 507d5a3e29bf9534b83041a36bf975de, type: 3}
+  bodyFont: {fileID: 12800000, guid: 750b6035dd3759c4e9567abe89b695d8, type: 3}
+  boldFont: {fileID: 12800000, guid: 507d5a3e29bf9534b83041a36bf975de, type: 3}
+  rounded: {fileID: 21300000, guid: a3e4a320790e3534595b2435c90f79eb, type: 3}
+  solid: {fileID: 21300000, guid: 45b809ff77a0d8042a1cc3a9d9b90a46, type: 3}
+  ink: {r: 0.09019608, g: 0.19215687, b: 0.23529412, a: 1}
+  teal: {r: 0.3019608, g: 0.56078434, b: 0.53333336, a: 1}
+  cream: {r: 0.95686275, g: 0.92941177, b: 0.85490197, a: 1}
+  lime: {r: 0.9372549, g: 0.48235294, b: 0.3137255, a: 1}
+  orange: {r: 0.9372549, g: 0.48235294, b: 0.3137255, a: 1}
+  yellow: {r: 0.9490196, g: 0.74509805, b: 0.34509805, a: 1}

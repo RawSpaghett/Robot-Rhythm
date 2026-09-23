@@ -1,0 +1,1 @@
+{"name":"RobotRhythm.UI.Editor","rootNamespace":"RobotRhythm.UI.Editor","references":["RobotRhythm.UI","Unity.ugui","Unity.InputSystem"],"includePlatforms":["Editor"]}
