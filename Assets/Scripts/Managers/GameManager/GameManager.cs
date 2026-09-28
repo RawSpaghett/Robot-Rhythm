@@ -2,7 +2,7 @@ using UnityEngine;
 
 //Singleton that handles Pause, Resume, End game, Start game
 //Justin
-public class GameManager //GameManager.INSTANCE.ChangeState(state);
+public class GameManager: MonoBehaviour//GameManager.INSTANCE.ChangeState(state);
 {
     #region Singleton Logic
     private static GameManager instance; //singleton
@@ -28,8 +28,6 @@ public class GameManager //GameManager.INSTANCE.ChangeState(state);
     private PAUSE pause;
     private OPTIONS options;
     #endregion
-
-
 
     void Awake()
     {
