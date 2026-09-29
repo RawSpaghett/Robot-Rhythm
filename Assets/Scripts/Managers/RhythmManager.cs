@@ -39,11 +39,7 @@ public class RhythmManager: MonoBehaviour
 
         //Record the time when the music starts
         dspSongTime = (float)AudioSettings.dspTime;
-
-        //Start the music
-        musicSource.Play();
     }
-
 
     void Update()
     {
@@ -53,4 +49,5 @@ public class RhythmManager: MonoBehaviour
         //determine how many beats since the song started
         songPositionInBeats = songPosition / secPerBeat;
     }
+
 }

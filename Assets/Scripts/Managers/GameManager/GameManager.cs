@@ -5,18 +5,17 @@ using UnityEngine;
 public class GameManager: MonoBehaviour//GameManager.INSTANCE.ChangeState(state);
 {
     #region Singleton Logic
-    private static GameManager instance; //singleton
-
-    private GameManager()
-    {}
-    public static GameManager Instance //intialize Singleton
+    public static GameManager Instance; //singleton
+    private void IntializeInstance()
     {
-        get {
-            if(instance==null) {
-                instance = new GameManager();
-            }
-            return instance;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
         }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
     #endregion
     
@@ -31,6 +30,7 @@ public class GameManager: MonoBehaviour//GameManager.INSTANCE.ChangeState(state)
 
     void Awake()
     {
+        IntializeInstance();
         stateMachine = new StateMachineBase();
         gameStart = new GAMESTART();
         stateMachine.Intialize(gameStart);
