@@ -96,6 +96,33 @@ public class ObstacleTimingTest : MonoBehaviour
         SubmitInput(ObstacleInputType.LongJump, charge);
     }
 
+    // RELEASE EVENT CONNECTIONS:
+    // Assign this test controller to each action's request event in the Inspector.
+    // These methods are called immediately when GestureButtonInput executes the
+    // matching action on release, not when the hold or swipe first begins.
+    public void RegisterBrakeAttempt()
+    {
+        SubmitInput(ObstacleInputType.Brake, 0f);
+    }
+
+    public void RegisterAccelerateAttempt()
+    {
+        SubmitInput(ObstacleInputType.Accelerate, 0f);
+    }
+
+    public void RegisterDuckAttempt()
+    {
+        // The gesture is called Duck; the existing obstacle enum calls it Dodge.
+        SubmitInput(ObstacleInputType.Dodge, 0f);
+    }
+
+    // FUTURE RHYTHM CONNECTION:
+    // This is a single-obstacle test harness. In a full level, a rhythm/input
+    // router should select the relevant active obstacle and submit the request.
+    // Do not broadcast every input to every obstacle in the level.
+    // Keep Prepare, EvaluateInput, and CheckForMiss on one shared clock.
+    // This test uses Time.timeAsDouble; production music timing can replace it
+    // in all three places together. Do not use gesture hold duration as beat time.
     private void SubmitInput(
         ObstacleInputType inputType,
         float charge)
