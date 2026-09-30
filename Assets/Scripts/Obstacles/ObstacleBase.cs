@@ -36,7 +36,7 @@ public abstract class ObstacleBase : MonoBehaviour
     
     // Listeners subscribe with += and unsubscribe with -=.
     // Only ObstacleBase can invoke this event.
-    public static event UnityAction<ObstacleBase, ObstacleResult, float>
+    public static event UnityAction<float>
         OnObstacleResolved;
 
     public double TargetTime { get; private set; }
@@ -159,7 +159,7 @@ public abstract class ObstacleBase : MonoBehaviour
 
         // Notify listeners after the obstacle's result has been stored.
         // ?.Invoke safely handles having no listeners.
-        OnObstacleResolved?.Invoke(this, LastResult, LastAccuracy);
+        OnObstacleResolved?.Invoke(LastAccuracy);
     }
 
     protected virtual void OnDisable()
