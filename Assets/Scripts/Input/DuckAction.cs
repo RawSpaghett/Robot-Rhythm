@@ -46,9 +46,7 @@ public class DuckAction : ButtonActionBase
         // FUTURE DUCK / DODGE CONNECTION:
         // Connect a listener that requests the robot's duck animation and reports
         // the dodge attempt to the obstacle/rhythm system.
-        // A duck-specific obstacle can integrate with the existing ObstacleBase
-        // once its API is available. Evaluate success using the beat window;
-        // the animation or a collider overlap should not decide timing accuracy.
+        // Evaluate success using the beat window
         // Keep animation playback and success/failure judgment separate so an
         // early/late attempt can animate while still receiving a failed judgment.
         // Exact listener methods will be chosen after reviewing ObstacleBase.
