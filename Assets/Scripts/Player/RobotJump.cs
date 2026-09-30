@@ -2,25 +2,64 @@ using UnityEngine;
 
 public class RobotJump : MonoBehaviour
 {
-    [Header("Jump Settings")]
+    [Header("Normal Jump Settings")]
     [SerializeField, Min(0f)] private float jumpHeight = 2f;
     [SerializeField, Min(0.01f)] private float jumpDuration = 0.5f;
 
+    [Header("Long Jump Height")]
+    [SerializeField, Min(0f)] private float minimumLongJumpHeight = 2.5f;
+    [SerializeField, Min(0f)] private float maximumLongJumpHeight = 3.5f;
+
+    [Header("Long Jump Duration")]
+    [SerializeField, Min(0.01f)]
+    private float minimumLongJumpDuration = 0.8f;
+
+    [SerializeField, Min(0.01f)]
+    private float maximumLongJumpDuration = 1.2f;
+
     private Vector3 restingLocalPosition;
+
     private float jumpTimer;
+    private float activeJumpHeight;
+    private float activeJumpDuration;
+
     private bool isJumping;
 
     private void Awake()
     {
-        // Remember the visual's position relative to its parent.
         restingLocalPosition = transform.localPosition;
     }
 
     public void TryJump()
     {
-        // Prevent additional jumps while airborne or paused.
+        BeginJump(jumpHeight, jumpDuration);
+    }
+
+    public void TryLongJump(float charge)
+    {
+        charge = Mathf.Clamp01(charge);
+
+        float height = Mathf.Lerp(
+            minimumLongJumpHeight,
+            Mathf.Max(minimumLongJumpHeight, maximumLongJumpHeight),
+            charge);
+
+        float duration = Mathf.Lerp(
+            minimumLongJumpDuration,
+            Mathf.Max(minimumLongJumpDuration, maximumLongJumpDuration),
+            charge);
+
+        BeginJump(height, duration);
+    }
+
+    private void BeginJump(float height, float duration)
+    {
+        // Both jump types obey the same airborne and pause restrictions.
         if (!isActiveAndEnabled || isJumping || Time.timeScale <= 0f)
             return;
+
+        activeJumpHeight = Mathf.Max(0f, height);
+        activeJumpDuration = Mathf.Max(0.01f, duration);
 
         jumpTimer = 0f;
         isJumping = true;
@@ -33,13 +72,11 @@ public class RobotJump : MonoBehaviour
 
         jumpTimer += Time.deltaTime;
 
-        // Convert elapsed time into progress between 0 and 1.
-        float duration = Mathf.Max(0.01f, jumpDuration);
-        float progress = Mathf.Clamp01(jumpTimer / duration);
+        float progress = Mathf.Clamp01(
+            jumpTimer / activeJumpDuration);
 
-        // A simple arc: zero at the start/end, maximum halfway through.
         float verticalOffset =
-            4f * jumpHeight * progress * (1f - progress);
+            4f * activeJumpHeight * progress * (1f - progress);
 
         transform.localPosition =
             restingLocalPosition + Vector3.up * verticalOffset;
@@ -53,8 +90,8 @@ public class RobotJump : MonoBehaviour
 
     private void OnDisable()
     {
-        // Reset cleanly if the visual is disabled during a jump.
         transform.localPosition = restingLocalPosition;
+
         jumpTimer = 0f;
         isJumping = false;
     }
