@@ -4,11 +4,11 @@ using System.Collections.Generic;
 //Stores music data
 //Justin
 
-public class MusicDatabase: MonoBehaviour
+public class AudioFXDatabase: MonoBehaviour
 {
-    public static MusicDatabase Instance {get; private set;}//singleton
+    public static AudioFXDatabase Instance {get; private set;}//singleton
     public AudioClip[] audioLoader;
-    public Dictionary<string, AudioClip> musicLibrary = new Dictionary<string, AudioClip>();
+    public Dictionary<string, AudioClip> fxLibrary = new Dictionary<string, AudioClip>();
 
     void Awake()
     {
@@ -32,22 +32,22 @@ public class MusicDatabase: MonoBehaviour
     {
         foreach (AudioClip clip in audioLoader)
         {
-            if (clip != null && !musicLibrary.ContainsKey(clip.name))
+            if (clip != null && !fxLibrary.ContainsKey(clip.name))
             {
-                musicLibrary.Add(clip.name, clip);
+                fxLibrary.Add(clip.name, clip);
             }
         }
     }
 
-    public AudioClip GetClip(string musicID)
+    public AudioClip GetClip(string fxID)
     {
-        if(musicLibrary.TryGetValue(musicID, out AudioClip clip))
+        if(fxLibrary.TryGetValue(fxID, out AudioClip clip))
         {
             return clip;
         }
         else
         {
-            Debug.Log($"{musicID} not found.");
+            Debug.Log($"{fxID} not found.");
             return null;
         }
     }

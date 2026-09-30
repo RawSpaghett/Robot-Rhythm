@@ -10,6 +10,7 @@ using System.Collections;
 
 public class RhythmManager: MonoBehaviour
 {
+    public static RhythmManager Instance {get; private set;}//singleton
     public float songBpm {get; private set;}//Song beats per minute
     public float secPerBeat {get; private set;}//The number of seconds for each song beat
     public float songPosition {get; private set;}    //Current song position, in seconds
@@ -19,6 +20,7 @@ public class RhythmManager: MonoBehaviour
 
     void Start()
     {
+        IntializeInstance();
         musicManager = GetComponent<MusicManager>();
 
         secPerBeat = 60f / songBpm; //Calculate the number of seconds in each beat
@@ -31,6 +33,18 @@ public class RhythmManager: MonoBehaviour
         songPosition = (float)(AudioSettings.dspTime - dspSongTime);//determine how many seconds since the song started
 
         songPositionInBeats = songPosition / secPerBeat;//determine how many beats since the song started
+    }
+
+    private void IntializeInstance()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
 }

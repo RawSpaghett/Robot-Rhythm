@@ -297,8 +297,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1719772160}
-  - component: {fileID: 1719772161}
   - component: {fileID: 1719772162}
+  - component: {fileID: 1719772164}
   - component: {fileID: 1719772163}
   m_Layer: 0
   m_Name: Rhythm Manager
@@ -322,20 +322,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1216689445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1719772161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719772159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbdac4ace4cec4055ab9a91c1f77f1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
-  audioLibrary:
-  - {fileID: 8300000, guid: 3276f8b3b0ea14e879d74b5040065268, type: 3}
 --- !u!114 &1719772162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,6 +431,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1719772164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719772159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1158058485cc4fe08b98a656a9c3f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
 --- !u!1001 &8995407143341143833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -455,7 +453,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1759082735540205039, guid: e6cf05646778148c6ae32cc1e2aff120, type: 3}
       propertyPath: m_Name
-      value: MusicDatabase
+      value: Database
       objectReference: {fileID: 0}
     - target: {fileID: 4802640417940044721, guid: e6cf05646778148c6ae32cc1e2aff120, type: 3}
       propertyPath: m_LocalPosition.x
