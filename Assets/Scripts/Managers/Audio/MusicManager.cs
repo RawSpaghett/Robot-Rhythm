@@ -14,12 +14,30 @@ public class MusicManager: MonoBehaviour
         speakers = GetComponent<AudioSource>();
     }
 
-    public void StartPlay()
-    {}
+    public void StartPlay(string musicID)
+    {
+        var song = MusicDatabase.Instance.GetClip(musicID);
+        if (song != null)
+        {
+            speakers.clip = song;
+            speakers.Play();
+        }
+    }
+
     public void EndPlay()
-    {}
+    {
+        speakers.Stop();
+    }
+
     public void ResumePlay() 
-    {}
+    {
+        speakers.UnPause();
+    }
+
+    public void PausePlay()
+    {
+        speakers.Pause();
+    }
 
 
     
