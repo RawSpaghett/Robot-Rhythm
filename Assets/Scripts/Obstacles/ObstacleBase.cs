@@ -31,10 +31,13 @@ public abstract class ObstacleBase : MonoBehaviour
     [SerializeField, Range(0.01f, 1f)]
     private float perfectAccuracyThreshold = 0.90f;
 
-    [Header("Result Events")]
-    [SerializeField]
-    private UnityEvent<float> onAccuracyEvaluated =
-        new UnityEvent<float>();
+    // Shared result event for every obstacle derived from ObstacleBase.
+    // Arguments: obstacle that resolved, outcome, timing accuracy.
+    
+    // Listeners subscribe with += and unsubscribe with -=.
+    // Only ObstacleBase can invoke this event.
+    public static event UnityAction<ObstacleBase, ObstacleResult, float>
+        OnObstacleResolved;
 
     public double TargetTime { get; private set; }
 
@@ -154,7 +157,9 @@ public abstract class ObstacleBase : MonoBehaviour
         LastResult = result;
         LastAccuracy = Mathf.Clamp01(accuracy);
 
-        onAccuracyEvaluated.Invoke(LastAccuracy);
+        // Notify listeners after the obstacle's result has been stored.
+        // ?.Invoke safely handles having no listeners.
+        OnObstacleResolved?.Invoke(this, LastResult, LastAccuracy);
     }
 
     protected virtual void OnDisable()
