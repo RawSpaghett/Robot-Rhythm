@@ -10,11 +10,11 @@ using System.Collections;
 
 public class RhythmManager: MonoBehaviour
 {
-    private float songBpm;//Song beats per minute
-    private float secPerBeat;//The number of seconds for each song beat
-    private float songPosition;    //Current song position, in seconds
-    private float songPositionInBeats;  //Current song position, in beats
-    private float dspSongTime;//How many seconds have passed since the song started
+    public float songBpm {get; private set;}//Song beats per minute
+    public float secPerBeat {get; private set;}//The number of seconds for each song beat
+    public float songPosition {get; private set;}    //Current song position, in seconds
+    public float songPositionInBeats {get; private set;}  //Current song position, in beats
+    public float dspSongTime {get; private set;}//How many seconds have passed since the song started
     private MusicManager musicManager;
 
     void Start()

@@ -39,5 +39,18 @@ public class MusicDatabase: MonoBehaviour
         }
     }
 
+    public AudioClip GetClip(string musicID)
+    {
+        if(musicLibrary.TryGetValue(musicID, out AudioClip clip))
+        {
+            return clip;
+        }
+        else
+        {
+            Debug.Log($"{musicID} not found.");
+            return null;
+        }
+    }
+
 
 }
