@@ -1,0 +1,85 @@
+using System.Linq;
+
+namespace RhythmGameUtilities
+{
+
+    public class Song
+    {
+
+        public int resolution;
+
+        public Tempo[] tempoChanges;
+
+        public TimeSignature[] timeSignatureChanges;
+
+        public Note[] notes;
+
+        public BeatBar[] beatBars;
+
+        public Song()
+        {
+
+        }
+
+        public Song(int resolution, Tempo[] tempoChanges, TimeSignature[] timeSignatureChanges,
+            Note[] notes, BeatBar[] beatBars)
+        {
+            this.resolution = resolution;
+            this.tempoChanges = tempoChanges;
+            this.timeSignatureChanges = timeSignatureChanges;
+            this.notes = notes;
+            this.beatBars = beatBars;
+        }
+
+        public static Song FromChartData(string contents, Difficulty difficulty)
+        {
+            var resolution = Chart.ReadResolutionFromChartData(contents);
+
+            var tempoChanges = Chart.ReadTempoChangesFromChartData(contents);
+
+            var timeSignatureChanges = Chart.ReadTimeSignatureChangesFromChartData(contents);
+
+            return new Song
+            {
+                resolution = resolution,
+                tempoChanges = tempoChanges,
+                timeSignatureChanges = timeSignatureChanges,
+                notes = Chart.ReadNotesFromChartData(contents, difficulty),
+                beatBars = Utilities.CalculateBeatBars(tempoChanges, resolution, true)
+            };
+        }
+
+        public static Song FromMidiData(byte[] data)
+        {
+            var resolution = Midi.ReadResolutionFromMidiData(data);
+
+            var tempoChanges = Midi.ReadTempoChangesFromMidiData(data);
+
+            var timeSignatureChanges = Midi.ReadTimeSignatureChangesFromMidiData(data);
+
+            return new Song
+            {
+                resolution = resolution,
+                tempoChanges = tempoChanges,
+                timeSignatureChanges = timeSignatureChanges,
+                notes = Midi.ReadNotesFromMidiData(data),
+                beatBars = Utilities.CalculateBeatBars(tempoChanges, resolution, true)
+            };
+        }
+
+        public void RecalculateBeatBarsWithSongLength(float songLength, bool includeHalfNotes = true)
+        {
+            var lastTick = Utilities.ConvertSecondsToTicks(songLength, resolution, tempoChanges);
+
+            var position = Utilities.RoundUpToTheNearestMultiplier(lastTick, resolution);
+
+            beatBars = Utilities.CalculateBeatBars(tempoChanges.Concat(new Tempo[]
+                {
+                    new() { Position = position, BPM = tempoChanges.LastOrDefault().BPM }
+                })
+                .ToArray(), resolution, includeHalfNotes);
+        }
+
+    }
+
+}

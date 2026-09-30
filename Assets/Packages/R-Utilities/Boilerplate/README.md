@@ -1,0 +1,2441 @@
+> [!CAUTION]
+> This package is in early development and should not be used in production.
+
+![Rhythm Game Utilities](https://github.com/rhythm-game-utilities/rhythm-game-utilities/blob/main/cover.svg?raw=true)
+
+[![Tests](https://github.com/rhythm-game-utilities/rhythm-game-utilities/actions/workflows/test.workflow.yml/badge.svg)](https://github.com/rhythm-game-utilities/rhythm-game-utilities/actions/workflows/test.workflow.yml)
+[![Build](https://github.com/rhythm-game-utilities/rhythm-game-utilities/actions/workflows/build.workflow.yml/badge.svg)](https://github.com/rhythm-game-utilities/rhythm-game-utilities/actions/workflows/build.workflow.yml)
+[![Nuget](https://img.shields.io/nuget/v/com.neogeek.rhythm-game-utilities)](https://www.nuget.org/packages/com.neogeek.rhythm-game-utilities/)
+[![NPM version](https://img.shields.io/npm/v/@rhythm-game-utilities/core)](https://www.npmjs.org/package/@rhythm-game-utilities/core)
+[![Join the chat at https://discord.gg/nNtFsfd](https://img.shields.io/badge/discord-join%20chat-7289DA.svg)](https://discord.gg/nNtFsfd)
+
+This library is a collection of utilities for creating rhythm games like Tap Tap Revenge, Guitar Hero, and Rock Band. It is meant to be used within any game engine that supports loading C++ libraries, such as Unity, Unreal, Godot, MonoGame, Love2D, and more.
+
+![Prototype game built using these utilities.](https://github.com/rhythm-game-utilities/rhythm-game-utilities/blob/main/screenshot.png?raw=true)
+_Prototype game built using these utilities._
+
+## Features
+
+- 🎵 Parse `.chart` and `.midi` song files
+- 🎼 Calculate position to render notes
+- 💯 Calculate hit accuracy
+- 🥁 Determine if the current time is on the beat
+- 💫 And more!
+
+## Social
+
+- Star [this repo on GitHub](https://github.com/rhythm-game-utilities/rhythm-game-utilities) for updates
+- Follow me on [Bluesky](https://bsky.app/profile/scottdoxey.com)
+- Join the [Discord](https://discord.gg/nNtFsfd)
+- Follow me on [GitHub](https://github.com/neogeek/)
+
+## Table of Contents
+
+- [Platforms](#platforms)
+- [Languages](#languages)
+- [Examples](#examples)
+- [Install](#install)
+- [API](#api)
+  1. [Audio](#audio)
+     1. [ConvertSamplesToWaveform](#audioconvertsamplestowaveform)
+  1. [Common](#common)
+     1. [InverseLerpUnclamped](#commoninverselerpunclamped)
+     1. [InverseLerp](#commoninverselerp)
+     1. [Lerp](#commonlerp)
+  1. [Parsers](#parsers)
+     1. [ReadNotesFromChartData](#chartreadnotesfromchartdata)
+     1. [ReadResolutionFromChartData](#chartreadresolutionfromchartdata)
+     1. [ReadTempoChangesFromChartData](#chartreadtempochangesfromchartdata)
+     1. [ReadTimeSignatureChangesFromChartData](#chartreadtimesignaturechangesfromchartdata)
+     1. [ReadNotesFromMidiData](#midireadnotesfrommididata)
+     1. [ReadResolutionFromMidiData](#midireadresolutionfrommididata)
+     1. [ReadTempoChangesFromMidiData](#midireadtempochangesfrommididata)
+     1. [ReadTimeSignatureChangesFromMidiData](#midireadtimesignaturechangesfrommididata)
+  1. [Utilities](#utilities)
+     1. [CalculateAccuracy](#utilitiescalculateaccuracy)
+     1. [CalculateAccuracyRatio](#utilitiescalculateaccuracyratio)
+     1. [CalculateTiming](#utilitiescalculatetiming)
+     1. [CalculateBeatBars](#utilitiescalculatebeatbars)
+     1. [ConvertSecondsToTicks](#utilitiesconvertsecondstoticks)
+     1. [ConvertTickToPosition](#utilitiesconvertticktoposition)
+     1. [FindNotesNearGivenTick](#utilitiesfindnotesneargiventick)
+     1. [IsOnTheBeat](#utilitiesisonthebeat)
+     1. [RoundUpToTheNearestMultiplier](#utilitiesrounduptothenearestmultiplier)
+
+- [Architecture](#architecture)
+- [Git Hooks](#git-hooks)
+- [Testing](#testing)
+- [Build](#build)
+- [Contributing](#contributing)
+- [Community Roadmap](#community-roadmap)
+- [Other Projects](#other-projects)
+- [License](#license)
+
+## Platforms
+
+This library aims to offer support for multiple platforms through a single codebase. This is highly ambitious, so if you run into an issue with your platform of choice during development, please leave a detailed bug report with as much information as possible. Also, as this library is relatively new, mobile platforms will be fully supported after all other platforms are complete.
+
+| Engine                                  | Language | Platform |                  Version                  | Tested | Stable |
+| --------------------------------------- | -------- | -------- | :---------------------------------------: | :----: | :----: |
+| [Unity](https://unity.com/)             | C#       | macOS    | 6000.0.22f1<br>2022.3.50f1<br>2021.3.44f1 |   ✅   |   ❌   |
+| [Unity](https://unity.com/)             | C#       | Windows  | 6000.0.22f1<br>2022.3.50f1<br>2021.3.44f1 |   ✅   |   ❌   |
+| [Unity](https://unity.com/)             | C#       | Linux    | 6000.0.22f1<br>2022.3.50f1<br>2021.3.44f1 |   -    |   ❌   |
+| [Unity](https://unity.com/)             | C#       | iOS      | 6000.0.22f1<br>2022.3.50f1<br>2021.3.44f1 |   ✅   |   ❌   |
+| [Unity](https://unity.com/)             | C#       | Android  | 6000.0.22f1<br>2022.3.50f1<br>2021.3.44f1 |   ✅   |   ❌   |
+| [Unity](https://unity.com/)             | C#       | WebGL    | 6000.0.22f1<br>2022.3.50f1<br>2021.3.44f1 |   ✅   |   ❌   |
+| [Unreal](https://www.unrealengine.com/) | C++      | macOS    |                   5.4.4                   |   ✅   |   ❌   |
+| [Unreal](https://www.unrealengine.com/) | C++      | Windows  |                   5.4.4                   |   ✅   |   ❌   |
+| [Unreal](https://www.unrealengine.com/) | C++      | Linux    |                   5.4.4                   |   -    |   ❌   |
+| [Godot 4](https://godotengine.org/)     | GDScript | macOS    |                    4.3                    |   ✅   |   ❌   |
+| [Godot 4](https://godotengine.org/)     | GDScript | Windows  |                    4.3                    |   ✅   |   ❌   |
+| [Godot 4](https://godotengine.org/)     | GDScript | Linux    |                    4.3                    |   -    |   ❌   |
+| [Godot 4](https://godotengine.org/)     | GDScript | iOS      |                    4.3                    |   -    |   ❌   |
+| [Godot 4](https://godotengine.org/)     | GDScript | Android  |                    4.3                    |   -    |   ❌   |
+| [Godot 4](https://godotengine.org/)     | GDScript | WebGL    |                    4.3                    |   ✅   |   ❌   |
+| [Godot 4](https://godotengine.org/)     | C#       | macOS    |                    4.3                    |   ✅   |   ❌   |
+| [Godot 4](https://godotengine.org/)     | C#       | Windows  |                    4.3                    |   ✅   |   ❌   |
+| [Godot 4](https://godotengine.org/)     | C#       | Linux    |                    4.3                    |   -    |   ❌   |
+| [Godot 4](https://godotengine.org/)     | C#       | iOS      |                    4.3                    |   -    |   ❌   |
+| [Godot 4](https://godotengine.org/)     | C#       | Android  |                    4.3                    |   -    |   ❌   |
+| [Godot 4](https://godotengine.org/)     | C#       | WebGL    |                    4.3                    |   ✅   |   ❌   |
+| [SDL](https://www.libsdl.org/)          | C++      | macOS    |                  3.4.14                   |   ✅   |   ❌   |
+| [SDL](https://www.libsdl.org/)          | C++      | Windows  |                  3.4.14                   |   -    |   -    |
+| [SDL](https://www.libsdl.org/)          | C++      | Linux    |                  3.4.14                   |   -    |   -    |
+| [MonoGame](https://monogame.net/)       | C#       | macOS    |                   3.8.2                   |   ✅   |   ❌   |
+| [MonoGame](https://monogame.net/)       | C#       | Windows  |                   3.8.2                   |   ✅   |   ❌   |
+| [MonoGame](https://monogame.net/)       | C#       | Linux    |                   3.8.2                   |   ✅   |   ❌   |
+| [MonoGame](https://monogame.net/)       | C#       | iOS      |                   3.8.2                   |   ✅   |   ❌   |
+| [MonoGame](https://monogame.net/)       | C#       | Android  |                   3.8.2                   |   ✅   |   ❌   |
+| [Love2D](https://www.love2d.org/)       | Lua      | macOS    |                   11.5                    |   ✅   |   ❌   |
+| [Love2D](https://www.love2d.org/)       | Lua      | Linux    |                   11.5                    |   -    |   -    |
+| [Love2D](https://www.love2d.org/)       | Lua      | Windows  |                   11.5                    |   -    |   -    |
+
+## Languages
+
+| Language   | Distribution                                                                                               | Tested | Stable |
+| ---------- | ---------------------------------------------------------------------------------------------------------- | :----: | :----: |
+| C#         | NuGet - [com.neogeek.rhythm-game-utilities](https://nuget.org/packages/com.neogeek.rhythm-game-utilities/) |   ✅   |   ❌   |
+| C++        | GitHub Releases                                                                                            |   ✅   |   ❌   |
+| JavaScript | NPM                                                                                                        |   ✅   |   ❌   |
+| Lua        | GitHub Releases                                                                                            |   ✅   |   ❌   |
+
+## Examples
+
+| Engine                                  | Repo                                                     |
+| --------------------------------------- | -------------------------------------------------------- |
+| [Unity](https://unity.com/)             | <https://github.com/rhythm-game-utilities/unity-example> |
+| [Unreal](https://www.unrealengine.com/) | -                                                        |
+| [Godot](https://godotengine.org/)       | <https://github.com/rhythm-game-utilities/godot-example> |
+| [SDL](https://www.libsdl.org/)          | <https://github.com/rhythm-game-utilities/sdl-example>   |
+| [MonoGame](https://monogame.net/)       | -                                                        |
+| JavaScript                              | -                                                        |
+| [Love2D](https://www.love2d.org/)       | -                                                        |
+
+## Install
+
+### Unity
+
+1. Add package via git URL
+   ```
+   https://github.com/rhythm-game-utilities/rhythm-game-utilities.git?path=/UnityPackage
+   ```
+1. Import the sample project (optional)
+   - Check the materials to make sure they work in the version of Unity and render pipeline you selected.
+
+### Unreal
+
+1. Clone this repo locally (using either a tagged release or the main development branch).
+1. Add the include path to your `<project>.Build.cs` file.
+   ```csharp
+   PublicIncludePaths.AddRange(new string[] { "D:/git/github/rhythm-game-utilities/include" });
+   ```
+
+### Godot
+
+#### GDScript
+
+Download and install the latest release from <https://github.com/rhythm-game-utilities/godot-plugin>.
+
+#### C#
+
+Install the nuget package [com.neogeek.rhythm-game-utilities](https://nuget.org/packages/com.neogeek.rhythm-game-utilities/) via the CLI or from within your IDE.
+
+```bash
+dotnet add package com.neogeek.rhythm-game-utilities --version 1.0.0-alpha.8
+```
+
+### SDL
+
+1. Clone this repo locally (using either a tagged release or the main development branch).
+1. Add the include path to your project.
+   - VS Code: `.vscode/c_cpp_properties.json`
+     ```json
+     "includePath": [
+         "${workspaceFolder}/**",
+         "${HOME}/git/github/rhythm-game-utilities/include/**"
+     ]
+     ```
+1. Add the include path to your build command.
+   - `g++`
+     ```bash
+     g++ -std=c++17 -o build/output src/*.cpp -Isrc \
+         -I"${HOME}/git/github/rhythm-game-utilities/include/" \
+         -I/opt/homebrew/Cellar/sdl3/3.4.16/include -L/opt/homebrew/Cellar/sdl3/3.4.16/lib \
+         -lSDL3
+     ```
+1. Add the include path to your CMAKE `CMakeLists.txt` file.
+   ```cmake
+   include_directories($ENV{HOME}/git/github/rhythm-game-utilities/include/)
+   ```
+
+### MonoGame
+
+Install the nuget package [com.neogeek.rhythm-game-utilities](https://www.nuget.org/packages/com.neogeek.rhythm-game-utilities/) via the CLI or from within your IDE.
+
+```bash
+dotnet add package com.neogeek.rhythm-game-utilities --version 1.0.0-alpha.8
+```
+
+### Javascript
+
+#### Node
+
+```bash
+$ npm install @rhythm-game-utilities/core
+```
+
+#### JavaScript Module
+
+```javascript
+import RhythmGameUtilities from 'https://unpkg.com/@rhythm-game-utsilities/core@1.0.0-alpha.3/dist/index.js';
+
+const value = RhythmGameUtilities.Lerp(0, 10, 0.5);
+
+document.querySelector('#lerp .output').innerHTML = value;
+```
+
+### Love2D
+
+Coming Soon
+
+## API
+
+### `Audio`
+
+#### `Audio.ConvertSamplesToWaveform`
+
+> Languages: `C#`
+
+```csharp
+using RhythmGameUtilities;
+
+var samples = new float[_audioSource.clip.samples * _audioSource.clip.channels];
+
+_audioSource.clip.GetData(samples, 0);
+
+var color = Color.red;
+var transparentColor = new Color(0, 0, 0, 0);
+
+var waveform = Audio.ConvertSamplesToWaveform(samples, _texture2D.width, _texture2D.height);
+
+for (var x = 0; x < waveform.Length; x += 1)
+{
+    for (var y = 0; y < waveform[x].Length; y += 1)
+    {
+        _texture2D.SetPixel(x, y, waveform[x][y] == 1 ? color : transparentColor);
+    }
+}
+
+_texture2D.Apply();
+```
+
+### Common
+
+- [InverseLerpUnclamped](InverseLerpUnclamped.md)
+- [Lerp](Lerp.md)
+- [InverseLerp](InverseLerp.md)
+
+#### `Common.InverseLerp`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Common/InverseLerp.cs
+using System;
+using RhythmGameUtilities;
+
+var value = Common.InverseLerp(0, 10, 5);
+
+Console.WriteLine(value); // 0.5
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Common/InverseLerp.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Common.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto value = InverseLerp(0, 10, 5);
+
+    std::cout << value << std::endl; // 0.5
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Common/InverseLerp.gd
+extends Node
+
+func _ready() -> void:
+	var value: float = rhythm_game_utilities.inverse_lerp(0, 10, 5)
+
+	print(value) # 0.5
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Common/InverseLerp.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const value = RhythmGameUtilities.InverseLerp(0, 10, 5);
+
+console.log(value); // 0.5
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Common/InverseLerp.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local value = rhythmgameutilities.inverse_lerp(0, 10, 5);
+
+print(tonumber(string.format("%.1f", value))) -- 0.5
+```
+
+#### `Common.InverseLerpUnclamped`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Common/InverseLerpUnclamped.cs
+using System;
+using RhythmGameUtilities;
+
+var value = Common.InverseLerpUnclamped(0, 10, 11);
+
+Console.WriteLine(value); // 1.1
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Common/InverseLerpUnclamped.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Common.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto value = InverseLerpUnclamped(0, 10, 11);
+
+    std::cout << value << std::endl; // 1.1
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Common/InverseLerpUnclamped.gd
+extends Node
+
+func _ready() -> void:
+	var value: float = rhythm_game_utilities.inverse_lerp_unclamped(0, 10, 11)
+
+	print(value) # 1.1
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Common/InverseLerpUnclamped.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const value = RhythmGameUtilities.InverseLerpUnclamped(0, 10, 11);
+
+console.log(value.toFixed(1)); // 1.1
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Common/InverseLerpUnclamped.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local value = rhythmgameutilities.inverse_lerp_unclamped(0, 10, 11);
+
+print(tonumber(string.format("%.1f", value))) -- 1.1
+```
+
+#### `Common.Lerp`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Common/Lerp.cs
+using System;
+using RhythmGameUtilities;
+
+var value = Common.Lerp(0, 10, 0.5f);
+
+Console.WriteLine(value); // 5
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Common/Lerp.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Common.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto value = Lerp(0, 10, 0.5f);
+
+    std::cout << value << std::endl; // 5
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Common/Lerp.gd
+extends Node
+
+func _ready() -> void:
+	var value: float = rhythm_game_utilities.lerp(0, 10, 0.5)
+
+	print(value) # 5
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Common/Lerp.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const value = RhythmGameUtilities.Lerp(0, 10, 0.5);
+
+console.log(value); // 5
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Common/Lerp.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local value = rhythmgameutilities.lerp(0, 10, 0.5);
+
+print(tonumber(string.format("%i", value))) -- 5
+```
+
+### Parsers
+
+Read more about `.chart` files: <https://github.com/TheNathannator/GuitarGame_ChartFormats/blob/main/doc/FileFormats/.chart/Core%20Infrastructure.md>
+
+#### `Chart.ReadNotesFromChartData`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Parsers/Chart/ReadNotesFromChartData.cs
+using System;
+using System.IO;
+using RhythmGameUtilities;
+
+var contents = File.ReadAllText("./tests/Mocks/song.chart");
+
+var notes = Chart.ReadNotesFromChartData(contents, Difficulty.Expert);
+
+foreach (var note in notes)
+{
+
+    Console.WriteLine(note.Position + " " + note.HandPosition);
+
+}
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Parsers/Chart/ReadNotesFromChartData.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/File.hpp"
+#include "RhythmGameUtilities/Parsers/Chart.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto contents = ReadStringFromFile("./tests/Mocks/song.chart");
+
+    auto notes = ReadNotesFromChartData(contents.c_str(), Difficulty::Expert);
+
+    for (const auto &note : notes)
+    {
+        std::cout << note.Position << " " << note.HandPosition << std::endl;
+    }
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Parsers/Chart/ReadNotesFromChartData.gd
+extends Node
+
+func _ready() -> void:
+	var file: FileAccess = FileAccess.open("res://song.chart", FileAccess.READ)
+	var contents: String = file.get_as_text()
+
+	var notes: Array = rhythm_game_utilities.read_notes_from_chart_data(contents, rhythm_game_utilities.Expert)
+
+	print(notes)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Parsers/Chart/ReadNotesFromChartData.js
+import { readFileSync } from 'node:fs';
+
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const contents = readFileSync('./tests/Mocks/song.chart', 'utf-8');
+
+const notes = RhythmGameUtilities.ReadNotesFromChartData(contents, 'Expert');
+
+for (let note of notes) {
+  console.log(`${note.position} ${note.handPosition}`);
+}
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Parsers/Chart/ReadNotesFromChartData.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local file = io.open("./tests/Mocks/song.chart", "r")
+
+if file then
+    local content = file:read("*a")
+
+    local notes = rhythmgameutilities.read_notes_from_chart_data(content, Difficulty.Expert);
+
+    for _, note in pairs(notes) do
+        print(note["position"] .. " " .. note["hand_position"])
+    end
+end
+```
+
+#### `Chart.ReadResolutionFromChartData`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Parsers/Chart/ReadResolutionFromChartData.cs
+using System;
+using System.IO;
+using RhythmGameUtilities;
+
+var contents = File.ReadAllText("./tests/Mocks/song.chart");
+
+var resolution = Chart.ReadResolutionFromChartData(contents);
+
+Console.WriteLine(resolution); // 192
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Parsers/Chart/ReadResolutionFromChartData.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/File.hpp"
+#include "RhythmGameUtilities/Parsers/Chart.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto contents = ReadStringFromFile("./tests/Mocks/song.chart");
+
+    auto resolution = ReadResolutionFromChartData(contents.c_str());
+
+    std::cout << resolution << std::endl;
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Parsers/Chart/ReadResolutionFromChartData.gd
+extends Node
+
+func _ready() -> void:
+	var file: FileAccess = FileAccess.open("res://song.chart", FileAccess.READ)
+	var contents: String = file.get_as_text()
+
+	var resolution: int = rhythm_game_utilities.read_resolution_from_chart_data(contents)
+
+	print(resolution)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Parsers/Chart/ReadResolutionFromChartData.js
+import { readFileSync } from 'node:fs';
+
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const contents = readFileSync('./tests/Mocks/song.chart', 'utf-8');
+
+const resolution = RhythmGameUtilities.ReadResolutionFromChartData(contents);
+
+console.log(resolution); // 192
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Parsers/Chart/ReadResolutionFromChartData.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local file = io.open("./tests/Mocks/song.chart", "r")
+
+if file then
+    local content = file:read("*a")
+
+    local value = rhythmgameutilities.read_resolution_from_chart_data(content);
+
+    print(value) -- 192
+end
+```
+
+#### `Chart.ReadTempoChangesFromChartData`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Parsers/Chart/ReadTempoChangesFromChartData.cs
+using System;
+using System.IO;
+using RhythmGameUtilities;
+
+var contents = File.ReadAllText("./tests/Mocks/song.chart");
+
+var tempoChanges = Chart.ReadTempoChangesFromChartData(contents);
+
+Console.WriteLine(tempoChanges.Length); // 7
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Parsers/Chart/ReadTempoChangesFromChartData.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/File.hpp"
+#include "RhythmGameUtilities/Parsers/Chart.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto contents = ReadStringFromFile("./tests/Mocks/song.chart");
+
+    auto tempoChanges = ReadTempoChangesFromChartData(contents.c_str());
+
+    std::cout << size(tempoChanges) << std::endl; // 7
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Parsers/Chart/ReadTempoChangesFromChartData.gd
+extends Node
+
+func _ready() -> void:
+	var file: FileAccess = FileAccess.open("res://song.chart", FileAccess.READ)
+	var contents: String = file.get_as_text()
+
+	var tempo_changes: Array = rhythm_game_utilities.read_tempo_changes_from_chart_data(contents)
+
+	print(tempo_changes)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Parsers/Chart/ReadTempoChangesFromChartData.js
+import { readFileSync } from 'node:fs';
+
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const contents = readFileSync('./tests/Mocks/song.chart', 'utf-8');
+
+const tempoChanges = RhythmGameUtilities.ReadTempoChangesFromChartData(contents);
+
+console.log(tempoChanges.length); // 7
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Parsers/Chart/ReadTempoChangesFromChartData.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local function get_table_length(table)
+    local count = 0
+    for _ in pairs(table) do
+        count = count + 1
+    end
+    return count
+end
+
+local file = io.open("./tests/Mocks/song.chart", "r")
+
+if file then
+    local content = file:read("*a")
+
+    local value = rhythmgameutilities.read_tempo_changes_from_chart_data(content);
+
+    print(get_table_length(value)) -- 7
+end
+```
+
+#### `Chart.ReadTimeSignatureChangesFromChartData`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Parsers/Chart/ReadTimeSignatureChangesFromChartData.cs
+using System;
+using System.IO;
+using RhythmGameUtilities;
+
+var contents = File.ReadAllText("./tests/Mocks/song.chart");
+
+var timeSignatureChanges = Chart.ReadTimeSignatureChangesFromChartData(contents);
+
+Console.WriteLine(timeSignatureChanges.Length); // 4
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Parsers/Chart/ReadTimeSignatureChangesFromChartData.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/File.hpp"
+#include "RhythmGameUtilities/Parsers/Chart.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto contents = ReadStringFromFile("./tests/Mocks/song.chart");
+
+    auto timeSignatureChanges =
+        ReadTimeSignatureChangesFromChartData(contents.c_str());
+
+    std::cout << size(timeSignatureChanges) << std::endl; // 4
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Parsers/Chart/ReadTimeSignatureChangesFromChartData.gd
+extends Node
+
+func _ready() -> void:
+	var file: FileAccess = FileAccess.open("res://song.chart", FileAccess.READ)
+	var contents: String = file.get_as_text()
+
+	var time_signature_changes: Array = rhythm_game_utilities.read_time_signature_changes_from_chart_data(contents)
+
+	print(time_signature_changes)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Parsers/Chart/ReadTimeSignatureChangesFromChartData.js
+import { readFileSync } from 'node:fs';
+
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const contents = readFileSync('./tests/Mocks/song.chart', 'utf-8');
+
+const timeSignatureChanges = RhythmGameUtilities.ReadTimeSignatureChangesFromChartData(contents);
+
+console.log(timeSignatureChanges.length); // 4
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Parsers/Chart/ReadTimeSignatureChangesFromChartData.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local function get_table_length(table)
+    local count = 0
+    for _ in pairs(table) do
+        count = count + 1
+    end
+    return count
+end
+
+local file = io.open("./tests/Mocks/song.chart", "r")
+
+if file then
+    local content = file:read("*a")
+
+    local value = rhythmgameutilities.read_time_signature_changes_from_chart_data(content);
+
+    print(get_table_length(value)) -- 4
+end
+```
+
+#### `Midi.ReadNotesFromMidiData`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Parsers/Midi/ReadNotesFromMidiData.cs
+using System;
+using System.IO;
+using RhythmGameUtilities;
+
+var bytes = File.ReadAllBytes("./tests/Mocks/song.mid");
+
+var notes = Midi.ReadNotesFromMidiData(bytes);
+
+foreach (var note in notes)
+{
+
+    Console.WriteLine(note.Position + " " + note.HandPosition);
+
+}
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Parsers/Midi/ReadNotesFromMidiData.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/File.hpp"
+#include "RhythmGameUtilities/Parsers/Midi.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto bytes = ReadBytesFromFile("./tests/Mocks/song.mid");
+
+    auto notes = ReadNotesFromMidiData(bytes);
+
+    for (const auto &note : notes)
+    {
+        std::cout << note.Position << " " << note.HandPosition << std::endl;
+    }
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Parsers/Midi/ReadNotesFromMidiData.gd
+extends Node
+
+func _ready() -> void:
+	var file: FileAccess = FileAccess.open("res://song.mid", FileAccess.READ)
+	var bytes: PackedByteArray = file.get_buffer(file.get_length())
+
+	var notes: Array = rhythm_game_utilities.read_notes_from_midi_data(bytes)
+
+	print(notes)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Parsers/Midi/ReadNotesFromMidiData.js
+import { readFileSync } from 'node:fs';
+
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const data = readFileSync('./tests/Mocks/song.mid');
+
+const notes = RhythmGameUtilities.ReadNotesFromMidiData(data);
+
+for (let note of notes) {
+  console.log(`${note.position} ${note.handPosition}`);
+}
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Parsers/Midi/ReadNotesFromMidiData.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local file = io.open("./tests/Mocks/song.mid", "rb")
+
+if file then
+    local data = file:read("*a")
+
+    local notes = rhythmgameutilities.read_notes_from_midi_data(data);
+
+    for _, note in pairs(notes) do
+        print(note["position"] .. " " .. note["hand_position"])
+    end
+end
+```
+
+#### `Midi.ReadResolutionFromMidiData`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Parsers/Midi/ReadResolutionFromMidiData.cs
+using System;
+using System.IO;
+using RhythmGameUtilities;
+
+var bytes = File.ReadAllBytes("./tests/Mocks/song.mid");
+
+var resolution = Midi.ReadResolutionFromMidiData(bytes);
+
+Console.WriteLine(resolution); // 480
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Parsers/Midi/ReadResolutionFromMidiData.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/File.hpp"
+#include "RhythmGameUtilities/Parsers/Midi.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto bytes = ReadBytesFromFile("./tests/Mocks/song.mid");
+
+    auto resolution = ReadResolutionFromMidiData(bytes);
+
+    std::cout << resolution << std::endl;
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Parsers/Midi/ReadResolutionFromMidiData.gd
+extends Node
+
+func _ready() -> void:
+	var file: FileAccess = FileAccess.open("res://song.mid", FileAccess.READ)
+	var bytes: PackedByteArray = file.get_buffer(file.get_length())
+
+	var resolution: int = rhythm_game_utilities.read_resolution_from_midi_data(bytes)
+
+	print(resolution)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Parsers/Midi/ReadResolutionFromMidiData.js
+import { readFileSync } from 'node:fs';
+
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const data = readFileSync('./tests/Mocks/song.mid');
+
+const resolution = RhythmGameUtilities.ReadResolutionFromMidiData(data);
+
+console.log(resolution); // 480
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Parsers/Midi/ReadResolutionFromMidiData.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local file = io.open("./tests/Mocks/song.mid", "rb")
+
+if file then
+    local data = file:read("*a")
+
+    local value = rhythmgameutilities.read_resolution_from_midi_data(data);
+
+    print(value) -- 480
+end
+```
+
+#### `Midi.ReadTempoChangesFromMidiData`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Parsers/Midi/ReadTempoChangesFromMidiData.cs
+using System;
+using System.IO;
+using RhythmGameUtilities;
+
+var bytes = File.ReadAllBytes("./tests/Mocks/song.mid");
+
+var tempoChanges = Midi.ReadTempoChangesFromMidiData(bytes);
+
+Console.WriteLine(tempoChanges.Length); // 1
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Parsers/Midi/ReadTempoChangesFromMidiData.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/File.hpp"
+#include "RhythmGameUtilities/Parsers/Midi.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto bytes = ReadBytesFromFile("./tests/Mocks/song.mid");
+
+    auto tempoChanges = ReadTempoChangesFromMidiData(bytes);
+
+    std::cout << size(tempoChanges) << std::endl; // 7
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Parsers/Midi/ReadTempoChangesFromMidiData.gd
+extends Node
+
+func _ready() -> void:
+	var file: FileAccess = FileAccess.open("res://song.mid", FileAccess.READ)
+	var bytes: PackedByteArray = file.get_buffer(file.get_length())
+
+	var tempo_changes: Array = rhythm_game_utilities.read_tempo_changes_from_midi_data(bytes)
+
+	print(tempo_changes)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Parsers/Midi/ReadTempoChangesFromMidiData.js
+import { readFileSync } from 'node:fs';
+
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const data = readFileSync('./tests/Mocks/song.mid');
+
+const tempoChanges = RhythmGameUtilities.ReadTempoChangesFromMidiData(data);
+
+console.log(tempoChanges.length); // 1
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Parsers/Midi/ReadTempoChangesFromMidiData.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local function get_table_length(table)
+    local count = 0
+    for _ in pairs(table) do
+        count = count + 1
+    end
+    return count
+end
+
+local file = io.open("./tests/Mocks/song.mid", "rb")
+
+if file then
+    local data = file:read("*a")
+
+    local value = rhythmgameutilities.read_tempo_changes_from_midi_data(data);
+
+    print(get_table_length(value)) -- 1
+end
+```
+
+#### `Midi.ReadTimeSignatureChangesFromMidiData`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Parsers/Midi/ReadTimeSignatureChangesFromMidiData.cs
+using System;
+using System.IO;
+using RhythmGameUtilities;
+
+var bytes = File.ReadAllBytes("./tests/Mocks/song.mid");
+
+var timeSignatureChanges = Midi.ReadTimeSignatureChangesFromMidiData(bytes);
+
+Console.WriteLine(timeSignatureChanges.Length); // 1
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Parsers/Midi/ReadTimeSignatureChangesFromMidiData.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/File.hpp"
+#include "RhythmGameUtilities/Parsers/Midi.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto bytes = ReadBytesFromFile("./tests/Mocks/song.mid");
+
+    auto timeSignatureChanges = ReadTimeSignatureChangesFromMidiData(bytes);
+
+    std::cout << size(timeSignatureChanges) << std::endl; // 4
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Parsers/Midi/ReadTimeSignatureChangesFromMidiData.gd
+extends Node
+
+func _ready() -> void:
+	var file: FileAccess = FileAccess.open("res://song.mid", FileAccess.READ)
+	var bytes: PackedByteArray = file.get_buffer(file.get_length())
+
+	var time_signature_changes: Array = rhythm_game_utilities.read_time_signature_changes_from_midi_data(bytes)
+
+	print(time_signature_changes)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Parsers/Midi/ReadTimeSignatureChangesFromMidiData.js
+import { readFileSync } from 'node:fs';
+
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const data = readFileSync('./tests/Mocks/song.mid');
+
+const timeSignatureChanges =
+  RhythmGameUtilities.ReadTimeSignatureChangesFromMidiData(data);
+
+console.log(timeSignatureChanges.length); // 1
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Parsers/Midi/ReadTimeSignatureChangesFromMidiData.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local function get_table_length(table)
+    local count = 0
+    for _ in pairs(table) do
+        count = count + 1
+    end
+    return count
+end
+
+local file = io.open("./tests/Mocks/song.mid", "rb")
+
+if file then
+    local data = file:read("*a")
+
+    local value = rhythmgameutilities.read_time_signature_changes_from_midi_data(data);
+
+    print(get_table_length(value)) -- 1
+end
+```
+
+### Utilities
+
+- [IsOnTheBeat](IsOnTheBeat.md)
+- [ConvertSecondsToTicks](ConvertSecondsToTicks.md)
+- [FindNotesNearGivenTick](FindNotesNearGivenTick.md)
+- [CalculateBeatBars](CalculateBeatBars.md)
+- [CalculateAccuracyRatio](CalculateAccuracyRatio.md)
+- [CalculateAccuracy](CalculateAccuracy.md)
+- [RoundUpToTheNearestMultiplier](RoundUpToTheNearestMultiplier.md)
+- [CalculateTiming](CalculateTiming.md)
+- [ConvertTickToPosition](ConvertTickToPosition.md)
+
+#### `Utilities.CalculateAccuracy`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/CalculateAccuracy.cs
+using System;
+using RhythmGameUtilities;
+
+const int seconds = 2;
+const int resolution = 192;
+const int positionDelta = 50;
+
+var tempoChanges = new Tempo[] { new() { Position = 0, BPM = 120000 } };
+
+var note = new Note { Position = 750 };
+
+var currentPosition = Utilities.ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+var accuracy = Utilities.CalculateAccuracy(note.Position, currentPosition, positionDelta);
+
+Console.WriteLine(accuracy); // Good
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/CalculateAccuracy.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    const int seconds = 2;
+    const int resolution = 192;
+    const int positionDelta = 50;
+
+    std::vector<Tempo> tempoChanges = {{0, 120000}};
+
+    auto note = new Note{1, 750, 0, 0};
+    auto currentPosition =
+        ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+    auto accuracy =
+        CalculateAccuracy(note->Position, currentPosition, positionDelta);
+
+    std::cout << ToString(accuracy) << std::endl; // Good
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/CalculateAccuracy.gd
+extends Node
+
+func _ready() -> void:
+	var seconds: int = 2
+	var resolution: int = 192
+	var position_delta: int = 50
+
+	var tempo_changes: Array = [
+		{"position": 0, "bpm": 120000}
+	]
+
+	var current_position: int = rhythm_game_utilities.convert_seconds_to_ticks(seconds, resolution, tempo_changes)
+
+	var accuracy: int = rhythm_game_utilities.calculate_accuracy(750, current_position, position_delta)
+
+	match accuracy:
+		rhythm_game_utilities.Poor:
+			print("Poor")
+		rhythm_game_utilities.Fair:
+			print("Fair")
+		rhythm_game_utilities.Good:
+			print("Good")
+		rhythm_game_utilities.Great:
+			print("Great")
+		rhythm_game_utilities.Perfect:
+			print("Perfect")
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/CalculateAccuracy.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const seconds = 2;
+const resolution = 192;
+const positionDelta = 50;
+
+const tempoChanges = [{ position: 0, bpm: 120000 }];
+
+const currentPosition = RhythmGameUtilities.ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+const accuracy = RhythmGameUtilities.CalculateAccuracy(750, currentPosition, positionDelta);
+
+console.log(accuracy); // Good
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/CalculateAccuracy.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local seconds = 2;
+local resolution = 192;
+local position_delta = 50;
+
+local tempo_changes = { { position = 0, bpm = 120000 } };
+
+local current_position =
+    rhythmgameutilities.convert_seconds_to_ticks(seconds, resolution, tempo_changes);
+
+local value = rhythmgameutilities.calculate_accuracy(750, current_position, position_delta);
+
+print(value) -- Good
+```
+
+#### `Utilities.CalculateAccuracyRatio`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/CalculateAccuracyRatio.cs
+using System;
+using RhythmGameUtilities;
+
+const int seconds = 2;
+const int resolution = 192;
+const int positionDelta = 50;
+
+var tempoChanges = new Tempo[] { new() { Position = 0, BPM = 120000 } };
+
+var note = new Note { Position = 750 };
+
+var currentPosition =
+    Utilities.ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+var value = Utilities.CalculateAccuracyRatio(note.Position, currentPosition, positionDelta);
+
+Console.WriteLine(value); // -0.36
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/CalculateAccuracyRatio.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    const int seconds = 2;
+    const int resolution = 192;
+    const int positionDelta = 50;
+
+    std::vector<Tempo> tempoChanges = {{0, 120000}};
+
+    auto note = new Note{1, 750, 0, 0};
+    auto currentPosition =
+        ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+    auto value =
+        CalculateAccuracyRatio(note->Position, currentPosition, positionDelta);
+
+    std::cout << value << std::endl; // -0.36
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/CalculateAccuracyRatio.gd
+extends Node
+
+func _ready() -> void:
+	var seconds: int = 2
+	var resolution: int = 192
+	var position_delta: int = 50
+
+	var tempo_changes: Array = [
+		{"position": 0, "bpm": 120000}
+	]
+
+	var current_position: int = rhythm_game_utilities.convert_seconds_to_ticks(seconds, resolution, tempo_changes)
+
+	var value: float = rhythm_game_utilities.calculate_accuracy_ratio(750, current_position, position_delta)
+
+	print(round(value * 100) / 100.0) # -0.36
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/CalculateAccuracyRatio.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const seconds = 2;
+const resolution = 192;
+const positionDelta = 50;
+
+const tempoChanges = [{ position: 0, bpm: 120000 }];
+
+const currentPosition = RhythmGameUtilities.ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+const accuracyRatio = RhythmGameUtilities.CalculateAccuracyRatio(750, currentPosition, positionDelta);
+
+console.log(accuracyRatio.toFixed(2)); // -0.36
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/CalculateAccuracyRatio.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local seconds = 2;
+local resolution = 192;
+local position_delta = 50;
+
+local tempo_changes = { { position = 0, bpm = 120000 } };
+
+local current_position =
+    rhythmgameutilities.convert_seconds_to_ticks(seconds, resolution, tempo_changes);
+
+local value = rhythmgameutilities.calculate_accuracy_ratio(750, current_position, position_delta);
+
+print(string.format("%.2f", value)) -- -0.36
+```
+
+#### `Utilities.CalculateBeatBars`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/CalculateBeatBars.cs
+using System;
+using RhythmGameUtilities;
+
+const int resolution = 192;
+
+var tempoChanges = new Tempo[]
+{
+    new() { Position = 0, BPM = 88000 }, new() { Position = 3840, BPM = 112000 },
+    new() { Position = 9984, BPM = 89600 }, new() { Position = 22272, BPM = 112000 },
+    new() { Position = 33792, BPM = 111500 }, new() { Position = 34560, BPM = 112000 },
+    new() { Position = 42240, BPM = 111980 }
+};
+
+var beatBars = Utilities.CalculateBeatBars(tempoChanges, resolution, true);
+
+Console.WriteLine(beatBars.Length); // 440
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/CalculateBeatBars.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    const int resolution = 192;
+
+    std::vector<Tempo> tempoChanges = {
+        {0, 88000},      {3840, 112000},  {9984, 89600},  {22272, 112000},
+        {33792, 111500}, {34560, 112000}, {42240, 111980}};
+
+    auto beatBars = CalculateBeatBars(tempoChanges, resolution, true);
+
+    std::cout << size(beatBars) << std::endl; // 440
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/CalculateBeatBars.gd
+extends Node
+
+func _ready() -> void:
+	var resolution: int = 192
+
+	var tempo_changes: Array = [
+		{"position": 0, "bpm": 8800},
+		{"position": 3840, "bpm": 112000},
+		{"position": 9984, "bpm": 89600},
+		{"position": 22272, "bpm": 112000},
+		{"position": 33792, "bpm": 111500},
+		{"position": 34560, "bpm": 112000},
+		{"position": 42240, "bpm": 111980}
+	]
+
+	var beat_bars: Array = rhythm_game_utilities.calculate_beat_bars(tempo_changes, resolution, true)
+
+	print(beat_bars)
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/CalculateBeatBars.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const tempoChanges = [
+  { position: 0, bpm: 88000 },
+  { position: 3840, bpm: 112000 },
+  { position: 9984, bpm: 89600 },
+  { position: 22272, bpm: 112000 },
+  { position: 33792, bpm: 111500 },
+  { position: 34560, bpm: 112000 },
+  { position: 42240, bpm: 111980 }
+];
+
+const resolution = 192;
+
+const beatBars = RhythmGameUtilities.CalculateBeatBars(tempoChanges, resolution, true);
+
+console.log(beatBars.length); // 440
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/CalculateBeatBars.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local function get_table_length(table)
+    local count = 0
+    if table ~= nil then
+        for _ in pairs(table) do
+            count = count + 1
+        end
+    end
+    return count
+end
+
+local resolution = 192;
+
+local tempo_changes = { { position = 0, bpm = 88000 }, { position = 3840, bpm = 112000 },
+    { position = 9984, bpm = 89600 }, { position = 22272, bpm = 112000 },
+    { position = 33792, bpm = 111500 }, { position = 34560, bpm = 112000 },
+    { position = 42240, bpm = 111980 } };
+
+local value = rhythmgameutilities.calculate_beat_bars(tempo_changes, resolution, true);
+
+print(get_table_length(value)) -- 440
+```
+
+#### `Utilities.CalculateTiming`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/CalculateTiming.cs
+using System;
+using RhythmGameUtilities;
+
+const int seconds = 2;
+const int resolution = 192;
+const int positionDelta = 50;
+
+var tempoChanges = new Tempo[] { new() { Position = 0, BPM = 120000 } };
+
+var note = new Note { Position = 750 };
+
+var currentPosition = Utilities.ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+var timing = Utilities.CalculateTiming(note.Position, currentPosition, positionDelta);
+
+Console.WriteLine(timing); // Hit
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/CalculateTiming.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    const int seconds = 2;
+    const int resolution = 192;
+    const int positionDelta = 50;
+
+    std::vector<Tempo> tempoChanges = {{0, 120000}};
+
+    auto note = new Note{1, 750, 0, 0};
+    auto currentPosition =
+        ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+    auto timing =
+        CalculateTiming(note->Position, currentPosition, positionDelta);
+
+    std::cout << ToString(timing) << std::endl; // Hit
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/CalculateTiming.gd
+extends Node
+
+func _ready() -> void:
+	var seconds: int = 2
+	var resolution: int = 192
+	var position_delta: int = 50
+
+	var tempo_changes: Array = [
+		{"position": 0, "bpm": 120000}
+	]
+
+	var current_position: int = rhythm_game_utilities.convert_seconds_to_ticks(seconds, resolution, tempo_changes)
+
+	var timing: int = rhythm_game_utilities.calculate_timing(750, current_position, position_delta)
+
+	match timing:
+		rhythm_game_utilities.Miss:
+			print("Miss")
+		rhythm_game_utilities.Hit:
+			print("Hit")
+		rhythm_game_utilities.Early:
+			print("Early")
+		rhythm_game_utilities.Late:
+			print("Late")
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/CalculateTiming.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const seconds = 2;
+const resolution = 192;
+const positionDelta = 50;
+
+const tempoChanges = [{ position: 0, bpm: 120000 }];
+
+const currentPosition = RhythmGameUtilities.ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+const timing = RhythmGameUtilities.CalculateTiming(750, currentPosition, positionDelta);
+
+console.log(timing); // Hit
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/CalculateTiming.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local seconds = 2;
+local resolution = 192;
+local position_delta = 50;
+
+local tempo_changes = { { position = 0, bpm = 120000 } };
+
+local current_position =
+    rhythmgameutilities.convert_seconds_to_ticks(seconds, resolution, tempo_changes);
+
+local value = rhythmgameutilities.calculate_timing(750, current_position, position_delta);
+
+print(value) -- Hit
+```
+
+#### `Utilities.ConvertSecondsToTicks`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/ConvertSecondsToTicks.cs
+using System;
+using RhythmGameUtilities;
+
+const int seconds = 5;
+const int resolution = 192;
+
+var tempoChanges = new Tempo[]
+{
+    new() { Position = 0, BPM = 88000 }, new() { Position = 3840, BPM = 112000 },
+    new() { Position = 9984, BPM = 89600 }, new() { Position = 22272, BPM = 112000 },
+    new() { Position = 33792, BPM = 111500 }, new() { Position = 34560, BPM = 112000 },
+    new() { Position = 42240, BPM = 111980 }
+};
+
+var ticks = Utilities.ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+Console.WriteLine(ticks); // 1408
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/ConvertSecondsToTicks.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    const int seconds = 5;
+    const int resolution = 192;
+
+    std::vector<Tempo> tempoChanges = {
+        {0, 88000},      {3840, 112000},  {9984, 89600},  {22272, 112000},
+        {33792, 111500}, {34560, 112000}, {42240, 111980}};
+
+    auto ticks = ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+    std::cout << ticks << std::endl; // 1408
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/ConvertSecondsToTicks.cpp
+extends Node
+
+func _ready() -> void:
+	var seconds: int = 5
+	var resolution: int = 192
+
+	var tempo_changes: Array = [
+		{"position": 0, "bpm": 88000},
+		{"position": 3840, "bpm": 112000},
+		{"position": 9984, "bpm": 89600},
+		{"position": 22272, "bpm": 112000},
+		{"position": 33792, "bpm": 111500},
+		{"position": 34560, "bpm": 112000},
+		{"position": 42240, "bpm": 111980}
+	]
+
+	var current_position: int = rhythm_game_utilities.convert_seconds_to_ticks(seconds, resolution, tempo_changes)
+
+	print(current_position) # 1408
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/ConvertSecondsToTicks.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const seconds = 5;
+const resolution = 192;
+
+var tempoChanges = [
+  { position: 0, bpm: 88000 },
+  { position: 3840, bpm: 112000 },
+  { position: 9984, bpm: 89600 },
+  { position: 22272, bpm: 112000 },
+  { position: 33792, bpm: 111500 },
+  { position: 34560, bpm: 112000 },
+  { position: 42240, bpm: 111980 }
+];
+
+var ticks = RhythmGameUtilities.ConvertSecondsToTicks(seconds, resolution, tempoChanges);
+
+console.log(ticks); // 1408
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/ConvertSecondsToTicks.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local seconds = 5;
+local resolution = 192;
+
+local tempo_changes = {
+    { position = 0,     bpm = 88000 },
+    { position = 3840,  bpm = 112000 },
+    { position = 9984,  bpm = 89600 },
+    { position = 22272, bpm = 112000 },
+    { position = 33792, bpm = 111500 },
+    { position = 34560, bpm = 112000 },
+    { position = 42240, bpm = 111980 }
+}
+
+local ticks =
+    rhythmgameutilities.convert_seconds_to_ticks(seconds, resolution, tempo_changes);
+
+print(ticks); --1408
+```
+
+#### `Utilities.ConvertTickToPosition`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/ConvertTickToPosition.cs
+using System;
+using RhythmGameUtilities;
+
+const int tick = 1056;
+const int resolution = 192;
+
+var position = Utilities.ConvertTickToPosition(tick, resolution);
+
+Console.WriteLine(position); // 5.5
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/ConvertTickToPosition.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    const int tick = 1056;
+    const int resolution = 192;
+
+    auto position = ConvertTickToPosition(tick, resolution);
+
+    std::cout << position << std::endl; // 5.5
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/ConvertTickToPosition.gd
+extends Node
+
+func _ready() -> void:
+	var tick: int = 1056
+	var resolution: int = 192
+
+	var position: float = rhythm_game_utilities.convert_tick_to_position(tick, resolution)
+
+	print(position) # 5.5
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/ConvertTickToPosition.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const tick = 1056;
+const resolution = 192;
+
+const position = RhythmGameUtilities.ConvertTickToPosition(tick, resolution);
+
+console.log(position); // 5.5
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/ConvertTickToPosition.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local tick = 1056;
+local resolution = 192;
+
+local value = rhythmgameutilities.convert_tick_to_position(tick, resolution);
+
+print(value) -- 5.5
+```
+
+#### `Utilities.FindNotesNearGivenTick`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/FindNotesNearGivenTick.cs
+using System;
+using RhythmGameUtilities;
+
+var notes = new Note[]
+{
+    new() { ID = 1, Position = 768 }, new() { ID = 2, Position = 960 },
+    new() { ID = 3, Position = 1152 }, new() { ID = 4, Position = 1536 },
+    new() { ID = 5, Position = 1728 }, new() { ID = 6,  Position = 1920 },
+    new() { ID = 7, Position = 2304 }, new() { ID = 8, Position = 2496 },
+    new() { ID = 9, Position = 2688 }, new() { ID = 10, Position = 3072 },
+    new() { ID = 11, Position = 3264 }
+};
+
+var foundNotes = Utilities.FindNotesNearGivenTick(notes, 750);
+
+if (foundNotes?.Length > 0)
+{
+    Console.Write(foundNotes[0].Position); // 768
+}
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/FindNotesNearGivenTick.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    std::vector<Note> notes = {
+        {1, 768, 0, 0},  {2, 960, 0, 0},   {3, 1152, 0, 0}, {4, 1536, 0, 0},
+        {5, 1728, 0, 0}, {6, 1920, 0, 0},  {7, 2304, 0, 0}, {8, 2496, 0, 0},
+        {9, 2688, 0, 0}, {10, 3072, 0, 0}, {11, 3264, 0, 0}};
+
+    auto foundNotes = FindNotesNearGivenTick(notes, 750);
+
+    if (size(foundNotes) > 0)
+    {
+        std::cout << foundNotes[0].Position << std::endl; // 768
+    }
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/FindNotesNearGivenTick.gd
+extends Node
+
+func _ready() -> void:
+	var delta: int = 50
+
+	var notes: Array = [
+		{"position": 768}, {"position": 960}, {"position": 1152},
+		{"position": 1536}, {"position": 1728}, {"position": 1920},
+		{"position": 2304}, {"position": 2496}, {"position": 2688},
+		{"position": 3072}, {"position": 3264}
+	]
+
+	var found_notes: Array = rhythm_game_utilities.find_notes_near_given_tick(notes, 750, delta);
+
+	print(found_notes[0]["position"]) # 768
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/FindNotesNearGivenTick.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const delta = 50;
+
+const notes = [
+  { id: 1, position: 768 },
+  { id: 2, position: 960 },
+  { id: 3, position: 1152 },
+  { id: 4, position: 1536 },
+  { id: 5, position: 1728 },
+  { id: 6, position: 1920 },
+  { id: 7, position: 2304 },
+  { id: 8, position: 2496 },
+  { id: 9, position: 2688 },
+  { id: 10, position: 3072 },
+  { id: 11, position: 3264 }
+];
+
+const foundNotes = RhythmGameUtilities.FindNotesNearGivenTick(notes, 750, delta);
+
+if (foundNotes?.length > 0) {
+  console.log(foundNotes[0].position); // 768
+}
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/FindNotesNearGivenTick.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local delta = 50;
+
+local notes = { { id = 1, position = 768, hand_position = 0, length = 0 },
+    { id = 2,  position = 960,  hand_position = 0, length = 0 },
+    { id = 3,  position = 1152, hand_position = 0, length = 0 },
+    { id = 4,  position = 1536, hand_position = 0, length = 0 },
+    { id = 5,  position = 1728, hand_position = 0, length = 0 },
+    { id = 6,  position = 1920, hand_position = 0, length = 0 },
+    { id = 7,  position = 2304, hand_position = 0, length = 0 },
+    { id = 8,  position = 2496, hand_position = 0, length = 0 },
+    { id = 9,  position = 2688, hand_position = 0, length = 0 },
+    { id = 10, position = 3072, hand_position = 0, length = 0 },
+    { id = 11, position = 3264, hand_position = 0, length = 0 } };
+
+local value = rhythmgameutilities.find_notes_near_given_tick(notes, 750, delta);
+
+print(value[1].position) -- 768
+```
+
+#### `Utilities.IsOnTheBeat`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/IsOnTheBeat.cs
+using System;
+using RhythmGameUtilities;
+
+const int bpm = 120;
+const float currentTime = 10f;
+const float delta = 0.05f;
+
+var isOnTheBeat = Utilities.IsOnTheBeat(bpm, currentTime, delta);
+
+Console.WriteLine(isOnTheBeat ? "Is on the beat!" : "Is not on the beat!"); // "Is on the beat!"
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/IsOnTheBeat.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    const int bpm = 120;
+    const float currentTime = 10;
+    const float delta = 0.05f;
+
+    auto isOnTheBeat = IsOnTheBeat(bpm, currentTime, delta);
+
+    std::cout << (isOnTheBeat ? "Is on the beat!" : "Is not on the beat!")
+              << std::endl; // "Is on the beat!"
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/IsOnTheBeat.gd
+extends Node
+
+func _ready() -> void:
+	var bpm: int = 120
+	var current_time: int = 10
+	var delta: float = 0.05
+
+	var is_on_the_beat: bool = rhythm_game_utilities.is_on_the_beat(bpm, current_time, delta)
+
+	if is_on_the_beat: # "Is on the beat!"
+		print("Is on the beat!")
+	else:
+		print("Is not on the beat!")
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/IsOnTheBeat.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const bpm = 120;
+const currentTime = 10;
+const delta = 0.05;
+
+const isOnTheBeat = RhythmGameUtilities.IsOnTheBeat(bpm, currentTime, delta);
+
+console.log(isOnTheBeat ? 'Is on the beat!' : 'Is not on the beat!'); // Is on the beat!
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/IsOnTheBeat.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local bpm = 120;
+local current_time = 10;
+local delta = 0.05;
+
+local isOnTheBeat = rhythmgameutilities.is_on_the_beat(bpm, current_time, delta);
+
+if isOnTheBeat then
+    print("Is on the beat!") -- Is on the beat!
+else
+    print("Is not on the beat!")
+end
+```
+
+#### `Utilities.RoundUpToTheNearestMultiplier`
+
+> Languages: `C#` `C++` `GDScript` `JavaScript` `Lua`
+
+##### C#
+
+```csharp
+// Documentation/API/Utilities/RoundUpToTheNearestMultiplier.cs
+using System;
+using RhythmGameUtilities;
+
+var value = Utilities.RoundUpToTheNearestMultiplier(12, 10);
+
+Console.WriteLine(value); // 20
+```
+
+##### C++
+
+```cpp
+// Documentation/API/Utilities/RoundUpToTheNearestMultiplier.cpp
+#include <iostream>
+
+#include "RhythmGameUtilities/Utilities.hpp"
+
+using namespace RhythmGameUtilities;
+
+auto main() -> int
+{
+    auto value = RoundUpToTheNearestMultiplier(12, 10);
+
+    std::cout << value << std::endl; // 20
+
+    return 0;
+}
+```
+
+##### GDScript
+
+```gdscript
+# Documentation/API/Utilities/RoundUpToTheNearestMultiplier.gd
+extends Node
+
+func _ready() -> void:
+	var value: int = rhythm_game_utilities.round_up_to_the_nearest_multiplier(12, 10)
+
+	print(value) # 20
+```
+
+##### JavaScript
+
+```javascript
+// Documentation/API/Utilities/RoundUpToTheNearestMultiplier.js
+import RhythmGameUtilities from '@rhythm-game-utilities/core';
+
+const value = RhythmGameUtilities.RoundUpToTheNearestMultiplier(12, 10);
+
+console.log(value); // 20
+```
+
+##### Lua
+
+```lua
+-- Documentation/API/Utilities/RoundUpToTheNearestMultiplier.lua
+---@type RhythmGameUtilities
+local rhythmgameutilities = require("rhythmgameutilities")
+
+local value = rhythmgameutilities.round_up_to_the_nearest_multiplier(12, 10);
+
+print(value) -- 20
+```
+
+## Architecture
+
+The current architecture for this project looks like this:
+
+### C++ Library / C# Plugin
+
+```mermaid
+graph LR;
+    chart_file[/"song.chart"/]
+    midi_file[/"song.mid"/]
+
+    subgraph audioGraph ["Audio"]
+        convertSamplesToWaveform["ConvertSamplesToWaveform()"]
+    end
+
+    subgraph commonGraph ["Common"]
+        inverseLerp["InverseLerp()"]
+        lerp["Lerp()"]
+    end
+
+    subgraph parsersGraph ["Parsers"]
+        readResolutionFromChartData["ReadResolutionFromChartData()"]
+        readTempoChangesFromChartData["ReadTempoChangesFromChartData()"]
+        readTimeSignatureChangesFromChartData["ReadTimeSignatureChangesFromChartData()"]
+        readNotesFromChartData["ReadNotesFromChartData()"]
+
+        chart_file-->readResolutionFromChartData
+        chart_file-->readTempoChangesFromChartData
+        chart_file-->readTimeSignatureChangesFromChartData
+        chart_file-->readNotesFromChartData
+
+        readResolutionFromMidiData["ReadResolutionFromMidiData()"]
+        readTempoChangesFromMidiData["ReadTempoChangesFromMidiData()"]
+        readTimeSignatureChangesFromMidiData["ReadTimeSignatureChangesFromMidiData()"]
+        readNotesFromMidiData["ReadNotesFromMidiData()"]
+
+        midi_file-->readResolutionFromMidiData
+        midi_file-->readTempoChangesFromMidiData
+        midi_file-->readTimeSignatureChangesFromMidiData
+        midi_file-->readNotesFromMidiData
+    end
+
+    subgraph utilitiesGraph ["Utilities"]
+        calculateAccuracyRatio["CalculateAccuracyRatio()"]
+        calculateBeatBars["CalculateBeatBars()"]
+        convertSecondsToTicks["ConvertSecondsToTicks()"]
+        convertTickToPosition["ConvertTickToPosition()"]
+        isOnTheBeat["IsOnTheBeat()"]
+        roundUpToTheNearestMultiplier["RoundUpToTheNearestMultiplier()"]
+    end
+
+    convertSecondsToTicks-->calculateAccuracyRatio
+
+    readTempoChangesFromChartData-->calculateBeatBars
+    readTempoChangesFromChartData-->convertSecondsToTicks
+
+    readTempoChangesFromMidiData-->calculateBeatBars
+    readTempoChangesFromMidiData-->convertSecondsToTicks
+
+    readTimeSignatureChangesFromChartData-->convertSecondsToTicks
+
+    readTimeSignatureChangesFromMidiData-->convertSecondsToTicks
+
+    readNotesFromChartData-->calculateAccuracyRatio
+
+    readNotesFromMidiData-->calculateAccuracyRatio
+```
+
+### Unity Plugin
+
+The Unity plugin includes compiled C++ libraries (macOS, Windows and Linux) and wraps the internal calls in native C# functions. These functions pass and retrieve the data from the C++ library and clean up memory upon completion.
+
+### Unreal Plugin
+
+There isn't a custom wrapper or plugin for Unreal, as the C++ library works as is when included as a header-only library.
+
+### Godot Plugin
+
+The Godot plugin is automatically generated in <https://github.com/rhythm-game-utilities/godot-plugin> based on the latest in this repo. Eventually the plugin will also be available via the [Godot Asset Store](https://store-beta.godotengine.org/).
+
+### SDL Library
+
+There isn't a custom wrapper or plugin for SDL, as the C++ library works as is when included as a header-only library.
+
+## Git Hooks
+
+The git hooks that run are quick file checks to ensure the files in the dotnet project and the UnityProject are the same and that the build files haven't changed.
+
+```bash
+$ git config --local core.hooksPath .githooks/
+```
+
+## Testing
+
+Run all tests via `make test`.
+
+- Tests for the C++ library are authored using the C++ native library `cassert`.
+- Tests are run automatically via GitHub Actions on each new PR.
+- For you add a new feature or fix a bug, please include the benchmark output in the PR along with your device stats.
+
+If you want to test the project from within Unity, add the test namespace to your project by adding the following to your `Packages/manifest.json` file:
+
+```json
+{
+...
+    "testables": ["com.scottdoxey.rhythm-game-utilities"]
+...
+}
+```
+
+## Build
+
+> [!WARNING]
+> Do not commit any build changes to the repo. The build files are automatically generated via GitHub Actions.
+
+### macOS
+
+When developing on macOS, make sure that **Mac** is selected in the bottom right-hand corner of Visual Studio Code or C++ Intellisense will not work.
+
+```bash
+./bin/build.sh
+```
+
+### Windows
+
+When developing on Windows, make sure that **Win32** is selected in the bottom right-hand corner of Visual Studio Code or C++ Intellisense will not work.
+
+Run from **x64 Native Tools Command Prompt for VS**:
+
+```cmd
+call "./bin/build.bat"
+```
+
+## Contributing
+
+Be sure to review the [Contributing Guidelines](./CONTRIBUTING.md) before logging an issue or making a pull request.
+
+## Community Roadmap
+
+This project aims to help you build your rhythm game as fast as possible without needing to learn the complexities of a new library. Instead, you can utilize comprehensive examples and simple code recipes If you have feature requests or bugs, please create an issue and tag them with the appropriate tag. If an issue already exists, vote for it with 👍.
+
+- [Feature Requests](https://github.com/rhythm-game-utilities/rhythm-game-utilities/labels/enhancement)
+- [Bugs](https://github.com/rhythm-game-utilities/rhythm-game-utilities/labels/bug)
+
+## Other Projects
+
+| Name          | Description                                                                    | Link                                       |
+| ------------- | ------------------------------------------------------------------------------ | ------------------------------------------ |
+| tiny-midi     | Tiny wrapper around Window/macOS native MIDI libraries for reading MIDI input. | <https://github.com/neogeek/tiny-midi>     |
+| chart-to-json | Parse .chart files in JavaScript or the command line.                          | <https://github.com/neogeek/chart-to-json> |
+
+## License
+
+[The MIT License (MIT)](./LICENSE)
+
