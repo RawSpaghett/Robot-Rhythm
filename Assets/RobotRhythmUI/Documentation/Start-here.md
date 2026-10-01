@@ -39,3 +39,5 @@ NumberFinish on LiveScore, FinalScore, and AccuracyValue controls the raised num
 SCORING opens from Home or Pause. The ScoringGuide canvas holds the guide text and example buttons; edit those in MainMenu. ScoringGuide only updates its own example points and hazard count. It reads the existing ScoreDisplay colors and star thresholds, and never changes the active run. Back returns to the menu that opened it.
 
 Results score colors use their own editable Score Bands: red below 100 points, orange from 100, yellow from 250, green from 500, cyan from 1,000, blue from 1,500, and violet from 2,000. Accuracy still uses its percentage bands. For example, 1,600 points can be blue while 55% accuracy is orange. The guide example uses these separate lookups too.
+
+During the results roll, score and accuracy move through their own color bands from zero to the final value. Reduced Motion shows the final colors immediately.
