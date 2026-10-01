@@ -7,14 +7,30 @@ public class LevelEditor : EditorWindow
     // which level is open in the window, a link to the asset not a copy, anything typed here changes the real file
     private BeatMap beatMap;
 
-    // how wide one beat is
+    // how wide one beat is on the ruler
     private float pixelsPerBeat = 40f;
+
+    // how far along the song the view has scrolled measured in beats
+    private float scrollBeats;
+
+    // Every obstacle type in the project and their names for a dropdown
+    private ObstacleType[] obstacleTypes;
+    private string[] obstacleTypeNames;
+
+    // which name on the list is currently selected
+    private int selectedTypeIndex;
 
     // adds this to the top menu bar and the slash makes a submenu
     [MenuItem("Robot Rhythm/Level Editor")]
     public static void Open()
     {
         GetWindow<LevelEditor>("Level Editor");
+    }
+
+    // called when the window is opened
+    private void OnEnable()
+    {
+        LoadObstacleTypes();
     }
 
     // Unity calls this repeatedly to draw the window
@@ -31,6 +47,21 @@ public class LevelEditor : EditorWindow
         beatMap.Bpm = EditorGUILayout.FloatField("BPM", beatMap.Bpm);
         beatMap.FirstBeatOffset = EditorGUILayout.FloatField("First Beat Offset", beatMap.FirstBeatOffset);
         beatMap.BeatsPerMeasure = EditorGUILayout.IntField("Beats Per Measure", beatMap.BeatsPerMeasure);
+        
+        EditorGUILayout.BeginHorizontal();
+
+        if (obstacleTypes != null && obstacleTypes.Length > 0)
+        {
+            selectedTypeIndex = Mathf.Clamp(selectedTypeIndex, 0, obstacleTypes.Length - 1);
+            selectedTypeIndex = EditorGUILayout.Popup("Obstacle to Place", selectedTypeIndex, obstacleTypeNames);
+        }
+
+        if (GUILayout.Button("Refresh", GUILayout.Width(60f)))
+        {
+            LoadObstacleTypes();
+        }
+        
+        EditorGUILayout.EndHorizontal();
 
         EditorGUILayout.LabelField("Obstacles", beatMap.Obstacles.Count.ToString());
 
@@ -46,10 +77,13 @@ public class LevelEditor : EditorWindow
         // guard against a zero in the inspector so it doesnt divide by 0
         int beatsPerMeasure = Mathf.Max(1, beatMap.BeatsPerMeasure);
 
+        // start drawing from the first beat that is actually on screen
+        int firstBeat = Mathf.FloorToInt(scrollBeats);
+
         // one line per beat spaced by pixels per beat
-        for (int beat = 0; beat <= visibleBeats; beat++)
+        for (int beat = firstBeat; beat <= firstBeat + visibleBeats; beat++)
         {
-            float x = timeline.x + beat * pixelsPerBeat;
+            float x = BeatToX(beat, timeline);
 
             // first beat of each bar is a lil bigger
             bool isMeasureStart = beat % beatsPerMeasure == 0;
@@ -78,6 +112,119 @@ public class LevelEditor : EditorWindow
 
                 GUI.Label(new Rect(x + 3f, timeline.y, 40f, 16f), measureNumber.ToString(), EditorStyles.miniLabel);
             }
+        }
+
+        // Draws the obstacles on the ruler
+        foreach (ObstaclePlacement placement in beatMap.Obstacles)
+        {
+            // skips rows with no obstacles
+            if (placement.Type == null)
+            {
+                continue;
+            }
+
+            float barX = BeatToX(placement.Beat, timeline);
+            float barWidth = placement.Type.WidthInBeats * pixelsPerBeat;
+
+            Rect bar = new Rect(barX, timeline.y + 20f, barWidth, timeline.height - 40f);
+            EditorGUI.DrawRect(bar, placement.Type.TimelineColor);
+        }
+
+        HandleScroll(timeline);
+        HandleClick(timeline);
+    }
+
+    // Moves the view along the song with the mouse wheel
+    private void HandleScroll(Rect timeline)
+    {
+        Event e = Event.current;
+
+        if (e.type != EventType.ScrollWheel)
+        {
+            return;
+        }
+
+        if (!timeline.Contains(e.mousePosition))
+        {
+            return;
+        }
+
+        scrollBeats += e.delta.y;
+
+        // stop the view running off the start of the song
+        scrollBeats = Mathf.Max(0f, scrollBeats);
+
+        e.Use();
+        Repaint();
+    }
+
+    // Adds an obstacle where you click
+    private void HandleClick(Rect timeline)
+    {
+        Event e = Event.current;
+
+        // only react when a left button is clicked
+        if (e.type != EventType.MouseDown || e.button != 0)
+        {
+            return;
+        }
+
+        if (!timeline.Contains(e.mousePosition))
+        {
+            return;
+        }
+
+        if (obstacleTypes == null || obstacleTypes.Length == 0)
+        {
+            return;
+        }
+
+        // turns click position into a beat, then snaps to the nearest beat
+        float clickedBeat = XToBeat(e.mousePosition.x, timeline);
+        float snappedBeat = Mathf.Round(clickedBeat);
+
+        ObstaclePlacement placement = new ObstaclePlacement();
+        placement.Type = obstacleTypes[selectedTypeIndex];
+        placement.Beat = Mathf.Max(0f, snappedBeat);
+
+        // Snapshot the file before changing it so ctrl z can put it back
+        Undo.RecordObject(beatMap, "Place Obstacle");
+        beatMap.Obstacles.Add(placement);
+
+        // Tells unity that the file changed so the edit gets written to disk
+        EditorUtility.SetDirty(beatMap);
+
+        // Marks click as handled so nothing else reacts to it
+        e.Use();
+        Repaint();
+    }
+
+    // Converts a beat number into an x position on the ruler
+    private float BeatToX(float beat, Rect timeline)
+    {
+        return timeline.x + (beat - scrollBeats) * pixelsPerBeat;
+    }
+
+    // Converts an x position on the ruler back into a beat number
+    private float XToBeat(float x, Rect timeline)
+    {
+        return scrollBeats + (x - timeline.x) / pixelsPerBeat;
+    }
+
+    // Finds every obstacle type for the dropdown
+    private void LoadObstacleTypes()
+    {
+        string[] guids = AssetDatabase.FindAssets("t:ObstacleType");
+
+        obstacleTypes = new ObstacleType[guids.Length];
+        obstacleTypeNames = new string[guids.Length];
+
+        for (int i = 0; i < guids.Length; i++)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guids[i]);
+
+            obstacleTypes[i] = AssetDatabase.LoadAssetAtPath<ObstacleType>(path);
+            obstacleTypeNames[i] = obstacleTypes[i].DisplayName;
         }
     }
 }
