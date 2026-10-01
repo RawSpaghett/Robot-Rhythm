@@ -20,6 +20,7 @@ public class GestureButtonInput : MonoBehaviour, IPointerDownHandler,
     [Header("Feedback")]
     [SerializeField] private SwipeDirectionIndicator directionIndicator;
     [SerializeField] private ChargeIndicator chargeIndicator;
+    [SerializeField] private GesturePadFeedback padFeedback;
 
     private Button button;
     private RectTransform buttonRect;
@@ -62,6 +63,8 @@ public class GestureButtonInput : MonoBehaviour, IPointerDownHandler,
         trackedDirection = SwipeDirection.None;
         directionStartTime = pressTime;
         HideFeedback();
+        if (padFeedback != null)
+            padFeedback.Begin(position - buttonRect.rect.min);
     }
 
     public void OnInitializePotentialDrag(PointerEventData eventData)
@@ -88,11 +91,17 @@ public class GestureButtonInput : MonoBehaviour, IPointerDownHandler,
             buttonRect, eventData.position, eventData.pressEventCamera);
         GestureData gesture = BuildGesture(releasedInside);
         ButtonActionBase action = FindAction(gesture);
+        float charge = 0f;
+        bool hasCharge = action != null && action.TryGetCharge(gesture, out charge);
 
         // Reset before external events run. No fallback to a second action.
         CancelGesture();
         if (action != null && action.isActiveAndEnabled)
+        {
             action.Execute(gesture);
+            if (padFeedback != null && Time.timeScale > 0f)
+                padFeedback.Release(gesture, hasCharge, charge);
+        }
     }
 
     private bool CanAcceptInput()
@@ -169,18 +178,23 @@ public class GestureButtonInput : MonoBehaviour, IPointerDownHandler,
             directionIndicator.ShowDirection(
                 gesture.IsHold ? gesture.Direction : SwipeDirection.None);
 
-        if (chargeIndicator == null) return;
         ButtonActionBase action = FindAction(gesture);
-        if (action != null && action.TryGetCharge(gesture, out float charge))
-            chargeIndicator.Show(charge);
-        else
-            chargeIndicator.Hide();
+        float charge = 0f;
+        bool hasCharge = action != null && action.TryGetCharge(gesture, out charge);
+        if (chargeIndicator != null)
+        {
+            if (hasCharge) chargeIndicator.Show(charge);
+            else chargeIndicator.Hide();
+        }
+        if (padFeedback != null)
+            padFeedback.Show(gesture, currentPosition - buttonRect.rect.min, hasCharge, charge);
     }
 
     private void HideFeedback()
     {
         if (directionIndicator != null) directionIndicator.Hide();
         if (chargeIndicator != null) chargeIndicator.Hide();
+        if (padFeedback != null) padFeedback.ResetFeedback();
     }
 
     private void CancelGesture()

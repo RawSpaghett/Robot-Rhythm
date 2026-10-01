@@ -1,10 +1,12 @@
 # Robot Rhythm UI
 
-Landscape mobile menu design in Unity.
+Landscape mobile UI in Unity.
 
-Open `Assets/RobotRhythmUI/Scenes/RobotRhythmUIPreview.unity`.
+Open `Assets/Scenes/MainMenu.unity` for the connected menu and game flow.
 
-Screens: Home, Routes, Controls, Settings, and a static level placeholder. Gameplay is not connected.
+Play opens `PotholeTimingTest`. Pause offers Resume, Restart, Controls, Settings, Scoring, and Main Menu. Scoring also opens from Home. The original menu layouts remain in `Assets/RobotRhythmUI/Scenes/RobotRhythmUIPreview.unity`.
+
+The gameplay HUD displays ScoreManager's live total. `GameManager.EndGame()` opens Results with the final score; the looping obstacle test does not trigger an end automatically.
 
 - [Setup](Assets/RobotRhythmUI/Documentation/Start-here.md)
 - [Menu behavior](Assets/RobotRhythmUI/Documentation/Integration.md)

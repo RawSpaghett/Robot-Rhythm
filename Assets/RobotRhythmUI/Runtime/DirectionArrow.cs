@@ -19,11 +19,9 @@ namespace RobotRhythm.UI
                 new Vector2(.52f, .64f),
                 new Vector2(0, .64f)
             };
-            foreach (var point in points)
-                mesh.AddVert(new Vector2(r.xMin + point.x * r.width, r.yMin + point.y * r.height), color, Vector2.zero);
-            mesh.AddTriangle(0, 5, 1);
-            mesh.AddTriangle(0, 6, 5);
-            mesh.AddTriangle(2, 4, 3);
+            for (int i = 0; i < points.Length; i++)
+                points[i] = new Vector2(r.xMin + points[i].x * r.width, r.yMin + points[i].y * r.height);
+            CutPanel.DrawPolygon(mesh, points, color, CutPanel.FeatherWidth(this));
         }
     }
 }

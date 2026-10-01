@@ -1,11 +1,29 @@
-# Menu behavior
+# Menu and game flow
 
-`UiController` controls screen visibility, local selection highlights, menu volume, and reduced motion. Buttons call its public methods through serialized UnityEvents. Renaming a UI object does not change its menu action. The volume slider calls `SetVolume`; volume and reduced motion use local PlayerPrefs keys prefixed `rr.ui.v1`.
+`GameManager` owns the existing state machine, scene loading, and pause/resume. `UIManager` observes its `StateChanged` event and shows the corresponding menu or overlay. Buttons call the managers through Inspector UnityEvents; gameplay scripts do not need references to menu panels.
 
-Route names and package descriptions in `SelectRoute` and `SelectPackage` are display examples. They do not load levels, select gameplay equipment, or define real progression. Replace those example labels with confirmed data when the team supplies a route/package source. SELECT currently opens the static Placeholder page; its On Click event is the future integration point. The Controls screen is explanatory only.
+`MainMenu` stays loaded while `GameManager` loads the configured gameplay scene additively. Play currently opens `Assets/Scenes/PotholeTimingTest.unity`. To change that destination, set GameManager's **Gameplay Scene Path** and enable the scene in Build Settings. Keep MainMenu first. Restart unloads and reloads the level; Main Menu unloads it and restores the menu camera.
 
-`Click Sound` accepts a supplied UI AudioClip. Leaving it empty keeps the short menu tone. Menu volume affects that sound only.
+Pause suspends `Time.timeScale` and `AudioListener.pause`, including DSP time. Resume restores their previous values after the UI transition finishes. Opening Controls or Settings during a run keeps it paused, and Back returns to Pause. Losing app focus also pauses; returning to the app waits for Resume. UIManager uses unscaled time for fades and panel entrances, blocks touches during transitions, and respects Reduced Motion.
 
-The scene's EventSystem uses `TouchUI.inputactions` with touchscreen position and press bindings. Keep it separate from gameplay input and use only one EventSystem when integrating the menu into another scene.
+MainMenu owns one EventSystem using `TouchUI.inputactions`. UIManager disables a loaded level's EventSystem and input modules at runtime, so the existing touch pad uses that same EventSystem. The level retains its EventSystem for standalone use. No keyboard or mouse bindings are added.
+
+`UiController` retains local volume and reduced-motion preferences under `rr.ui.v1`. UIManager applies volume to `AudioListener.volume`; menu clicks use the same value while remaining audible during pause. **Click Sound** accepts a team-supplied AudioClip; leaving it empty retains the short menu tone.
+
+The connected Controls screen describes the current gesture actions: tap for Jump; swipe, hold, then release for the directional actions. The PotholeTimingTest scene has Jump, Long Jump, and Duck receivers. Accelerate and Brake gestures exist but have no gameplay receivers assigned yet.
+
+PotholeTimingTest's touch pad uses `GesturePadFeedback` for direction arrows, a touch trace, and the existing action's charge value. `GestureButtonInput` passes its recognized gesture to the feedback component; action matching and execution remain in the team's input scripts. Pausing cancels held gestures. The older direction/charge graphics and test readout are hidden. The pad fits inside the landscape safe area.
+
+`ScoreManager` in PotholeTimingTest receives `ObstacleBase.OnObstacleResolved` and owns the total. UIManager binds `ScoreDisplay` to that loaded scene's manager. Each hazard adds its existing timing accuracy multiplied by 100. The HUD shows the total rounded to a whole point. Restart and Try Again reload the level, so the new manager starts at zero. Missing score sources display a dash.
+
+ScoreManager also counts resolved hazards. Average accuracy is total points divided by (resolved hazards × 100). Misses contribute zero accuracy and remain in that count. Full stars use 50%, 65%, 80%, 90%, and 98%. Half stars use 25%, 57.5%, 72.5%, 85%, and 94%. Both sets are editable on ScoreDisplay. The HUD shows the current rating; Results snapshots the score, accuracy, and rating together. A run with no resolved hazards receives no stars and displays a dash for accuracy.
+
+The team can call `GameManager.Instance.EndGame()` when a real end condition occurs. Results offers Try Again and Main Menu. `ShowScoreboard()` keeps the same result. The existing obstacle test repeats indefinitely and does not end a run itself. Combo, package damage, saving, and level music selection still need their corresponding gameplay systems.
+
+Controls default to the right. The LEFT and RIGHT buttons in Settings select the matching bottom corner and saves the preference under `rr.ui.v1.controlsRight`. TouchPadLayout moves the existing input target, including its feedback, without changing gesture thresholds.
+
+HazardWarningUI reads the configured obstacle's active state and TargetTime using the test scene's existing game-time clock. An attention bubble appears 1.1 seconds before the target, changes to the configured gesture after 0.25 seconds, and disappears on resolution or pause. The bubble follows its assigned speaker within the safe area. The current Duck obstacle uses a down arrow; assign the lead robot as Speaker and the appropriate direction graphic when integrating a full level.
+
+Route and package labels in the original preview are examples. The connected menu bypasses those pages until real route/package data is available.
 
 `UIReview` contains the optional `UiMobileChecks` and `UiWalkthrough` tools. They only run with `-uiQA` or `-uiVideo` in the Editor or a development build. They are not part of the main UI prefab and are not needed when integrating that prefab. Their button-name lookups serve automated captures only. Save captures outside the repository.
