@@ -2529,7 +2529,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stars use accuracy, including half stars.
+  m_Text: Stars use accuracy; score colors use points.
 --- !u!222 &431055613
 CanvasRenderer:
   m_ObjectHideFlags: 0

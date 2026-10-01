@@ -36,7 +36,8 @@ public class ScoringGuide : MonoBehaviour
         exampleScore.text = Mathf.RoundToInt(points).ToString();
         exampleAccuracy.text = hits > 0 ? Mathf.RoundToInt(accuracy * 100f) + "%" : "--";
         exampleHits.text = hits + " HAZARDS";
-        exampleScore.color = exampleAccuracy.color = scoring.GetAccuracyColor(accuracy);
+        exampleScore.color = scoring.GetScoreColor(points);
+        exampleAccuracy.color = scoring.GetAccuracyColor(accuracy);
         float rating = scoring.GetRating(accuracy, hits);
         for (int i = 0; i < stars.Length; i++)
         {

@@ -42,6 +42,26 @@ public class ScoreDisplay : MonoBehaviour
         new AccuracyBand { minimumPercent = 95, color = new Color32(168, 85, 247, 255) }
     };
 
+    [System.Serializable]
+    private class ScoreBand
+    {
+        [Min(0)] public int minimumPoints;
+        public Color color;
+    }
+
+    [Header("Score Colors")]
+    [Tooltip("Results score colors use points, independently of accuracy. Keep these in ascending order.")]
+    [SerializeField] private ScoreBand[] scoreBands =
+    {
+        new ScoreBand { minimumPoints = 0, color = new Color32(255, 45, 45, 255) },
+        new ScoreBand { minimumPoints = 100, color = new Color32(255, 138, 0, 255) },
+        new ScoreBand { minimumPoints = 250, color = new Color32(255, 213, 0, 255) },
+        new ScoreBand { minimumPoints = 500, color = new Color32(69, 214, 90, 255) },
+        new ScoreBand { minimumPoints = 1000, color = new Color32(25, 207, 232, 255) },
+        new ScoreBand { minimumPoints = 1500, color = new Color32(52, 120, 246, 255) },
+        new ScoreBand { minimumPoints = 2000, color = new Color32(168, 85, 247, 255) }
+    };
+
     [Header("Animation")]
     [SerializeField, Min(0.01f)] private float resultDuration = 1.6f;
 
@@ -149,12 +169,19 @@ public class ScoreDisplay : MonoBehaviour
         return theme != null ? theme.ink : Color.white;
     }
 
+    public Color GetScoreColor(float score)
+    {
+        int points = Mathf.RoundToInt(score);
+        for (int i = scoreBands.Length - 1; i >= 0; i--)
+            if (points >= scoreBands[i].minimumPoints)
+                return scoreBands[i].color;
+        return theme != null ? theme.ink : Color.white;
+    }
+
     private void UpdateResultColors()
     {
-        // Both numbers describe the same run; more points alone do not mean better timing.
-        Color tint = GetAccuracyColor(resultAccuracy / 100f);
-        finalScore.color = tint;
-        if (accuracyText != null) accuracyText.color = tint;
+        finalScore.color = GetScoreColor(resultScore);
+        if (accuracyText != null) accuracyText.color = GetAccuracyColor(resultAccuracy / 100f);
     }
 
     private static string Format(float value)
