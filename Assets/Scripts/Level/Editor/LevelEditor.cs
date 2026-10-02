@@ -60,7 +60,7 @@ public class LevelEditor : EditorWindow
         {
             LoadObstacleTypes();
         }
-        
+
         EditorGUILayout.EndHorizontal();
 
         EditorGUILayout.LabelField("Obstacles", beatMap.Obstacles.Count.ToString());
@@ -123,15 +123,13 @@ public class LevelEditor : EditorWindow
                 continue;
             }
 
-            float barX = BeatToX(placement.Beat, timeline);
-            float barWidth = placement.Type.WidthInBeats * pixelsPerBeat;
-
-            Rect bar = new Rect(barX, timeline.y + 20f, barWidth, timeline.height - 40f);
+            Rect bar = GetBarRect(placement, timeline);
             EditorGUI.DrawRect(bar, placement.Type.TimelineColor);
         }
 
         HandleScroll(timeline);
         HandleClick(timeline);
+        HandleDelete(timeline);
     }
 
     // Moves the view along the song with the mouse wheel
@@ -211,6 +209,14 @@ public class LevelEditor : EditorWindow
         return scrollBeats + (x - timeline.x) / pixelsPerBeat;
     }
 
+    // Works out the rectangle the obstacle is drawn in 
+    private Rect GetBarRect(ObstaclePlacement placement, Rect timeline)
+    {
+        float barX = BeatToX(placement.Beat, timeline);
+        float barWidth = placement.Type.WidthInBeats * pixelsPerBeat;
+        return new Rect(barX, timeline.y + 20f, barWidth, timeline.height - 40f);
+    }
+
     // Finds every obstacle type for the dropdown
     private void LoadObstacleTypes()
     {
@@ -226,5 +232,58 @@ public class LevelEditor : EditorWindow
             obstacleTypes[i] = AssetDatabase.LoadAssetAtPath<ObstacleType>(path);
             obstacleTypeNames[i] = obstacleTypes[i].DisplayName;
         }
+    }
+
+    // Right click deletes the obstacle
+    private void HandleDelete(Rect timeline)
+    {
+        Event e = Event.current;
+
+        if (e.type != EventType.MouseDown || e.button != 1)
+        {
+            return;
+        }
+
+        if (!timeline.Contains(e.mousePosition))
+        {
+            return;
+        }
+
+        ObstaclePlacement hit = FindObstacle(e.mousePosition, timeline);
+
+        if (hit == null)
+        {
+            return;
+        }
+
+        Undo.RecordObject(beatMap, "Delete Obstacle");
+        beatMap.Obstacles.Remove(hit);
+
+        EditorUtility.SetDirty(beatMap);
+
+        e.Use();
+        Repaint();
+    }
+    
+    // Finds the obstacle drawn under a point
+    private ObstaclePlacement FindObstacle(Vector2 point, Rect timeline)
+    {
+        // goes backwards on the list so the whatever is on top is deleted
+        for (int i = beatMap.Obstacles.Count - 1; i >= 0; i--)
+        {
+            ObstaclePlacement placement = beatMap.Obstacles[i];
+
+            if (placement.Type == null)
+            {
+                continue;
+            }
+
+            if (GetBarRect(placement, timeline).Contains(point))
+            {
+                return placement;
+            }
+        }
+
+        return null;
     }
 }
