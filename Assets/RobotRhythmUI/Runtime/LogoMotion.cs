@@ -62,18 +62,18 @@ namespace RobotRhythm.UI
                 return;
             }
 
-            float topProgress = EaseOutBack(Mathf.Clamp01(elapsed / Mathf.Max(0.01f, topDuration)));
-            float bottomProgress = EaseOutBack(Mathf.Clamp01((elapsed - bottomDelay) / Mathf.Max(0.01f, bottomDuration)));
-            float idle = Mathf.Sin(Mathf.Max(0f, elapsed - idleDelay) * Mathf.PI * 2f / Mathf.Max(0.01f, idlePeriod)) * idleDistance;
+            float topProgress = EaseOutCubic(Mathf.Clamp01(elapsed / Mathf.Max(0.01f, topDuration)));
+            float bottomProgress = EaseOutCubic(Mathf.Clamp01((elapsed - bottomDelay) / Mathf.Max(0.01f, bottomDuration)));
+            float idleTime = Mathf.Max(0f, elapsed - idleDelay);
+            float idle = Mathf.Sin(idleTime * Mathf.PI * 2f / Mathf.Max(0.01f, idlePeriod)) * idleDistance * Mathf.SmoothStep(0f, 1f, idleTime);
 
             top.anchoredPosition = topOrigin + new Vector2(topOffset * (1f - topProgress), idle);
             bottom.anchoredPosition = bottomOrigin + new Vector2(bottomOffset * (1f - bottomProgress), idle);
         }
 
-        private static float EaseOutBack(float progress)
+        private static float EaseOutCubic(float progress)
         {
-            float offset = progress - 1f;
-            return 1f + 2.25f * offset * offset * offset + 1.25f * offset * offset;
+            return 1f - Mathf.Pow(1f - progress, 3f);
         }
     }
 }
