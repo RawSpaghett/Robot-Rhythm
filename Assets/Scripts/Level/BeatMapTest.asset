@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BeatMap
   Song: {fileID: 0}
   Bpm: 120
+  FirstBeatOffset: 0
   BeatsPerMeasure: 4
-  Obstacles: []
+  Obstacles:
+  - Type: {fileID: 11400000, guid: 79ffa11263771a04c98937602bb53d97, type: 2}
+    Beat: 5
+  - Type: {fileID: 11400000, guid: 79ffa11263771a04c98937602bb53d97, type: 2}
+    Beat: 2

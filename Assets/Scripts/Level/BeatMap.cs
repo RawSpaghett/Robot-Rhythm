@@ -13,4 +13,10 @@ public class BeatMap : ScriptableObject
 
     // This is where it holds obstacleplacement so it knows what obstaacles are in the level and at which beat each one is
     public List<ObstaclePlacement> Obstacles = new List<ObstaclePlacement>();
+
+    // Seconds between beats
+    public float SecondsPerBeat
+    {
+        get { return 60f / Bpm; }
+    }
 }

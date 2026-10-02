@@ -1,6 +1,4 @@
 using UnityEngine;
-using System;
-using System.Collections;
 
 //Aligns music and gameplay
 //Justin
@@ -10,29 +8,51 @@ using System.Collections;
 
 public class RhythmManager: MonoBehaviour
 {
+    // gives the audio system a small delay before the song actually starts
+    private const double startDelay = 0.2;
     public static RhythmManager Instance {get; private set;}//singleton
-    public float songBpm {get; private set;}//Song beats per minute
-    public float secPerBeat {get; private set;}//The number of seconds for each song beat
     public float songPosition {get; private set;}    //Current song position, in seconds
     public float songPositionInBeats {get; private set;}  //Current song position, in beats
-    public float dspSongTime {get; private set;}//How many seconds have passed since the song started
-    private MusicManager musicManager;
+    public bool isPlaying {get; private set;}
+    public BeatMap beatMap;
+    public AudioSource musicSource;
+    private double songStartDspTime;
+
+    void Awake()
+    {
+        IntializeInstance();
+    }
 
     void Start()
     {
-        IntializeInstance();
-        musicManager = GetComponent<MusicManager>();
-
-        secPerBeat = 60f / songBpm; //Calculate the number of seconds in each beat
-
-        dspSongTime = (float)AudioSettings.dspTime;//Record the time when the music starts
+        StartSong();
     }
 
     void Update()
     {
-        songPosition = (float)(AudioSettings.dspTime - dspSongTime);//determine how many seconds since the song started
+        if (!isPlaying)
+        {
+            return;
+        }
+        songPosition = (float)(AudioSettings.dspTime - songStartDspTime) - beatMap.FirstBeatOffset;
 
-        songPositionInBeats = songPosition / secPerBeat;//determine how many beats since the song started
+        songPositionInBeats = songPosition /beatMap.SecondsPerBeat;//determine how many beats since the song started
+    }
+
+    public void StartSong()
+    {
+        if (beatMap == null || beatMap.Song == null || beatMap.Bpm <= 0f)
+        {
+            Debug.Log("beatmap, song or bpm are missing");
+            return;
+        }
+
+        musicSource.clip = beatMap.Song;
+
+        songStartDspTime = AudioSettings.dspTime + startDelay;
+        musicSource.PlayScheduled(songStartDspTime);
+
+        isPlaying = true;
     }
 
     private void IntializeInstance()
