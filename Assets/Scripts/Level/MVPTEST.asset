@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0246dd64aedb644db2a63b56db05c41, type: 3}
+  m_Name: MVPTEST
+  m_EditorClassIdentifier: Assembly-CSharp::BeatMap
+  Song: {fileID: 8300000, guid: 2072ad19bb771464295bb94e4de0e253, type: 3}
+  Bpm: 125
+  FirstBeatOffset: 0
+  BeatsPerMeasure: 4
+  Obstacles:
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 12
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 28
+  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
+    Beat: 44
+  - Type: {fileID: 11400000, guid: a548c4cfaea89ea4cacdec62892e7215, type: 2}
+    Beat: 40
+  - Type: {fileID: 11400000, guid: a548c4cfaea89ea4cacdec62892e7215, type: 2}
+    Beat: 56
+  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
+    Beat: 60
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 76
+  - Type: {fileID: 11400000, guid: 71bbb77b47d26904893c70059bc9a86a, type: 2}
+    Beat: 74
+  - Type: {fileID: 11400000, guid: 71bbb77b47d26904893c70059bc9a86a, type: 2}
+    Beat: 90
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 92
+  - Type: {fileID: 11400000, guid: 71bbb77b47d26904893c70059bc9a86a, type: 2}
+    Beat: 91
+  - Type: {fileID: 11400000, guid: 71bbb77b47d26904893c70059bc9a86a, type: 2}
+    Beat: 75
