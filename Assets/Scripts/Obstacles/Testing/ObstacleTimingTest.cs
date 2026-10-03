@@ -26,17 +26,30 @@ public class ObstacleTimingTest : MonoBehaviour
 
     private void Start()
     {
-        if (obstacle == null ||
-            obstacleRenderer == null ||
-            statusText == null)
-        {
-            Debug.LogError(
-                "ObstacleTimingTest needs an obstacle, renderer, and text.",
-                this);
+            obstacle = GetComponent<ObstacleBase>();
+            obstacleRenderer = GetComponent<SpriteRenderer>();
+            statusText = GameObject.Find("StatusText").GetComponent<TextMeshPro>();
 
-            enabled = false;
-            return;
-        }
+        if (obstacle == null)
+    {
+        Debug.LogError("ObstacleTimingTest needs an obstacle.", this);
+        enabled = false;
+        return;
+    }
+
+    if (obstacleRenderer == null)
+    {
+        Debug.LogError("ObstacleTimingTest needs a renderer.", this);
+        enabled = false;
+        return;
+    }
+
+    if (statusText == null)
+    {
+        Debug.LogError("ObstacleTimingTest needs a text.", this);
+        enabled = false;
+        return;
+    }
 
         initialized = true;
         BeginAttempt();

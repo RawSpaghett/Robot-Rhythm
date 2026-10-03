@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5553014651996678367}
   - component: {fileID: 2350552986097842453}
+  - component: {fileID: 2979600250130989780}
+  - component: {fileID: 2156822832900781813}
   m_Layer: 0
   m_Name: pothole_0
   m_TagString: Untagged
@@ -91,3 +93,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2979600250130989780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743891988528664148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af73195545519034e88c655ac8d22d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotholeObstacle
+  earlyWindow: 0.25
+  lateWindow: 0.25
+  perfectAccuracyThreshold: 0.9
+--- !u!114 &2156822832900781813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743891988528664148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca9cac0519ad754882bbdf67312403a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleTimingTest
+  obstacle: {fileID: 2979600250130989780}
+  obstacleRenderer: {fileID: 0}
+  statusText: {fileID: 0}
+  preparationTime: 2
+  resultDisplayTime: 2
+  waitingColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  perfectColor: {r: 0, g: 1, b: 0, a: 1}
+  zeroAccuracyColor: {r: 1, g: 0, b: 0, a: 1}

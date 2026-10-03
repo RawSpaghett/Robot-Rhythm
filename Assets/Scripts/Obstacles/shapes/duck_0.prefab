@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5652365828202020029}
   - component: {fileID: 5425250393393557020}
+  - component: {fileID: 9031381321408060262}
+  - component: {fileID: 730391285361352780}
   m_Layer: 0
   m_Name: duck_0
   m_TagString: Untagged
@@ -91,3 +93,38 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &9031381321408060262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501356601781046500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae773105a64b76a4f8a99f0e1cb4e83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DuckObstacle
+  earlyWindow: 0.25
+  lateWindow: 0.25
+  perfectAccuracyThreshold: 0.9
+--- !u!114 &730391285361352780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501356601781046500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca9cac0519ad754882bbdf67312403a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleTimingTest
+  obstacle: {fileID: 0}
+  obstacleRenderer: {fileID: 0}
+  statusText: {fileID: 0}
+  preparationTime: 2
+  resultDisplayTime: 2
+  waitingColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  perfectColor: {r: 0, g: 1, b: 0, a: 1}
+  zeroAccuracyColor: {r: 1, g: 0, b: 0, a: 1}
