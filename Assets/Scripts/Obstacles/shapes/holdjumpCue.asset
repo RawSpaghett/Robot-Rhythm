@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 445953110e6fd19448ffd58892188b33, type: 3}
-  m_Name: test1
+  m_Name: holdjumpCue
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleType
-  DisplayName: New Obstacle
-  Prefab: {fileID: 9180868675857790849, guid: c1c4058c0b4864247a944addb2b79821, type: 3}
-  WidthInBeats: 1
-  TimelineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  DisplayName: hold Cue
+  Prefab: {fileID: 5151709183141991083, guid: 69776ac521db0714a8132131cbb17ecc, type: 3}
+  WidthInBeats: 4
+  TimelineColor: {r: 0, g: 0.026841607, b: 0.9924528, a: 1}

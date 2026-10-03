@@ -12,7 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0246dd64aedb644db2a63b56db05c41, type: 3}
   m_Name: BeatMapTest
   m_EditorClassIdentifier: Assembly-CSharp::BeatMap
-  Song: {fileID: 0}
+  Song: {fileID: 8300000, guid: 3276f8b3b0ea14e879d74b5040065268, type: 3}
   Bpm: 120
+  FirstBeatOffset: 0
   BeatsPerMeasure: 4
-  Obstacles: []
+  Obstacles:
+  - Type: {fileID: 11400000, guid: 79ffa11263771a04c98937602bb53d97, type: 2}
+    Beat: 5
+  - Type: {fileID: 11400000, guid: 79ffa11263771a04c98937602bb53d97, type: 2}
+    Beat: 2
+  - Type: {fileID: 11400000, guid: 79ffa11263771a04c98937602bb53d97, type: 2}
+    Beat: 8
+  - Type: {fileID: 11400000, guid: 79ffa11263771a04c98937602bb53d97, type: 2}
+    Beat: 12
+  - Type: {fileID: 11400000, guid: 79ffa11263771a04c98937602bb53d97, type: 2}
+    Beat: 20
+  - Type: {fileID: 11400000, guid: 79ffa11263771a04c98937602bb53d97, type: 2}
+    Beat: 2
