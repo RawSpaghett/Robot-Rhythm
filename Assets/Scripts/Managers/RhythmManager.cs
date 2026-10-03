@@ -18,6 +18,10 @@ public class RhythmManager: MonoBehaviour
     public AudioSource musicSource;
     private double songStartDspTime;
 
+    // Targets and player input use seconds from the same music clock.
+    public double SongTime => AudioSettings.dspTime - songStartDspTime -
+        (beatMap != null ? beatMap.FirstBeatOffset : 0f);
+
     void Awake()
     {
         IntializeInstance();
@@ -34,14 +38,14 @@ public class RhythmManager: MonoBehaviour
         {
             return;
         }
-        songPosition = (float)(AudioSettings.dspTime - songStartDspTime) - beatMap.FirstBeatOffset;
+        songPosition = (float)SongTime;
 
         songPositionInBeats = songPosition /beatMap.SecondsPerBeat;//determine how many beats since the song started
     }
 
     public void StartSong()
     {
-        if (beatMap == null || beatMap.Song == null || beatMap.Bpm <= 0f)
+        if (beatMap == null || beatMap.Song == null || beatMap.Bpm <= 0f || musicSource == null)
         {
             Debug.Log("beatmap, song or bpm are missing");
             return;
@@ -64,7 +68,13 @@ public class RhythmManager: MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        // The level owns its song. Reloading the level starts a fresh clock.
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
     }
 
 }

@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject menuCamera;
     [SerializeField] private GameObject menuEventSystem;
     [SerializeField] private ScoreDisplay scoreDisplay;
+    [SerializeField] private BeatPulse beatPulse;
 
     [Header("Overlays")]
     [SerializeField] private GameObject playHud;
@@ -25,6 +26,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text errorMessage;
 
     [SerializeField] private GameObject scoringPanel;
+    [SerializeField] private GameObject levelSelectPanel;
+    private bool showingLevels;
     private bool showingScoring;
 
     [Header("Transitions")]
@@ -82,7 +85,9 @@ public class UIManager : MonoBehaviour
         Navigate(() => showingControls = false);
     }
 
-    public void StartGame() => Navigate(gameManager.StartGame);
+    public void OpenLevels() => Navigate(() => showingLevels = true);
+    public void CloseLevels() => Navigate(() => showingLevels = false);
+    public void StartGame() => Navigate(() => { showingLevels = false; gameManager.StartGame(); });
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
     public void RestartGame() => Navigate(gameManager.RestartGame);
     public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu);
@@ -163,13 +168,16 @@ public class UIManager : MonoBehaviour
         if (loading || options || ended)
             showingControls = false;
         if (loading || ended) showingScoring = false;
+        if (loading || inGame) showingLevels = false;
+        if (levelSelectPanel != null) levelSelectPanel.SetActive(showingLevels && !loading);
         if (scoringPanel != null) scoringPanel.SetActive(showingScoring && !loading);
-        bool showMenu = !showingScoring && !loading && (options || showingControls || !inGame);
+        bool showMenu = !showingLevels && !showingScoring && !loading && (options || showingControls || !inGame);
         menu.SetVisible(showMenu);
         if (showMenu)
             menu.ShowPage(options ? UiPage.Settings : showingControls ? UiPage.Controls : UiPage.Home);
 
         menuCamera.SetActive(!inGame || loading);
+        if (beatPulse != null && (!inGame || loading)) beatPulse.Bind(null);
         menuEventSystem.SetActive(!loading);
         playHud.SetActive(inGame && !loading && !paused && !ended && !options && !showingControls && !showingScoring);
         pausePanel.SetActive(inGame && paused && !loading && !showingControls && !showingScoring);
@@ -190,6 +198,8 @@ public class UIManager : MonoBehaviour
         // The menu owns touch input while it hosts a level. Keep the level's standalone setup intact.
         foreach (GameObject root in scene.GetRootGameObjects())
         {
+            RhythmManager rhythm = root.GetComponentInChildren<RhythmManager>();
+            if (beatPulse != null && rhythm != null) beatPulse.Bind(rhythm);
             foreach (EventSystem events in root.GetComponentsInChildren<EventSystem>(true))
             {
                 foreach (BaseInputModule module in events.GetComponents<BaseInputModule>())
@@ -204,7 +214,11 @@ public class UIManager : MonoBehaviour
                 levelPads.Add(layout.gameObject);
             }
             foreach (HazardWarningUI warning in root.GetComponentsInChildren<HazardWarningUI>(true))
+            {
                 warning.SetPreferences(menu);
+                if (beatPulse != null)
+                    beatPulse.Follow(warning.SpeakerVisual, warning.WorldCamera);
+            }
             if (scoreDisplay != null)
             {
                 ScoreManager score = root.GetComponentInChildren<ScoreManager>();
