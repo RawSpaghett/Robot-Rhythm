@@ -1,0 +1,57 @@
+{
+    "version": 1,
+    "name": "TouchUI",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "51ab1f6b-6d09-4cf6-be8e-8f9c4f78520a",
+            "actions": [
+                {
+                    "name": "Point",
+                    "type": "PassThrough",
+                    "id": "4c3c3dea-c9c5-4397-8ee7-736ba2b7c6a0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Press",
+                    "type": "PassThrough",
+                    "id": "0358e2d8-948a-4bfe-affc-f941b32d521e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "80cca391-bce6-4269-905c-8e6cb79abca6",
+                    "path": "<Touchscreen>/touch*/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8df97e2f-0f67-4751-a521-6c2acb3b5fe2",
+                    "path": "<Touchscreen>/touch*/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
