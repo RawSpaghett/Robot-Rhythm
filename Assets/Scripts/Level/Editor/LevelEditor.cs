@@ -177,9 +177,9 @@ public class LevelEditor : EditorWindow
             return;
         }
 
-        // turns click position into a beat, then snaps to the nearest beat
+        // turns click position into a beat, then rounds down
         float clickedBeat = XToBeat(e.mousePosition.x, timeline);
-        float snappedBeat = Mathf.Round(clickedBeat);
+        float snappedBeat = Mathf.Floor(clickedBeat);
 
         ObstaclePlacement placement = new ObstaclePlacement();
         placement.Type = obstacleTypes[selectedTypeIndex];

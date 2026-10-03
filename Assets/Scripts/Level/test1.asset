@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: test1
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleType
   DisplayName: New Obstacle
+  Prefab: {fileID: 9180868675857790849, guid: c1c4058c0b4864247a944addb2b79821, type: 3}
   WidthInBeats: 1
   TimelineColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
