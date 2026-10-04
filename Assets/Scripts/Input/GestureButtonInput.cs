@@ -34,6 +34,8 @@ public class GestureButtonInput : MonoBehaviour, IPointerDownHandler,
     private SwipeDirection trackedDirection = SwipeDirection.None;
     private double directionStartTime;
 
+    public event System.Action<GestureData> GesturePerformed;
+
     private void Awake()
     {
         button = GetComponent<Button>();
@@ -101,6 +103,7 @@ public class GestureButtonInput : MonoBehaviour, IPointerDownHandler,
             action.Execute(gesture);
             if (padFeedback != null && Time.timeScale > 0f)
                 padFeedback.Release(gesture, hasCharge, charge);
+            GesturePerformed?.Invoke(gesture);
         }
     }
 

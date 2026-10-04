@@ -87,7 +87,10 @@ public class UIManager : MonoBehaviour
 
     public void OpenLevels() => Navigate(() => showingLevels = true);
     public void CloseLevels() => Navigate(() => showingLevels = false);
-    public void StartGame() => Navigate(() => { showingLevels = false; gameManager.StartGame(); });
+    public void StartGame()
+    {
+        GetComponent<PracticeIntro>().Show(() => Navigate(() => { showingLevels = false; gameManager.StartGame(); }));
+    }
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
     public void RestartGame() => Navigate(gameManager.RestartGame);
     public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu);

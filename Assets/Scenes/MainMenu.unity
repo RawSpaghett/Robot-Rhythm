@@ -813,6 +813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+  doubleArrow: 0
 --- !u!1 &64556137
 GameObject:
   m_ObjectHideFlags: 0
@@ -7081,6 +7082,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+  doubleArrow: 0
 --- !u!1 &912468139
 GameObject:
   m_ObjectHideFlags: 0
@@ -9159,6 +9161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+  doubleArrow: 0
 --- !u!1 &1369087078
 GameObject:
   m_ObjectHideFlags: 0
@@ -9369,6 +9372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+  doubleArrow: 0
 --- !u!1 &1396389623
 GameObject:
   m_ObjectHideFlags: 0
@@ -14115,6 +14119,7 @@ GameObject:
   - component: {fileID: 2081131908}
   - component: {fileID: 2081131907}
   - component: {fileID: 2081131909}
+  - component: {fileID: 2081131910}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -14241,6 +14246,25 @@ MonoBehaviour:
   - minimumPoints: 2000
     color: {r: 0.65882355, g: 0.33333334, b: 0.96862745, a: 1}
   resultDuration: 1.6
+--- !u!114 &2081131910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081131906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987b67c3e452f8c4aa630330f3088a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PracticeIntro
+  practicePad: {fileID: 8621390595552737750, guid: 35865068d1024404db6139fddabf0f11, type: 3}
+  canvasRoot: {fileID: 1688790428}
+  font: {fileID: 12800000, guid: 507d5a3e29bf9534b83041a36bf975de, type: 3}
+  pothole: {fileID: -3507394279127233086, guid: 60a76f339337fa9488ede5491a535d2a, type: 3}
+  duckObstacle: {fileID: 8868729072188591806, guid: 96d94bcefefb2354c9c12e1bf0914e2d, type: 3}
+  raisedBlock: {fileID: 1117844276165083543, guid: 2611ffa1b68eeb04c817068e3bc0a2af, type: 3}
+  holdMarker: {fileID: -4466724743442842347, guid: 213ff5a4a726c704a978599cdd0ab29a, type: 3}
 --- !u!224 &2087522785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6695419892454167931, guid: 20c7e2cec81c13d49aa747e837277a29, type: 3}

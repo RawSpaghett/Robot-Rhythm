@@ -58,6 +58,8 @@ public class HazardWarningUI : MonoBehaviour
         direction.SetActive(!alert);
         // The existing obstacle classes decide which action clears the hazard.
         direction.transform.localRotation = Quaternion.Euler(0f, 0f, obstacle is DuckObstacle ? -90f : 90f);
+        var cue = obstacle.GetComponent<HazardWarningCue>();
+        direction.GetComponent<DirectionArrow>().SetDouble(cue != null && cue.DoubleArrow);
         var parent = (RectTransform)bubble.parent;
         Canvas canvas = bubble.GetComponentInParent<Canvas>().rootCanvas;
         Camera uiCamera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;

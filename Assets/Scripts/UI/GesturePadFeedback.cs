@@ -148,6 +148,7 @@ public class GesturePadFeedback : MonoBehaviour
         for (int i = 0; i < directionArrows.Length; i++)
         {
             bool selected = Direction == (SwipeDirection)(i + 1);
+            directionArrows[i].SetDouble(selected && holding && i < 2);
             directionArrows[i].color = selected ? Color.Lerp(theme.teal, theme.yellow, Charge) :
                 new Color(theme.cream.r, theme.cream.g, theme.cream.b, 0.25f);
         }
