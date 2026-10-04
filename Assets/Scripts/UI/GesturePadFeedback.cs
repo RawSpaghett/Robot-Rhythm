@@ -8,6 +8,8 @@ public class GesturePadFeedback : MonoBehaviour
     [Header("Appearance")]
     [SerializeField] private UiTheme theme;
     [SerializeField] private Graphic border;
+    [SerializeField, Range(0f, 1f)] private float idleArrowOpacity = 1f;
+    [SerializeField, Range(0f, 1f)] private float idleBorderOpacity = 1f;
     [SerializeField] private DirectionArrow[] directionArrows;
     [SerializeField] private RectTransform centerDot;
     [SerializeField] private GameObject chargeGroup;
@@ -139,7 +141,7 @@ public class GesturePadFeedback : MonoBehaviour
 
     private Color IdleBorder()
     {
-        return new Color(theme.cream.r, theme.cream.g, theme.cream.b, 0.35f);
+        return new Color(theme.cream.r, theme.cream.g, theme.cream.b, idleBorderOpacity);
     }
 
     private void UpdateArrows()
@@ -150,7 +152,7 @@ public class GesturePadFeedback : MonoBehaviour
             bool selected = Direction == (SwipeDirection)(i + 1);
             directionArrows[i].SetDouble(selected && holding && i < 2);
             directionArrows[i].color = selected ? Color.Lerp(theme.teal, theme.yellow, Charge) :
-                new Color(theme.cream.r, theme.cream.g, theme.cream.b, 0.25f);
+                new Color(theme.cream.r, theme.cream.g, theme.cream.b, idleArrowOpacity);
         }
     }
 
