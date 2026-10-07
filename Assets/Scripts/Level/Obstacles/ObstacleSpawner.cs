@@ -18,6 +18,9 @@ public class ObstacleSpawner : MonoBehaviour
     public float spawnTime = 4f;
 
     public float groundY;
+    [Header("Timing")]
+    [SerializeField] private RhythmManager rhythmManager;
+    private bool levelFinished;
     // Sorted copy of the beat map list, editor adds in click order so it is sorted to beat order
     private List<ObstaclePlacement> obstacles;
 
@@ -31,11 +34,20 @@ public class ObstacleSpawner : MonoBehaviour
     {
         public Transform Transform;
         public float TargetBeat;
+        public ObstacleBase Obstacle;
     }
 
     void Start()
     {
-        BeatMap beatMap = RhythmManager.Instance.beatMap;
+        if (rhythmManager == null)
+            rhythmManager = RhythmManager.Instance;
+        if (rhythmManager == null || rhythmManager.beatMap == null)
+        {
+            Debug.LogError("ObstacleSpawner needs a rhythm manager with a beatmap.", this);
+            enabled = false;
+            return;
+        }
+        BeatMap beatMap = rhythmManager.beatMap;
 
         obstacles = new List<ObstaclePlacement>(beatMap.Obstacles);
         obstacles.Sort(CompareByBeat);
@@ -43,15 +55,17 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Update()
     {
-        if (!RhythmManager.Instance.isPlaying)
+        if (!rhythmManager.isPlaying || Time.timeScale <= 0f || AudioListener.pause || levelFinished)
         {
             return;
         }
 
-        float currentBeat = RhythmManager.Instance.songPositionInBeats;
+        double currentTime = rhythmManager.SongTime;
+        float currentBeat = (float)(currentTime / rhythmManager.beatMap.SecondsPerBeat);
 
         SpawnNextObstacle(currentBeat);
-        MoveObstacles(currentBeat);
+        MoveObstacles(currentBeat, currentTime);
+        CheckLevelFinished(currentTime);
     }
 
     private void SpawnNextObstacle(float currentBeat)
@@ -65,30 +79,83 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Spawn(ObstaclePlacement placement)
     {
-        GameObject instance = Instantiate(placement.Type.Prefab);
+        if (placement.Type == null || placement.Type.Prefab == null)
+        {
+            Debug.LogWarning("A beatmap entry is missing its obstacle prefab.", this);
+            return;
+        }
+        GameObject instance = Instantiate(placement.Type.Prefab, transform);
 
         ActiveObstacle entry = new ActiveObstacle();
         entry.Transform = instance.transform;
         entry.TargetBeat = placement.Beat;
+        entry.Obstacle = instance.GetComponent<ObstacleBase>();
+        // Cue pictures have no ObstacleBase, so they don't count as hazards.
+        if (entry.Obstacle != null)
+            entry.Obstacle.Prepare(placement.Beat * rhythmManager.beatMap.SecondsPerBeat);
 
         active.Add(entry);
     }
 
-    private void MoveObstacles(float currentBeat)
+    private void MoveObstacles(float currentBeat, double currentTime)
     {
         // Counting down so when an obstacle is removed it doesnt shift the list
         for (int i = active.Count - 1; i >= 0; i--)
         {
             float beatsAway = active[i].TargetBeat - currentBeat;
 
+            if (active[i].Obstacle != null)
+                active[i].Obstacle.CheckForMiss(currentTime);
+
             active[i].Transform.position = new Vector3(hitLineX + beatsAway * distancePerBeat, groundY, 0f);
 
-            if (beatsAway < -despawnBeats)
+            if (beatsAway < -despawnBeats &&
+                (active[i].Obstacle == null || active[i].Obstacle.IsResolved))
             {
                 Destroy(active[i].Transform.gameObject);
                 active.RemoveAt(i); 
             }
         }
+    }
+
+    public ObstacleBase FindInputTarget(double inputTime)
+    {
+        ObstacleBase nearest = null;
+        double nearestDistance = double.MaxValue;
+        foreach (ActiveObstacle entry in active)
+        {
+            ObstacleBase obstacle = entry.Obstacle;
+            if (obstacle == null || !obstacle.isActiveAndEnabled || !obstacle.IsActive)
+                continue;
+            obstacle.CheckForMiss(inputTime);
+            if (obstacle.IsResolved || inputTime < obstacle.TargetTime - obstacle.EarlyWindow)
+                continue;
+            double distance = System.Math.Abs(obstacle.TargetTime - inputTime);
+            if (distance < nearestDistance)
+            {
+                nearest = obstacle;
+                nearestDistance = distance;
+            }
+        }
+        return nearest;
+    }
+
+    public ObstacleBase GetNextObstacle()
+    {
+        foreach (ActiveObstacle entry in active)
+            if (entry.Obstacle != null && entry.Obstacle.isActiveAndEnabled && entry.Obstacle.IsActive)
+                return entry.Obstacle;
+        return null;
+    }
+
+    private void CheckLevelFinished(double currentTime)
+    {
+        if (nextIndex < obstacles.Count || GetNextObstacle() != null ||
+            currentTime + rhythmManager.beatMap.FirstBeatOffset < rhythmManager.beatMap.Song.length)
+            return;
+        levelFinished = true;
+        if (GameManager.Instance != null && GameManager.Instance.GameplayScene == gameObject.scene)
+            GameManager.Instance.EndGame();
     }
 
     private static int CompareByBeat(ObstaclePlacement a, ObstaclePlacement b)
