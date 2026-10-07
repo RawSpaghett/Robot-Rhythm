@@ -43,7 +43,7 @@ public class LevelEditor : EditorWindow
             return;
         }
 
-        beatMap.Song = (AudioClip)EditorGUILayout.ObjectField("Song", beatMap.Song, typeof(AudioClip), false);
+        beatMap.SongID = EditorGUILayout.TextField("Song", beatMap.SongID);
         beatMap.Bpm = EditorGUILayout.FloatField("BPM", beatMap.Bpm);
         beatMap.FirstBeatOffset = EditorGUILayout.FloatField("First Beat Offset", beatMap.FirstBeatOffset);
         beatMap.BeatsPerMeasure = EditorGUILayout.IntField("Beats Per Measure", beatMap.BeatsPerMeasure);

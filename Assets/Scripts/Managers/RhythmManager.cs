@@ -10,13 +10,14 @@ public class RhythmManager: MonoBehaviour
 {
     // gives the audio system a small delay before the song actually starts
     private const double startDelay = 0.2;
-    public static RhythmManager Instance {get; private set;}//singleton
     public float songPosition {get; private set;}    //Current song position, in seconds
     public float songPositionInBeats {get; private set;}  //Current song position, in beats
     public bool isPlaying {get; private set;}
-    public BeatMap beatMap;
-    public AudioSource musicSource;
     private double songStartDspTime;
+
+    public BeatMap beatMap;
+    public MusicManager musicManager;
+    public static RhythmManager Instance {get; private set;}//singleton
 
     // Targets and player input use seconds from the same music clock.
     public double SongTime => AudioSettings.dspTime - songStartDspTime -
@@ -45,16 +46,13 @@ public class RhythmManager: MonoBehaviour
 
     public void StartSong()
     {
-        if (beatMap == null || beatMap.Song == null || beatMap.Bpm <= 0f || musicSource == null)
+        if (beatMap == null || beatMap.SongID == null || beatMap.Bpm <= 0f || musicManager == null)
         {
             Debug.Log("beatmap, song or bpm are missing");
             return;
         }
-
-        musicSource.clip = beatMap.Song;
-
         songStartDspTime = AudioSettings.dspTime + startDelay;
-        musicSource.PlayScheduled(songStartDspTime);
+        musicManager.StartPlay(beatMap.SongID,songStartDspTime);
 
         isPlaying = true;
     }

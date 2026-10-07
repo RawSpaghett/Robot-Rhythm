@@ -151,7 +151,7 @@ public class ObstacleSpawner : MonoBehaviour
     private void CheckLevelFinished(double currentTime)
     {
         if (nextIndex < obstacles.Count || GetNextObstacle() != null ||
-            currentTime + rhythmManager.beatMap.FirstBeatOffset < rhythmManager.beatMap.Song.length)
+            currentTime + rhythmManager.beatMap.FirstBeatOffset < rhythmManager.beatMap.SongLength)
             return;
         levelFinished = true;
         if (GameManager.Instance != null && GameManager.Instance.GameplayScene == gameObject.scene)
