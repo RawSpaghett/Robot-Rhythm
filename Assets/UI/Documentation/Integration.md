@@ -1,6 +1,8 @@
 # Menu and game flow
 
-`GameManager` owns the existing state machine, scene loading, and pause/resume. `UIManager` observes its `StateChanged` event and shows the corresponding menu or overlay. Buttons call the managers through Inspector UnityEvents; gameplay scripts do not need references to menu panels.
+`GameManager` runs the existing state machine. Each screen has a state in `Scripts/Managers/GameManager/StateMachine/States`: main menu, level selection, package selection, controls, settings, scoring guide, loading, gameplay, pause, and results. A state shows its screen in `EnterState` and hides it in `ExitState`. `UIManager` holds the Inspector references and handles fades. The existing button events still work.
+
+`GameSceneLoader` handles loading and unloading the level. Controls, settings, and the scoring guide remember which state opened them, so Back returns to the right screen. `UiController.OpenPage` sends menu navigation to the state machine; `ShowPage` only displays the requested page. To add a screen, follow one of the small existing state classes.
 
 `MainMenu` stays loaded while `GameManager` loads the configured gameplay scene additively. Play currently opens `Assets/Scenes/PotholeTimingTest.unity`. To change that destination, set GameManager's **Gameplay Scene Path** and enable the scene in Build Settings. Keep MainMenu first. Restart unloads and reloads the level; Main Menu unloads it and restores the menu camera.
 

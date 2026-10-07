@@ -1,8 +1,8 @@
-public class OPTIONS : UIStateBase
+public class CONTROLS : UIStateBase
 {
     public UIStateBase ReturnState { get; private set; }
 
-    public OPTIONS(GameManager game) : base(game) { }
+    public CONTROLS(GameManager game) : base(game) { }
 
     public void Open(UIStateBase returnState)
     {
@@ -20,6 +20,6 @@ public class OPTIONS : UIStateBase
     {
         base.EnterState();
         if (game.UI != null)
-            game.UI.ShowMenu(RobotRhythm.UI.UiPage.Settings);
+            game.UI.ShowMenu(RobotRhythm.UI.UiPage.Controls);
     }
 }
