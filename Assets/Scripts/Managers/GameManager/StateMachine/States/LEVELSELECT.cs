@@ -6,6 +6,6 @@ public class LEVELSELECT : UIStateBase
     {
         base.EnterState();
         if (game.UI != null)
-            game.UI.ShowMenu(RobotRhythm.UI.UiPage.Routes);
+            game.UI.ShowLevels();
     }
 }

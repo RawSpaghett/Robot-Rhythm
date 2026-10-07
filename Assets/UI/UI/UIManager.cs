@@ -27,8 +27,6 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject scoringPanel;
     [SerializeField] private GameObject levelSelectPanel;
-    private bool showingLevels;
-    private bool showingScoring;
 
     [Header("Transitions")]
     [SerializeField] private CanvasGroup transitionCover;
@@ -70,11 +68,11 @@ public class UIManager : MonoBehaviour
     public void OpenControls() => Navigate(gameManager.OpenControls);
     public void CloseControls() => Navigate(gameManager.CloseControls);
 
-    public void OpenLevels() => Navigate(() => showingLevels = true);
-    public void CloseLevels() => Navigate(() => showingLevels = false);
+    public void OpenLevels() => OpenMenuPage(UiPage.Routes);
+    public void CloseLevels() => OpenMenuPage(UiPage.Home);
     public void StartGame()
     {
-        GetComponent<PracticeIntro>().Show(() => Navigate(() => { showingLevels = false; gameManager.StartGame(); }));
+        GetComponent<PracticeIntro>().Show(() => Navigate(gameManager.StartGame));
     }
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
     public void RestartGame() => Navigate(gameManager.RestartGame);
@@ -141,27 +139,14 @@ public class UIManager : MonoBehaviour
 
     public void HideScreens()
     {
-        bool loading = gameManager.IsLoading;
-        bool inGame = gameManager.HasActiveGame;
-        bool options = gameManager.CurrentState is OPTIONS;
-        bool paused = gameManager.CurrentState is PAUSE;
-        bool ended = gameManager.CurrentState is GAMEEND || gameManager.CurrentState is SCOREBOARD;
-        if (scoreDisplay != null)
-        {
-            if (loading || !inGame)
-                scoreDisplay.Bind(null);
-            scoreDisplay.ShowResults(inGame && ended && !loading);
-        }
-        if (loading || options || ended)
-            showingControls = false;
-        if (loading || ended) showingScoring = false;
-        if (loading || inGame) showingLevels = false;
-        if (levelSelectPanel != null) levelSelectPanel.SetActive(showingLevels && !loading);
-        if (scoringPanel != null) scoringPanel.SetActive(showingScoring && !loading);
-        bool showMenu = !showingLevels && !showingScoring && !loading && (options || showingControls || !inGame);
-        menu.SetVisible(showMenu);
-        if (showMenu)
-            menu.ShowPage(options ? UiPage.Settings : showingControls ? UiPage.Controls : UiPage.Home);
+        menu.SetVisible(false);
+        playHud.SetActive(false);
+        pausePanel.SetActive(false);
+        loadingPanel.SetActive(false);
+        endPanel.SetActive(false);
+        if (scoringPanel != null) scoringPanel.SetActive(false);
+        if (levelSelectPanel != null) levelSelectPanel.SetActive(false);
+    }
 
     // Common scene references stay here; states choose the visible screen.
     public void PrepareScreen(bool showResults)
@@ -183,6 +168,14 @@ public class UIManager : MonoBehaviour
     {
         menu.SetVisible(true);
         menu.ShowPage(page);
+    }
+
+    public void ShowLevels()
+    {
+        if (levelSelectPanel != null)
+            levelSelectPanel.SetActive(true);
+        else
+            ShowMenu(UiPage.Routes);
     }
 
     public void ShowGameplay() => playHud.SetActive(true);
