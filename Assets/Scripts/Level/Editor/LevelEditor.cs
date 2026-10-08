@@ -20,6 +20,8 @@ public class LevelEditor : EditorWindow
     // which name on the list is currently selected
     private int selectedTypeIndex;
 
+    private AudioClip previewClip;
+
     // adds this to the top menu bar and the slash makes a submenu
     [MenuItem("Robot Rhythm/Level Editor")]
     public static void Open()
@@ -44,10 +46,25 @@ public class LevelEditor : EditorWindow
         }
 
         beatMap.SongID = EditorGUILayout.TextField("Song", beatMap.SongID);
+        previewClip = (AudioClip)EditorGUILayout.ObjectField("Preview Clip", previewClip, typeof(AudioClip), false);
         beatMap.Bpm = EditorGUILayout.FloatField("BPM", beatMap.Bpm);
         beatMap.FirstBeatOffset = EditorGUILayout.FloatField("First Beat Offset", beatMap.FirstBeatOffset);
         beatMap.BeatsPerMeasure = EditorGUILayout.IntField("Beats Per Measure", beatMap.BeatsPerMeasure);
         
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("Play", GUILayout.Width(60f)))
+        {
+            PlayFromView();
+        }
+
+        if (GUILayout.Button("Stop", GUILayout.Width(60f)))
+        {
+            LevelEditorSound.Stop();
+        }
+
+        EditorGUILayout.EndHorizontal();
+
         EditorGUILayout.BeginHorizontal();
 
         if (obstacleTypes != null && obstacleTypes.Length > 0)
@@ -127,9 +144,40 @@ public class LevelEditor : EditorWindow
             EditorGUI.DrawRect(bar, placement.Type.TimelineColor);
         }
 
+        DrawSongPosition(timeline);
         HandleScroll(timeline);
         HandleClick(timeline);
         HandleDelete(timeline);
+    }
+
+    // Red line that shows where in the song you are
+    private void DrawSongPosition(Rect timeline)
+    {
+        if (!LevelEditorSound.IsPlaying)
+        {
+            return;
+        }
+
+        float playtimeBeat = (LevelEditorSound.Position - beatMap.FirstBeatOffset) / beatMap.SecondsPerBeat;
+        float playheadX = BeatToX(playtimeBeat, timeline);
+
+        EditorGUI.DrawRect(new Rect(playheadX, timeline.y, 2f, timeline.height), Color.red);
+
+        // So the line refreshes and follows the song
+        Repaint();
+    }
+
+    private void PlayFromView()
+    {
+        if (previewClip == null)
+        {
+            return;
+        }
+
+        float seconds = beatMap.FirstBeatOffset + scrollBeats * beatMap.SecondsPerBeat;
+        int startSample = Mathf.Clamp(Mathf.RoundToInt(seconds * previewClip.frequency), 0, previewClip.samples - 1);
+
+        LevelEditorSound.Play(previewClip, startSample);
     }
 
     // Moves the view along the song with the mouse wheel
