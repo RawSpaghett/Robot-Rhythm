@@ -26,6 +26,7 @@ public class RhythmManager: MonoBehaviour
     void Awake()
     {
         IntializeInstance();
+        
     }
 
     void Start()
@@ -73,6 +74,14 @@ public class RhythmManager: MonoBehaviour
     {
         if (Instance == this)
             Instance = null;
+    }
+
+    private void SetObstacleTime()
+    {
+        foreach (ObstaclePlacement placement in beatMap.Obstacles)
+        {
+            placement.TargetTime = songStartDspTime + (beatMap.SecondsPerBeat * placement);
+        }
     }
 
 }
