@@ -1,6 +1,9 @@
+using System;
 using UnityEngine;
 
-public class RobotJump : MonoBehaviour
+// Serialized inside ActionManager. Do not attach this class to a GameObject.
+[Serializable]
+public class RobotJump : ActionBase
 {
     [Header("Normal Jump Settings")]
     [SerializeField, Min(0f)] private float jumpHeight = 2f;
@@ -11,88 +14,72 @@ public class RobotJump : MonoBehaviour
     [SerializeField, Min(0f)] private float maximumLongJumpHeight = 3.5f;
 
     [Header("Long Jump Duration")]
-    [SerializeField, Min(0.01f)]
-    private float minimumLongJumpDuration = 0.8f;
+    [SerializeField, Min(0.01f)] private float minimumLongJumpDuration = 0.8f;
+    [SerializeField, Min(0.01f)] private float maximumLongJumpDuration = 1.2f;
 
-    [SerializeField, Min(0.01f)]
-    private float maximumLongJumpDuration = 1.2f;
+    [NonSerialized] private Vector3 restingLocalPosition;
+    [NonSerialized] private float jumpTimer;
+    [NonSerialized] private float activeJumpHeight;
+    [NonSerialized] private float activeJumpDuration;
 
-    private Vector3 restingLocalPosition;
-
-    private float jumpTimer;
-    private float activeJumpHeight;
-    private float activeJumpDuration;
-
-    private bool isJumping;
-
-    private void Awake()
+    public override bool TryBegin(RobotActionType type, float charge)
     {
-        restingLocalPosition = transform.localPosition;
-    }
+        if (IsRunning || Visual == null ||
+            (type != RobotActionType.Jump && type != RobotActionType.LongJump))
+            return false;
 
-    public void TryJump()
-    {
-        BeginJump(jumpHeight, jumpDuration);
-    }
+        if (type == RobotActionType.LongJump)
+        {
+            charge = Mathf.Clamp01(charge);
+            activeJumpHeight = Mathf.Lerp(
+                minimumLongJumpHeight,
+                Mathf.Max(minimumLongJumpHeight, maximumLongJumpHeight),
+                charge);
+            activeJumpDuration = Mathf.Lerp(
+                minimumLongJumpDuration,
+                Mathf.Max(minimumLongJumpDuration, maximumLongJumpDuration),
+                charge);
+        }
+        else
+        {
+            activeJumpHeight = jumpHeight;
+            activeJumpDuration = jumpDuration;
+        }
 
-    public void TryLongJump(float charge)
-    {
-        charge = Mathf.Clamp01(charge);
+        activeJumpHeight = Mathf.Max(0f, activeJumpHeight);
+        activeJumpDuration = Mathf.Max(0.01f, activeJumpDuration);
 
-        float height = Mathf.Lerp(
-            minimumLongJumpHeight,
-            Mathf.Max(minimumLongJumpHeight, maximumLongJumpHeight),
-            charge);
-
-        float duration = Mathf.Lerp(
-            minimumLongJumpDuration,
-            Mathf.Max(minimumLongJumpDuration, maximumLongJumpDuration),
-            charge);
-
-        BeginJump(height, duration);
-    }
-
-    private void BeginJump(float height, float duration)
-    {
-        // Both jump types obey the same airborne and pause restrictions.
-        if (!isActiveAndEnabled || isJumping || Time.timeScale <= 0f)
-            return;
-
-        activeJumpHeight = Mathf.Max(0f, height);
-        activeJumpDuration = Mathf.Max(0.01f, duration);
-
+        // Capture each attempt's starting position so relocation between jumps
+        // does not send the robot back to its original scene position.
+        restingLocalPosition = Visual.localPosition;
         jumpTimer = 0f;
-        isJumping = true;
+        IsRunning = true;
+        return true;
     }
 
-    private void Update()
+    public override void Tick(float deltaTime)
     {
-        if (!isJumping)
-            return;
+        if (!IsRunning) return;
+        if (Visual == null) { Cancel(); return; }
 
-        jumpTimer += Time.deltaTime;
-
-        float progress = Mathf.Clamp01(
-            jumpTimer / activeJumpDuration);
-
+        jumpTimer += Mathf.Max(0f, deltaTime);
+        float progress = Mathf.Clamp01(jumpTimer / activeJumpDuration);
         float verticalOffset =
             4f * activeJumpHeight * progress * (1f - progress);
 
-        transform.localPosition =
+        Visual.localPosition =
             restingLocalPosition + Vector3.up * verticalOffset;
 
         if (progress >= 1f)
-        {
-            transform.localPosition = restingLocalPosition;
-            isJumping = false;
-        }
+            Cancel();
     }
 
-    private void OnDisable()
+    public override void Cancel()
     {
-        transform.localPosition = restingLocalPosition;
+        if (IsRunning && Visual != null)
+            Visual.localPosition = restingLocalPosition;
 
         jumpTimer = 0f;
-        isJumping = false;
+        IsRunning = false;
     }
 }
