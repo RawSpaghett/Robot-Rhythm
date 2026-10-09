@@ -30,7 +30,7 @@
                     "name": "",
                     "id": "5907035f-4b32-433f-abe6-ffdd884c18a3",
                     "path": "<Pointer>/press",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "",
                     "action": "Press",
