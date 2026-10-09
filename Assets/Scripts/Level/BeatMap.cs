@@ -6,7 +6,8 @@ using UnityEngine;
 public class BeatMap : ScriptableObject
 {
     // link to the audio file, does not hold the song it just points to it
-    public AudioClip Song;
+    public string SongID;
+    public float SongLength; //TEMPORARY FIX
     public float Bpm = 120f;
     public float FirstBeatOffset;
     public int BeatsPerMeasure = 4;

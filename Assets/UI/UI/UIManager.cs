@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject menuCamera;
     [SerializeField] private GameObject menuEventSystem;
     [SerializeField] private ScoreDisplay scoreDisplay;
+    [SerializeField] private BeatPulse beatPulse;
 
     [Header("Overlays")]
     [SerializeField] private GameObject playHud;
@@ -25,7 +26,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text errorMessage;
 
     [SerializeField] private GameObject scoringPanel;
-    private bool showingScoring;
+    [SerializeField] private GameObject levelSelectPanel;
 
     [Header("Transitions")]
     [SerializeField] private CanvasGroup transitionCover;
@@ -33,7 +34,6 @@ public class UIManager : MonoBehaviour
     [SerializeField, Min(0.01f)] private float transitionDuration = 0.32f;
 
     private readonly List<GameObject> levelPads = new List<GameObject>();
-    private bool showingControls;
     private float previousVolume;
     public bool IsTransitioning { get; private set; }
 
@@ -51,6 +51,7 @@ public class UIManager : MonoBehaviour
         }
         gameManager.StateChanged += OnStateChanged;
         menu.VolumeChanged += SetVolume;
+        menu.PageRequested += OpenMenuPage;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -58,31 +59,21 @@ public class UIManager : MonoBehaviour
     {
         SetVolume(menu.UiVolume);
         transitionCover.gameObject.SetActive(false);
-        ApplyView();
+        gameManager.BindUI(this);
     }
 
-    public void OpenScoring()
+    private void OpenMenuPage(UiPage page) => Navigate(() => gameManager.OpenMenuPage(page));
+    public void OpenScoring() => Navigate(gameManager.OpenScoring);
+    public void CloseScoring() => Navigate(gameManager.CloseScoring);
+    public void OpenControls() => Navigate(gameManager.OpenControls);
+    public void CloseControls() => Navigate(gameManager.CloseControls);
+
+    public void OpenLevels() => OpenMenuPage(UiPage.Routes);
+    public void CloseLevels() => OpenMenuPage(UiPage.Home);
+    public void StartGame()
     {
-        Navigate(() =>
-        {
-            if (gameManager.HasActiveGame) gameManager.PauseGame();
-            showingScoring = true;
-        });
+        GetComponent<PracticeIntro>().Show(() => Navigate(gameManager.StartGame));
     }
-
-    public void CloseScoring() => Navigate(() => showingScoring = false);
-
-    public void OpenControls()
-    {
-        Navigate(() => { gameManager.PauseGame(); showingControls = true; });
-    }
-
-    public void CloseControls()
-    {
-        Navigate(() => showingControls = false);
-    }
-
-    public void StartGame() => Navigate(gameManager.StartGame);
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
     public void RestartGame() => Navigate(gameManager.RestartGame);
     public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu);
@@ -99,6 +90,7 @@ public class UIManager : MonoBehaviour
 
     private void OnStateChanged()
     {
+        ShowError();
         if (!IsTransitioning)
             StartCoroutine(Transition(null));
     }
@@ -120,12 +112,10 @@ public class UIManager : MonoBehaviour
         yield return Fade(0f, 1f, duration * 0.4f);
 
         action?.Invoke();
-        ApplyView();
         transitionLoadingLabel.SetActive(gameManager.IsLoading);
         while (gameManager.IsLoading)
             yield return null;
         transitionLoadingLabel.SetActive(false);
-        ApplyView();
 
         yield return Fade(1f, 0f, duration * 0.6f);
         transitionCover.gameObject.SetActive(false);
@@ -147,38 +137,67 @@ public class UIManager : MonoBehaviour
         transitionCover.alpha = to;
     }
 
-    private void ApplyView()
+    public void HideScreens()
     {
-        bool loading = gameManager.IsLoading;
-        bool inGame = gameManager.HasActiveGame;
-        bool options = gameManager.CurrentState is OPTIONS;
-        bool paused = gameManager.CurrentState is PAUSE;
-        bool ended = gameManager.CurrentState is GAMEEND || gameManager.CurrentState is SCOREBOARD;
-        if (scoreDisplay != null)
-        {
-            if (loading || !inGame)
-                scoreDisplay.Bind(null);
-            scoreDisplay.ShowResults(inGame && ended && !loading);
-        }
-        if (loading || options || ended)
-            showingControls = false;
-        if (loading || ended) showingScoring = false;
-        if (scoringPanel != null) scoringPanel.SetActive(showingScoring && !loading);
-        bool showMenu = !showingScoring && !loading && (options || showingControls || !inGame);
-        menu.SetVisible(showMenu);
-        if (showMenu)
-            menu.ShowPage(options ? UiPage.Settings : showingControls ? UiPage.Controls : UiPage.Home);
+        menu.SetVisible(false);
+        playHud.SetActive(false);
+        pausePanel.SetActive(false);
+        loadingPanel.SetActive(false);
+        endPanel.SetActive(false);
+        if (scoringPanel != null) scoringPanel.SetActive(false);
+        if (levelSelectPanel != null) levelSelectPanel.SetActive(false);
+    }
 
+    // Common scene references stay here; states choose the visible screen.
+    public void PrepareScreen(bool showResults)
+    {
+        HideScreens();
+        bool inGame = gameManager.HasActiveGame;
+        bool loading = gameManager.IsLoading;
         menuCamera.SetActive(!inGame || loading);
+        if (beatPulse != null && (!inGame || loading)) beatPulse.Bind(null);
         menuEventSystem.SetActive(!loading);
-        playHud.SetActive(inGame && !loading && !paused && !ended && !options && !showingControls && !showingScoring);
-        pausePanel.SetActive(inGame && paused && !loading && !showingControls && !showingScoring);
-        loadingPanel.SetActive(loading);
-        endPanel.SetActive(inGame && ended && !loading);
         foreach (GameObject pad in levelPads)
-            if (pad != null) pad.SetActive(inGame && !ended && !loading);
+            if (pad != null) pad.SetActive(inGame && !loading);
+        if (scoreDisplay != null && (loading || !inGame)) scoreDisplay.Bind(null);
+        if (scoreDisplay != null) scoreDisplay.ShowResults(showResults);
+        ShowError();
+    }
+
+    public void ShowMenu(UiPage page)
+    {
+        menu.SetVisible(true);
+        menu.ShowPage(page);
+    }
+
+    public void ShowLevels()
+    {
+        if (levelSelectPanel != null)
+            levelSelectPanel.SetActive(true);
+        else
+            ShowMenu(UiPage.Routes);
+    }
+
+    public void ShowGameplay() => playHud.SetActive(true);
+    public void ShowPause() => pausePanel.SetActive(true);
+    public void ShowLoading() => loadingPanel.SetActive(true);
+
+    public void ShowScoring()
+    {
+        if (scoringPanel != null) scoringPanel.SetActive(true);
+    }
+
+    public void ShowResults()
+    {
+        endPanel.SetActive(true);
+        foreach (GameObject pad in levelPads)
+            if (pad != null) pad.SetActive(false);
+    }
+
+    private void ShowError()
+    {
         errorMessage.text = gameManager.LastError;
-        errorPanel.SetActive(!loading && !string.IsNullOrEmpty(gameManager.LastError));
+        errorPanel.SetActive(!gameManager.IsLoading && !string.IsNullOrEmpty(gameManager.LastError));
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -190,6 +209,8 @@ public class UIManager : MonoBehaviour
         // The menu owns touch input while it hosts a level. Keep the level's standalone setup intact.
         foreach (GameObject root in scene.GetRootGameObjects())
         {
+            RhythmManager rhythm = root.GetComponentInChildren<RhythmManager>();
+            if (beatPulse != null && rhythm != null) beatPulse.Bind(rhythm);
             foreach (EventSystem events in root.GetComponentsInChildren<EventSystem>(true))
             {
                 foreach (BaseInputModule module in events.GetComponents<BaseInputModule>())
@@ -204,7 +225,11 @@ public class UIManager : MonoBehaviour
                 levelPads.Add(layout.gameObject);
             }
             foreach (HazardWarningUI warning in root.GetComponentsInChildren<HazardWarningUI>(true))
+            {
                 warning.SetPreferences(menu);
+                if (beatPulse != null)
+                    beatPulse.Follow(warning.SpeakerVisual, warning.WorldCamera);
+            }
             if (scoreDisplay != null)
             {
                 ScoreManager score = root.GetComponentInChildren<ScoreManager>();
@@ -227,7 +252,10 @@ public class UIManager : MonoBehaviour
             gameManager.SetUITransition(false);
         }
         if (menu != null)
+        {
             menu.VolumeChanged -= SetVolume;
+            menu.PageRequested -= OpenMenuPage;
+        }
         SceneManager.sceneLoaded -= OnSceneLoaded;
         AudioListener.volume = previousVolume;
         StopAllCoroutines();

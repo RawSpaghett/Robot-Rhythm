@@ -45,6 +45,7 @@ namespace RobotRhythm.UI
         public int PageCount => pages.Length;
         public RectTransform CurrentPageRect => (RectTransform)pages[(int)Page].transform;
         public event Action<float> VolumeChanged;
+        public event Action<UiPage> PageRequested;
 
         private void Awake()
         {
@@ -87,7 +88,10 @@ namespace RobotRhythm.UI
             if (pageIndex < 0 || pageIndex >= pages.Length)
                 return;
 
-            ShowPage((UiPage)pageIndex);
+            if (PageRequested != null)
+                PageRequested.Invoke((UiPage)pageIndex);
+            else
+                ShowPage((UiPage)pageIndex);
         }
 
         public void ShowPage(UiPage page)

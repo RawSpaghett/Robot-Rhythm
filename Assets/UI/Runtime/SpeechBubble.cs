@@ -14,12 +14,10 @@ namespace RobotRhythm.UI
         {
             var points = new List<Vector2>();
             Curve(points, new Vector2(.5f,.94f), new Vector2(.77f,.94f), new Vector2(.97f,.80f), new Vector2(.97f,.58f), 24);
-            Curve(points, new Vector2(.97f,.58f), new Vector2(.97f,.35f), new Vector2(.74f,.20f), new Vector2(.43f,.20f), 24);
-            Curve(points, new Vector2(.43f,.20f), new Vector2(.39f,.20f), new Vector2(.37f,.20f), new Vector2(.35f,.21f), 6);
-            Curve(points, new Vector2(.35f,.21f), new Vector2(.32f,.18f), new Vector2(.295f,.155f), new Vector2(.27f,.13f), 8);
-            Curve(points, new Vector2(.27f,.13f), new Vector2(.22f,.08f), new Vector2(.18f,.12f), new Vector2(.205f,.17f), 8);
-            Curve(points, new Vector2(.205f,.17f), new Vector2(.225f,.20f), new Vector2(.235f,.23f), new Vector2(.24f,.25f), 8);
-            Curve(points, new Vector2(.24f,.25f), new Vector2(.10f,.31f), new Vector2(.03f,.43f), new Vector2(.03f,.58f), 18);
+            Curve(points, new Vector2(.97f,.58f), new Vector2(.97f,.35f), new Vector2(.78f,.23f), new Vector2(.60f,.23f), 24);
+            Curve(points, new Vector2(.60f,.23f), new Vector2(.57f,.14f), new Vector2(.54f,.06f), new Vector2(.5f,.03f), 12);
+            Curve(points, new Vector2(.5f,.03f), new Vector2(.46f,.06f), new Vector2(.43f,.14f), new Vector2(.40f,.23f), 12);
+            Curve(points, new Vector2(.40f,.23f), new Vector2(.22f,.23f), new Vector2(.03f,.35f), new Vector2(.03f,.58f), 24);
             Curve(points, new Vector2(.03f,.58f), new Vector2(.03f,.80f), new Vector2(.23f,.94f), new Vector2(.5f,.94f), 24);
             var rect = rectTransform.rect;
             var edge = new Vector2[points.Count];

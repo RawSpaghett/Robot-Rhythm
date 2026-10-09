@@ -1,15 +1,13 @@
-using UnityEngine;
-
-//Dan
-public class SCOREBOARD: StateBase
+public class SCOREBOARD : UIStateBase
 {
+    public override bool ShowsResults => true;
+
+    public SCOREBOARD(GameManager game) : base(game) { }
+
     public override void EnterState()
     {
-        
-    }
-
-    public override void ExitState()
-    {
-        
+        base.EnterState();
+        if (game.UI != null)
+            game.UI.ShowResults();
     }
 }
