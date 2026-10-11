@@ -34,9 +34,11 @@ public class UIManager : MonoBehaviour
     [SerializeField, Min(0.01f)] private float transitionDuration = 0.32f;
 
     [Header("Swipe Trail")]
-    [SerializeField] private Color trailColor = new Color(1f, 0.85f, 0.5f, 0.9f);
-    [SerializeField, Min(1f)] private float trailMarkSize = 22f;
-    [SerializeField, Min(1f)] private float trailSpacing = 30f;
+    [SerializeField] private Color trailColor = new Color(1f, 0.95f, 0.75f, 1f);
+    [SerializeField] private Color trailGlowColor = new Color(1f, 0.74f, 0.33f, 0.35f);
+    [SerializeField, Range(0f, 16f)] private float trailGlowSize = 7f;
+    [SerializeField, Min(1f)] private float trailMarkSize = 25f;
+    [SerializeField, Min(1f)] private float trailSpacing = 32f;
     [SerializeField, Min(0.01f)] private float trailFadeDuration = 0.2f;
     private SwipeTrailUI swipeTrail;
 
@@ -74,6 +76,8 @@ public class UIManager : MonoBehaviour
         trailRect.offsetMin = trailRect.offsetMax = Vector2.zero;
         swipeTrail = trailObject.GetComponent<SwipeTrailUI>();
         swipeTrail.color = trailColor;
+        swipeTrail.GlowColor = trailGlowColor;
+        swipeTrail.GlowSize = trailGlowSize;
         gameManager.BindUI(this);
     }
 
@@ -225,7 +229,7 @@ public class UIManager : MonoBehaviour
         // The menu owns touch input while it hosts a level. Keep the level's standalone setup intact.
         foreach (GameObject root in scene.GetRootGameObjects())
         {
-            InputManager input = root.GetComponentInChildren<InputManager>();
+            InputManager input = root.GetComponentInChildren<InputManager>(true);
             if (input != null) swipeTrail.Bind(input, trailMarkSize, trailSpacing, trailFadeDuration);
             RhythmManager rhythm = root.GetComponentInChildren<RhythmManager>();
             if (beatPulse != null && rhythm != null) beatPulse.Bind(rhythm);
@@ -241,6 +245,7 @@ public class UIManager : MonoBehaviour
             {
                 layout.Bind(menu);
                 levelPads.Add(layout.gameObject);
+                layout.gameObject.SetActive(false);
             }
             foreach (HazardWarningUI warning in root.GetComponentsInChildren<HazardWarningUI>(true))
             {

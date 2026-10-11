@@ -81,6 +81,11 @@ public class SwipeTrailUI : MaskableGraphic
         new Vector2(-0.352606f, 0.117091f),
     };
     private InputManager input;
+    private PlayerInput playerInput;
+    private InputAction dragAction;
+    private InputAction pressAction;
+    public Color GlowColor { get; set; } = new Color(1f, 0.74f, 0.33f, 0.35f);
+    public float GlowSize { get; set; } = 7f;
     private float markSize = 22f;
     private float spacing = 30f;
     private float fadeDuration = 0.2f;
@@ -91,6 +96,9 @@ public class SwipeTrailUI : MaskableGraphic
     public void Bind(InputManager source, float size, float gap, float duration)
     {
         input = source;
+        playerInput = source != null ? source.GetComponent<PlayerInput>() : null;
+        dragAction = playerInput != null ? playerInput.actions.FindAction("Drag") : null;
+        pressAction = playerInput != null ? playerInput.actions.FindAction("Press") : null;
         markSize = Mathf.Max(1f, size);
         spacing = Mathf.Max(1f, gap);
         fadeDuration = Mathf.Max(0.01f, duration);
@@ -100,8 +108,12 @@ public class SwipeTrailUI : MaskableGraphic
 
     private void Update()
     {
-        Pointer pointer = Pointer.current;
-        if (input == null || !input.isActiveAndEnabled || pointer == null || Time.timeScale == 0f)
+        // Observe the same actions/device as gameplay without enabling or consuming input.
+        Pointer pointer = dragAction?.activeControl?.device as Pointer
+            ?? pressAction?.activeControl?.device as Pointer ?? Pointer.current;
+        if (input == null || !input.isActiveAndEnabled || playerInput == null
+            || !playerInput.isActiveAndEnabled || dragAction == null || !dragAction.enabled
+            || pressAction == null || !pressAction.enabled || pointer == null || Time.timeScale == 0f)
         {
             Clear();
             return;
@@ -187,6 +199,7 @@ public class SwipeTrailUI : MaskableGraphic
         fill.a *= fade;
         foreach (Mark mark in dots)
         {
+            DrawGlow(mesh, mark);
             int first = mesh.currentVertCount;
             mesh.AddVert(mark.position, fill, Vector2.zero);
             Quaternion rotation = Quaternion.Euler(0f, 0f, mark.angle);
@@ -197,6 +210,35 @@ public class SwipeTrailUI : MaskableGraphic
             }
             for (int i = 0; i < dashOutline.Length; i++)
                 mesh.AddTriangle(first, first + 1 + i, first + 1 + (i + 1) % dashOutline.Length);
+        }
+    }
+
+    private void DrawGlow(VertexHelper mesh, Mark mark)
+    {
+        if (GlowSize <= 0f) return;
+        int first = mesh.currentVertCount;
+        Quaternion rotation = Quaternion.Euler(0f, 0f, mark.angle);
+        Color inner = GlowColor;
+        inner.a *= fade * color.a;
+        Color outer = inner;
+        outer.a = 0f;
+        for (int i = 0; i < dashOutline.Length; i++)
+        {
+            Vector2 edge = dashOutline[i] * markSize * mark.scale;
+            Vector2 tangent = dashOutline[(i + 1) % dashOutline.Length]
+                - dashOutline[(i + dashOutline.Length - 1) % dashOutline.Length];
+            Vector2 outward = new Vector2(tangent.y, -tangent.x).normalized;
+            Vector3 position = (Vector3)mark.position + rotation * (Vector3)edge;
+            mesh.AddVert(position, inner, Vector2.zero);
+            mesh.AddVert(position + rotation * (Vector3)(outward * GlowSize), outer, Vector2.zero);
+        }
+        // Fade from warm light at the mark to transparent at the outer edge.
+        for (int i = 0; i < dashOutline.Length; i++)
+        {
+            int a = first + i * 2;
+            int b = first + ((i + 1) % dashOutline.Length) * 2;
+            mesh.AddTriangle(a, a + 1, b);
+            mesh.AddTriangle(b, a + 1, b + 1);
         }
     }
 }
