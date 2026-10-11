@@ -33,6 +33,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject transitionLoadingLabel;
     [SerializeField, Min(0.01f)] private float transitionDuration = 0.32f;
 
+    [Header("Swipe Trail")]
+    [SerializeField] private Color trailColor = new Color(1f, 0.85f, 0.5f, 0.9f);
+    [SerializeField, Min(1f)] private float trailMarkSize = 22f;
+    [SerializeField, Min(1f)] private float trailSpacing = 30f;
+    [SerializeField, Min(0.01f)] private float trailFadeDuration = 0.2f;
+    private SwipeTrailUI swipeTrail;
+
     private readonly List<GameObject> levelPads = new List<GameObject>();
     private float previousVolume;
     public bool IsTransitioning { get; private set; }
@@ -59,6 +66,14 @@ public class UIManager : MonoBehaviour
     {
         SetVolume(menu.UiVolume);
         transitionCover.gameObject.SetActive(false);
+        var trailObject = new GameObject("Swipe Trail", typeof(RectTransform), typeof(CanvasRenderer), typeof(SwipeTrailUI));
+        trailObject.transform.SetParent(playHud.transform, false);
+        var trailRect = (RectTransform)trailObject.transform;
+        trailRect.anchorMin = Vector2.zero;
+        trailRect.anchorMax = Vector2.one;
+        trailRect.offsetMin = trailRect.offsetMax = Vector2.zero;
+        swipeTrail = trailObject.GetComponent<SwipeTrailUI>();
+        swipeTrail.color = trailColor;
         gameManager.BindUI(this);
     }
 
@@ -72,7 +87,7 @@ public class UIManager : MonoBehaviour
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
     public void StartGame()
     {
-        GetComponent<PracticeIntro>().Show(() => Navigate(gameManager.StartGame));
+        Navigate(gameManager.StartGame);
     }
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
     public void RestartGame() => Navigate(gameManager.RestartGame);
@@ -158,7 +173,7 @@ public class UIManager : MonoBehaviour
         if (beatPulse != null && (!inGame || loading)) beatPulse.Bind(null);
         menuEventSystem.SetActive(!loading);
         foreach (GameObject pad in levelPads)
-            if (pad != null) pad.SetActive(inGame && !loading);
+            if (pad != null) pad.SetActive(false);
         if (scoreDisplay != null && (loading || !inGame)) scoreDisplay.Bind(null);
         if (scoreDisplay != null) scoreDisplay.ShowResults(showResults);
         ShowError();
@@ -206,9 +221,12 @@ public class UIManager : MonoBehaviour
             return;
         menuCamera.SetActive(false);
         levelPads.Clear();
+        swipeTrail.Bind(null, trailMarkSize, trailSpacing, trailFadeDuration);
         // The menu owns touch input while it hosts a level. Keep the level's standalone setup intact.
         foreach (GameObject root in scene.GetRootGameObjects())
         {
+            InputManager input = root.GetComponentInChildren<InputManager>();
+            if (input != null) swipeTrail.Bind(input, trailMarkSize, trailSpacing, trailFadeDuration);
             RhythmManager rhythm = root.GetComponentInChildren<RhythmManager>();
             if (beatPulse != null && rhythm != null) beatPulse.Bind(rhythm);
             foreach (EventSystem events in root.GetComponentsInChildren<EventSystem>(true))

@@ -60,16 +60,16 @@ public class GesturePadFeedback : MonoBehaviour
         border.color = theme.orange;
     }
 
-    public void Show(GestureData gesture, Vector2 point, bool hasCharge, float charge)
+    public void Show(SwipeDirection direction, bool isHold, Vector2 point, bool hasCharge, float charge)
     {
         if (!IsPressed)
             return;
-        Direction = gesture.Direction;
-        holding = IsPressed && gesture.IsHold;
+        Direction = direction;
+        holding = IsPressed && isHold;
         Charge = hasCharge ? Mathf.Clamp01(charge) : 0f;
         bool directional = Direction != SwipeDirection.None;
         UpdateArrows();
-        border.color = gesture.IsHold ? theme.yellow : directional ? theme.teal : theme.orange;
+        border.color = isHold ? theme.yellow : directional ? theme.teal : theme.orange;
         chargeGroup.SetActive(hasCharge);
         chargeFill.fillAmount = Charge;
         touchMark.anchoredPosition = ClampPoint(point);
@@ -80,15 +80,15 @@ public class GesturePadFeedback : MonoBehaviour
         dragLine.localEulerAngles = Vector3.forward * Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg;
     }
 
-    public void Release(GestureData gesture, bool hasCharge, float charge)
+    public void Release(SwipeDirection direction, bool isTap, bool hasCharge, float charge)
     {
         IsPressed = false;
         releasing = true;
         releaseTime = 0f;
-        Direction = gesture.Direction;
-        holding = IsPressed && gesture.IsHold;
+        Direction = direction;
+        holding = false;
         Charge = hasCharge ? Mathf.Clamp01(charge) : 0f;
-        releaseColor = gesture.IsTap ? theme.orange : theme.teal;
+        releaseColor = isTap ? theme.orange : theme.teal;
         border.color = releaseColor;
         touchMark.gameObject.SetActive(true);
         UpdateArrows();
