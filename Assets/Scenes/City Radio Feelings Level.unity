@@ -452,7 +452,7 @@ MonoBehaviour:
   hitLineX: -7.1
   distancePerBeat: 3
   spawnTime: 4
-  groundY: -2
+  groundY: -4
   rhythmManager: {fileID: 1333327601}
 --- !u!4 &381480584
 Transform:
@@ -769,7 +769,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4808, y: 1.4808, z: 1.4808}
+  m_LocalScale: {x: 1.6587923, y: 1.6587923, z: 1.6587923}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1806,7 +1806,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1626, y: 1.1626, z: 1.1626}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2740,7 +2740,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2097325180}
   - component: {fileID: 2097325183}
-  - component: {fileID: 2097325185}
   - component: {fileID: 2097325184}
   m_Layer: 0
   m_Name: RobotVisual
@@ -2838,7 +2837,7 @@ MonoBehaviour:
   robotVisual: {fileID: 2097325180}
   robotRenderer: {fileID: 2097325183}
   jump:
-    jumpHeight: 2
+    jumpHeight: 1
     jumpDuration: 0.5
     jumpFrames:
     - {fileID: -8272374056155730032, guid: 0bfb002a9a5488944b5491302880ce69, type: 3}
@@ -2860,10 +2859,10 @@ MonoBehaviour:
     - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
     - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
     longJumpFrames: []
-    minimumLongJumpHeight: 2.5
-    maximumLongJumpHeight: 3.5
-    minimumLongJumpDuration: 0.8
-    maximumLongJumpDuration: 1.2
+    minimumLongJumpHeight: 1.5
+    maximumLongJumpHeight: 2
+    minimumLongJumpDuration: 0.75
+    maximumLongJumpDuration: 1
   duck:
     duckFrames:
     - {fileID: 5929532765446534122, guid: a5a74d61b86e44b49b315ba5731d5f18, type: 3}
@@ -2888,28 +2887,27 @@ MonoBehaviour:
     - {fileID: -8243520808262304162, guid: 8297643e75f860841ae7866bffb5c088, type: 3}
     - {fileID: 4644998939122795206, guid: f9603d9aaca15fe4abcfe1cad1a3218a, type: 3}
     duckDuration: 0.5
---- !u!95 &2097325185
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097325179}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8cf42acd727960142a1d3ae1b520bedf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  runningAnimation:
+    runFrames:
+    - {fileID: 9063727863196720943, guid: 0859941a77db672458bbd5be706dbfc9, type: 3}
+    - {fileID: -507557509636459190, guid: 8146199be1a1ec4469a3178661383cc9, type: 3}
+    - {fileID: -3243987433283489735, guid: 1150c02605d1afd439fa23b31de638cf, type: 3}
+    - {fileID: -1927897894335052021, guid: 60516f36cd1fc764ca548900280a4c02, type: 3}
+    - {fileID: 6797006194252844328, guid: 12ef4acc607637746b2e432b20938db9, type: 3}
+    - {fileID: -1310173859473669456, guid: b8fc3df2dcc376e4b96cd605ab4763da, type: 3}
+    - {fileID: 9167174286080498692, guid: 054f532170b3a4b4482e336da31bc232, type: 3}
+    - {fileID: 5913327684666125502, guid: cfc3be0d6cf5e9445a9ccc0e79a8aeaf, type: 3}
+    - {fileID: -1943942926601583988, guid: d3b95bf9fcfa7e942bb596c2475f388b, type: 3}
+    - {fileID: 3144758384602214517, guid: 218a5bb98fbf1a34aa5c98e590afc3aa, type: 3}
+    - {fileID: -1528354729668150564, guid: 7fb3ac380dda5f147838342dfe5ce903, type: 3}
+    - {fileID: -4606721772413064449, guid: 60ff286745da1c34794ee1dceae4d5f3, type: 3}
+    - {fileID: -2177127840377556005, guid: dc55f500e04a7204f81005a96b549d5d, type: 3}
+    - {fileID: 4004009806823722598, guid: 3afd8ea3d9289fb4281729de4d865c75, type: 3}
+    - {fileID: -8799070788536916050, guid: b55f9af7c08508845a6537a063aaf7c3, type: 3}
+    - {fileID: -3711413252106384533, guid: 5c68bfdd1f625854d9b5d14501334acc, type: 3}
+    - {fileID: 2937542380364343250, guid: e0b954e978eacb645af9d56fe5a9fb84, type: 3}
+    - {fileID: -2344716011290733520, guid: 8bb1d99755485b144ba853a99a830608, type: 3}
+    framesPerSecond: 24
 --- !u!1 &2110908123
 GameObject:
   m_ObjectHideFlags: 0

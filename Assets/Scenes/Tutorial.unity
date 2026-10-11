@@ -2470,6 +2470,27 @@ MonoBehaviour:
   duck:
     duckFrames: []
     duckDuration: 0.5
+  runningAnimation:
+    runFrames:
+    - {fileID: 9063727863196720943, guid: 0859941a77db672458bbd5be706dbfc9, type: 3}
+    - {fileID: -507557509636459190, guid: 8146199be1a1ec4469a3178661383cc9, type: 3}
+    - {fileID: -3243987433283489735, guid: 1150c02605d1afd439fa23b31de638cf, type: 3}
+    - {fileID: -1927897894335052021, guid: 60516f36cd1fc764ca548900280a4c02, type: 3}
+    - {fileID: 6797006194252844328, guid: 12ef4acc607637746b2e432b20938db9, type: 3}
+    - {fileID: -1310173859473669456, guid: b8fc3df2dcc376e4b96cd605ab4763da, type: 3}
+    - {fileID: 9167174286080498692, guid: 054f532170b3a4b4482e336da31bc232, type: 3}
+    - {fileID: 5913327684666125502, guid: cfc3be0d6cf5e9445a9ccc0e79a8aeaf, type: 3}
+    - {fileID: -1943942926601583988, guid: d3b95bf9fcfa7e942bb596c2475f388b, type: 3}
+    - {fileID: 3144758384602214517, guid: 218a5bb98fbf1a34aa5c98e590afc3aa, type: 3}
+    - {fileID: -1528354729668150564, guid: 7fb3ac380dda5f147838342dfe5ce903, type: 3}
+    - {fileID: -4606721772413064449, guid: 60ff286745da1c34794ee1dceae4d5f3, type: 3}
+    - {fileID: -2177127840377556005, guid: dc55f500e04a7204f81005a96b549d5d, type: 3}
+    - {fileID: 4004009806823722598, guid: 3afd8ea3d9289fb4281729de4d865c75, type: 3}
+    - {fileID: -8799070788536916050, guid: b55f9af7c08508845a6537a063aaf7c3, type: 3}
+    - {fileID: -3711413252106384533, guid: 5c68bfdd1f625854d9b5d14501334acc, type: 3}
+    - {fileID: 2937542380364343250, guid: e0b954e978eacb645af9d56fe5a9fb84, type: 3}
+    - {fileID: -2344716011290733520, guid: 8bb1d99755485b144ba853a99a830608, type: 3}
+    framesPerSecond: 24
 --- !u!1 &2110908123
 GameObject:
   m_ObjectHideFlags: 0
