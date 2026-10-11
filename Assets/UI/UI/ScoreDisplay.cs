@@ -125,7 +125,7 @@ public class ScoreDisplay : MonoBehaviour
         animatingResult = source != null;
         bool reducedMotion = preferences != null && preferences.ReducedMotion;
         PaintStars(resultStars, reducedMotion ? resultRating : 0);
-        UpdateResultColors();
+        UpdateResultColors(reducedMotion ? 1f : 0f);
         finalScore.text = source != null ? Format(reducedMotion ? resultScore : 0f) : "—";
     }
 
@@ -153,6 +153,7 @@ public class ScoreDisplay : MonoBehaviour
         float progress = reducedMotion ? 1f : Mathf.Clamp01(resultTime / resultDuration);
         float eased = 1f - Mathf.Pow(1f - progress, 3f);
         finalScore.text = Format(Mathf.Lerp(0f, resultScore, eased));
+        UpdateResultColors(eased);
         if (scoreRoll != null) scoreRoll.SetProgress(Mathf.RoundToInt(resultScore), progress);
         if (accuracyRoll != null && resultHasAccuracy) accuracyRoll.SetProgress(resultAccuracy, progress);
         PaintStars(resultStars, reducedMotion ? resultRating : Mathf.Min(resultRating, Mathf.FloorToInt(progress * 6f)), !reducedMotion);
@@ -178,10 +179,10 @@ public class ScoreDisplay : MonoBehaviour
         return theme != null ? theme.ink : Color.white;
     }
 
-    private void UpdateResultColors()
+    private void UpdateResultColors(float progress)
     {
-        finalScore.color = GetScoreColor(resultScore);
-        if (accuracyText != null) accuracyText.color = GetAccuracyColor(resultAccuracy / 100f);
+        finalScore.color = GetScoreColor(resultScore * progress);
+        if (accuracyText != null) accuracyText.color = GetAccuracyColor(resultAccuracy * progress / 100f);
     }
 
     private static string Format(float value)

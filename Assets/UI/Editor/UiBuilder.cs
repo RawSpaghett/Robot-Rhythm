@@ -473,7 +473,7 @@ namespace RobotRhythm.UI.Editor
                 }
             }
 
-            Label(p, "ControlInstructions", "Tap or swipe on the control pad.\nHold before swiping up for a long jump.", 49, 559, 800, 86, 26, Ink).font = theme.bodyFont;
+            Label(p, "ControlInstructions", "Tap or swipe anywhere on the screen.", 49, 559, 800, 86, 26, Ink).font = theme.bodyFont;
             Button(p, "ControlsDone", "DONE", 963, 576, 271, 82, Orange, 30);
         }
 

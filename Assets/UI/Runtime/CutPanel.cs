@@ -6,6 +6,9 @@ namespace RobotRhythm.UI
     public sealed class CutPanel : MaskableGraphic
     {
         public float cut = 16;
+        [Min(0f)] public float outlineWidth;
+        public bool cutAllCorners;
+
         protected override void OnPopulateMesh(VertexHelper mesh)
         {
             mesh.Clear();
@@ -20,6 +23,49 @@ namespace RobotRhythm.UI
                 new Vector2(r.xMin, r.yMin),
                 new Vector2(r.xMin, r.yMax - c)
             };
+            if (cutAllCorners)
+            {
+                points = new Vector2[]
+                {
+                    new Vector2(r.xMin + c, r.yMax), new Vector2(r.xMax - c, r.yMax),
+                    new Vector2(r.xMax, r.yMax - c), new Vector2(r.xMax, r.yMin + c),
+                    new Vector2(r.xMax - c, r.yMin), new Vector2(r.xMin + c, r.yMin),
+                    new Vector2(r.xMin, r.yMin + c), new Vector2(r.xMin, r.yMax - c)
+                };
+            }
+            if (outlineWidth > 0f)
+            {
+                // Draw just the edge so the scene stays visible inside the panel.
+                float width = Mathf.Min(outlineWidth, Mathf.Min(r.width, r.height) * .25f);
+                float feather = FeatherWidth(this);
+                Color clear = new Color(color.r, color.g, color.b, 0f);
+                for (int i = 0; i < points.Length; i++)
+                {
+                    Vector2 previous = points[(i + points.Length - 1) % points.Length];
+                    Vector2 next = points[(i + 1) % points.Length];
+                    Vector2 incoming = (points[i] - previous).normalized;
+                    Vector2 outgoing = (next - points[i]).normalized;
+                    Vector2 normal = new Vector2(outgoing.y, -outgoing.x);
+                    Vector2 inward = (new Vector2(incoming.y, -incoming.x) + normal).normalized;
+                    Vector2 inset = inward / Mathf.Max(.25f, Vector2.Dot(inward, normal));
+                    mesh.AddVert(points[i] - inset * feather, clear, Vector2.zero);
+                    mesh.AddVert(points[i], color, Vector2.zero);
+                    mesh.AddVert(points[i] + inset * width, color, Vector2.zero);
+                    mesh.AddVert(points[i] + inset * (width + feather), clear, Vector2.zero);
+                }
+                for (int i = 0; i < points.Length; i++)
+                {
+                    int next = (i + 1) % points.Length;
+                    for (int band = 0; band < 3; band++)
+                    {
+                        int a = i * 4 + band;
+                        int b = next * 4 + band;
+                        mesh.AddTriangle(a, b, a + 1);
+                        mesh.AddTriangle(a + 1, b, b + 1);
+                    }
+                }
+                return;
+            }
             DrawPolygon(mesh, points, color, FeatherWidth(this));
         }
 

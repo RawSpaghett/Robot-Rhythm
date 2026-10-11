@@ -1,15 +1,25 @@
-using UnityEngine;
-//Dans
-
-public class OPTIONS: StateBase
+public class OPTIONS : UIStateBase
 {
-    public override void EnterState()
+    public UIStateBase ReturnState { get; private set; }
+
+    public OPTIONS(GameManager game) : base(game) { }
+
+    public void Open(UIStateBase returnState)
     {
-        
+        ReturnState = returnState;
+        game.ChangeState(this);
     }
 
-    public override void ExitState()
+    public void Close()
     {
-        
+        if (game.CurrentState == this)
+            game.ChangeState(ReturnState);
+    }
+
+    public override void EnterState()
+    {
+        base.EnterState();
+        if (game.UI != null)
+            game.UI.ShowMenu(RobotRhythm.UI.UiPage.Settings);
     }
 }

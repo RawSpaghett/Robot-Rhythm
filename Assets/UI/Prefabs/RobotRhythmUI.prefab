@@ -8322,10 +8322,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tap or swipe on the control pad.
-
-    Hold before swiping up for a long
-    jump.'
+  m_Text: Tap or swipe anywhere on the screen.
 --- !u!1 &6662268685666211165
 GameObject:
   m_ObjectHideFlags: 0

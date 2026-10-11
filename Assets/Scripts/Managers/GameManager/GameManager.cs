@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Owns scene flow and pause state. UIManager presents the current state.
+// Loads scenes and runs the screen states. Each state decides what UI to show.
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -17,9 +17,15 @@ public class GameManager : MonoBehaviour
     private SCOREBOARD scoreBoard;
     private PAUSE pause;
     private OPTIONS options;
-    private StateBase stateBeforeOptions;
-    private Scene menuScene;
-    private Scene gameplayScene;
+    private MAINMENU mainMenu;
+    private LEVELSELECT levelSelect;
+    private PACKAGESELECT packageSelect;
+    private CONTROLS controls;
+    private SCORING scoring;
+    private LOADING loading;
+    private bool statePausesGameplay;
+    public UIManager UI { get; private set; }
+    private GameSceneLoader sceneLoader;
     private bool holdsPause;
     private float timeScaleBeforePause;
     private bool audioPausedBeforePause;
@@ -27,8 +33,8 @@ public class GameManager : MonoBehaviour
 
     public event Action StateChanged;
     public StateBase CurrentState => stateMachine?.currentState;
-    public Scene GameplayScene => gameplayScene;
-    public bool HasActiveGame => gameplayScene.IsValid() && gameplayScene.isLoaded;
+    public Scene GameplayScene => sceneLoader.GameplayScene;
+    public bool HasActiveGame => sceneLoader != null && sceneLoader.HasActiveGame;
     public bool IsLoading { get; private set; }
     public bool IsUITransitioning { get; private set; }
     public string LastError { get; private set; } = "";
@@ -42,15 +48,21 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-        menuScene = gameObject.scene;
+        sceneLoader = new GameSceneLoader(gameObject.scene);
         DontDestroyOnLoad(gameObject);
-        gameStart = new GAMESTART();
-        gameEnd = new GAMEEND();
-        scoreBoard = new SCOREBOARD();
-        pause = new PAUSE();
-        options = new OPTIONS();
+        gameStart = new GAMESTART(this);
+        gameEnd = new GAMEEND(this);
+        scoreBoard = new SCOREBOARD(this);
+        pause = new PAUSE(this);
+        options = new OPTIONS(this);
+        mainMenu = new MAINMENU(this);
+        levelSelect = new LEVELSELECT(this);
+        packageSelect = new PACKAGESELECT(this);
+        controls = new CONTROLS(this);
+        scoring = new SCORING(this);
+        loading = new LOADING(this);
         stateMachine = new StateMachineBase();
-        stateMachine.Intialize(gameStart);
+        stateMachine.Intialize(mainMenu);
     }
 
     public void StartGame()
@@ -85,19 +97,67 @@ public class GameManager : MonoBehaviour
             ChangeState(gameStart);
     }
 
+    public void BindUI(UIManager ui)
+    {
+        UI = ui;
+        // The UI may finish starting after GameManager.Awake.
+        CurrentState?.EnterState();
+    }
+
+    public void OpenMenuPage(RobotRhythm.UI.UiPage page)
+    {
+        if (IsLoading) return;
+        switch (page)
+        {
+            case RobotRhythm.UI.UiPage.Home:
+                if (CurrentState == controls) controls.Close();
+                else if (CurrentState == options) options.Close();
+                else ChangeState(HasActiveGame ? pause : mainMenu);
+                break;
+            case RobotRhythm.UI.UiPage.Routes:
+                if (!HasActiveGame) ChangeState(levelSelect);
+                break;
+            case RobotRhythm.UI.UiPage.Placeholder:
+                if (!HasActiveGame) ChangeState(packageSelect);
+                break;
+            case RobotRhythm.UI.UiPage.Controls: OpenControls(); break;
+            case RobotRhythm.UI.UiPage.Settings: OpenOptions(); break;
+        }
+    }
+
+    private UIStateBase MenuReturnState()
+    {
+        return CurrentState == gameStart ? pause : (UIStateBase)CurrentState;
+    }
+
     public void OpenOptions()
     {
-        if (IsLoading || CurrentState == options)
-            return;
-        // Closing settings during a run returns to Pause, never straight into play.
-        stateBeforeOptions = HasActiveGame && CurrentState == gameStart ? pause : CurrentState;
-        ChangeState(options);
+        if (!IsLoading && CurrentState != options) options.Open(MenuReturnState());
     }
 
     public void CloseOptions()
     {
-        if (!IsLoading && CurrentState == options)
-            ChangeState(stateBeforeOptions ?? gameStart);
+        if (!IsLoading) options.Close();
+    }
+
+    public void OpenControls()
+    {
+        if (!IsLoading && CurrentState != controls) controls.Open(MenuReturnState());
+    }
+
+    public void CloseControls()
+    {
+        if (!IsLoading) controls.Close();
+    }
+
+    public void OpenScoring()
+    {
+        if (!IsLoading && CurrentState != scoring) scoring.Open(MenuReturnState());
+    }
+
+    public void CloseScoring()
+    {
+        if (!IsLoading) scoring.Close();
     }
 
     public void EndGame()
@@ -124,9 +184,15 @@ public class GameManager : MonoBehaviour
         UpdatePause();
     }
 
+    public void SetStatePause(bool paused)
+    {
+        statePausesGameplay = paused;
+        UpdatePause();
+    }
+
     private void UpdatePause()
     {
-        SetPaused(IsLoading || IsUITransitioning || (HasActiveGame && CurrentState != gameStart));
+        SetPaused(IsLoading || IsUITransitioning || (HasActiveGame && statePausesGameplay));
     }
 
     private bool CanLoadGame()
@@ -144,46 +210,19 @@ public class GameManager : MonoBehaviour
         IsLoading = true;
         LastError = "";
         pauseAfterLoading = false;
-        SetPaused(true);
-        StateChanged?.Invoke();
-        if (HasActiveGame)
-        {
-            if (menuScene.IsValid() && menuScene.isLoaded)
-                SceneManager.SetActiveScene(menuScene);
-            yield return SceneManager.UnloadSceneAsync(gameplayScene);
-            gameplayScene = default;
-        }
-
-        if (loadGame)
-        {
-            AsyncOperation loading = null;
-            try
-            {
-                loading = SceneManager.LoadSceneAsync(gameplayScenePath, LoadSceneMode.Additive);
-            }
-            catch (Exception error)
-            {
-                Debug.LogException(error, this);
-            }
-            if (loading != null)
-            {
-                yield return loading;
-                gameplayScene = SceneManager.GetSceneByPath(gameplayScenePath);
-            }
-            if (HasActiveGame)
-                SceneManager.SetActiveScene(gameplayScene);
-            else
-                LastError = "Couldn't open the level. Please try again.";
-        }
+        ChangeState(loading);
+        yield return sceneLoader.ChangeScene(loadGame, gameplayScenePath);
+        LastError = sceneLoader.LastError;
 
         IsLoading = false;
-        ChangeState(HasActiveGame && pauseAfterLoading ? pause : gameStart);
+        ChangeState(HasActiveGame ? (pauseAfterLoading ? pause : gameStart) : mainMenu);
     }
 
-    private void ChangeState(StateBase next)
+    public void ChangeState(UIStateBase next)
     {
-        if (CurrentState != next)
-            stateMachine.ChangeState(next);
+        if (next == null || CurrentState == next)
+            return;
+        stateMachine.ChangeState(next);
         UpdatePause();
         StateChanged?.Invoke();
     }

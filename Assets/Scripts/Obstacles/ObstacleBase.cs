@@ -162,6 +162,9 @@ public abstract class ObstacleBase : MonoBehaviour
         OnObstacleResolved?.Invoke(LastAccuracy);
     }
 
+    protected virtual void CallForFX() //call the popup FX
+    {}
+
     protected virtual void OnDisable()
     {
         CancelAttempt();
