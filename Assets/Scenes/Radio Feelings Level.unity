@@ -666,6 +666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1de9cfc108f4e9ebda1efa4efafb20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
+  actionManager: {fileID: 2097325184}
+  longJumpCharge: 1
 --- !u!4 &547819207
 Transform:
   m_ObjectHideFlags: 0
