@@ -1171,7 +1171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 830499614}
   m_Layer: 0
-  m_Name: Robot
+  m_Name: RobotPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2838,6 +2838,26 @@ MonoBehaviour:
   jump:
     jumpHeight: 2
     jumpDuration: 0.5
+    jumpFrames:
+    - {fileID: -8272374056155730032, guid: 0bfb002a9a5488944b5491302880ce69, type: 3}
+    - {fileID: -2513365138187677715, guid: 3acc45688b2407e4fbafd9d611d20d4f, type: 3}
+    - {fileID: -8871437444667805394, guid: e4ee3cc0d215f314c8c7d00382a7b8f6, type: 3}
+    - {fileID: -3263066999820522093, guid: 691b2209a736d1549ae89440f72e7026, type: 3}
+    - {fileID: 4650453894752423078, guid: d6a83586c3a37b7409897eb2ba0e065c, type: 3}
+    - {fileID: -8505737180503263204, guid: 6b2632cdc699feb4eb88ce758ce357a4, type: 3}
+    - {fileID: -1810157568532773015, guid: c00e96ba712b78c4f9f2c1745272fea1, type: 3}
+    - {fileID: 5479674929548547370, guid: 5e519cf7d7dc83e468542bfc93df7fc8, type: 3}
+    - {fileID: -1420203558937515861, guid: 61487cb22031d0d48b5143b83ea28ed5, type: 3}
+    - {fileID: -4224619379541111955, guid: 1ac508b95efaab64f9064b529120cdc0, type: 3}
+    - {fileID: 8657252731511567715, guid: c17bccfbb8118fe41bd913870aacb8a6, type: 3}
+    - {fileID: -5843202056713268027, guid: 45f0df9430fbf104a9b82223d78342eb, type: 3}
+    - {fileID: 3469751324568289209, guid: 110e156d10f8ec043aa647b965be5538, type: 3}
+    - {fileID: 6615837766159393877, guid: 170294c54a599624293e8be44535d08f, type: 3}
+    - {fileID: 3472256711626233064, guid: 96c70bd25f5c94d4aa131506f4193c34, type: 3}
+    - {fileID: -8611579710663742256, guid: 8bee3922ffc70554589ac7da32ffa5bf, type: 3}
+    - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
+    - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
+    longJumpFrames: []
     minimumLongJumpHeight: 2.5
     maximumLongJumpHeight: 3.5
     minimumLongJumpDuration: 0.8
