@@ -6,6 +6,11 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
+    // Assign the player robot's ActionManager
+    [SerializeField] private ActionManager actionManager;
+
+    [SerializeField, Range(0f, 1f)]
+    private float longJumpCharge = 1f;
     private PlayerInput inputSystem;
     private InputAction pressAction;
     private InputAction dragAction;
@@ -36,13 +41,35 @@ public class InputManager : MonoBehaviour
 
     private void Jump(InputAction.CallbackContext context)
     {
+        // Request a normal jump.
+        if (actionManager != null)
+            actionManager.TryJump();
+
         OnPressed?.Invoke();
     }
 
     private void Drag(InputAction.CallbackContext context)
     {
         Vector2 dragInput = context.ReadValue<Vector2>();
-        OnSwipe?.Invoke(GetDirection(dragInput));
+        Direction direction = GetDirection(dragInput);
+
+        // Request the action matching the swipe direction.
+        if (actionManager != null)
+        {
+            switch (direction)
+            {
+                case Direction.Up:
+                    actionManager.TryLongJump(longJumpCharge);
+                    break;
+
+                case Direction.Down:
+                    actionManager.TryDuck();
+                    break;
+
+                    // Add braking and accelerating here when implemented.
+            }
+        }
+        OnSwipe?.Invoke(direction);
     }
 
     public enum Direction { Up,Down,Left,Right,None }
