@@ -14,6 +14,11 @@ public class ActionManager : MonoBehaviour
     [SerializeField] private RobotJump jump = new RobotJump();
     [SerializeField] private RobotDuck duck = new RobotDuck();
 
+    [Header("Default Running Animation")]
+    [SerializeField]
+    private RobotRunAnimation runningAnimation =
+        new RobotRunAnimation();
+
     private readonly Dictionary<RobotActionType, ActionBase> actions =
         new Dictionary<RobotActionType, ActionBase>();
 
@@ -27,6 +32,13 @@ public class ActionManager : MonoBehaviour
         InitializeActions();
     }
 
+    private void OnEnable()
+    {
+        InitializeActions();
+        if (!IsBusy)
+            runningAnimation.Play();
+    }
+
     private void InitializeActions()
     {
         if (initialized) return;
@@ -37,9 +49,12 @@ public class ActionManager : MonoBehaviour
 
         if (jump == null) jump = new RobotJump();
         if (duck == null) duck = new RobotDuck();
+        if (runningAnimation == null)
+            runningAnimation = new RobotRunAnimation();
 
         jump.Initialize(robotVisual, robotRenderer, this);
         duck.Initialize(robotVisual, robotRenderer, this);
+        runningAnimation.Initialize(robotRenderer, this);
 
         actions.Add(RobotActionType.Jump, jump);
         actions.Add(RobotActionType.LongJump, jump);
@@ -70,29 +85,64 @@ public class ActionManager : MonoBehaviour
             return false;
 
         activeAction = action.IsRunning ? action : null;
+
+        if (activeAction != null)
+        {
+            // TryBegin may already have displayed the action's first frame.
+            // Suspend only stops the idle loop; it does not write a sprite.
+            runningAnimation.Suspend();
+        }
+        else
+        {
+            runningAnimation.Play();
+        }
+
         return true;
     }
 
     private void Update()
     {
-        if (activeAction == null || Time.timeScale <= 0f)
+        if (Time.timeScale <= 0f)
             return;
 
-        activeAction.Tick(Time.deltaTime);
+        // Only one animation path updates the renderer in a frame.
+        if (activeAction != null)
+        {
+            activeAction.Tick(Time.deltaTime);
 
-        if (!activeAction.IsRunning)
-            activeAction = null;
+            if (!activeAction.IsRunning)
+            {
+                activeAction = null;
+
+                // The action restores its pre-action sprite, then this sets the
+                // first running frame immediately, before the frame is rendered.
+                runningAnimation.Play();
+            }
+
+            return;
+        }
+
+        runningAnimation.Tick(Time.deltaTime);
     }
 
     public void CancelCurrentAction()
     {
+        bool hadAction = activeAction != null;
         activeAction?.Cancel();
         activeAction = null;
+
+        // Repeated cancellation while idle should not restart the loop.
+        if (hadAction && initialized && isActiveAndEnabled)
+            runningAnimation.Play();
     }
 
     private void OnDisable()
     {
-        CancelCurrentAction();
+        // Restore action pose first, then stop the running presentation.
+        activeAction?.Cancel();
+        activeAction = null;
+        if (initialized)
+            runningAnimation.Stop();
     }
 
 }
