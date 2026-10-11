@@ -5,7 +5,6 @@ using RobotRhythm.UI;
 
 public class PracticeIntro : MonoBehaviour
 {
-    [SerializeField] private GameObject practicePad;
     [SerializeField] private Transform canvasRoot;
     [SerializeField] private Font font;
     [SerializeField] private Sprite pothole;
@@ -33,7 +32,6 @@ public class PracticeIntro : MonoBehaviour
         obstaclePicture = Picture(panel.transform,pothole,new Vector2(.28f,.57f));
         instructions = Label("",new Vector2(.28f,.36f),new Vector2(650,120),23);
         progress = Label("",new Vector2(.28f,.22f),new Vector2(540,40),22);
-        // Gesture practice will be connected after the new input system is ready.
         var icon = new GameObject("Action cue",typeof(RectTransform),typeof(DirectionArrow));
         icon.transform.SetParent(panel.transform,false); cue=icon.GetComponent<DirectionArrow>();
         cue.rectTransform.anchorMin=cue.rectTransform.anchorMax=new Vector2(.76f,.72f);
@@ -63,7 +61,7 @@ public class PracticeIntro : MonoBehaviour
         string[] details={"Tap and release to jump.","Drag down and keep pressed.\nRelease to duck.",
             "Drag down, keep pressed, then release.\nRepeat three times with a new press.",
             "Drag up and keep pressed.\nRelease to jump farther.",
-            "HOLD means keep the pad pressed.\nDrag in the arrow direction and stay there.\nRelease as the obstacle reaches your robot.",
+            "HOLD means keep your finger on the screen.\nDrag in the arrow direction and stay there.\nRelease as the obstacle reaches your robot.",
             "Release as the obstacle reaches your robot.\nCloser timing earns more points."};
         bool finished=step==5;
         recap.SetActive(finished); next.gameObject.SetActive(!finished);

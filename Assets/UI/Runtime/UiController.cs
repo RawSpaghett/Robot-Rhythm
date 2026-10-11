@@ -23,7 +23,6 @@ namespace RobotRhythm.UI
         [SerializeField] private Slider volumeSlider;
         [SerializeField] private Text volumeValue;
         [SerializeField] private Text motionLabel;
-        [SerializeField] private Graphic[] controlSideOptions;
 
         [Header("Appearance and Audio")]
         [SerializeField] private UiTheme theme;
@@ -31,14 +30,11 @@ namespace RobotRhythm.UI
 
         private const string VolumeKey = "rr.ui.v1.volume";
         private const string MotionKey = "rr.ui.v1.motion";
-        private const string ControlSideKey = "rr.ui.v1.controlsRight";
         private AudioSource audioSource;
         private AudioClip defaultClick;
 
         public UiPage Page { get; private set; }
         public bool ReducedMotion { get; private set; }
-        public bool ControlsOnRight { get; private set; } = true;
-        public event Action<bool> ControlSideChanged;
         public int Route { get; private set; } = 1;
         public int Package { get; private set; }
         public float UiVolume { get; private set; }
@@ -63,7 +59,6 @@ namespace RobotRhythm.UI
 
             UiVolume = Mathf.Clamp01(PlayerPrefs.GetFloat(VolumeKey, 0.5f));
             ReducedMotion = PlayerPrefs.GetInt(MotionKey, 0) == 1;
-            ControlsOnRight = PlayerPrefs.GetInt(ControlSideKey, 1) == 1;
             volumeSlider.SetValueWithoutNotify(UiVolume);
             audioSource = GetComponent<AudioSource>();
             if (audioSource == null)
@@ -155,17 +150,6 @@ namespace RobotRhythm.UI
         {
             volumeValue.text = Mathf.RoundToInt(UiVolume * 100f) + "%";
             motionLabel.text = ReducedMotion ? "REDUCED MOTION: ON" : "REDUCED MOTION: OFF";
-            if (controlSideOptions != null && controlSideOptions.Length == 2)
-                UpdateSelection(controlSideOptions, ControlsOnRight ? 1 : 0);
-        }
-
-        public void SetControlsOnRight(bool right)
-        {
-            ControlsOnRight = right;
-            PlayerPrefs.SetInt(ControlSideKey, ControlsOnRight ? 1 : 0);
-            PlayerPrefs.Save();
-            UpdateSettings();
-            ControlSideChanged?.Invoke(ControlsOnRight);
         }
 
         public void PlayClick()

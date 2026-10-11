@@ -91,7 +91,7 @@ namespace RobotRhythm.UI
             foreach (var text in ui.GetComponentsInChildren<Text>(true))
                 Require(text.pixelsPerUnit + .01f >= text.rectTransform.lossyScale.x, "Text must render at screen resolution: " + text.name);
             foreach (var component in ui.GetComponentsInChildren<MonoBehaviour>(true))
-                Require(component.GetType().Name != "GesturePad" && component.GetType().Name != "UiPreviewDriver", "No gameplay components");
+                Require(component.GetType().Name != "UiPreviewDriver", "No gameplay components");
             touch = InputSystem.AddDevice<Touchscreen>();
             yield return null;
             if (ui.ReducedMotion)

@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using RobotRhythm.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -42,7 +41,6 @@ public class UIManager : MonoBehaviour
     [SerializeField, Min(0.01f)] private float trailFadeDuration = 0.2f;
     private SwipeTrailUI swipeTrail;
 
-    private readonly List<GameObject> levelPads = new List<GameObject>();
     private float previousVolume;
     public bool IsTransitioning { get; private set; }
 
@@ -176,8 +174,6 @@ public class UIManager : MonoBehaviour
         menuCamera.SetActive(!inGame || loading);
         if (beatPulse != null && (!inGame || loading)) beatPulse.Bind(null);
         menuEventSystem.SetActive(!loading);
-        foreach (GameObject pad in levelPads)
-            if (pad != null) pad.SetActive(false);
         if (scoreDisplay != null && (loading || !inGame)) scoreDisplay.Bind(null);
         if (scoreDisplay != null) scoreDisplay.ShowResults(showResults);
         ShowError();
@@ -209,8 +205,6 @@ public class UIManager : MonoBehaviour
     public void ShowResults()
     {
         endPanel.SetActive(true);
-        foreach (GameObject pad in levelPads)
-            if (pad != null) pad.SetActive(false);
     }
 
     private void ShowError()
@@ -224,7 +218,6 @@ public class UIManager : MonoBehaviour
         if (!gameManager.IsLoading || mode != LoadSceneMode.Additive)
             return;
         menuCamera.SetActive(false);
-        levelPads.Clear();
         swipeTrail.Bind(null, trailMarkSize, trailSpacing, trailFadeDuration);
         // The menu owns touch input while it hosts a level. Keep the level's standalone setup intact.
         foreach (GameObject root in scene.GetRootGameObjects())
@@ -238,14 +231,6 @@ public class UIManager : MonoBehaviour
                 foreach (BaseInputModule module in events.GetComponents<BaseInputModule>())
                     module.enabled = false;
                 events.enabled = false;
-            }
-            foreach (GesturePadFeedback feedback in root.GetComponentsInChildren<GesturePadFeedback>(true))
-                feedback.SetPreferences(menu);
-            foreach (TouchPadLayout layout in root.GetComponentsInChildren<TouchPadLayout>(true))
-            {
-                layout.Bind(menu);
-                levelPads.Add(layout.gameObject);
-                layout.gameObject.SetActive(false);
             }
             foreach (HazardWarningUI warning in root.GetComponentsInChildren<HazardWarningUI>(true))
             {
