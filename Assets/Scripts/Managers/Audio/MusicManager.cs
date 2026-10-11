@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MusicManager: MonoBehaviour
 {
-    private AudioSource speakers;
-    private RhythmManager rhythmManager;
+    [SerializeField]private AudioSource speakers;
+    [SerializeField]private RhythmManager rhythmManager;
 
     void Awake()
     {

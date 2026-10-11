@@ -47,11 +47,31 @@ public class RhythmManager: MonoBehaviour
 
     public void StartSong()
     {
-        if (beatMap == null || beatMap.SongID == null || beatMap.Bpm <= 0f || musicManager == null)
+        #region  Debug
+        if (beatMap == null || beatMap.SongID == null || beatMap.Bpm <= 0f || musicManager == null)if (beatMap == null)
         {
-            Debug.Log("beatmap, song or bpm are missing");
+            Debug.LogError("beatMap is missing (null).");
             return;
         }
+
+        if (beatMap.SongID == null)
+        {
+            Debug.LogError("beatMap.SongID is missing (null).");
+            return;
+        }
+
+        if (beatMap.Bpm <= 0f)
+        {
+            Debug.LogError($"beatMap.Bpm is invalid ({beatMap.Bpm}). Must be greater than 0.");
+            return;
+        }
+
+        if (musicManager == null)
+        {
+            Debug.LogError("musicManager is missing (null).");
+            return;
+        }
+        #endregion
         songStartDspTime = AudioSettings.dspTime + startDelay;
         musicManager.StartPlay(beatMap.SongID,songStartDspTime);
 

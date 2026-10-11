@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0246dd64aedb644db2a63b56db05c41, type: 3}
   m_Name: RadioFeelings
   m_EditorClassIdentifier: Assembly-CSharp::BeatMap
-  SongID: RadioFeelings
+  SongID: Level1
   SongLength: 60
   Bpm: 115
   FirstBeatOffset: 0
