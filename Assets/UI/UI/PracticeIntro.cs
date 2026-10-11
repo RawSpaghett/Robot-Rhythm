@@ -5,7 +5,6 @@ using RobotRhythm.UI;
 
 public class PracticeIntro : MonoBehaviour
 {
-    [SerializeField] private GameObject practicePad;
     [SerializeField] private Transform canvasRoot;
     [SerializeField] private Font font;
     [SerializeField] private Sprite pothole;
@@ -13,17 +12,17 @@ public class PracticeIntro : MonoBehaviour
     [SerializeField] private Sprite raisedBlock;
     [SerializeField] private Sprite holdMarker;
     private int holdExamples;
-    private GameObject panel, pad, recap;
+    private GameObject panel, recap;
     private Image obstaclePicture;
     private Text title, instructions, progress, cueCaption;
     private DirectionArrow cue;
-    private Button start;
+    private Button start, next;
     private Action beginLevel;
-    private int step, ducks;
+    private int step;
 
     public void Show(Action begin)
     {
-        beginLevel = begin; step = 0; ducks = 0; holdExamples = 0;
+        beginLevel = begin; step = 0; holdExamples = 0;
         panel = new GameObject("PracticeIntroPanel", typeof(RectTransform), typeof(Image));
         panel.transform.SetParent(canvasRoot, false);
         Stretch((RectTransform)panel.transform);
@@ -33,12 +32,6 @@ public class PracticeIntro : MonoBehaviour
         obstaclePicture = Picture(panel.transform,pothole,new Vector2(.28f,.57f));
         instructions = Label("",new Vector2(.28f,.36f),new Vector2(650,120),23);
         progress = Label("",new Vector2(.28f,.22f),new Vector2(540,40),22);
-        pad = Instantiate(practicePad,panel.transform); pad.name="PracticePad";
-        var rect = (RectTransform)pad.transform;
-        rect.anchorMin = rect.anchorMax = new Vector2(.76f,.52f);
-        rect.pivot = new Vector2(.5f,.5f); rect.anchoredPosition=Vector2.zero;
-        rect.sizeDelta=new Vector2(300,220);
-        pad.GetComponent<GestureButtonInput>().GesturePerformed += OnGesture;
         var icon = new GameObject("Action cue",typeof(RectTransform),typeof(DirectionArrow));
         icon.transform.SetParent(panel.transform,false); cue=icon.GetComponent<DirectionArrow>();
         cue.rectTransform.anchorMin=cue.rectTransform.anchorMax=new Vector2(.76f,.72f);
@@ -53,19 +46,13 @@ public class PracticeIntro : MonoBehaviour
         MakeButton("PracticeBack","BACK",new Vector2(.14f,.12f),()=>Destroy(panel));
         start=MakeButton("PracticeStart","START LEVEL",new Vector2(.77f,.12f),Finish);
         MakeButton("PracticeSkip","SKIP PRACTICE",new Vector2(.48f,.12f),Finish);
+        next = MakeButton("PracticeNext","NEXT",new Vector2(.77f,.12f),NextPage);
         UpdateStep();
     }
-    private void OnGesture(GestureData gesture)
+    private void NextPage()
     {
-        if(step==0 && (gesture.IsTap || gesture.Direction==SwipeDirection.Up)) step++;
-        else if(step==1 && gesture.Direction==SwipeDirection.Down) step++;
-        else if(step==2 && gesture.Direction==SwipeDirection.Down) { ducks++; if(ducks==3)step++; }
-        else if(step==3 && gesture.Direction==SwipeDirection.Up && gesture.IsHold) step++;
-        else if (step == 4 && gesture.IsHold && gesture.Direction == (holdExamples == 0 ? SwipeDirection.Up : SwipeDirection.Down))
-        {
-            holdExamples++;
-            if (holdExamples == 2) step++;
-        }
+        if (step == 4 && holdExamples == 0) holdExamples = 1;
+        else step = Mathf.Min(step + 1, 5);
         UpdateStep();
     }
     private void UpdateStep()
@@ -74,10 +61,10 @@ public class PracticeIntro : MonoBehaviour
         string[] details={"Tap and release to jump.","Drag down and keep pressed.\nRelease to duck.",
             "Drag down, keep pressed, then release.\nRepeat three times with a new press.",
             "Drag up and keep pressed.\nRelease to jump farther.",
-            "HOLD means keep the pad pressed.\nDrag in the arrow direction and stay there.\nRelease as the obstacle reaches your robot.",
+            "HOLD means keep your finger on the screen.\nDrag in the arrow direction and stay there.\nRelease as the obstacle reaches your robot.",
             "Release as the obstacle reaches your robot.\nCloser timing earns more points."};
         bool finished=step==5;
-        recap.SetActive(finished); pad.SetActive(!finished);
+        recap.SetActive(finished); next.gameObject.SetActive(!finished);
         cue.gameObject.SetActive(step>0 && !finished);
         cue.rectTransform.localRotation=Quaternion.Euler(0,0,(step==3 || (step==4 && holdExamples==0))?90:-90); cue.SetDouble(true);
         cueCaption.gameObject.SetActive(!finished);
@@ -87,7 +74,7 @@ public class PracticeIntro : MonoBehaviour
         title.rectTransform.anchorMin=title.rectTransform.anchorMax=new Vector2(finished?.5f:.28f,.72f);
         instructions.rectTransform.anchorMin=instructions.rectTransform.anchorMax=new Vector2(finished?.5f:.28f,finished?.25f:.36f);
         title.text=titles[step]; instructions.text=details[step];
-        progress.text=step==2?ducks+" / 3":step==4?holdExamples+" / 2":finished?"":"Try it on the pad";
+        progress.text=finished?"":"Page " + (step + 1) + " / 5";
         start.gameObject.SetActive(finished);
     }
     private void Finish(){Destroy(panel);beginLevel?.Invoke();}

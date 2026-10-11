@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using RobotRhythm.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -33,7 +32,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject transitionLoadingLabel;
     [SerializeField, Min(0.01f)] private float transitionDuration = 0.32f;
 
-    private readonly List<GameObject> levelPads = new List<GameObject>();
+    [Header("Swipe Trail")]
+    [SerializeField] private Color trailColor = new Color(1f, 0.95f, 0.75f, 1f);
+    [SerializeField] private Color trailGlowColor = new Color(1f, 0.74f, 0.33f, 0.35f);
+    [SerializeField, Range(0f, 16f)] private float trailGlowSize = 7f;
+    [SerializeField, Min(1f)] private float trailMarkSize = 25f;
+    [SerializeField, Min(1f)] private float trailSpacing = 32f;
+    [SerializeField, Min(0.01f)] private float trailFadeDuration = 0.2f;
+    private SwipeTrailUI swipeTrail;
+
     private float previousVolume;
     public bool IsTransitioning { get; private set; }
 
@@ -59,6 +66,16 @@ public class UIManager : MonoBehaviour
     {
         SetVolume(menu.UiVolume);
         transitionCover.gameObject.SetActive(false);
+        var trailObject = new GameObject("Swipe Trail", typeof(RectTransform), typeof(CanvasRenderer), typeof(SwipeTrailUI));
+        trailObject.transform.SetParent(playHud.transform, false);
+        var trailRect = (RectTransform)trailObject.transform;
+        trailRect.anchorMin = Vector2.zero;
+        trailRect.anchorMax = Vector2.one;
+        trailRect.offsetMin = trailRect.offsetMax = Vector2.zero;
+        swipeTrail = trailObject.GetComponent<SwipeTrailUI>();
+        swipeTrail.color = trailColor;
+        swipeTrail.GlowColor = trailGlowColor;
+        swipeTrail.GlowSize = trailGlowSize;
         gameManager.BindUI(this);
     }
 
@@ -72,7 +89,7 @@ public class UIManager : MonoBehaviour
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
     public void StartGame()
     {
-        GetComponent<PracticeIntro>().Show(() => Navigate(gameManager.StartGame));
+        Navigate(gameManager.StartGame);
     }
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
     public void RestartGame() => Navigate(gameManager.RestartGame);
@@ -157,8 +174,6 @@ public class UIManager : MonoBehaviour
         menuCamera.SetActive(!inGame || loading);
         if (beatPulse != null && (!inGame || loading)) beatPulse.Bind(null);
         menuEventSystem.SetActive(!loading);
-        foreach (GameObject pad in levelPads)
-            if (pad != null) pad.SetActive(inGame && !loading);
         if (scoreDisplay != null && (loading || !inGame)) scoreDisplay.Bind(null);
         if (scoreDisplay != null) scoreDisplay.ShowResults(showResults);
         ShowError();
@@ -190,8 +205,6 @@ public class UIManager : MonoBehaviour
     public void ShowResults()
     {
         endPanel.SetActive(true);
-        foreach (GameObject pad in levelPads)
-            if (pad != null) pad.SetActive(false);
     }
 
     private void ShowError()
@@ -205,10 +218,12 @@ public class UIManager : MonoBehaviour
         if (!gameManager.IsLoading || mode != LoadSceneMode.Additive)
             return;
         menuCamera.SetActive(false);
-        levelPads.Clear();
+        swipeTrail.Bind(null, trailMarkSize, trailSpacing, trailFadeDuration);
         // The menu owns touch input while it hosts a level. Keep the level's standalone setup intact.
         foreach (GameObject root in scene.GetRootGameObjects())
         {
+            InputManager input = root.GetComponentInChildren<InputManager>(true);
+            if (input != null) swipeTrail.Bind(input, trailMarkSize, trailSpacing, trailFadeDuration);
             RhythmManager rhythm = root.GetComponentInChildren<RhythmManager>();
             if (beatPulse != null && rhythm != null) beatPulse.Bind(rhythm);
             foreach (EventSystem events in root.GetComponentsInChildren<EventSystem>(true))
@@ -216,13 +231,6 @@ public class UIManager : MonoBehaviour
                 foreach (BaseInputModule module in events.GetComponents<BaseInputModule>())
                     module.enabled = false;
                 events.enabled = false;
-            }
-            foreach (GesturePadFeedback feedback in root.GetComponentsInChildren<GesturePadFeedback>(true))
-                feedback.SetPreferences(menu);
-            foreach (TouchPadLayout layout in root.GetComponentsInChildren<TouchPadLayout>(true))
-            {
-                layout.Bind(menu);
-                levelPads.Add(layout.gameObject);
             }
             foreach (HazardWarningUI warning in root.GetComponentsInChildren<HazardWarningUI>(true))
             {
