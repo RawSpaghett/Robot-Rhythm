@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7719533524881936465}
   - component: {fileID: 7652570999159686424}
   m_Layer: 0
-  m_Name: MusicDatabase
+  m_Name: AudioDatabases
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdac4ace4cec4055ab9a91c1f77f1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicDatabase
-  audioLibrary: []
+  audioLoader:
+  - {fileID: 8300000, guid: db188a55103ff424f9e07484d2f6db00, type: 3}
+  - {fileID: 8300000, guid: 2072ad19bb771464295bb94e4de0e253, type: 3}
 --- !u!114 &7652570999159686424
 MonoBehaviour:
   m_ObjectHideFlags: 0

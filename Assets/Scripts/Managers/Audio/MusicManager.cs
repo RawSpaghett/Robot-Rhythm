@@ -7,9 +7,9 @@ public class MusicManager: MonoBehaviour
 {
     [SerializeField]private AudioSource speakers;
     [SerializeField]private RhythmManager rhythmManager;
-
     private double fadeStart;
     private const float FadeSeconds = .8f;
+    public static MusicManager Instance {get; private set;}
     void Update()
     {
         if (speakers)
@@ -21,6 +21,7 @@ public class MusicManager: MonoBehaviour
 
     void Awake()
     {
+        IntializeInstance();
         rhythmManager = RhythmManager.Instance;
         speakers = GetComponent<AudioSource>();
     }
@@ -50,6 +51,17 @@ public class MusicManager: MonoBehaviour
     public void PausePlay()
     {
         speakers.Pause();
+    }
+    private void IntializeInstance()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
 
