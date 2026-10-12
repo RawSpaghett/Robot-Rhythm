@@ -92,6 +92,13 @@ public class RollingNumber : MonoBehaviour
         var finish = label.GetComponent<NumberFinish>();
         if (finish != null && finish.enabled)
             digit.gameObject.AddComponent<NumberFinish>().CopyStyleFrom(finish);
+        var roundOutline = label.GetComponent<RoundedTextOutline>();
+        if (roundOutline != null && roundOutline.enabled)
+        {
+            var stroke = digit.gameObject.AddComponent<RoundedTextOutline>();
+            stroke.strokeColor = roundOutline.strokeColor;
+            stroke.width = roundOutline.width;
+        }
         var sourceOutline = label.GetComponent<Outline>();
         if (sourceOutline != null && sourceOutline.enabled)
         {

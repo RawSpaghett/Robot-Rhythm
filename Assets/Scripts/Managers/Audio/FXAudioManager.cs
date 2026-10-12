@@ -21,7 +21,7 @@ public class FXAudioManager: MonoBehaviour
         if (fx != null)
         {
             speakers.Stop();
-            speakers.PlayOneShot(fx,Volume);
+            speakers.PlayOneShot(fx,Volume * Mathf.Clamp01(PlayerPrefs.GetFloat("rr.effects", 1f)));
         }
     }
 }

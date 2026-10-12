@@ -8,6 +8,17 @@ public class MusicManager: MonoBehaviour
     [SerializeField]private AudioSource speakers;
     [SerializeField]private RhythmManager rhythmManager;
 
+    private double fadeStart;
+    private const float FadeSeconds = .8f;
+    void Update()
+    {
+        if (speakers)
+        {
+            float fade = Mathf.Clamp01((float)(AudioSettings.dspTime - fadeStart) / FadeSeconds);
+            speakers.volume = Mathf.Clamp01(PlayerPrefs.GetFloat("rr.music", 1f)) * Mathf.SmoothStep(0, 1, fade);
+        }
+    }
+
     void Awake()
     {
         rhythmManager = RhythmManager.Instance;
@@ -20,6 +31,8 @@ public class MusicManager: MonoBehaviour
         if (song != null)
         {
             speakers.clip = song;
+            speakers.volume=0;
+            fadeStart=dsp;
             speakers.PlayScheduled(dsp);
         }
     }
