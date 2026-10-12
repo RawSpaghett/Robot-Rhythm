@@ -23,10 +23,15 @@ namespace RobotRhythm.UI
         [SerializeField] private Slider volumeSlider;
         [SerializeField] private Text volumeValue;
         [SerializeField] private Text motionLabel;
+        public Slider effectsSlider, musicSlider;
+        public Text effectsValue, musicValue;
+        public float EffectsVolume { get; private set; }
+        public float MusicVolume { get; private set; }
 
         [Header("Appearance and Audio")]
         [SerializeField] private UiTheme theme;
         [SerializeField] private AudioClip clickSound;
+        [SerializeField] private AudioClip backSound;
 
         private const string VolumeKey = "rr.ui.v1.volume";
         private const string MotionKey = "rr.ui.v1.motion";
@@ -58,6 +63,10 @@ namespace RobotRhythm.UI
             }
 
             UiVolume = Mathf.Clamp01(PlayerPrefs.GetFloat(VolumeKey, 0.5f));
+            EffectsVolume = Mathf.Clamp01(PlayerPrefs.GetFloat("rr.effects", 1f));
+            MusicVolume = Mathf.Clamp01(PlayerPrefs.GetFloat("rr.music", 1f));
+            if (effectsSlider) effectsSlider.SetValueWithoutNotify(EffectsVolume);
+            if (musicSlider) musicSlider.SetValueWithoutNotify(MusicVolume);
             ReducedMotion = PlayerPrefs.GetInt(MotionKey, 0) == 1;
             volumeSlider.SetValueWithoutNotify(UiVolume);
             audioSource = GetComponent<AudioSource>();
@@ -138,6 +147,20 @@ namespace RobotRhythm.UI
             VolumeChanged?.Invoke(UiVolume);
         }
 
+        public void SetEffectsVolume(float value)
+        {
+            EffectsVolume = Mathf.Clamp01(value);
+            PlayerPrefs.SetFloat("rr.effects", EffectsVolume);
+            UpdateSettings();
+        }
+
+        public void SetMusicVolume(float value)
+        {
+            MusicVolume = Mathf.Clamp01(value);
+            PlayerPrefs.SetFloat("rr.music", MusicVolume);
+            UpdateSettings();
+        }
+
         public void ToggleReducedMotion()
         {
             ReducedMotion = !ReducedMotion;
@@ -148,6 +171,8 @@ namespace RobotRhythm.UI
 
         private void UpdateSettings()
         {
+            if (effectsValue) effectsValue.text = Mathf.RoundToInt(EffectsVolume * 100) + "%";
+            if (musicValue) musicValue.text = Mathf.RoundToInt(MusicVolume * 100) + "%";
             volumeValue.text = Mathf.RoundToInt(UiVolume * 100f) + "%";
             motionLabel.text = ReducedMotion ? "REDUCED MOTION: ON" : "REDUCED MOTION: OFF";
         }
@@ -155,7 +180,13 @@ namespace RobotRhythm.UI
         public void PlayClick()
         {
             if (audioSource != null)
-                audioSource.PlayOneShot(clickSound != null ? clickSound : defaultClick, UiVolume);
+                audioSource.PlayOneShot(clickSound != null ? clickSound : defaultClick, UiVolume * EffectsVolume);
+        }
+
+        public void PlayBackClick()
+        {
+            if (audioSource != null)
+                audioSource.PlayOneShot(backSound != null ? backSound : clickSound != null ? clickSound : defaultClick, UiVolume * EffectsVolume);
         }
 
         private AudioClip CreateDefaultClick()

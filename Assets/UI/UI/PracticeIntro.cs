@@ -34,8 +34,8 @@ public class PracticeIntro : MonoBehaviour
         progress = Label("",new Vector2(.28f,.22f),new Vector2(540,40),22);
         var icon = new GameObject("Action cue",typeof(RectTransform),typeof(DirectionArrow));
         icon.transform.SetParent(panel.transform,false); cue=icon.GetComponent<DirectionArrow>();
-        cue.rectTransform.anchorMin=cue.rectTransform.anchorMax=new Vector2(.76f,.72f);
-        cue.rectTransform.sizeDelta=new Vector2(40,36);
+        cue.rectTransform.anchorMin=cue.rectTransform.anchorMax=new Vector2(.76f,.57f);
+        cue.rectTransform.sizeDelta=new Vector2(110,100);
         cue.color=new Color32(23,49,60,255); cue.raycastTarget=false;
         cueCaption=Label("",new Vector2(.76f,.28f),new Vector2(440,70),21);
         recap=new GameObject("Obstacle recap",typeof(RectTransform));
@@ -105,11 +105,11 @@ public class PracticeIntro : MonoBehaviour
     }
     private Button MakeButton(string name,string label,Vector2 anchor,UnityEngine.Events.UnityAction action)
     {
-        var text=Label(label,anchor,new Vector2(270,72),24);
+        var text=Label(label,anchor,new Vector2(225,80),24);
         var obj=new GameObject(name,typeof(RectTransform),typeof(Image),typeof(Button));
         obj.transform.SetParent(panel.transform,false);var rect=(RectTransform)obj.transform;
-        rect.anchorMin=rect.anchorMax=anchor;rect.sizeDelta=new Vector2(280,76);
-        var image=obj.GetComponent<Image>();image.color=new Color32(242,190,88,255);
+        rect.anchorMin=rect.anchorMax=anchor;rect.sizeDelta=new Vector2(260,127);
+        var image=obj.GetComponent<Image>();image.sprite=SuppliedArtwork.Get("01-Buttons-and-Panels/button-secondary-normal");image.color=Color.white;image.preserveAspect=true;
         var button=obj.GetComponent<Button>();button.targetGraphic=image;button.onClick.AddListener(action);
         text.transform.SetParent(obj.transform,false);text.rectTransform.anchorMin=text.rectTransform.anchorMax=new Vector2(.5f,.5f);
         text.rectTransform.anchoredPosition=Vector2.zero;return button;

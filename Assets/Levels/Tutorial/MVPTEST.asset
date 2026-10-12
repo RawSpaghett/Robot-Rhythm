@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0246dd64aedb644db2a63b56db05c41, type: 3}
   m_Name: MVPTEST
   m_EditorClassIdentifier: Assembly-CSharp::BeatMap
-  Song: {fileID: 8300000, guid: 2072ad19bb771464295bb94e4de0e253, type: 3}
+  SongID: TestSong
+  SongLength: 54.07347
   Bpm: 125
   FirstBeatOffset: 0
   BeatsPerMeasure: 4

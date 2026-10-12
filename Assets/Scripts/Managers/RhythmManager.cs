@@ -25,8 +25,8 @@ public class RhythmManager: MonoBehaviour
 
     void Awake()
     {
+        musicManager = MusicManager.Instance;
         IntializeInstance();
-        
     }
 
     void Start()
@@ -87,7 +87,7 @@ public class RhythmManager: MonoBehaviour
         }
 
         Instance = this;
-        // The level owns its song. Reloading the level starts a fresh clock.
+        
     }
 
     private void OnDestroy()

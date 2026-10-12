@@ -5,12 +5,15 @@ namespace RobotRhythm.UI
 {
     public sealed class CutPanel : MaskableGraphic
     {
+        public Sprite artwork;
+        public override Texture mainTexture => artwork != null ? artwork.texture : base.mainTexture;
         public float cut = 16;
         [Min(0f)] public float outlineWidth;
         public bool cutAllCorners;
 
         protected override void OnPopulateMesh(VertexHelper mesh)
         {
+            if (artwork != null) { SuppliedArtwork.Draw(mesh, rectTransform.rect, artwork, color.a); return; }
             mesh.Clear();
             var r = rectTransform.rect;
             float c = Mathf.Min(cut, Mathf.Min(r.width, r.height) * .4f);

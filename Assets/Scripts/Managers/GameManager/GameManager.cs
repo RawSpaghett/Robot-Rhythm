@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
         stateMachine.Intialize(mainMenu);
     }
 
+    public void SelectLevel(string path) { if (!IsLoading && !HasActiveGame) gameplayScenePath = path; }
     public void StartGame()
     {
         if (IsLoading || HasActiveGame)
@@ -274,3 +275,4 @@ public class GameManager : MonoBehaviour
         Instance = null;
     }
 }
+
