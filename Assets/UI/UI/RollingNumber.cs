@@ -19,7 +19,8 @@ public class RollingNumber : MonoBehaviour
     public void SetProgress(int value, float progress)
     {
         if (label == null) label = GetComponent<Text>();
-        string text = value.ToString("N0", CultureInfo.InvariantCulture) + (percentage ? "%" : "");
+        string text = value.ToString("0", CultureInfo.InvariantCulture) + (percentage ? "%" : "");
+        // Keep the same digit cells at rest so completion cannot change spacing or size.
         if (row == null || targetText != text) BuildDigits(text);
         row.gameObject.SetActive(true);
         label.text = text;
@@ -61,13 +62,13 @@ public class RollingNumber : MonoBehaviour
         row.offsetMin = row.offsetMax = Vector2.zero;
         float width = label.rectTransform.rect.width;
         digitHeight = label.rectTransform.rect.height;
-        int size = Mathf.Min(label.fontSize, Mathf.FloorToInt(width / (text.Length * .65f)));
+        int size = Mathf.Min(label.fontSize, Mathf.FloorToInt(width / (text.Length * 1.15f)));
         float totalWidth = 0f;
-        foreach (char character in text) totalWidth += size * (character == '%' ? .95f : .64f);
+        foreach (char character in text) totalWidth += size * 1.15f;
         float cursor = -totalWidth * .5f;
         for (int i = 0; i < text.Length; i++)
         {
-            float cellWidth = size * (text[i] == '%' ? .95f : .64f);
+            float cellWidth = size * 1.15f;
             var cell = new GameObject("Digit " + i, typeof(RectTransform), typeof(RectMask2D)).GetComponent<RectTransform>();
             cell.SetParent(row, false);
             cell.anchorMin = cell.anchorMax = cell.pivot = new Vector2(.5f, .5f);
@@ -89,11 +90,25 @@ public class RollingNumber : MonoBehaviour
         digit.fontStyle = label.fontStyle;
         digit.color = label.color;
         var finish = label.GetComponent<NumberFinish>();
-        if (finish != null)
+        if (finish != null && finish.enabled)
             digit.gameObject.AddComponent<NumberFinish>().CopyStyleFrom(finish);
+        var sourceOutline = label.GetComponent<Outline>();
+        if (sourceOutline != null && sourceOutline.enabled)
+        {
+            var stroke = digit.gameObject.AddComponent<Outline>();
+            stroke.effectColor = sourceOutline.effectColor;
+            stroke.effectDistance = sourceOutline.effectDistance;
+            stroke.useGraphicAlpha = sourceOutline.useGraphicAlpha;
+        }
+        digit.horizontalOverflow = HorizontalWrapMode.Overflow;
+        digit.verticalOverflow = VerticalWrapMode.Overflow;
         digit.alignment = TextAnchor.MiddleCenter;
         digit.raycastTarget = false;
         digit.text = text;
         return digit;
     }
 }
+
+
+
+

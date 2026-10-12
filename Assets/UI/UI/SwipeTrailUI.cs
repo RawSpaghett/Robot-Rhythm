@@ -6,6 +6,8 @@ using UnityEngine.UI;
 // Draws pointer movement only. InputManager still decides which action to perform.
 public class SwipeTrailUI : MaskableGraphic
 {
+    private Sprite Artwork => RobotRhythm.UI.SuppliedArtwork.Get("03-Controls-and-Feedback/brush-dash-glow");
+    public override Texture mainTexture => Artwork != null ? Artwork.texture : base.mainTexture;
     private struct Mark
     {
         public Vector2 position;
@@ -199,6 +201,19 @@ public class SwipeTrailUI : MaskableGraphic
         fill.a *= fade;
         foreach (Mark mark in dots)
         {
+            if (Artwork != null)
+            {
+                int start = mesh.currentVertCount;
+                var uv = UnityEngine.Sprites.DataUtility.GetOuterUV(Artwork);
+                float width = markSize * mark.scale * 1.55f;
+                float height = width * Artwork.rect.height / Artwork.rect.width;
+                Quaternion turn = Quaternion.Euler(0,0,mark.angle);
+                Vector2[] corners = { new Vector2(-width/2,-height/2),new Vector2(-width/2,height/2),new Vector2(width/2,height/2),new Vector2(width/2,-height/2) };
+                Vector2[] uvs = { new Vector2(uv.x,uv.y),new Vector2(uv.x,uv.w),new Vector2(uv.z,uv.w),new Vector2(uv.z,uv.y) };
+                for(int i=0;i<4;i++) mesh.AddVert((Vector3)mark.position+turn*(Vector3)corners[i],new Color(1,1,1,fill.a),uvs[i]);
+                mesh.AddTriangle(start,start+1,start+2); mesh.AddTriangle(start,start+2,start+3);
+                continue;
+            }
             DrawGlow(mesh, mark);
             int first = mesh.currentVertCount;
             mesh.AddVert(mark.position, fill, Vector2.zero);

@@ -87,6 +87,8 @@ public class UIManager : MonoBehaviour
 
     public void OpenLevels() => OpenMenuPage(UiPage.Routes);
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
+    public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Desert Radio Feelings Level.unity"); StartGame(); }
+    public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Tutorial.unity"); StartGame(); }
     public void StartGame()
     {
         Navigate(gameManager.StartGame);
@@ -102,7 +104,27 @@ public class UIManager : MonoBehaviour
     {
         // Freeze immediately on touch; the overlay can then animate using unscaled time.
         if (!IsTransitioning)
-            gameManager.PauseGame();
+            StartCoroutine(PauseTransition());
+    }
+
+    private IEnumerator PauseTransition()
+    {
+        // The pause state is entered immediately; only its overlay fades in.
+        IsTransitioning = true;
+        gameManager.SetUITransition(true);
+        var group = pausePanel.GetComponent<CanvasGroup>();
+        if (group == null) group = pausePanel.AddComponent<CanvasGroup>();
+        group.alpha = 0;
+        gameManager.PauseGame();
+        float duration = menu.ReducedMotion ? 0f : .18f;
+        for (float elapsed = 0; elapsed < duration; elapsed += Time.unscaledDeltaTime)
+        {
+            group.alpha = Mathf.SmoothStep(0, 1, elapsed / duration);
+            yield return null;
+        }
+        group.alpha = 1;
+        IsTransitioning = false;
+        gameManager.SetUITransition(false);
     }
 
     private void OnStateChanged()
@@ -272,3 +294,4 @@ public class UIManager : MonoBehaviour
             transitionCover.gameObject.SetActive(false);
     }
 }
+

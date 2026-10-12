@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 547819207}
   - component: {fileID: 547819206}
   - component: {fileID: 547819205}
+  - component: {fileID: 547819208}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -865,6 +866,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1169807981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547819208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547819204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e431d04aff5ebed46bde0501a079eb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerObstacleScoring
+  input: {fileID: 547819206}
+  spawner: {fileID: 381480583}
+  rhythm: {fileID: 1333327601}
 --- !u!1 &623510172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3162,7 +3178,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicDatabase
   audioLoader:
+  - {fileID: 8300000, guid: 3276f8b3b0ea14e879d74b5040065268, type: 3}
   - {fileID: 8300000, guid: db188a55103ff424f9e07484d2f6db00, type: 3}
+  - {fileID: 8300000, guid: 2072ad19bb771464295bb94e4de0e253, type: 3}
 --- !u!1 &2097325179
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b24c24501683149a45efae86805697, type: 3}
   m_Name: UiTheme
   m_EditorClassIdentifier: RobotRhythm.UI::RobotRhythm.UI.UiTheme
-  displayFont: {fileID: 12800000, guid: 507d5a3e29bf9534b83041a36bf975de, type: 3}
-  bodyFont: {fileID: 12800000, guid: 750b6035dd3759c4e9567abe89b695d8, type: 3}
-  boldFont: {fileID: 12800000, guid: 507d5a3e29bf9534b83041a36bf975de, type: 3}
+  displayFont: {fileID: 12800000, guid: f95b16dc36947a043bc9131181c544b5, type: 3}
+  bodyFont: {fileID: 12800000, guid: f95b16dc36947a043bc9131181c544b5, type: 3}
+  boldFont: {fileID: 12800000, guid: f95b16dc36947a043bc9131181c544b5, type: 3}
   rounded: {fileID: 21300000, guid: a3e4a320790e3534595b2435c90f79eb, type: 3}
   solid: {fileID: 21300000, guid: 45b809ff77a0d8042a1cc3a9d9b90a46, type: 3}
   ink: {r: 0.09019608, g: 0.19215687, b: 0.23529412, a: 1}

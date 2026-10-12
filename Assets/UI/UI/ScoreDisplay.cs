@@ -187,7 +187,7 @@ public class ScoreDisplay : MonoBehaviour
 
     private static string Format(float value)
     {
-        return Mathf.RoundToInt(value).ToString("N0", CultureInfo.InvariantCulture);
+        return Mathf.RoundToInt(value).ToString("0", CultureInfo.InvariantCulture);
     }
 
     public float GetRating(float accuracy, int resolved)
@@ -223,3 +223,4 @@ public class ScoreDisplay : MonoBehaviour
     }
 
 }
+

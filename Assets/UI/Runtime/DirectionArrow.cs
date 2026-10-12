@@ -5,15 +5,28 @@ namespace RobotRhythm.UI
 {
     public sealed class DirectionArrow : MaskableGraphic
     {
+        private Sprite Artwork => SuppliedArtwork.Get(doubleArrow ? "02-Icons/double-up" : "02-Icons/arrow-right");
+        public override Texture mainTexture => Artwork != null ? Artwork.texture : base.mainTexture;
         [SerializeField] private bool doubleArrow;
         public void SetDouble(bool value)
         {
             if (doubleArrow == value) return;
             doubleArrow = value;
+            SetMaterialDirty();
             SetVerticesDirty();
         }
         protected override void OnPopulateMesh(VertexHelper mesh)
         {
+            if (Artwork != null)
+            {
+                SuppliedArtwork.Draw(mesh, rectTransform.rect, Artwork, color.a, true);
+                if (doubleArrow)
+                {
+                    UIVertex v = new UIVertex(); Vector2 center = rectTransform.rect.center;
+                    for (int i=0;i<mesh.currentVertCount;i++) { mesh.PopulateUIVertex(ref v,i); Vector2 p=(Vector2)v.position-center; v.position=center+new Vector2(p.y,-p.x); mesh.SetUIVertex(v,i); }
+                }
+                return;
+            }
             mesh.Clear();
             var r = rectTransform.rect;
             if (doubleArrow)
