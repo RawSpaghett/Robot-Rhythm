@@ -5,11 +5,23 @@ using UnityEngine;
 
 public class MusicManager: MonoBehaviour
 {
-    private AudioSource speakers;
-    private RhythmManager rhythmManager;
+    [SerializeField]private AudioSource speakers;
+    [SerializeField]private RhythmManager rhythmManager;
+    private double fadeStart;
+    private const float FadeSeconds = .8f;
+    public static MusicManager Instance {get; private set;}
+    void Update()
+    {
+        if (speakers)
+        {
+            float fade = Mathf.Clamp01((float)(AudioSettings.dspTime - fadeStart) / FadeSeconds);
+            speakers.volume = Mathf.Clamp01(PlayerPrefs.GetFloat("rr.music", 1f)) * Mathf.SmoothStep(0, 1, fade);
+        }
+    }
 
     void Awake()
     {
+        IntializeInstance();
         rhythmManager = RhythmManager.Instance;
         speakers = GetComponent<AudioSource>();
     }
@@ -20,6 +32,8 @@ public class MusicManager: MonoBehaviour
         if (song != null)
         {
             speakers.clip = song;
+            speakers.volume=0;
+            fadeStart=dsp;
             speakers.PlayScheduled(dsp);
         }
     }
@@ -37,6 +51,17 @@ public class MusicManager: MonoBehaviour
     public void PausePlay()
     {
         speakers.Pause();
+    }
+    private void IntializeInstance()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
 

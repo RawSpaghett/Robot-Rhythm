@@ -39,8 +39,40 @@ public class InputManager : MonoBehaviour
     }
     
 
+    private bool mouseHeld;
+    private bool previousMouseDown;
+    private Vector2 mouseStart;
+    private void Update()
+    {
+        var mouse = Mouse.current;
+        if (mouse == null) return;
+        bool down = mouse.leftButton.isPressed;
+        bool pressed = down && !previousMouseDown;
+        bool released = !down && previousMouseDown;
+        previousMouseDown = down;
+        if (Time.timeScale <= 0 || AudioListener.pause) { mouseHeld = false; return; }
+        if (pressed)
+        {
+            mouseHeld = UnityEngine.EventSystems.EventSystem.current == null ||
+                !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
+            mouseStart = mouse.position.ReadValue();
+        }
+        if (released && mouseHeld)
+        {
+            mouseHeld = false;
+            Vector2 displacement = mouse.position.ReadValue() - mouseStart;
+            if (displacement.magnitude < 24f * Mathf.Max(.75f, Screen.height / 720f))
+            {
+                if (actionManager != null) actionManager.TryJump();
+                OnPressed?.Invoke();
+            }
+            else PerformSwipe(GetDirection(displacement));
+        }
+    }
+    private void OnApplicationFocus(bool focused) { if (!focused) mouseHeld = false; }
     private void Jump(InputAction.CallbackContext context)
     {
+        if (context.control.device is Mouse) return;
         // Request a normal jump.
         if (actionManager != null)
             actionManager.TryJump();
@@ -50,9 +82,14 @@ public class InputManager : MonoBehaviour
 
     private void Drag(InputAction.CallbackContext context)
     {
+        if (context.control.device is Mouse) return;
         Vector2 dragInput = context.ReadValue<Vector2>();
         Direction direction = GetDirection(dragInput);
 
+        PerformSwipe(direction);
+    }
+    private void PerformSwipe(Direction direction)
+    {
         // Request the action matching the swipe direction.
         if (actionManager != null)
         {
@@ -92,4 +129,6 @@ public class InputManager : MonoBehaviour
     }
     
 }
+
+
 

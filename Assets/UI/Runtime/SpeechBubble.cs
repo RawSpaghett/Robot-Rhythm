@@ -6,12 +6,15 @@ namespace RobotRhythm.UI
 {
     public sealed class SpeechBubble : MaskableGraphic
     {
+        private Sprite Artwork => SuppliedArtwork.Get("03-Controls-and-Feedback/warning-bubble");
+        public override Texture mainTexture => Artwork != null ? Artwork.texture : base.mainTexture;
         [SerializeField] private Color outline = new Color(0.067f, 0.184f, 0.224f, 1f);
         [SerializeField, Min(0f)] private float borderWidth = 3f;
         [SerializeField] private Vector2 shadowOffset = new Vector2(1.5f, -2f);
 
         protected override void OnPopulateMesh(VertexHelper mesh)
         {
+            if (Artwork != null) { SuppliedArtwork.Draw(mesh, rectTransform.rect, Artwork, color.a); return; }
             var points = new List<Vector2>();
             Curve(points, new Vector2(.5f,.94f), new Vector2(.77f,.94f), new Vector2(.97f,.80f), new Vector2(.97f,.58f), 24);
             Curve(points, new Vector2(.97f,.58f), new Vector2(.97f,.35f), new Vector2(.78f,.23f), new Vector2(.60f,.23f), 24);

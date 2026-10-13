@@ -1,27 +1,60 @@
 using UnityEngine;
 
-//playing audio cues, scoring audio, etc
 //Justin
+//Plays sound effects
 
-public class FXAudioManager: MonoBehaviour
+public class FXManager: MonoBehaviour
 {
-    private AudioSource speakers;
-    private RhythmManager rhythmManager;
-
+    [SerializeField]private AudioSource speakers;
+    public static FXManager Instance {get; private set;}
 
     void Awake()
     {
-        rhythmManager = RhythmManager.Instance;
+        IntializeInstance();
         speakers = GetComponent<AudioSource>();
     }
 
-    public void PlayEffect(string FXId, float Volume)
+    public void PlaySFX(string SongID)
     {
-        var fx = AudioFXDatabase.Instance.GetClip(FXId);
-        if (fx != null)
+        if (speakers == null)
         {
-            speakers.Stop();
-            speakers.PlayOneShot(fx,Volume);
+            Debug.LogError("No Speakers attatched! FXManager");
         }
+
+        if (AudioFXDatabase.Instance.fxLibrary.ContainsKey(SongID))
+        {
+            speakers.PlayOneShot(AudioFXDatabase.Instance.GetClip(SongID));
+        }
+        
     }
+
+    public void MuteAllSFX()
+    {
+        speakers.Stop();
+    }
+
+    public void ResumeSFX() 
+    {
+        speakers.UnPause();
+    }
+
+    public void PauseSFX()
+    {
+        speakers.Pause();
+    }
+    
+    private void IntializeInstance()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        // The level owns its song. Reloading the level starts a fresh clock.
+    }
+
+
+    
 }

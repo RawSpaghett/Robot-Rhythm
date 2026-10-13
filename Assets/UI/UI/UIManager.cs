@@ -41,6 +41,8 @@ public class UIManager : MonoBehaviour
     [SerializeField, Min(0.01f)] private float trailFadeDuration = 0.2f;
     private SwipeTrailUI swipeTrail;
 
+    public CanvasGroup[] menuContents;
+    public GameObject sharedMenuBackground;
     private float previousVolume;
     public bool IsTransitioning { get; private set; }
 
@@ -87,12 +89,14 @@ public class UIManager : MonoBehaviour
 
     public void OpenLevels() => OpenMenuPage(UiPage.Routes);
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
+    public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Desert Radio Feelings Level.unity"); StartGame(); }
+    public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Tutorial.unity"); StartGame(); }
     public void StartGame()
     {
-        Navigate(gameManager.StartGame);
+        Navigate(gameManager.StartGame, true);
     }
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
-    public void RestartGame() => Navigate(gameManager.RestartGame);
+    public void RestartGame() => Navigate(gameManager.RestartGame, true);
     public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu);
     public void OpenSettings() => Navigate(gameManager.OpenOptions);
     public void CloseSettings() => Navigate(gameManager.CloseOptions);
@@ -102,26 +106,56 @@ public class UIManager : MonoBehaviour
     {
         // Freeze immediately on touch; the overlay can then animate using unscaled time.
         if (!IsTransitioning)
-            gameManager.PauseGame();
+            StartCoroutine(PauseTransition());
+    }
+
+    private IEnumerator PauseTransition()
+    {
+        // The pause state is entered immediately; only its overlay fades in.
+        IsTransitioning = true;
+        gameManager.SetUITransition(true);
+        var group = pausePanel.GetComponent<CanvasGroup>();
+        if (group == null) group = pausePanel.AddComponent<CanvasGroup>();
+        group.alpha = 0;
+        gameManager.PauseGame();
+        float duration = menu.ReducedMotion ? 0f : .18f;
+        for (float elapsed = 0; elapsed < duration; elapsed += Time.unscaledDeltaTime)
+        {
+            group.alpha = Mathf.SmoothStep(0, 1, elapsed / duration);
+            yield return null;
+        }
+        group.alpha = 1;
+        IsTransitioning = false;
+        gameManager.SetUITransition(false);
     }
 
     private void OnStateChanged()
     {
         ShowError();
         if (!IsTransitioning)
-            StartCoroutine(Transition(null));
+            StartCoroutine(RevealState());
     }
 
-    private void Navigate(Action action)
+    private void Navigate(Action action, bool fullScreen = false)
     {
         if (!IsTransitioning && !gameManager.IsLoading)
-            StartCoroutine(Transition(action));
+            StartCoroutine(Transition(action, fullScreen));
     }
 
-    private IEnumerator Transition(Action action)
+    private IEnumerator Transition(Action action, bool fullScreen = false)
     {
         IsTransitioning = true;
         gameManager.SetUITransition(true);
+        if (!fullScreen)
+        {
+            yield return FadeContents(1, 0, .12f);
+            action?.Invoke();
+            while (gameManager.IsLoading) yield return null;
+            yield return FadeContents(0, 1, .18f);
+            IsTransitioning = false;
+            gameManager.SetUITransition(false);
+            yield break;
+        }
         transitionCover.gameObject.SetActive(true);
         transitionCover.blocksRaycasts = true;
         transitionLoadingLabel.SetActive(false);
@@ -138,6 +172,38 @@ public class UIManager : MonoBehaviour
         transitionCover.gameObject.SetActive(false);
         IsTransitioning = false;
         gameManager.SetUITransition(false);
+    }
+
+    private IEnumerator RevealState()
+    {
+        IsTransitioning = true;
+        gameManager.SetUITransition(true);
+        yield return FadeContents(0, 1, .18f);
+        IsTransitioning = false;
+        gameManager.SetUITransition(false);
+    }
+
+    private IEnumerator FadeContents(float from, float to, float duration)
+    {
+        if (menu.ReducedMotion) duration = .01f;
+        for (float elapsed = 0; elapsed < duration; elapsed += Time.unscaledDeltaTime)
+        {
+            float alpha = Mathf.Lerp(from, to, Mathf.SmoothStep(0, 1, elapsed / duration));
+            foreach (var group in menuContents)
+                if (group) group.alpha = alpha;
+            yield return null;
+        }
+        foreach (var group in menuContents)
+            if (group) group.alpha = to;
+    }
+
+    private void LateUpdate()
+    {
+        if (sharedMenuBackground)
+        {
+            bool menuVisible = menu.GetComponent<Canvas>().enabled && menu.CurrentPageRect.gameObject.activeInHierarchy;
+            sharedMenuBackground.SetActive(!gameManager.HasActiveGame || menuVisible || (scoringPanel && scoringPanel.activeInHierarchy));
+        }
     }
 
     private IEnumerator Fade(float from, float to, float duration)

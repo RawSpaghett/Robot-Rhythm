@@ -5,6 +5,8 @@ namespace RobotRhythm.UI
 {
     public sealed class RatingStar : MaskableGraphic
     {
+        private Sprite Artwork => SuppliedArtwork.Get(FillAmount >= 1f ? "03-Controls-and-Feedback/star-full" : FillAmount > 0f ? "03-Controls-and-Feedback/star-half" : "02-Icons/star-empty");
+        public override Texture mainTexture => Artwork != null ? Artwork.texture : base.mainTexture;
         [Header("Star Finish")]
         [SerializeField] private Color insetColor = new Color32(15, 34, 44, 255);
         [SerializeField] private Color insetShade = new Color32(5, 16, 24, 255);
@@ -19,6 +21,7 @@ namespace RobotRhythm.UI
         [SerializeField, Range(0f, .5f)] private float jumpScale = .30f;
         private float jumpTime;
         private bool jumping;
+        private Image previousDrawing;
         public float FillAmount { get; private set; }
         public bool Earned => FillAmount > 0f;
         public bool IsJumping => jumping;
@@ -36,8 +39,27 @@ namespace RobotRhythm.UI
                 if (!animate && jumping) Settle();
                 return;
             }
-            jumping = amount > FillAmount && animate && isActiveAndEnabled;
+            Sprite previous = Artwork;
+            jumping = animate && isActiveAndEnabled;
+            if (jumping)
+            {
+                if (previousDrawing == null)
+                {
+                    previousDrawing = new GameObject("Previous star drawing", typeof(RectTransform), typeof(Image)).GetComponent<Image>();
+                    previousDrawing.transform.SetParent(transform, false);
+                    previousDrawing.rectTransform.anchorMin = Vector2.zero;
+                    previousDrawing.rectTransform.anchorMax = Vector2.one;
+                    previousDrawing.rectTransform.offsetMin = previousDrawing.rectTransform.offsetMax = Vector2.zero;
+                    previousDrawing.preserveAspect = true;
+                    previousDrawing.raycastTarget = false;
+                }
+                previousDrawing.sprite = previous;
+                previousDrawing.color = new Color(1,1,1,color.a);
+                previousDrawing.enabled = true;
+            }
+            else if (previousDrawing != null) previousDrawing.enabled = false;
             FillAmount = amount;
+            SetMaterialDirty();
             jumpTime = 0f;
             SetVerticesDirty();
         }
@@ -46,13 +68,19 @@ namespace RobotRhythm.UI
         {
             if (!jumping) return;
             jumpTime += Time.unscaledDeltaTime;
-            if (jumpTime >= jumpDuration) jumping = false;
+            if (previousDrawing != null)
+            {
+                float fade = Mathf.SmoothStep(0,1,Mathf.Clamp01(jumpTime / jumpDuration));
+                previousDrawing.color = new Color(1,1,1,color.a * (1-fade));
+            }
+            if (jumpTime >= jumpDuration) { jumping = false; if (previousDrawing != null) previousDrawing.enabled = false; }
             SetVerticesDirty();
         }
 
         private void Settle()
         {
             jumping = false;
+            if (previousDrawing != null) previousDrawing.enabled = false;
             jumpTime = jumpDuration;
             SetVerticesDirty();
         }
@@ -60,11 +88,18 @@ namespace RobotRhythm.UI
         protected override void OnDisable()
         {
             jumping = false;
+            if (previousDrawing != null) previousDrawing.enabled = false;
             base.OnDisable();
         }
 
         protected override void OnPopulateMesh(VertexHelper mesh)
         {
+            if (Artwork != null)
+            {
+                float blend = jumping ? Mathf.SmoothStep(0,1,Mathf.Clamp01(jumpTime / jumpDuration)) : 1;
+                SuppliedArtwork.Draw(mesh, rectTransform.rect, Artwork, color.a * blend, true);
+                return;
+            }
             var rect = rectTransform.rect;
             float size = Mathf.Min(rect.width, rect.height);
             float feather = CutPanel.FeatherWidth(this);
