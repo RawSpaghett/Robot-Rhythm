@@ -17,6 +17,8 @@ public abstract class ObstacleBase : MonoBehaviour
     // Unity Action event for sending Obstacle Accuracy & Obstacle Result
     public static event UnityAction<ObstacleBase, ObstacleResult, float> OnObstacleResolved;
 
+    public static event UnityAction<ObstacleInputType,float> OnPerfectTiming; //for robot team
+
     public double TargetTime { get; private set; }
     public float EarlyWindow => Mathf.Max(0.01f, earlyWindow);
     public float LateWindow => Mathf.Max(0.01f, lateWindow);
@@ -24,6 +26,8 @@ public abstract class ObstacleBase : MonoBehaviour
     public bool IsResolved { get; private set; }
     public float LastAccuracy { get; private set; }
     public ObstacleResult LastResult { get; private set; } = ObstacleResult.None;
+    public abstract ObstacleInputType RequiredInput { get; }
+    
 
     // A correct input exactly on the window boundary succeeds with 0 accuracy.
     // Use these properties / LastResult when you need success versus failure.
@@ -40,6 +44,7 @@ public abstract class ObstacleBase : MonoBehaviour
         IsResolved = false;
         LastAccuracy = 0f;
         LastResult = ObstacleResult.None;
+        
     }
 
     public void EvaluateInput(ObstacleInputType inputType, double inputTime, float charge = 0f)
@@ -73,7 +78,11 @@ public abstract class ObstacleBase : MonoBehaviour
         // The existing spawner calls this every update using SongTime.
         // No separate Update or RhythmManager reference is needed in this class.
         if (!isActiveAndEnabled || !IsActive || IsResolved)
+        {
+            OnPerfectTiming?.Invoke(RequiredInput, 1.0f);
             return;
+        }
+
         if (currentTime > TargetTime + LateWindow)
             Resolve(ObstacleResult.Missed, 0f);
     }

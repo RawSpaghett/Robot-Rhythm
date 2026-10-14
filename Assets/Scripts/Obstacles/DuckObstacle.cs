@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class DuckObstacle : ObstacleBase
 {
+    public override ObstacleInputType RequiredInput => ObstacleInputType.Dodge;
     protected override bool AcceptsInput(
         ObstacleInputType inputType,
         float charge)
@@ -13,6 +14,7 @@ public class DuckObstacle : ObstacleBase
         // gameplay input name used by ObstacleBase for that action.
         // Charge is unused: ducking only needs the correct action and timing.
         return inputType == ObstacleInputType.Dodge;
+
     }
 
     // FUTURE ANIMATION CONNECTION:

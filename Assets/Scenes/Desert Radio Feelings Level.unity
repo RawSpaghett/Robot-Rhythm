@@ -499,8 +499,9 @@ GameObject:
   - component: {fileID: 368559385}
   - component: {fileID: 368559384}
   - component: {fileID: 368559383}
+  - component: {fileID: 368559386}
   m_Layer: 0
-  m_Name: Robot2
+  m_Name: RobotTeammate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -602,6 +603,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &368559386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368559382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ce2f62b679c814eabdb6c5ca596aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActionManager
+  robotVisual: {fileID: 0}
+  robotRenderer: {fileID: 0}
+  jump:
+    jumpHeight: 2
+    jumpDuration: 0.5
+    jumpFrames: []
+    longJumpFrames: []
+    minimumLongJumpHeight: 2.5
+    maximumLongJumpHeight: 3.5
+    minimumLongJumpDuration: 0.8
+    maximumLongJumpDuration: 1.2
+  duck:
+    duckFrames: []
+    duckDuration: 0.5
+  runningAnimation:
+    runFrames: []
+    framesPerSecond: 24
 --- !u!1 &381480582
 GameObject:
   m_ObjectHideFlags: 0
