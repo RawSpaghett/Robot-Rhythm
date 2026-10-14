@@ -1,82 +1,51 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// Describes the gameplay action, rather than the physical gesture.
-public enum ObstacleInputType
-{
-    Jump,
-    LongJump,
-    Brake,
-    Accelerate,
-    Dodge
-}
-
-public enum ObstacleResult
-{
-    None,
-    Success,
-    TooEarly,
-    TooLate,
-    WrongInput,
-    Missed
-}
+// Gameplay actions, rather than the inputs used to request them.
+public enum ObstacleInputType { Jump, LongJump, Brake, Accelerate, Dodge }
+public enum ObstacleResult { None, Success, TooEarly, TooLate, WrongInput, Missed }
 
 public abstract class ObstacleBase : MonoBehaviour
 {
-    [Header("Timing Windows")]
+    [Header("Timing Windows (Seconds)")]
     [SerializeField, Min(0.01f)] private float earlyWindow = 0.25f;
     [SerializeField, Min(0.01f)] private float lateWindow = 0.25f;
 
     [Header("Rating")]
-    [SerializeField, Range(0.01f, 1f)]
-    private float perfectAccuracyThreshold = 0.90f;
+    [SerializeField, Range(0.01f, 1f)] private float perfectAccuracyThreshold = 0.90f;
 
-    // Shared result event for every obstacle derived from ObstacleBase.
-    // Arguments: obstacle that resolved, outcome, timing accuracy.
-    
-    // Listeners subscribe with += and unsubscribe with -=.
-    // Only ObstacleBase can invoke this event.
-    public static event UnityAction<float>
-        OnObstacleResolved;
+    // Unity Action event for sending Obstacle Accuracy & Obstacle Result
+    public static event UnityAction<ObstacleBase, ObstacleResult, float> OnObstacleResolved;
 
     public double TargetTime { get; private set; }
-
     public float EarlyWindow => Mathf.Max(0.01f, earlyWindow);
     public float LateWindow => Mathf.Max(0.01f, lateWindow);
-
     public bool IsActive { get; private set; }
     public bool IsResolved { get; private set; }
-
     public float LastAccuracy { get; private set; }
+    public ObstacleResult LastResult { get; private set; } = ObstacleResult.None;
 
-    public ObstacleResult LastResult { get; private set; } =
-        ObstacleResult.None;
-
-    // Clearance is separate from accuracy because a press exactly
-    // on the window boundary is accepted but has zero accuracy.
-    public bool WasCleared =>
-        IsResolved && LastResult == ObstacleResult.Success;
-
-    public bool WasPerfect =>
-        WasCleared && LastAccuracy >= perfectAccuracyThreshold;
+    // A correct input exactly on the window boundary succeeds with 0 accuracy.
+    // Use these properties / LastResult when you need success versus failure.
+    public bool WasCleared => IsResolved && LastResult == ObstacleResult.Success;
+    public bool WasPerfect => WasCleared && LastAccuracy >= perfectAccuracyThreshold;
 
     public void Prepare(double targetTime)
     {
-        // A test controller or rhythm system supplies the target.
+        // ObstacleSpawner already supplies placement.Beat * SecondsPerBeat.
+        // These are seconds relative to beat zero, matching RhythmManager.SongTime.
+        // Do not add FirstBeatOffset here: SongTime already subtracts it.
         TargetTime = targetTime;
-
         IsActive = true;
         IsResolved = false;
-
         LastAccuracy = 0f;
         LastResult = ObstacleResult.None;
     }
 
-    public void EvaluateInput(
-        ObstacleInputType inputType,
-        double inputTime,
-        float charge = 0f)
+    public void EvaluateInput(ObstacleInputType inputType, double inputTime, float charge = 0f)
     {
+        // The input/controller forwards one confirmed input to the target chosen
+        // by ObstacleSpawner.FindInputTarget. inputTime must be SongTime.
         if (!isActiveAndEnabled || !IsActive || IsResolved)
             return;
 
@@ -85,52 +54,35 @@ public abstract class ObstacleBase : MonoBehaviour
             Resolve(ObstacleResult.TooEarly, 0f);
             return;
         }
-
         if (inputTime > TargetTime + LateWindow)
         {
             Resolve(ObstacleResult.TooLate, 0f);
             return;
         }
-
-        // Each child obstacle defines its accepted actions.
         if (!AcceptsInput(inputType, Mathf.Clamp01(charge)))
         {
             Resolve(ObstacleResult.WrongInput, 0f);
             return;
         }
 
-        float accuracy = CalculateAccuracy(inputTime);
-
-        Resolve(ObstacleResult.Success, accuracy);
+        Resolve(ObstacleResult.Success, CalculateAccuracy(inputTime));
     }
 
     public void CheckForMiss(double currentTime)
     {
+        // The existing spawner calls this every update using SongTime.
+        // No separate Update or RhythmManager reference is needed in this class.
         if (!isActiveAndEnabled || !IsActive || IsResolved)
             return;
-
-        // The obstacle must resolve even if no input occurs.
         if (currentTime > TargetTime + LateWindow)
-        {
             Resolve(ObstacleResult.Missed, 0f);
-        }
     }
 
     public float CalculateAccuracy(double inputTime)
     {
-        double timingDifference = inputTime - TargetTime;
-
-        double window = timingDifference <= 0.0
-            ? EarlyWindow
-            : LateWindow;
-
-        double distanceFromTarget =
-            System.Math.Abs(timingDifference);
-
-        float accuracy =
-            (float)(1.0 - distanceFromTarget / window);
-
-        return Mathf.Clamp01(accuracy);
+        double difference = inputTime - TargetTime;
+        double window = difference <= 0.0 ? EarlyWindow : LateWindow;
+        return Mathf.Clamp01((float)(1.0 - System.Math.Abs(difference) / window));
     }
 
     public void CancelAttempt()
@@ -138,32 +90,21 @@ public abstract class ObstacleBase : MonoBehaviour
         // Cancellation does not award points or report a miss.
         IsActive = false;
         IsResolved = false;
-
         LastAccuracy = 0f;
         LastResult = ObstacleResult.None;
     }
 
-    // Every obstacle subclass must provide its own input rules.
-    protected abstract bool AcceptsInput(
-        ObstacleInputType inputType,
-        float charge);
+    protected abstract bool AcceptsInput(ObstacleInputType inputType, float charge);
 
     private void Resolve(ObstacleResult result, float accuracy)
     {
-        // Lock the outcome before notifying other systems.
+        // Store and lock the result before notifying listeners.
         IsActive = false;
         IsResolved = true;
-
         LastResult = result;
         LastAccuracy = Mathf.Clamp01(accuracy);
-
-        // Notify listeners after the obstacle's result has been stored.
-        // ?.Invoke safely handles having no listeners.
-        OnObstacleResolved?.Invoke(LastAccuracy);
+        OnObstacleResolved?.Invoke(this, LastResult, LastAccuracy);
     }
-
-    protected virtual void CallForFX() //call the popup FX
-    {}
 
     protected virtual void OnDisable()
     {

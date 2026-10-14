@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5553014651996678367}
   - component: {fileID: 2350552986097842453}
   - component: {fileID: 2979600250130989780}
+  - component: {fileID: 8679426669905581782}
   m_Layer: 0
   m_Name: pothole_0
   m_TagString: Untagged
@@ -107,3 +108,20 @@ MonoBehaviour:
   earlyWindow: 0.25
   lateWindow: 0.25
   perfectAccuracyThreshold: 0.9
+--- !u!114 &8679426669905581782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743891988528664148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3122ff81bf12a5e469be1f83eadd3f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleTimingGizmo
+  obstacle: {fileID: 2979600250130989780}
+  rhythmManager: {fileID: 0}
+  localOffset: {x: 0, y: 1.5, z: 0}
+  width: 3
+  approachSeconds: 1
