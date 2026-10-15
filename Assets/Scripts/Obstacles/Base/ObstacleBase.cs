@@ -57,20 +57,23 @@ public abstract class ObstacleBase : MonoBehaviour
 
         if (inputTime < TargetTime - EarlyWindow)
         {
+            FXManager.Instance.PlaySFX("tooearly");
             Resolve(ObstacleResult.TooEarly, 0f);
             return;
         }
         if (inputTime > TargetTime + LateWindow)
         {
+            FXManager.Instance.PlaySFX("toolate");
             Resolve(ObstacleResult.TooLate, 0f);
             return;
         }
         if (!AcceptsInput(inputType, Mathf.Clamp01(charge)))
         {
+            FXManager.Instance.PlaySFX("wronginput");
             Resolve(ObstacleResult.WrongInput, 0f);
             return;
         }
-
+        
         Resolve(ObstacleResult.Success, CalculateAccuracy(inputTime));
     }
 
@@ -83,6 +86,7 @@ public abstract class ObstacleBase : MonoBehaviour
         
 
         if (currentTime > TargetTime + LateWindow)
+            FXManager.Instance.PlaySFX("miss");
             Resolve(ObstacleResult.Missed, 0f);
     }
 

@@ -76,7 +76,7 @@ public class ActionManager : MonoBehaviour
             return false;
 
         // Supports another component calling before this component's Awake.
-        InitializeActions();
+        InitializeActions(); 
 
         if (!actions.TryGetValue(type, out ActionBase action))
             return false;

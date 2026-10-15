@@ -43,7 +43,7 @@ public class RobotTeammate : MonoBehaviour
 
     private void PrepareQueue(ObstacleInputType Type, double DspTime)
     {
-        Debug.Log("Robot team PrepareQueue!");
+        //Debug.Log("Robot team PrepareQueue!");
         actionQueue.Enqueue(new ObstacleData { dspTime = DspTime + offset, type = Type }); //add to queue
     }
     
@@ -53,11 +53,11 @@ public class RobotTeammate : MonoBehaviour
         switch(type.type)
         {
             case ObstacleInputType.Dodge:
-                Debug.Log($"Robot team Dodge!");
+                //Debug.Log($"Robot team Dodge!");
                 actionManager.TryDuck();
                 return;
             case ObstacleInputType.Jump:
-                Debug.Log($"Robot team Jump!");
+                //Debug.Log($"Robot team Jump!");
                 actionManager.TryJump();
                 return;
         }
