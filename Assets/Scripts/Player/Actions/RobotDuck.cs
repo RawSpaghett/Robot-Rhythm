@@ -31,7 +31,7 @@ public class RobotDuck : ActionBase
             return false;
         }
 
-        FXManager.Instance.PlaySFX("duck");
+        if (FXManager.Instance != null) FXManager.Instance.PlaySFX("duck");
         
         for (int i = 0; i < duckFrames.Length; i++)
         {

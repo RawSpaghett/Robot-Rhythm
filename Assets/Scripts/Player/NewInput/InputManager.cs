@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -53,9 +55,8 @@ public class InputManager : MonoBehaviour
         if (Time.timeScale <= 0 || AudioListener.pause) { mouseHeld = false; return; }
         if (pressed)
         {
-            mouseHeld = UnityEngine.EventSystems.EventSystem.current == null ||
-                !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
             mouseStart = mouse.position.ReadValue();
+            mouseHeld = !IsOverUI(mouseStart);
         }
         if (released && mouseHeld)
         {
@@ -69,6 +70,16 @@ public class InputManager : MonoBehaviour
             else PerformSwipe(GetDirection(displacement));
         }
     }
+    private bool IsOverUI(Vector2 position)
+    {
+        if (EventSystem.current == null) return false;
+        // Check this press position instead of the input module's previous pointer state.
+        var pointer = new PointerEventData(EventSystem.current) { position = position };
+        var hits = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointer, hits);
+        return hits.Count > 0;
+    }
+
     private void OnApplicationFocus(bool focused) { if (!focused) mouseHeld = false; }
     private void Jump(InputAction.CallbackContext context)
     {

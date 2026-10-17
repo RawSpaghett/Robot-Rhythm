@@ -19,9 +19,10 @@ public class FXManager: MonoBehaviour
         if (speakers == null)
         {
             Debug.LogError("No Speakers attatched! FXManager");
+            return;
         }
 
-        if (AudioFXDatabase.Instance.fxLibrary.ContainsKey(SongID))
+        if (AudioFXDatabase.Instance != null && AudioFXDatabase.Instance.fxLibrary.ContainsKey(SongID))
         {
             speakers.PlayOneShot(AudioFXDatabase.Instance.GetClip(SongID));
         }

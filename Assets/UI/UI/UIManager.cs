@@ -43,6 +43,9 @@ public class UIManager : MonoBehaviour
 
     public CanvasGroup[] menuContents;
     public GameObject sharedMenuBackground;
+    public ComboDisplay comboDisplay;
+    public GameObject countdownPanel;
+    public Text countdownText;
     private float previousVolume;
     public bool IsTransitioning { get; private set; }
 
@@ -68,6 +71,7 @@ public class UIManager : MonoBehaviour
     {
         SetVolume(menu.UiVolume);
         transitionCover.gameObject.SetActive(false);
+        countdownPanel.SetActive(false);
         var trailObject = new GameObject("Swipe Trail", typeof(RectTransform), typeof(CanvasRenderer), typeof(SwipeTrailUI));
         trailObject.transform.SetParent(playHud.transform, false);
         var trailRect = (RectTransform)trailObject.transform;
@@ -91,6 +95,13 @@ public class UIManager : MonoBehaviour
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
     public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Desert Radio Feelings Level.unity"); StartGame(); }
     public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Tutorial.unity"); StartGame(); }
+    public void StartLevel(string scenePath)
+    {
+        if (IsTransitioning || gameManager.IsLoading) return;
+        gameManager.SelectLevel(scenePath);
+        StartGame();
+    }
+
     public void StartGame()
     {
         Navigate(gameManager.StartGame, true);
@@ -170,8 +181,24 @@ public class UIManager : MonoBehaviour
 
         yield return Fade(1f, 0f, duration * 0.6f);
         transitionCover.gameObject.SetActive(false);
+        if (gameManager.HasActiveGame)
+            yield return Countdown();
         IsTransitioning = false;
         gameManager.SetUITransition(false);
+    }
+
+    private IEnumerator Countdown()
+    {
+        // The UI transition keeps gameplay and the music clock paused until this ends.
+        countdownPanel.SetActive(true);
+        float remaining = 5f;
+        while (remaining > 0)
+        {
+            countdownText.text = Mathf.CeilToInt(remaining).ToString();
+            yield return null;
+            remaining -= Time.unscaledDeltaTime;
+        }
+        countdownPanel.SetActive(false);
     }
 
     private IEnumerator RevealState()
@@ -237,6 +264,7 @@ public class UIManager : MonoBehaviour
         HideScreens();
         bool inGame = gameManager.HasActiveGame;
         bool loading = gameManager.IsLoading;
+        if (comboDisplay != null && (loading || !inGame)) comboDisplay.ClearCombo();
         menuCamera.SetActive(!inGame || loading);
         if (beatPulse != null && (!inGame || loading)) beatPulse.Bind(null);
         menuEventSystem.SetActive(!loading);
@@ -333,6 +361,7 @@ public class UIManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
         AudioListener.volume = previousVolume;
         StopAllCoroutines();
+        if (countdownPanel != null) countdownPanel.SetActive(false);
         IsTransitioning = false;
         if (transitionCover != null)
             transitionCover.gameObject.SetActive(false);
