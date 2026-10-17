@@ -17,16 +17,21 @@ public class DuckObstacle : ObstacleBase
 
     }
 
+    void OnEnable()
+    {
+        FXManager.Instance.PlaySFX("duck");
+    }
+
     // FUTURE ANIMATION CONNECTION:
     // Connect DuckAction's request event to an animation controller separately.
     // The animation can play for an attempt even when its timing is incorrect.
     // Do not use animation completion or collider overlap to determine success.
-    
+
     // FUTURE RESULT CONNECTION:
     // A result listener can use the inherited On Accuracy Evaluated event.
     // That listener should inspect WasCleared / LastResult for success/failure.
     // Accuracy alone is insufficient: an accepted window boundary scores zero.
-    
+
     // FUTURE LEVEL CONNECTION:
     // Replace the test controller with the level's rhythm/input router.
     // It must Prepare the target time, route Dodge attempts to EvaluateInput,

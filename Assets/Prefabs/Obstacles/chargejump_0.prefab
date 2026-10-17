@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 847408272001744990}
   - component: {fileID: 4998186943114438915}
-  - component: {fileID: 4424986881155105582}
   - component: {fileID: 4468790631360143452}
+  - component: {fileID: -5641367011392288484}
   - component: {fileID: 8220606515596276091}
   m_Layer: 0
   m_Name: chargejump_0
@@ -94,21 +94,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &4424986881155105582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411088392457839807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af73195545519034e88c655ac8d22d70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PotholeObstacle
-  earlyWindow: 0.5
-  lateWindow: 0.25
-  perfectAccuracyThreshold: 0.929
 --- !u!114 &4468790631360143452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +107,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HazardWarningCue
   doubleArrow: 1
+--- !u!114 &-5641367011392288484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7411088392457839807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e12af4baa540c746ab2fc57208fd158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoadblockObstacle
+  earlyWindow: 0.5
+  lateWindow: 0.25
+  perfectAccuracyThreshold: 0.99
 --- !u!114 &8220606515596276091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3122ff81bf12a5e469be1f83eadd3f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleTimingGizmo
-  obstacle: {fileID: 4424986881155105582}
+  obstacle: {fileID: 0}
   rhythmManager: {fileID: 0}
   localOffset: {x: 0, y: 1.5, z: 0}
   width: 3

@@ -61,10 +61,16 @@ public class RobotTeammate : MonoBehaviour
             case ObstacleInputType.Dodge:
                 //Debug.Log($"Robot team Dodge!");
                 actionManager.TryDuck();
+                FXManager.Instance.PlaySFX("duck");
                 return;
             case ObstacleInputType.Jump:
                 //Debug.Log($"Robot team Jump!");
                 actionManager.TryJump();
+                FXManager.Instance.PlaySFX("jump");
+                return;
+            case ObstacleInputType.LongJump:
+                actionManager.TryLongJump(7f);
+                FXManager.Instance.PlaySFX("jump");
                 return;
         }
     }
