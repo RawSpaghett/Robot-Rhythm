@@ -19,6 +19,7 @@ public class RobotTeammate : MonoBehaviour
     private void OnEnable()
     {
         ObstacleBase.OnPerfectTiming += PrepareQueue;
+        actionQueue.Clear();
         actionManager = GetComponent<ActionManager>();
     }
 
@@ -27,23 +28,28 @@ public class RobotTeammate : MonoBehaviour
         ObstacleBase.OnPerfectTiming -= PrepareQueue;
     }
 
+    private void Start() //for alignment, GEMINI ASSISTED
+    {  
+        ObstacleSpawner spawner = FindFirstObjectByType<ObstacleSpawner>();
+
+        float distance = transform.position.x - spawner.hitLineX;
+        float speed = spawner.distancePerBeat / (float)RhythmManager.Instance.beatMap.SecondsPerBeat;
+        offset += -(distance / speed);
+    }
+
     void Update()
     {
-        if (actionQueue.Count != 0)
-        {
-            if (RhythmManager.Instance.SongTime >= actionQueue.Peek().dspTime)
+            while (actionQueue.Count > 0 && RhythmManager.Instance.SongTime >= actionQueue.Peek().dspTime)
             {
                 ObstacleData nextAction = actionQueue.Dequeue();
                 AutomateAction(nextAction);
             }
-        }
     }
     
     
 
     private void PrepareQueue(ObstacleInputType Type, double DspTime)
     {
-        //Debug.Log("Robot team PrepareQueue!");
         actionQueue.Enqueue(new ObstacleData { dspTime = DspTime + offset, type = Type }); //add to queue
     }
     

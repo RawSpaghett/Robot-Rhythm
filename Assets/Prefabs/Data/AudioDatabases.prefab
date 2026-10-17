@@ -48,6 +48,7 @@ MonoBehaviour:
   audioLoader:
   - {fileID: 8300000, guid: db188a55103ff424f9e07484d2f6db00, type: 3}
   - {fileID: 8300000, guid: 2072ad19bb771464295bb94e4de0e253, type: 3}
+  - {fileID: 8300000, guid: 303dc8cc9b473d64bb9e7664472a8580, type: 3}
 --- !u!114 &7652570999159686424
 MonoBehaviour:
   m_ObjectHideFlags: 0
