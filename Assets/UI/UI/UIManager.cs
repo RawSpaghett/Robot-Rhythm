@@ -47,6 +47,7 @@ public class UIManager : MonoBehaviour
     public GameObject countdownPanel;
     public Text countdownText;
     private float previousVolume;
+    private Coroutine countdownRoutine;
     public bool IsTransitioning { get; private set; }
 
     private void OnEnable()
@@ -72,6 +73,8 @@ public class UIManager : MonoBehaviour
         SetVolume(menu.UiVolume);
         transitionCover.gameObject.SetActive(false);
         countdownPanel.SetActive(false);
+        foreach (Graphic graphic in countdownPanel.GetComponentsInChildren<Graphic>(true))
+            graphic.raycastTarget = false;
         var trailObject = new GameObject("Swipe Trail", typeof(RectTransform), typeof(CanvasRenderer), typeof(SwipeTrailUI));
         trailObject.transform.SetParent(playHud.transform, false);
         var trailRect = (RectTransform)trailObject.transform;
@@ -109,6 +112,8 @@ public class UIManager : MonoBehaviour
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
     public void RestartGame() => Navigate(gameManager.RestartGame, true);
     public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu);
+    public void ReturnToLevels() => Navigate(gameManager.ReturnToLevelSelect);
+    public void ExitGame() => Application.Quit();
     public void OpenSettings() => Navigate(gameManager.OpenOptions);
     public void CloseSettings() => Navigate(gameManager.CloseOptions);
     public void DismissError() => Navigate(gameManager.DismissError);
@@ -143,6 +148,8 @@ public class UIManager : MonoBehaviour
     private void OnStateChanged()
     {
         ShowError();
+        if (!(gameManager.CurrentState is GAMESTART))
+            countdownPanel.SetActive(false);
         if (!IsTransitioning)
             StartCoroutine(RevealState());
     }
@@ -182,23 +189,40 @@ public class UIManager : MonoBehaviour
         yield return Fade(1f, 0f, duration * 0.6f);
         transitionCover.gameObject.SetActive(false);
         if (gameManager.HasActiveGame)
-            yield return Countdown();
+            StartCountdown();
         IsTransitioning = false;
         gameManager.SetUITransition(false);
     }
 
+    private void StartCountdown()
+    {
+        if (countdownRoutine != null) StopCoroutine(countdownRoutine);
+        gameManager.SetCountdown(true);
+        countdownRoutine = StartCoroutine(Countdown());
+    }
+
     private IEnumerator Countdown()
     {
-        // The UI transition keeps gameplay and the music clock paused until this ends.
-        countdownPanel.SetActive(true);
         float remaining = 5f;
-        while (remaining > 0)
+        while (gameManager.HasActiveGame && !gameManager.IsLoading && remaining > 0)
         {
-            countdownText.text = Mathf.CeilToInt(remaining).ToString();
+            bool ready = gameManager.CurrentState is GAMESTART && !IsTransitioning;
+            countdownPanel.SetActive(ready);
+            if (ready)
+            {
+                countdownText.text = Mathf.CeilToInt(remaining).ToString();
+                remaining -= Time.unscaledDeltaTime;
+            }
+            else
+            {
+                // Pause and its submenus hide the timer. Resume always starts at five.
+                remaining = 5f;
+            }
             yield return null;
-            remaining -= Time.unscaledDeltaTime;
         }
         countdownPanel.SetActive(false);
+        countdownRoutine = null;
+        gameManager.SetCountdown(false);
     }
 
     private IEnumerator RevealState()
@@ -350,6 +374,7 @@ public class UIManager : MonoBehaviour
     {
         if (gameManager != null)
         {
+            gameManager.SetCountdown(false);
             gameManager.StateChanged -= OnStateChanged;
             gameManager.SetUITransition(false);
         }
