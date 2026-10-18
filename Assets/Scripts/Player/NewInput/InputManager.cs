@@ -138,7 +138,6 @@ public class InputManager : MonoBehaviour
             return vector.y > 0 ? Direction.Up : Direction.Down;
         }
     }
-    
 }
 
 
