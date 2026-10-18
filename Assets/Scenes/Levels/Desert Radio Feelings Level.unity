@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
+  jumpHeight: 0
   offset: 0
   actionManager: {fileID: 0}
 --- !u!114 &408185576
@@ -654,6 +655,8 @@ MonoBehaviour:
     - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
     - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
     longJumpFrames: []
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 1.5
     maximumLongJumpHeight: 2
     minimumLongJumpDuration: 0.75
@@ -2827,6 +2830,8 @@ MonoBehaviour:
     - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
     - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
     longJumpFrames: []
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 1.5
     maximumLongJumpHeight: 2
     minimumLongJumpDuration: 0.75
@@ -2888,6 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
+  jumpHeight: 0
   offset: 1
   actionManager: {fileID: 0}
 --- !u!1 &1950308091
@@ -2936,6 +2942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
+  jumpHeight: 0
   offset: 0.5
   actionManager: {fileID: 0}
 --- !u!114 &1950308094
@@ -2975,6 +2982,8 @@ MonoBehaviour:
     - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
     - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
     longJumpFrames: []
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 1.5
     maximumLongJumpHeight: 2
     minimumLongJumpDuration: 0.75
@@ -3423,9 +3432,11 @@ MonoBehaviour:
     - {fileID: 207534127915693758, guid: 0cbbd3377d1a1d34f8ca61349918c825, type: 3}
     - {fileID: -5181671146825180203, guid: 005353b7c12452e4dadb58b8b2cb98da, type: 3}
     - {fileID: 728978747843212734, guid: 08a0b7774c30c96499e6c2227d6cb320, type: 3}
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 1.5
     maximumLongJumpHeight: 2
-    minimumLongJumpDuration: 0.75
+    minimumLongJumpDuration: 1
     maximumLongJumpDuration: 1
   duck:
     duckFrames:

@@ -68,6 +68,23 @@ public class ActionManager : MonoBehaviour
         TryPerform(RobotActionType.LongJump, charge);
     public void TryDuck() => TryPerform(RobotActionType.Duck);
 
+    // Cosmetic charging preview; it does not make the robot busy or change input.
+    public void SetLongJumpCharging(bool charging)
+    {
+        if (!charging)
+        {
+            if (!initialized || !jump.IsChargingAnimationPlaying) return;
+            jump.StopChargingAnimation();
+            if (!IsBusy && isActiveAndEnabled) runningAnimation.Play();
+            return;
+        }
+
+        if (!isActiveAndEnabled || Time.timeScale <= 0f || AudioListener.pause || IsBusy)
+            return;
+        InitializeActions();
+        if (jump.BeginChargingAnimation()) runningAnimation.Suspend();
+    }
+
     // True means the animation started, NOT that the rhythm judgment succeeded.
     // Busy robots reject requests rather than queueing delayed rhythm actions.
     public bool TryPerform(RobotActionType type, float charge = 0f)
@@ -76,10 +93,13 @@ public class ActionManager : MonoBehaviour
             return false;
 
         // Supports another component calling before this component's Awake.
-        InitializeActions(); 
+        InitializeActions();
 
         if (!actions.TryGetValue(type, out ActionBase action))
             return false;
+
+        // Restore the pre-charge sprite before the action captures its own pose.
+        SetLongJumpCharging(false);
 
         if (!action.TryBegin(type, Mathf.Clamp01(charge)))
             return false;
@@ -122,12 +142,19 @@ public class ActionManager : MonoBehaviour
             return;
         }
 
+        if (jump.IsChargingAnimationPlaying)
+        {
+            if (!AudioListener.pause) jump.TickChargingAnimation(Time.deltaTime);
+            return;
+        }
+
         runningAnimation.Tick(Time.deltaTime);
     }
 
     public void CancelCurrentAction()
     {
-        bool hadAction = activeAction != null;
+        bool hadAction = activeAction != null || (initialized && jump.IsChargingAnimationPlaying);
+        if (initialized) jump.StopChargingAnimation();
         activeAction?.Cancel();
         activeAction = null;
 
@@ -139,6 +166,7 @@ public class ActionManager : MonoBehaviour
     private void OnDisable()
     {
         // Restore action pose first, then stop the running presentation.
+        if (initialized) jump.StopChargingAnimation();
         activeAction?.Cancel();
         activeAction = null;
         if (initialized)

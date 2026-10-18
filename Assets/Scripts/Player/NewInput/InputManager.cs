@@ -16,7 +16,7 @@ public class InputManager : MonoBehaviour
     private PlayerInput inputSystem;
     private InputAction pressAction;
     private InputAction dragAction;
-    
+
     public event Action OnPressed;
     public event Action<Direction> OnSwipe;
 
@@ -36,10 +36,11 @@ public class InputManager : MonoBehaviour
 
     private void OnDisable()
     {
+        if (actionManager != null) actionManager.SetLongJumpCharging(false);
         pressAction.performed -= Jump;
         dragAction.performed -= Drag;
     }
-    
+
 
     private bool mouseHeld;
     private bool previousMouseDown;
@@ -47,17 +48,38 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         var mouse = Mouse.current;
-        if (mouse == null) return;
+        if (mouse == null)
+        {
+            if (actionManager != null) actionManager.SetLongJumpCharging(false);
+            return;
+        }
         bool down = mouse.leftButton.isPressed;
         bool pressed = down && !previousMouseDown;
         bool released = !down && previousMouseDown;
         previousMouseDown = down;
-        if (Time.timeScale <= 0 || AudioListener.pause) { mouseHeld = false; return; }
+        if (Time.timeScale <= 0 || AudioListener.pause)
+        {
+            mouseHeld = false;
+            if (actionManager != null) actionManager.SetLongJumpCharging(false);
+            return;
+        }
         if (pressed)
         {
             mouseStart = mouse.position.ReadValue();
             mouseHeld = !IsOverUI(mouseStart);
         }
+
+        // Animation only: use the same displacement threshold/direction as release.
+        // Begin after swiping up, keep showing it while held, stop if direction changes.
+        if (actionManager != null)
+        {
+            Vector2 heldDisplacement = mouse.position.ReadValue() - mouseStart;
+            bool showCharging = down && mouseHeld &&
+                heldDisplacement.magnitude >= 24f * Mathf.Max(.75f, Screen.height / 720f) &&
+                GetDirection(heldDisplacement) == Direction.Up;
+            actionManager.SetLongJumpCharging(showCharging);
+        }
+
         if (released && mouseHeld)
         {
             mouseHeld = false;
@@ -80,7 +102,14 @@ public class InputManager : MonoBehaviour
         return hits.Count > 0;
     }
 
-    private void OnApplicationFocus(bool focused) { if (!focused) mouseHeld = false; }
+    private void OnApplicationFocus(bool focused)
+    {
+        if (!focused)
+        {
+            mouseHeld = false;
+            if (actionManager != null) actionManager.SetLongJumpCharging(false);
+        }
+    }
     private void Jump(InputAction.CallbackContext context)
     {
         if (context.control.device is Mouse) return;
@@ -120,7 +149,7 @@ public class InputManager : MonoBehaviour
         OnSwipe?.Invoke(direction);
     }
 
-    public enum Direction { Up,Down,Left,Right,None }
+    public enum Direction { Up, Down, Left, Right, None }
     private Direction GetDirection(Vector2 vector) //helper function for drag
     {
         if (vector == Vector2.zero)
