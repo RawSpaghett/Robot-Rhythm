@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class RobotTeammate : MonoBehaviour
 {
+    [SerializeField] private float jumpHeight;
     private struct ObstacleData
     {
         public double dspTime;
@@ -69,7 +70,7 @@ public class RobotTeammate : MonoBehaviour
                 FXManager.Instance.PlaySFX("jump");
                 return;
             case ObstacleInputType.LongJump:
-                actionManager.TryLongJump(7f);
+                actionManager.TryLongJump(jumpHeight);
                 FXManager.Instance.PlaySFX("jump");
                 return;
         }

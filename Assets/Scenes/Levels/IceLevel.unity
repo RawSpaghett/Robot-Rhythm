@@ -2366,6 +2366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotTeammate
       objectReference: {fileID: 0}
+    - target: {fileID: 2562358285289024147, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jumpHeight
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0941
@@ -2465,11 +2469,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7478867707058806226, guid: d3e2b73901e2240df9a55bb47f478e75, type: 3}
       propertyPath: m_Volume
-      value: 0.445
+      value: 0.487
       objectReference: {fileID: 0}
     - target: {fileID: 7478867707058806226, guid: d3e2b73901e2240df9a55bb47f478e75, type: 3}
       propertyPath: m_Resource
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478867707058806226, guid: d3e2b73901e2240df9a55bb47f478e75, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8290057765761529904, guid: d3e2b73901e2240df9a55bb47f478e75, type: 3}
       propertyPath: speakers
