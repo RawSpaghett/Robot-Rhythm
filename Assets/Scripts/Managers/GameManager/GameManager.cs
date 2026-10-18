@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     private SCORING scoring;
     private LOADING loading;
     private bool statePausesGameplay;
+    private bool countdownActive;
     public UIManager UI { get; private set; }
     private GameSceneLoader sceneLoader;
     private bool holdsPause;
@@ -84,6 +85,12 @@ public class GameManager : MonoBehaviour
     {
         if (!IsLoading && HasActiveGame)
             StartCoroutine(ChangeScene(false));
+    }
+
+    public void ReturnToLevelSelect()
+    {
+        if (!IsLoading && HasActiveGame)
+            StartCoroutine(ChangeScene(false, true));
     }
 
     public void PauseGame()
@@ -191,9 +198,15 @@ public class GameManager : MonoBehaviour
         UpdatePause();
     }
 
+    public void SetCountdown(bool active)
+    {
+        countdownActive = active;
+        UpdatePause();
+    }
+
     private void UpdatePause()
     {
-        SetPaused(IsLoading || IsUITransitioning || (HasActiveGame && statePausesGameplay));
+        SetPaused(IsLoading || IsUITransitioning || countdownActive || (HasActiveGame && statePausesGameplay));
     }
 
     private bool CanLoadGame()
@@ -206,7 +219,7 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    private IEnumerator ChangeScene(bool loadGame)
+    private IEnumerator ChangeScene(bool loadGame, bool showLevels = false)
     {
         IsLoading = true;
         LastError = "";
@@ -216,7 +229,7 @@ public class GameManager : MonoBehaviour
         LastError = sceneLoader.LastError;
 
         IsLoading = false;
-        ChangeState(HasActiveGame ? (pauseAfterLoading ? pause : gameStart) : mainMenu);
+        ChangeState(HasActiveGame ? (pauseAfterLoading ? pause : gameStart) : (showLevels ? levelSelect : mainMenu));
     }
 
     public void ChangeState(UIStateBase next)

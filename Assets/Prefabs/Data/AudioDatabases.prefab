@@ -48,6 +48,7 @@ MonoBehaviour:
   audioLoader:
   - {fileID: 8300000, guid: db188a55103ff424f9e07484d2f6db00, type: 3}
   - {fileID: 8300000, guid: 2072ad19bb771464295bb94e4de0e253, type: 3}
+  - {fileID: 8300000, guid: 303dc8cc9b473d64bb9e7664472a8580, type: 3}
 --- !u!114 &7652570999159686424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,4 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a911ad66aa0c64884aa0e5573914802f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioFXDatabase
-  audioLoader: []
+  audioLoader:
+  - {fileID: 8300000, guid: c58be9278998182438943de98238c799, type: 3}
+  - {fileID: 8300000, guid: d9dcac1021603f04b86c45e610bfcaa1, type: 3}
+  - {fileID: 8300000, guid: 1c4e70613af913e49bd1e18c2acdab90, type: 3}
+  - {fileID: 8300000, guid: 6796dbe838a0bd8428b7b0f33bab093b, type: 3}

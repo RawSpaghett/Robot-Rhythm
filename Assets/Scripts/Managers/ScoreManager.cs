@@ -17,12 +17,12 @@ public class ScoreManager: MonoBehaviour
 
     void OnEnable()
     {
-        ObstacleBase.OnObstacleResolved += CompileScore;
+        //ObstacleBase.OnObstacleResolved += CompileScore;
     }
 
     void OnDisable()
     {
-        ObstacleBase.OnObstacleResolved -= CompileScore;
+        //ObstacleBase.OnObstacleResolved -= CompileScore;
     }
 
     private void CompileScore(float addedScore)

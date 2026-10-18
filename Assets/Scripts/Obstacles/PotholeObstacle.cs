@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PotholeObstacle : ObstacleBase
 {
+    public override ObstacleInputType RequiredInput => ObstacleInputType.Jump;
     protected override bool AcceptsInput(
         ObstacleInputType inputType,
         float charge)

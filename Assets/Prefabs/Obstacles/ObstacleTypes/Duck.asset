@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 445953110e6fd19448ffd58892188b33, type: 3}
-  m_Name: extrusion
+  m_Name: Duck
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleType
-  DisplayName: ChargeJump
-  Prefab: {fileID: 7411088392457839807, guid: 54157011fa7f4664cb13e28ae149cd6c, type: 3}
+  DisplayName: Duck
+  Prefab: {fileID: 7501356601781046500, guid: 286eb31a5c7d4d94880551a32a4c25fd, type: 3}
   WidthInBeats: 1
-  TimelineColor: {r: 1, g: 0, b: 0, a: 1}
+  TimelineColor: {r: 0.1995102, g: 1, b: 0.015686274, a: 1}

@@ -43,7 +43,11 @@ public class UIManager : MonoBehaviour
 
     public CanvasGroup[] menuContents;
     public GameObject sharedMenuBackground;
+    public ComboDisplay comboDisplay;
+    public GameObject countdownPanel;
+    public Text countdownText;
     private float previousVolume;
+    private Coroutine countdownRoutine;
     public bool IsTransitioning { get; private set; }
 
     private void OnEnable()
@@ -68,6 +72,9 @@ public class UIManager : MonoBehaviour
     {
         SetVolume(menu.UiVolume);
         transitionCover.gameObject.SetActive(false);
+        countdownPanel.SetActive(false);
+        foreach (Graphic graphic in countdownPanel.GetComponentsInChildren<Graphic>(true))
+            graphic.raycastTarget = false;
         var trailObject = new GameObject("Swipe Trail", typeof(RectTransform), typeof(CanvasRenderer), typeof(SwipeTrailUI));
         trailObject.transform.SetParent(playHud.transform, false);
         var trailRect = (RectTransform)trailObject.transform;
@@ -91,6 +98,13 @@ public class UIManager : MonoBehaviour
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
     public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Desert Radio Feelings Level.unity"); StartGame(); }
     public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Tutorial.unity"); StartGame(); }
+    public void StartLevel(string scenePath)
+    {
+        if (IsTransitioning || gameManager.IsLoading) return;
+        gameManager.SelectLevel(scenePath);
+        StartGame();
+    }
+
     public void StartGame()
     {
         Navigate(gameManager.StartGame, true);
@@ -98,6 +112,8 @@ public class UIManager : MonoBehaviour
     public void ResumeGame() => Navigate(gameManager.ResumeGame);
     public void RestartGame() => Navigate(gameManager.RestartGame, true);
     public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu);
+    public void ReturnToLevels() => Navigate(gameManager.ReturnToLevelSelect);
+    public void ExitGame() => Application.Quit();
     public void OpenSettings() => Navigate(gameManager.OpenOptions);
     public void CloseSettings() => Navigate(gameManager.CloseOptions);
     public void DismissError() => Navigate(gameManager.DismissError);
@@ -132,6 +148,8 @@ public class UIManager : MonoBehaviour
     private void OnStateChanged()
     {
         ShowError();
+        if (!(gameManager.CurrentState is GAMESTART))
+            countdownPanel.SetActive(false);
         if (!IsTransitioning)
             StartCoroutine(RevealState());
     }
@@ -170,8 +188,41 @@ public class UIManager : MonoBehaviour
 
         yield return Fade(1f, 0f, duration * 0.6f);
         transitionCover.gameObject.SetActive(false);
+        if (gameManager.HasActiveGame)
+            StartCountdown();
         IsTransitioning = false;
         gameManager.SetUITransition(false);
+    }
+
+    private void StartCountdown()
+    {
+        if (countdownRoutine != null) StopCoroutine(countdownRoutine);
+        gameManager.SetCountdown(true);
+        countdownRoutine = StartCoroutine(Countdown());
+    }
+
+    private IEnumerator Countdown()
+    {
+        float remaining = 5f;
+        while (gameManager.HasActiveGame && !gameManager.IsLoading && remaining > 0)
+        {
+            bool ready = gameManager.CurrentState is GAMESTART && !IsTransitioning;
+            countdownPanel.SetActive(ready);
+            if (ready)
+            {
+                countdownText.text = Mathf.CeilToInt(remaining).ToString();
+                remaining -= Time.unscaledDeltaTime;
+            }
+            else
+            {
+                // Pause and its submenus hide the timer. Resume always starts at five.
+                remaining = 5f;
+            }
+            yield return null;
+        }
+        countdownPanel.SetActive(false);
+        countdownRoutine = null;
+        gameManager.SetCountdown(false);
     }
 
     private IEnumerator RevealState()
@@ -237,6 +288,7 @@ public class UIManager : MonoBehaviour
         HideScreens();
         bool inGame = gameManager.HasActiveGame;
         bool loading = gameManager.IsLoading;
+        if (comboDisplay != null && (loading || !inGame)) comboDisplay.ClearCombo();
         menuCamera.SetActive(!inGame || loading);
         if (beatPulse != null && (!inGame || loading)) beatPulse.Bind(null);
         menuEventSystem.SetActive(!loading);
@@ -322,6 +374,7 @@ public class UIManager : MonoBehaviour
     {
         if (gameManager != null)
         {
+            gameManager.SetCountdown(false);
             gameManager.StateChanged -= OnStateChanged;
             gameManager.SetUITransition(false);
         }
@@ -333,6 +386,7 @@ public class UIManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
         AudioListener.volume = previousVolume;
         StopAllCoroutines();
+        if (countdownPanel != null) countdownPanel.SetActive(false);
         IsTransitioning = false;
         if (transitionCover != null)
             transitionCover.gameObject.SetActive(false);

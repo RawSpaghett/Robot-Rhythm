@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1158058485cc4fe08b98a656a9c3f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
-  speakers: {fileID: 0}
+  speakers: {fileID: 7478867707058806226}
   rhythmManager: {fileID: 0}
 --- !u!82 &7478867707058806226
 AudioSource:

@@ -25,12 +25,12 @@ public class RhythmManager: MonoBehaviour
 
     void Awake()
     {
-        musicManager = MusicManager.Instance;
         IntializeInstance();
     }
 
     void Start()
     {
+        if (musicManager == null) musicManager = MusicManager.Instance;
         StartSong();
     }
 

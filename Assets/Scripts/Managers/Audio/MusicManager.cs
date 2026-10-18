@@ -22,8 +22,9 @@ public class MusicManager: MonoBehaviour
     void Awake()
     {
         IntializeInstance();
-        rhythmManager = RhythmManager.Instance;
         speakers = GetComponent<AudioSource>();
+        speakers.playOnAwake = false;
+        speakers.Stop();
     }
 
     public void StartPlay(string musicID, double dsp)
@@ -61,9 +62,11 @@ public class MusicManager: MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        // The level owns this player, so unloading it also stops its song.
     }
 
-
-    
+    private void OnDestroy()
+    {
+        if (Instance == this) Instance = null;
+    }
 }

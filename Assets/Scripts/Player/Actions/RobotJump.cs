@@ -72,6 +72,7 @@ public class RobotJump : ActionBase
         // duration, so its frames automatically stretch across that duration.
         BeginSpriteAnimation(type == RobotActionType.LongJump
             ? longJumpFrames : jumpFrames);
+        if (FXManager.Instance != null) FXManager.Instance.PlaySFX("jump");
         return true;
     }
 
