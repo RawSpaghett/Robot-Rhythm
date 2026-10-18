@@ -13,12 +13,12 @@ public class ComboDisplay : MonoBehaviour
     private int previousCount;
     private float pulse;
 
-    public void SetCombo(int count, int multiplier)
+    public void SetCombo(int count, float multiplier)
     {
         count = Mathf.Max(0, count);
         badge.SetActive(count > 0);
         comboText.text = count.ToString();
-        multiplierText.text = "x" + Mathf.Max(1, multiplier);
+        multiplierText.text = "x" + Mathf.Max(1f, multiplier);
         if (count > previousCount && !preferences.ReducedMotion) pulse = 1;
         previousCount = count;
     }
