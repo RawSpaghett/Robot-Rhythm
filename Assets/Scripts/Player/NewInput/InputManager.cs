@@ -10,6 +10,8 @@ public class InputManager : MonoBehaviour
 {
     // Assign the player robot's ActionManager
     [SerializeField] private ActionManager actionManager;
+    [Tooltip("Optional player timing/animation bridge. Assign it to enable judged variations.")]
+    [SerializeField] private PlayerTimingFeedback timingFeedback;
 
     [SerializeField, Range(0f, 1f)]
     private float longJumpCharge = 1f;
@@ -23,6 +25,7 @@ public class InputManager : MonoBehaviour
 
     void Awake()
     {
+        if (timingFeedback == null) timingFeedback = GetComponent<PlayerTimingFeedback>();
         inputSystem = GetComponent<PlayerInput>();
         pressAction = inputSystem.actions.FindAction("Press");
         dragAction = inputSystem.actions.FindAction("Drag");
@@ -86,7 +89,7 @@ public class InputManager : MonoBehaviour
             Vector2 displacement = mouse.position.ReadValue() - mouseStart;
             if (displacement.magnitude < 24f * Mathf.Max(.75f, Screen.height / 720f))
             {
-                if (actionManager != null) actionManager.TryJump();
+                RequestAction(RobotActionType.Jump);
                 OnPressed?.Invoke();
             }
             else PerformSwipe(GetDirection(displacement));
@@ -114,8 +117,7 @@ public class InputManager : MonoBehaviour
     {
         if (context.control.device is Mouse) return;
         // Request a normal jump.
-        if (actionManager != null)
-            actionManager.TryJump();
+        RequestAction(RobotActionType.Jump);
 
         OnPressed?.Invoke();
     }
@@ -136,17 +138,25 @@ public class InputManager : MonoBehaviour
             switch (direction)
             {
                 case Direction.Up:
-                    actionManager.TryLongJump(longJumpCharge);
+                    RequestAction(RobotActionType.LongJump, longJumpCharge);
                     break;
 
                 case Direction.Down:
-                    actionManager.TryDuck();
+                    RequestAction(RobotActionType.Duck);
                     break;
 
                     // Add braking and accelerating here when implemented.
             }
         }
         OnSwipe?.Invoke(direction);
+    }
+
+    private void RequestAction(RobotActionType action, float charge = 0f)
+    {
+        if (timingFeedback != null && timingFeedback.isActiveAndEnabled)
+            timingFeedback.Perform(action, charge);
+        else if (actionManager != null)
+            actionManager.TryPerform(action, charge);
     }
 
     public enum Direction { Up, Down, Left, Right, None }

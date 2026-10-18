@@ -17,6 +17,18 @@ public class RobotJump : ActionBase
     [Tooltip("Optional charged-jump sprites in playback order. Plays during the jump, not while charging.")]
     [SerializeField] private Sprite[] longJumpFrames = new Sprite[0];
 
+    [Header("Jump Timing Variations (Default = Jump Frames)")]
+    [SerializeField] private RobotAnimationVariations jumpVariations = new RobotAnimationVariations();
+    [Header("Long Jump Timing Variations (Default = Long Jump Frames)")]
+    [SerializeField] private RobotAnimationVariations longJumpVariations = new RobotAnimationVariations();
+
+    public Sprite[] GetAnimationFrames(RobotActionType type, RobotTimingVisual visual)
+    {
+        return type == RobotActionType.LongJump
+            ? (longJumpVariations != null ? longJumpVariations.Select(visual, longJumpFrames) : longJumpFrames)
+            : (jumpVariations != null ? jumpVariations.Select(visual, jumpFrames) : jumpFrames);
+    }
+
     [Header("Long Jump Charging Animation")]
     [Tooltip("Optional sprites shown while holding an upward mouse gesture. The final frame is held until release.")]
     [SerializeField] private Sprite[] chargingFrames = new Sprite[0];
@@ -88,6 +100,11 @@ public class RobotJump : ActionBase
 
     public override bool TryBegin(RobotActionType type, float charge)
     {
+        return TryBeginWithFeedback(type, charge, RobotTimingVisual.Default);
+    }
+
+    public bool TryBeginWithFeedback(RobotActionType type, float charge, RobotTimingVisual visual)
+    {
         if (IsRunning || Visual == null ||
             (type != RobotActionType.Jump && type != RobotActionType.LongJump))
             return false;
@@ -121,8 +138,7 @@ public class RobotJump : ActionBase
 
         // Each jump type has its own sequence. Charge determines long-jump
         // duration, so its frames automatically stretch across that duration.
-        BeginSpriteAnimation(type == RobotActionType.LongJump
-            ? longJumpFrames : jumpFrames);
+        BeginSpriteAnimation(GetAnimationFrames(type, visual));
         if (FXManager.Instance != null) FXManager.Instance.PlaySFX("jump");
         return true;
     }
