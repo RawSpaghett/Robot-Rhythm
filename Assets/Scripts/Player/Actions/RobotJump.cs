@@ -139,7 +139,7 @@ public class RobotJump : ActionBase
         // Each jump type has its own sequence. Charge determines long-jump
         // duration, so its frames automatically stretch across that duration.
         BeginSpriteAnimation(GetAnimationFrames(type, visual));
-        if (FXManager.Instance != null) FXManager.Instance.PlaySFX("jump");
+        //if (FXManager.Instance != null) FXManager.Instance.PlaySFX("jump");
         return true;
     }
 
