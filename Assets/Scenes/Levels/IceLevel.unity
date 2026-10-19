@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
   hitLineX: -7.1
   distancePerBeat: 3
+  QOLoffset: 0.3
   spawnTime: 4
   groundY: -3.2
   rhythmManager: {fileID: 1333327601}
