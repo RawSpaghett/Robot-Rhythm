@@ -25,6 +25,15 @@ public class ActionManager : MonoBehaviour
     private ActionBase activeAction;
     private bool initialized;
 
+    [Header("Missed Obstacle Feedback")]
+    [Tooltip("Duration of sprite-only red feedback when an obstacle is missed without input.")]
+    [SerializeField, Min(0.01f)] private float missedFeedbackDuration = 0.4f;
+    private RobotActionType? pendingMiss;
+    private Sprite[] missedFrames;
+    private Sprite spriteBeforeMiss;
+    private float missedTimer;
+    private float activeMissedDuration;
+
     public bool IsBusy => activeAction != null && activeAction.IsRunning;
 
     private void Awake()
@@ -68,21 +77,59 @@ public class ActionManager : MonoBehaviour
         TryPerform(RobotActionType.LongJump, charge);
     public void TryDuck() => TryPerform(RobotActionType.Duck);
 
+    // Cosmetic charging preview; it does not make the robot busy or change input.
+    public void SetLongJumpCharging(bool charging)
+    {
+        if (!charging)
+        {
+            if (!initialized || !jump.IsChargingAnimationPlaying) return;
+            jump.StopChargingAnimation();
+            if (!IsBusy && isActiveAndEnabled) runningAnimation.Play();
+            return;
+        }
+
+        if (!isActiveAndEnabled || Time.timeScale <= 0f || AudioListener.pause || IsBusy || missedFrames != null)
+            return;
+        InitializeActions();
+        if (jump.BeginChargingAnimation()) runningAnimation.Suspend();
+    }
+
     // True means the animation started, NOT that the rhythm judgment succeeded.
     // Busy robots reject requests rather than queueing delayed rhythm actions.
     public bool TryPerform(RobotActionType type, float charge = 0f)
+    {
+        // NPC callers and existing UnityEvent wrappers keep the default animation.
+        return TryPerformWithFeedback(type, charge, RobotTimingVisual.Default);
+    }
+
+    public bool TryPerformWithFeedback(RobotActionType type, float charge, RobotTimingVisual visual)
     {
         if (!isActiveAndEnabled || Time.timeScale <= 0f || IsBusy)
             return false;
 
         // Supports another component calling before this component's Awake.
-        InitializeActions(); 
+        InitializeActions();
 
         if (!actions.TryGetValue(type, out ActionBase action))
             return false;
 
-        if (!action.TryBegin(type, Mathf.Clamp01(charge)))
+        // A new player action takes priority over cosmetic missed feedback.
+        pendingMiss = null;
+        StopMissedFeedback();
+
+        // Restore the pre-charge sprite before the action captures its own pose.
+        SetLongJumpCharging(false);
+
+        bool started = action == jump
+            ? jump.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
+            : action == duck
+                ? duck.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
+                : action.TryBegin(type, Mathf.Clamp01(charge));
+        if (!started)
+        {
+            runningAnimation.Play();
             return false;
+        }
 
         activeAction = action.IsRunning ? action : null;
 
@@ -116,9 +163,39 @@ public class ActionManager : MonoBehaviour
 
                 // The action restores its pre-action sprite, then this sets the
                 // first running frame immediately, before the frame is rendered.
-                runningAnimation.Play();
+                if (pendingMiss.HasValue)
+                {
+                    RobotActionType missedType = pendingMiss.Value;
+                    pendingMiss = null;
+                    BeginMissedFeedback(missedType);
+                }
+                else runningAnimation.Play();
             }
 
+            return;
+        }
+
+        if (missedFrames != null)
+        {
+            if (AudioListener.pause) return;
+            missedTimer += Time.deltaTime;
+            if (missedTimer >= activeMissedDuration)
+            {
+                StopMissedFeedback();
+                runningAnimation.Play();
+            }
+            else if (robotRenderer != null)
+            {
+                int frame = Mathf.Min(Mathf.FloorToInt(
+                    missedTimer / activeMissedDuration * missedFrames.Length), missedFrames.Length - 1);
+                robotRenderer.sprite = missedFrames[frame];
+            }
+            return;
+        }
+
+        if (jump.IsChargingAnimationPlaying)
+        {
+            if (!AudioListener.pause) jump.TickChargingAnimation(Time.deltaTime);
             return;
         }
 
@@ -127,7 +204,10 @@ public class ActionManager : MonoBehaviour
 
     public void CancelCurrentAction()
     {
-        bool hadAction = activeAction != null;
+        bool hadAction = activeAction != null || missedFrames != null || (initialized && jump.IsChargingAnimationPlaying);
+        pendingMiss = null;
+        StopMissedFeedback();
+        if (initialized) jump.StopChargingAnimation();
         activeAction?.Cancel();
         activeAction = null;
 
@@ -138,11 +218,57 @@ public class ActionManager : MonoBehaviour
 
     private void OnDisable()
     {
+        pendingMiss = null;
+        StopMissedFeedback();
         // Restore action pose first, then stop the running presentation.
+        if (initialized) jump.StopChargingAnimation();
         activeAction?.Cancel();
         activeAction = null;
         if (initialized)
             runningAnimation.Stop();
+    }
+
+    // A miss with no input must not trigger a real jump/duck or jump SFX.
+    // If an action is finishing, show the reaction afterwards rather than interrupting motion.
+    public void ShowMissedObstacle(RobotActionType requiredAction)
+    {
+        if (!isActiveAndEnabled) return;
+        InitializeActions();
+        if (IsBusy)
+        {
+            pendingMiss = requiredAction; // Keep only the most recent reaction; never queue gameplay actions.
+            return;
+        }
+        BeginMissedFeedback(requiredAction);
+    }
+
+    private void BeginMissedFeedback(RobotActionType type)
+    {
+        StopMissedFeedback();
+        SetLongJumpCharging(false);
+        Sprite[] frames = type == RobotActionType.Duck
+            ? duck.GetAnimationFrames(RobotTimingVisual.Failed)
+            : jump.GetAnimationFrames(type, RobotTimingVisual.Failed);
+        if (robotRenderer == null || !RobotAnimationVariations.IsValid(frames))
+        {
+            runningAnimation.Play();
+            return;
+        }
+        spriteBeforeMiss = robotRenderer.sprite;
+        missedFrames = (Sprite[])frames.Clone();
+        missedTimer = 0f;
+        activeMissedDuration = Mathf.Max(0.01f, missedFeedbackDuration);
+        runningAnimation.Suspend();
+        robotRenderer.sprite = missedFrames[0];
+    }
+
+    private void StopMissedFeedback()
+    {
+        if (missedFrames != null && robotRenderer != null)
+            robotRenderer.sprite = spriteBeforeMiss;
+        missedFrames = null;
+        spriteBeforeMiss = null;
+        missedTimer = 0f;
     }
 
 }

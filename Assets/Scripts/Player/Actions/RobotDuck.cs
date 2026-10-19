@@ -9,6 +9,14 @@ public class RobotDuck : ActionBase
     [Tooltip("Frames in order: enter duck, ducked pose, stand up.")]
     [SerializeField] private Sprite[] duckFrames = new Sprite[0];
 
+    [Header("Duck Timing Variations (Default = Duck Frames)")]
+    [SerializeField] private RobotAnimationVariations duckVariations = new RobotAnimationVariations();
+
+    public Sprite[] GetAnimationFrames(RobotTimingVisual visual)
+    {
+        return duckVariations != null ? duckVariations.Select(visual, duckFrames) : duckFrames;
+    }
+
     [Tooltip("Total sequence duration; each frame receives equal time.")]
     [SerializeField, Min(0.01f)] private float duckDuration = 0.5f;
 
@@ -20,10 +28,16 @@ public class RobotDuck : ActionBase
 
     public override bool TryBegin(RobotActionType type, float charge)
     {
+        return TryBeginWithFeedback(type, charge, RobotTimingVisual.Default);
+    }
+
+    public bool TryBeginWithFeedback(RobotActionType type, float charge, RobotTimingVisual visual)
+    {
         if (IsRunning || type != RobotActionType.Duck)
             return false;
 
-        if (Renderer == null || duckFrames == null || duckFrames.Length == 0)
+        Sprite[] frames = GetAnimationFrames(visual);
+        if (Renderer == null || frames == null || frames.Length == 0)
         {
             Debug.LogWarning(
                 "RobotDuck needs a renderer and at least one duck frame.",
@@ -32,10 +46,10 @@ public class RobotDuck : ActionBase
         }
 
         if (FXManager.Instance != null) FXManager.Instance.PlaySFX("duck");
-        
-        for (int i = 0; i < duckFrames.Length; i++)
+
+        for (int i = 0; i < frames.Length; i++)
         {
-            if (duckFrames[i] == null)
+            if (frames[i] == null)
             {
                 Debug.LogWarning(
                     $"RobotDuck: Duck Frames element {i} is unassigned.",
@@ -45,7 +59,7 @@ public class RobotDuck : ActionBase
         }
 
         // Snapshot the sequence so Inspector edits cannot invalidate its length.
-        activeFrames = (Sprite[])duckFrames.Clone();
+        activeFrames = (Sprite[])frames.Clone();
         spriteBeforeDuck = Renderer.sprite;
         activeDuckDuration = Mathf.Max(0.01f, duckDuration);
         duckTimer = 0f;

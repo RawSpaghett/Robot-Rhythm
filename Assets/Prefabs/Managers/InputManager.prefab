@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 424976395560863469}
   - component: {fileID: 7744374931705267122}
   - component: {fileID: 2340465443636631975}
+  - component: {fileID: 915488997994208459}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -47,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
   actionManager: {fileID: 0}
+  timingFeedback: {fileID: 0}
   longJumpCharge: 1
 --- !u!114 &7744374931705267122
 MonoBehaviour:
@@ -93,3 +95,18 @@ MonoBehaviour:
   input: {fileID: 424976395560863469}
   spawner: {fileID: 0}
   rhythm: {fileID: 0}
+--- !u!114 &915488997994208459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319650868729156626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb48a0cb676ef44eb4d4ecaac43ae69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTimingFeedback
+  actionManager: {fileID: 0}
+  obstacleSpawner: {fileID: 0}
+  rhythmManager: {fileID: 0}

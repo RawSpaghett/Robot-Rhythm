@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
+  jumpHeight: 0
   offset: 0
   actionManager: {fileID: 0}
 --- !u!114 &408185576
@@ -654,6 +655,16 @@ MonoBehaviour:
     - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
     - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
     longJumpFrames: []
+    jumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    longJumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 1.5
     maximumLongJumpHeight: 2
     minimumLongJumpDuration: 0.75
@@ -681,6 +692,10 @@ MonoBehaviour:
     - {fileID: -7751170823669677295, guid: 6ec763508f770f2408439f4ff5fc3971, type: 3}
     - {fileID: -8243520808262304162, guid: 8297643e75f860841ae7866bffb5c088, type: 3}
     - {fileID: 4644998939122795206, guid: f9603d9aaca15fe4abcfe1cad1a3218a, type: 3}
+    duckVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
     duckDuration: 0.5
   runningAnimation:
     runFrames:
@@ -703,6 +718,7 @@ MonoBehaviour:
     - {fileID: 2937542380364343250, guid: e0b954e978eacb645af9d56fe5a9fb84, type: 3}
     - {fileID: -2344716011290733520, guid: 8bb1d99755485b144ba853a99a830608, type: 3}
     framesPerSecond: 24
+  missedFeedbackDuration: 0.4
 --- !u!212 &408185577
 SpriteRenderer:
   serializedVersion: 2
@@ -2827,6 +2843,16 @@ MonoBehaviour:
     - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
     - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
     longJumpFrames: []
+    jumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    longJumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 1.5
     maximumLongJumpHeight: 2
     minimumLongJumpDuration: 0.75
@@ -2854,6 +2880,10 @@ MonoBehaviour:
     - {fileID: -7751170823669677295, guid: 6ec763508f770f2408439f4ff5fc3971, type: 3}
     - {fileID: -8243520808262304162, guid: 8297643e75f860841ae7866bffb5c088, type: 3}
     - {fileID: 4644998939122795206, guid: f9603d9aaca15fe4abcfe1cad1a3218a, type: 3}
+    duckVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
     duckDuration: 0.5
   runningAnimation:
     runFrames:
@@ -2876,6 +2906,7 @@ MonoBehaviour:
     - {fileID: 2937542380364343250, guid: e0b954e978eacb645af9d56fe5a9fb84, type: 3}
     - {fileID: -2344716011290733520, guid: 8bb1d99755485b144ba853a99a830608, type: 3}
     framesPerSecond: 24
+  missedFeedbackDuration: 0.4
 --- !u!114 &1890109595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2888,6 +2919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
+  jumpHeight: 0
   offset: 1
   actionManager: {fileID: 0}
 --- !u!1 &1950308091
@@ -2936,6 +2968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
+  jumpHeight: 0
   offset: 0.5
   actionManager: {fileID: 0}
 --- !u!114 &1950308094
@@ -2975,6 +3008,16 @@ MonoBehaviour:
     - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
     - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
     longJumpFrames: []
+    jumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    longJumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 1.5
     maximumLongJumpHeight: 2
     minimumLongJumpDuration: 0.75
@@ -3002,6 +3045,10 @@ MonoBehaviour:
     - {fileID: -7751170823669677295, guid: 6ec763508f770f2408439f4ff5fc3971, type: 3}
     - {fileID: -8243520808262304162, guid: 8297643e75f860841ae7866bffb5c088, type: 3}
     - {fileID: 4644998939122795206, guid: f9603d9aaca15fe4abcfe1cad1a3218a, type: 3}
+    duckVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
     duckDuration: 0.5
   runningAnimation:
     runFrames:
@@ -3024,6 +3071,7 @@ MonoBehaviour:
     - {fileID: 2937542380364343250, guid: e0b954e978eacb645af9d56fe5a9fb84, type: 3}
     - {fileID: -2344716011290733520, guid: 8bb1d99755485b144ba853a99a830608, type: 3}
     framesPerSecond: 24
+  missedFeedbackDuration: 0.4
 --- !u!212 &1950308095
 SpriteRenderer:
   serializedVersion: 2
@@ -3423,9 +3471,19 @@ MonoBehaviour:
     - {fileID: 207534127915693758, guid: 0cbbd3377d1a1d34f8ca61349918c825, type: 3}
     - {fileID: -5181671146825180203, guid: 005353b7c12452e4dadb58b8b2cb98da, type: 3}
     - {fileID: 728978747843212734, guid: 08a0b7774c30c96499e6c2227d6cb320, type: 3}
+    jumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    longJumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 1.5
     maximumLongJumpHeight: 2
-    minimumLongJumpDuration: 0.75
+    minimumLongJumpDuration: 1
     maximumLongJumpDuration: 1
   duck:
     duckFrames:
@@ -3450,6 +3508,10 @@ MonoBehaviour:
     - {fileID: -7751170823669677295, guid: 6ec763508f770f2408439f4ff5fc3971, type: 3}
     - {fileID: -8243520808262304162, guid: 8297643e75f860841ae7866bffb5c088, type: 3}
     - {fileID: 4644998939122795206, guid: f9603d9aaca15fe4abcfe1cad1a3218a, type: 3}
+    duckVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
     duckDuration: 0.5
   runningAnimation:
     runFrames:
@@ -3472,6 +3534,7 @@ MonoBehaviour:
     - {fileID: 2937542380364343250, guid: e0b954e978eacb645af9d56fe5a9fb84, type: 3}
     - {fileID: -2344716011290733520, guid: 8bb1d99755485b144ba853a99a830608, type: 3}
     framesPerSecond: 24
+  missedFeedbackDuration: 0.4
 --- !u!1 &2110908123
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,6 +3790,22 @@ PrefabInstance:
       propertyPath: actionManager
       value: 
       objectReference: {fileID: 2097325184}
+    - target: {fileID: 424976395560863469, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: timingFeedback
+      value: 
+      objectReference: {fileID: 5784817914215813451}
+    - target: {fileID: 915488997994208459, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: actionManager
+      value: 
+      objectReference: {fileID: 2097325184}
+    - target: {fileID: 915488997994208459, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: rhythmManager
+      value: 
+      objectReference: {fileID: 1333327601}
+    - target: {fileID: 915488997994208459, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: obstacleSpawner
+      value: 
+      objectReference: {fileID: 381480583}
     - target: {fileID: 1319650868729156626, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
       propertyPath: m_Name
       value: InputManager
@@ -3792,6 +3871,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+--- !u!114 &5784817914215813451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 915488997994208459, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+  m_PrefabInstance: {fileID: 5784817914215813450}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb48a0cb676ef44eb4d4ecaac43ae69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTimingFeedback
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

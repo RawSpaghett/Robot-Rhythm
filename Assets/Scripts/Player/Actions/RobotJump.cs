@@ -17,6 +17,69 @@ public class RobotJump : ActionBase
     [Tooltip("Optional charged-jump sprites in playback order. Plays during the jump, not while charging.")]
     [SerializeField] private Sprite[] longJumpFrames = new Sprite[0];
 
+    [Header("Jump Timing Variations (Default = Jump Frames)")]
+    [SerializeField] private RobotAnimationVariations jumpVariations = new RobotAnimationVariations();
+    [Header("Long Jump Timing Variations (Default = Long Jump Frames)")]
+    [SerializeField] private RobotAnimationVariations longJumpVariations = new RobotAnimationVariations();
+
+    public Sprite[] GetAnimationFrames(RobotActionType type, RobotTimingVisual visual)
+    {
+        return type == RobotActionType.LongJump
+            ? (longJumpVariations != null ? longJumpVariations.Select(visual, longJumpFrames) : longJumpFrames)
+            : (jumpVariations != null ? jumpVariations.Select(visual, jumpFrames) : jumpFrames);
+    }
+
+    [Header("Long Jump Charging Animation")]
+    [Tooltip("Optional sprites shown while holding an upward mouse gesture. The final frame is held until release.")]
+    [SerializeField] private Sprite[] chargingFrames = new Sprite[0];
+    [Tooltip("Seconds to play the charging sequence. Visual only: does not change jump strength or input timing.")]
+    [SerializeField, Min(0.01f)] private float chargingAnimationDuration = 1f;
+
+    [NonSerialized] private Sprite[] activeChargingFrames;
+    [NonSerialized] private Sprite spriteBeforeCharging;
+    [NonSerialized] private float chargingTimer;
+    [NonSerialized] private float activeChargingDuration;
+    public bool IsChargingAnimationPlaying { get; private set; }
+
+    // A visual preview only. It does not set IsRunning, move the robot or play SFX.
+    public bool BeginChargingAnimation()
+    {
+        if (IsChargingAnimationPlaying) return true;
+        if (IsRunning || Renderer == null || chargingFrames == null || chargingFrames.Length == 0)
+            return false;
+        for (int i = 0; i < chargingFrames.Length; i++)
+            if (chargingFrames[i] == null) return false;
+
+        activeChargingFrames = (Sprite[])chargingFrames.Clone();
+        spriteBeforeCharging = Renderer.sprite;
+        chargingTimer = 0f;
+        activeChargingDuration = Mathf.Max(0.01f, chargingAnimationDuration);
+        IsChargingAnimationPlaying = true;
+        Renderer.sprite = activeChargingFrames[0];
+        return true;
+    }
+
+    public void TickChargingAnimation(float deltaTime)
+    {
+        if (!IsChargingAnimationPlaying || Renderer == null) return;
+        chargingTimer = Mathf.Min(activeChargingDuration,
+            chargingTimer + Mathf.Max(0f, deltaTime));
+        float progress = chargingTimer / activeChargingDuration;
+        int frame = Mathf.Min(Mathf.FloorToInt(progress * activeChargingFrames.Length),
+            activeChargingFrames.Length - 1);
+        Renderer.sprite = activeChargingFrames[frame];
+    }
+
+    public void StopChargingAnimation()
+    {
+        if (IsChargingAnimationPlaying && Renderer != null)
+            Renderer.sprite = spriteBeforeCharging;
+        IsChargingAnimationPlaying = false;
+        activeChargingFrames = null;
+        spriteBeforeCharging = null;
+        chargingTimer = 0f;
+    }
+
     [Header("Long Jump Height")]
     [SerializeField, Min(0f)] private float minimumLongJumpHeight = 2.5f;
     [SerializeField, Min(0f)] private float maximumLongJumpHeight = 3.5f;
@@ -36,6 +99,11 @@ public class RobotJump : ActionBase
     [NonSerialized] private bool playingSpriteAnimation;
 
     public override bool TryBegin(RobotActionType type, float charge)
+    {
+        return TryBeginWithFeedback(type, charge, RobotTimingVisual.Default);
+    }
+
+    public bool TryBeginWithFeedback(RobotActionType type, float charge, RobotTimingVisual visual)
     {
         if (IsRunning || Visual == null ||
             (type != RobotActionType.Jump && type != RobotActionType.LongJump))
@@ -70,8 +138,7 @@ public class RobotJump : ActionBase
 
         // Each jump type has its own sequence. Charge determines long-jump
         // duration, so its frames automatically stretch across that duration.
-        BeginSpriteAnimation(type == RobotActionType.LongJump
-            ? longJumpFrames : jumpFrames);
+        BeginSpriteAnimation(GetAnimationFrames(type, visual));
         if (FXManager.Instance != null) FXManager.Instance.PlaySFX("jump");
         return true;
     }
@@ -173,5 +240,5 @@ public class RobotJump : ActionBase
     // Pausing the manager pauses both motion and sprite playback.
     // Keep other sprite animation systems from writing this renderer during
     // the jump. This class restores the pre-jump sprite when it ends.
-    // No charge-up animation or rhythm judgment is performed here.
+    // Charging preview is separate from jump motion. No rhythm judgment occurs here.
 }
