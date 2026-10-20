@@ -45,7 +45,6 @@ public abstract class ObstacleBase : MonoBehaviour
         LastAccuracy = 0f;
         LastResult = ObstacleResult.None;
         OnPerfectTiming?.Invoke(RequiredInput,TargetTime);
-        
     }
 
     public void EvaluateInput(ObstacleInputType inputType, double inputTime, float charge = 0f)

@@ -21,5 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Desert Radio Feelings Level.unity
     guid: a4eb2329abaaa6e43a5e94ecbad72cd1
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    com.unity.input.settings: {fileID: 11400000, guid: ec9478efb8a1649b195c801b941da076, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 93ca0ed513a0c49368955073d4be18f0, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -5,7 +5,9 @@ using System.Collections.Generic;
 
 public class RobotTeammate : MonoBehaviour
 {
-    [SerializeField] private float jumpHeight;
+    [SerializeField] private string jumpID;
+    [SerializeField] private string duckID;
+    
     private struct ObstacleData
     {
         public double dspTime;
@@ -62,16 +64,16 @@ public class RobotTeammate : MonoBehaviour
             case ObstacleInputType.Dodge:
                 //Debug.Log($"Robot team Dodge!");
                 actionManager.TryDuck();
-                FXManager.Instance.PlaySFX("duck");
+                FXManager.Instance.PlaySFX(duckID);
                 return;
             case ObstacleInputType.Jump:
                 //Debug.Log($"Robot team Jump!");
                 actionManager.TryJump();
-                FXManager.Instance.PlaySFX("jump");
+                FXManager.Instance.PlaySFX(jumpID);
                 return;
             case ObstacleInputType.LongJump:
-                actionManager.TryLongJump(jumpHeight);
-                FXManager.Instance.PlaySFX("jump");
+                actionManager.TryLongJump(1f);
+                FXManager.Instance.PlaySFX(jumpID);
                 return;
         }
     }
