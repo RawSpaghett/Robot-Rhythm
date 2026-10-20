@@ -6,8 +6,8 @@ using UnityEngine;
 [Serializable]
 public class RobotRunAnimation
 {
-    [Tooltip("Running sprites in playback order. Loops while no action is active.")]
-    [SerializeField] private Sprite[] runFrames = new Sprite[0];
+    [SerializeField] private SpriteSheetSequence runSheet = new SpriteSheetSequence();
+    [SerializeField, HideInInspector] private Sprite[] runFrames = new Sprite[0];
 
     [SerializeField, Min(0.01f)] private float framesPerSecond = 12f;
 
@@ -37,7 +37,8 @@ public class RobotRunAnimation
         activeFrames = null;
 
         // Optional until the art is available.
-        if (runFrames == null || runFrames.Length == 0)
+        Sprite[] frames = runSheet != null && runSheet.IsValid ? runSheet.Frames : runFrames;
+        if (frames == null || frames.Length == 0)
             return;
 
         if (renderer == null)
@@ -48,9 +49,9 @@ public class RobotRunAnimation
             return;
         }
 
-        for (int i = 0; i < runFrames.Length; i++)
+        for (int i = 0; i < frames.Length; i++)
         {
-            if (runFrames[i] == null)
+            if (frames[i] == null)
             {
                 Debug.LogWarning(
                     $"RobotRunAnimation: Run Frames element {i} is unassigned.",
@@ -59,7 +60,7 @@ public class RobotRunAnimation
             }
         }
 
-        activeFrames = (Sprite[])runFrames.Clone();
+        activeFrames = (Sprite[])frames.Clone();
         frameProgress = 0f;
         currentFrame = 0;
         isPlaying = true;

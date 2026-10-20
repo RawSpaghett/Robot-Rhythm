@@ -10,28 +10,30 @@ public class RobotJump : ActionBase
     [SerializeField, Min(0.01f)] private float jumpDuration = 0.5f;
 
     [Header("Normal Jump Animation")]
-    [Tooltip("Optional sprites in order: takeoff, airborne, landing.")]
-    [SerializeField] private Sprite[] jumpFrames = new Sprite[0];
+    [SerializeField] private SpriteSheetSequence jumpSheet = new SpriteSheetSequence();
+    [SerializeField, HideInInspector] private Sprite[] jumpFrames = new Sprite[0];
 
     [Header("Long Jump Animation")]
-    [Tooltip("Optional charged-jump sprites in playback order. Plays during the jump, not while charging.")]
-    [SerializeField] private Sprite[] longJumpFrames = new Sprite[0];
+    [SerializeField] private SpriteSheetSequence longJumpSheet = new SpriteSheetSequence();
+    [SerializeField, HideInInspector] private Sprite[] longJumpFrames = new Sprite[0];
 
-    [Header("Jump Timing Variations (Default = Jump Frames)")]
+    [Header("Jump Timing Variations (Default = Jump Sheet)")]
     [SerializeField] private RobotAnimationVariations jumpVariations = new RobotAnimationVariations();
-    [Header("Long Jump Timing Variations (Default = Long Jump Frames)")]
+    [Header("Long Jump Timing Variations (Default = Long Jump Sheet)")]
     [SerializeField] private RobotAnimationVariations longJumpVariations = new RobotAnimationVariations();
 
     public Sprite[] GetAnimationFrames(RobotActionType type, RobotTimingVisual visual)
     {
+        Sprite[] normalFrames = jumpSheet != null && jumpSheet.IsValid ? jumpSheet.Frames : jumpFrames;
+        Sprite[] chargedFrames = longJumpSheet != null && longJumpSheet.IsValid ? longJumpSheet.Frames : longJumpFrames;
         return type == RobotActionType.LongJump
-            ? (longJumpVariations != null ? longJumpVariations.Select(visual, longJumpFrames) : longJumpFrames)
-            : (jumpVariations != null ? jumpVariations.Select(visual, jumpFrames) : jumpFrames);
+            ? (longJumpVariations != null ? longJumpVariations.Select(visual, chargedFrames) : chargedFrames)
+            : (jumpVariations != null ? jumpVariations.Select(visual, normalFrames) : normalFrames);
     }
 
     [Header("Long Jump Charging Animation")]
-    [Tooltip("Optional sprites shown while holding an upward mouse gesture. The final frame is held until release.")]
-    [SerializeField] private Sprite[] chargingFrames = new Sprite[0];
+    [SerializeField] private SpriteSheetSequence chargingSheet = new SpriteSheetSequence();
+    [SerializeField, HideInInspector] private Sprite[] chargingFrames = new Sprite[0];
     [Tooltip("Seconds to play the charging sequence. Visual only: does not change jump strength or input timing.")]
     [SerializeField, Min(0.01f)] private float chargingAnimationDuration = 1f;
 
@@ -45,12 +47,13 @@ public class RobotJump : ActionBase
     public bool BeginChargingAnimation()
     {
         if (IsChargingAnimationPlaying) return true;
-        if (IsRunning || Renderer == null || chargingFrames == null || chargingFrames.Length == 0)
+        Sprite[] frames = chargingSheet != null && chargingSheet.IsValid ? chargingSheet.Frames : chargingFrames;
+        if (IsRunning || Renderer == null || frames == null || frames.Length == 0)
             return false;
-        for (int i = 0; i < chargingFrames.Length; i++)
-            if (chargingFrames[i] == null) return false;
+        for (int i = 0; i < frames.Length; i++)
+            if (frames[i] == null) return false;
 
-        activeChargingFrames = (Sprite[])chargingFrames.Clone();
+        activeChargingFrames = (Sprite[])frames.Clone();
         spriteBeforeCharging = Renderer.sprite;
         chargingTimer = 0f;
         activeChargingDuration = Mathf.Max(0.01f, chargingAnimationDuration);
@@ -236,9 +239,4 @@ public class RobotJump : ActionBase
         }
     }
 
-    // ActionManager still starts, ticks, and cancels this action.
-    // Pausing the manager pauses both motion and sprite playback.
-    // Keep other sprite animation systems from writing this renderer during
-    // the jump. This class restores the pre-jump sprite when it ends.
-    // Charging preview is separate from jump motion. No rhythm judgment occurs here.
 }

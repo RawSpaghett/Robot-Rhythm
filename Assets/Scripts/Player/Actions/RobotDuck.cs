@@ -6,15 +6,17 @@ using UnityEngine;
 public class RobotDuck : ActionBase
 {
     [Header("Duck Animation")]
-    [Tooltip("Frames in order: enter duck, ducked pose, stand up.")]
-    [SerializeField] private Sprite[] duckFrames = new Sprite[0];
+    [SerializeField] private SpriteSheetSequence duckSheet = new SpriteSheetSequence();
+    // Hidden legacy frames preserve the existing prefab until a sheet is assigned.
+    [SerializeField, HideInInspector] private Sprite[] duckFrames = new Sprite[0];
 
-    [Header("Duck Timing Variations (Default = Duck Frames)")]
+    [Header("Duck Timing Variations (Default = Duck Sheet)")]
     [SerializeField] private RobotAnimationVariations duckVariations = new RobotAnimationVariations();
 
     public Sprite[] GetAnimationFrames(RobotTimingVisual visual)
     {
-        return duckVariations != null ? duckVariations.Select(visual, duckFrames) : duckFrames;
+        Sprite[] frames = duckSheet != null && duckSheet.IsValid ? duckSheet.Frames : duckFrames;
+        return duckVariations != null ? duckVariations.Select(visual, frames) : frames;
     }
 
     [Tooltip("Total sequence duration; each frame receives equal time.")]
