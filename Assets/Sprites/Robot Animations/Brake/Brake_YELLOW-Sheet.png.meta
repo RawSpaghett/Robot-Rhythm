@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 1bf5d90df8538b2429d5edcd7340cf0b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1736885765217814700
+    second: Brake_YELLOW-Sheet_0
+  - first:
+      213: -8630248571145907664
+    second: Brake_YELLOW-Sheet_1
+  - first:
+      213: -3048358762133594695
+    second: Brake_YELLOW-Sheet_2
+  - first:
+      213: -6229748474914732266
+    second: Brake_YELLOW-Sheet_3
+  - first:
+      213: 2810484211000868475
+    second: Brake_YELLOW-Sheet_4
+  - first:
+      213: 8261518192958511513
+    second: Brake_YELLOW-Sheet_5
+  - first:
+      213: 8719879599365937703
+    second: Brake_YELLOW-Sheet_6
+  - first:
+      213: -3918571791036528456
+    second: Brake_YELLOW-Sheet_7
+  - first:
+      213: 8051181180340422522
+    second: Brake_YELLOW-Sheet_8
+  - first:
+      213: -8367812557899746440
+    second: Brake_YELLOW-Sheet_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2076
+        width: 923
+        height: 891
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca88d3ba668aa1810800000000000000
+      internalID: 1736885765217814700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2241
+        y: 2073
+        width: 1108
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032968946a23b3880800000000000000
+      internalID: -8630248571145907664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 4091
+        y: 2090
+        width: 1042
+        height: 828
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdd3135bdd02b5d0800000000000000
+      internalID: -3048358762133594695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 5796
+        y: 2105
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6170da8c4cc7b89a0800000000000000
+      internalID: -6229748474914732266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1056
+        width: 1069
+        height: 855
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7efc83df78d00720800000000000000
+      internalID: 2810484211000868475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2055
+        y: 1043
+        width: 923
+        height: 914
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99918bc660fc6a270800000000000000
+      internalID: 8261518192958511513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3701
+        y: 1051
+        width: 934
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ad164bb4c330970800000000000000
+      internalID: 8719879599365937703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 5825
+        y: 1114
+        width: 937
+        height: 927
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8c660b7bf6e99c0800000000000000
+      internalID: -3918571791036528456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 30
+        width: 923
+        height: 854
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77408460aa8bbf60800000000000000
+      internalID: 8051181180340422522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 28
+        width: 922
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873355b20de8fdb80800000000000000
+      internalID: -8367812557899746440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brake_YELLOW-Sheet_0: 1736885765217814700
+      Brake_YELLOW-Sheet_1: -8630248571145907664
+      Brake_YELLOW-Sheet_2: -3048358762133594695
+      Brake_YELLOW-Sheet_3: -6229748474914732266
+      Brake_YELLOW-Sheet_4: 2810484211000868475
+      Brake_YELLOW-Sheet_5: 8261518192958511513
+      Brake_YELLOW-Sheet_6: 8719879599365937703
+      Brake_YELLOW-Sheet_7: -3918571791036528456
+      Brake_YELLOW-Sheet_8: 8051181180340422522
+      Brake_YELLOW-Sheet_9: -8367812557899746440
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
