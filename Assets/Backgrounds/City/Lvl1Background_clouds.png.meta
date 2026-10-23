@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: b9bd41c1548cc524ca70ea0c38c11bd0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6156475358224328461
+    second: Lvl1Background_clouds_0
+  - first:
+      213: -3955230120836875281
+    second: Lvl1Background_clouds_1
+  - first:
+      213: 7610453132608380190
+    second: Lvl1Background_clouds_2
+  - first:
+      213: -2613924634687215314
+    second: Lvl1Background_clouds_3
+  - first:
+      213: -5740284263480803718
+    second: Lvl1Background_clouds_4
+  - first:
+      213: -3133748331806517891
+    second: Lvl1Background_clouds_5
+  - first:
+      213: 5969632744792847511
+    second: Lvl1Background_clouds_6
+  - first:
+      213: 2839037402268247877
+    second: Lvl1Background_clouds_7
+  - first:
+      213: -6647057327842041844
+    second: Lvl1Background_clouds_8
+  - first:
+      213: 7981095989111151046
+    second: Lvl1Background_clouds_9
+  - first:
+      213: 5188650773683536121
+    second: Lvl1Background_clouds_10
+  - first:
+      213: 8867596330179656509
+    second: Lvl1Background_clouds_11
+  - first:
+      213: -8270294730445578940
+    second: Lvl1Background_clouds_12
+  - first:
+      213: -4512883037226046545
+    second: Lvl1Background_clouds_13
+  - first:
+      213: 564264021458522472
+    second: Lvl1Background_clouds_14
+  - first:
+      213: 5846904710984237214
+    second: Lvl1Background_clouds_15
+  - first:
+      213: -4602066608661774484
+    second: Lvl1Background_clouds_16
+  - first:
+      213: 984440861041828847
+    second: Lvl1Background_clouds_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_0
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 927
+        width: 305
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07286b48b1307550800000000000000
+      internalID: 6156475358224328461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_1
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 965
+        width: 269
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: febb79a29233c19c0800000000000000
+      internalID: -3955230120836875281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_2
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 949
+        width: 308
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1d91ec5dc2cd9960800000000000000
+      internalID: 7610453132608380190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_3
+      rect:
+        serializedVersion: 2
+        x: 2943
+        y: 927
+        width: 230
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2963d7d46979bbd0800000000000000
+      internalID: -2613924634687215314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_4
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 852
+        width: 386
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e367d20e96650b0800000000000000
+      internalID: -5740284263480803718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_5
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 814
+        width: 156
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75133bde70b284d0800000000000000
+      internalID: -3133748331806517891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_6
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 852
+        width: 255
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794fae85a5568d250800000000000000
+      internalID: 5969632744792847511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_7
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 814
+        width: 129
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5472f3ab979466720800000000000000
+      internalID: 2839037402268247877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_8
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 701
+        width: 146
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c006154f398e0c3a0800000000000000
+      internalID: -6647057327842041844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_9
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 720
+        width: 129
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9d345348c82ce60800000000000000
+      internalID: 7981095989111151046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_10
+      rect:
+        serializedVersion: 2
+        x: 2795
+        y: 738
+        width: 155
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f086f4536ac10840800000000000000
+      internalID: 5188650773683536121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_11
+      rect:
+        serializedVersion: 2
+        x: 3238
+        y: 710
+        width: 146
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b7ae731e7001b70800000000000000
+      internalID: 8867596330179656509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_12
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 663
+        width: 117
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d9104b2c20a3d80800000000000000
+      internalID: -8270294730445578940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_13
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 625
+        width: 117
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab6145b9c40f51c0800000000000000
+      internalID: -4512883037226046545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_14
+      rect:
+        serializedVersion: 2
+        x: 3390
+        y: 625
+        width: 207
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861919e432ba4d700800000000000000
+      internalID: 564264021458522472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_15
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 609
+        width: 115
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9006cd3bd0642150800000000000000
+      internalID: 5846904710984237214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_16
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 587
+        width: 115
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f370e5dcc2220c0800000000000000
+      internalID: -4602066608661774484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl1Background_clouds_17
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 549
+        width: 125
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe327c05fbf69ad00800000000000000
+      internalID: 984440861041828847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lvl1Background_clouds_0: 6156475358224328461
+      Lvl1Background_clouds_1: -3955230120836875281
+      Lvl1Background_clouds_10: 5188650773683536121
+      Lvl1Background_clouds_11: 8867596330179656509
+      Lvl1Background_clouds_12: -8270294730445578940
+      Lvl1Background_clouds_13: -4512883037226046545
+      Lvl1Background_clouds_14: 564264021458522472
+      Lvl1Background_clouds_15: 5846904710984237214
+      Lvl1Background_clouds_16: -4602066608661774484
+      Lvl1Background_clouds_17: 984440861041828847
+      Lvl1Background_clouds_2: 7610453132608380190
+      Lvl1Background_clouds_3: -2613924634687215314
+      Lvl1Background_clouds_4: -5740284263480803718
+      Lvl1Background_clouds_5: -3133748331806517891
+      Lvl1Background_clouds_6: 5969632744792847511
+      Lvl1Background_clouds_7: 2839037402268247877
+      Lvl1Background_clouds_8: -6647057327842041844
+      Lvl1Background_clouds_9: 7981095989111151046
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
