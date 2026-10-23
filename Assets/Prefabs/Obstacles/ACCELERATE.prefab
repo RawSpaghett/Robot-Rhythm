@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7548301576450267194}
   - component: {fileID: 1797714057966653973}
+  - component: {fileID: -1659797053631860480}
   m_Layer: 0
   m_Name: ACCELERATE
   m_TagString: Untagged
@@ -91,3 +92,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &-1659797053631860480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5317361197830595766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8d372048409c34eb1a0245221c4746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccelerateObstacle
+  earlyWindow: 0.25
+  lateWindow: 0.25
+  perfectAccuracyThreshold: 0.9

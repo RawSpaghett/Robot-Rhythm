@@ -48,7 +48,8 @@ MonoBehaviour:
   audioLoader:
   - {fileID: 8300000, guid: db188a55103ff424f9e07484d2f6db00, type: 3}
   - {fileID: 8300000, guid: 2072ad19bb771464295bb94e4de0e253, type: 3}
-  - {fileID: 8300000, guid: 303dc8cc9b473d64bb9e7664472a8580, type: 3}
+  - {fileID: 8300000, guid: 90091d8c0b52b104eb6be77ef566fd3f, type: 3}
+  - {fileID: 8300000, guid: 3261360fe5e2ce5458e8a1015631785f, type: 3}
 --- !u!114 &7652570999159686424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,3 +67,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d9dcac1021603f04b86c45e610bfcaa1, type: 3}
   - {fileID: 8300000, guid: 1c4e70613af913e49bd1e18c2acdab90, type: 3}
   - {fileID: 8300000, guid: 6796dbe838a0bd8428b7b0f33bab093b, type: 3}
+  - {fileID: 8300000, guid: 8bb5cb1dbe99a49939afc2f2310c4ad6, type: 3}
+  - {fileID: 8300000, guid: 185cabf70c2b5491196abdefa1cdff2e, type: 3}

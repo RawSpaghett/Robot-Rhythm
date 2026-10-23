@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class AccelerateObstacle : ObstacleBase
 {
     public override ObstacleInputType RequiredInput =>
