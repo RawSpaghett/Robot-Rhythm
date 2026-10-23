@@ -152,8 +152,13 @@ public class InputManager : MonoBehaviour
                     RequestAction(RobotActionType.Duck);
                     if (FXManager.Instance != null) FXManager.Instance.PlaySFX(duckID);
                     break;
+                case Direction.Left:
+                    RequestAction(RobotActionType.Brake);
+                    break;
+                case Direction.Right:
+                    RequestAction(RobotActionType.Accelerate);
+                    break;
 
-                    // Add braking and accelerating here when implemented.
             }
         }
         OnSwipe?.Invoke(direction);
