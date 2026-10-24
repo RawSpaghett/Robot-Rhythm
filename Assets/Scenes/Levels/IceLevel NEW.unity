@@ -1119,23 +1119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
---- !u!1 &1040666998 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3839460082116138315, guid: 2d064294cef2c0a419327e4933343c07, type: 3}
-  m_PrefabInstance: {fileID: 4486546823458199638}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1040667000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040666998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 530ca5738101d71489e8cef814aabaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ComboTracker
 --- !u!1001 &1133846662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3335,10 +3318,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3839460082116138315, guid: 2d064294cef2c0a419327e4933343c07, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1040667000}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d064294cef2c0a419327e4933343c07, type: 3}
 --- !u!1001 &4622348821855503745
 PrefabInstance:
@@ -3503,6 +3483,10 @@ PrefabInstance:
       propertyPath: spawner
       value: 
       objectReference: {fileID: 381480583}
+    - target: {fileID: 2340465443636631975, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4963813780889712514, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.31315

@@ -18,6 +18,7 @@ Shader "RobotRhythm/LevelCard"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma target 3.0
             #include "UnityCG.cginc"
             struct appdata { float4 vertex:POSITION; float4 color:COLOR; float2 uv:TEXCOORD0; };
             struct v2f { float4 vertex:SV_POSITION; float4 color:COLOR; float2 uv:TEXCOORD0; };
@@ -41,12 +42,14 @@ Shader "RobotRhythm/LevelCard"
                 float2 paperUV = lerp(float2(.055,.075), float2(.93,.925), i.uv);
                 float interior = paperInterior(paperUV);
                 float2 edge = fwidth(paperUV) * 3;
-                float outline = max(max(paperInterior(paperUV+float2(edge.x,0)),
+                float inkInterior = min(min(paperInterior(paperUV+float2(edge.x,0)),
                     paperInterior(paperUV-float2(edge.x,0))),
-                    max(paperInterior(paperUV+float2(0,edge.y)),
+                    min(paperInterior(paperUV+float2(0,edge.y)),
                     paperInterior(paperUV-float2(0,edge.y))));
+                inkInterior = min(inkInterior, min(min(paperInterior(paperUV+edge),paperInterior(paperUV-edge)),
+                    min(paperInterior(paperUV+float2(edge.x,-edge.y)),paperInterior(paperUV+float2(-edge.x,edge.y)))));
                 float4 art = tex2D(_MainTex,i.uv);
-                float4 color = float4(lerp(float3(.035,.045,.05),art.rgb,interior),max(interior,outline));
+                float4 color = float4(lerp(float3(.002,.003,.004),art.rgb,inkInterior),interior);
                 return color * i.color;
             }
             ENDCG
