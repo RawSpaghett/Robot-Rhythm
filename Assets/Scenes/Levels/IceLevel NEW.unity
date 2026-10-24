@@ -3063,6 +3063,10 @@ PrefabInstance:
       value: RobotTeammate
       objectReference: {fileID: 0}
     - target: {fileID: 2562358285289024147, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: offset
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562358285289024147, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: jumpHeight
       value: 15
       objectReference: {fileID: 0}

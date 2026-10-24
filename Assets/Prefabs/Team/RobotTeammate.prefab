@@ -141,7 +141,7 @@ MonoBehaviour:
   duckID: duck
   accelerateID: accelerate
   brakeID: brake
-  offset: -0.15
+  offset: -0.25
   actionManager: {fileID: 0}
 --- !u!114 &6268589061873731464
 MonoBehaviour:
