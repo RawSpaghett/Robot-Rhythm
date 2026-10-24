@@ -33,7 +33,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Border: 4
+    - _Border: 5
     - _Radius: 22
     m_Colors:
     - _BorderColor: {r: 0.025, g: 0.035, b: 0.04, a: 1}
