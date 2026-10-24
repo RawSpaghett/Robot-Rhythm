@@ -183,6 +183,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1612832148377695353, guid: 2d064294cef2c0a419327e4933343c07, type: 3}
   m_PrefabInstance: {fileID: 4486546823458199638}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &324982086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324982087}
+  - component: {fileID: 324982088}
+  m_Layer: 0
+  m_Name: Close
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &324982087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324982086}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 547610360}
+  m_Father: {fileID: 1684793623}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &324982088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324982086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0ffe29fe06ef14ea25b47fee1b5580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScrollingLayer
+  speedMultiplier: 1
+  layerWidth: 40
+  rhythmManager: {fileID: 1333327601}
+  obstacleSpawner: {fileID: 381480583}
 --- !u!1 &381480582
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +521,6 @@ GameObject:
   m_Component:
   - component: {fileID: 547610360}
   - component: {fileID: 547610362}
-  - component: {fileID: 547610361}
   m_Layer: 0
   m_Name: Lvl3Background_road_0
   m_TagString: Untagged
@@ -495,24 +543,8 @@ Transform:
   m_Children:
   - {fileID: 936532970}
   - {fileID: 528195558}
-  m_Father: {fileID: 1684793623}
+  m_Father: {fileID: 324982087}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &547610361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547610359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef0ffe29fe06ef14ea25b47fee1b5580, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScrollingLayer
-  speedMultiplier: 1
-  layerWidth: 30
-  rhythmManager: {fileID: 1333327601}
-  obstacleSpawner: {fileID: 381480583}
 --- !u!212 &547610362
 SpriteRenderer:
   serializedVersion: 2
@@ -587,7 +619,6 @@ GameObject:
   m_Component:
   - component: {fileID: 585004744}
   - component: {fileID: 585004746}
-  - component: {fileID: 585004745}
   m_Layer: 0
   m_Name: Lvl3Background_sky_0
   m_TagString: Untagged
@@ -610,24 +641,8 @@ Transform:
   m_Children:
   - {fileID: 1389165807}
   - {fileID: 1495625520}
-  m_Father: {fileID: 1684793623}
+  m_Father: {fileID: 1225177618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &585004745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585004743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef0ffe29fe06ef14ea25b47fee1b5580, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ScrollingLayer
-  speedMultiplier: 0.5
-  layerWidth: 30
-  rhythmManager: {fileID: 1333327601}
-  obstacleSpawner: {fileID: 381480583}
 --- !u!212 &585004746
 SpriteRenderer:
   serializedVersion: 2
@@ -1448,6 +1463,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+--- !u!1 &1225177617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225177618}
+  - component: {fileID: 1225177619}
+  m_Layer: 0
+  m_Name: Far
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1225177618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225177617}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 585004744}
+  m_Father: {fileID: 1684793623}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225177619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225177617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0ffe29fe06ef14ea25b47fee1b5580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScrollingLayer
+  speedMultiplier: 0.5
+  layerWidth: 40
+  rhythmManager: {fileID: 1333327601}
+  obstacleSpawner: {fileID: 381480583}
 --- !u!1 &1234430177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,8 +2100,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 547610360}
-  - {fileID: 585004744}
+  - {fileID: 324982087}
+  - {fileID: 1225177618}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1711373545
