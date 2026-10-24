@@ -13,7 +13,7 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     {
         public string title;
         public string scenePath;
-        public Texture2D[] coverLayers;
+        public Texture2D cover;
         public AudioClip song;
     }
 
@@ -26,7 +26,7 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     [Header("Card")]
     public RectTransform card;
     public CanvasGroup cardFade;
-    public RawImage[] coverImages;
+    public RawImage coverImage;
     public Text title;
     public Text pageNumber;
     public Button previousButton;
@@ -63,12 +63,7 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
         if (levels == null || levels.Length == 0) return;
         SelectedIndex = Mathf.Clamp(SelectedIndex, 0, levels.Length - 1);
         Level level = levels[SelectedIndex];
-        for (int i = 0; i < coverImages.Length; i++)
-        {
-            bool visible = level.coverLayers != null && i < level.coverLayers.Length;
-            coverImages[i].gameObject.SetActive(visible);
-            if (visible) coverImages[i].texture = level.coverLayers[i];
-        }
+        coverImage.texture = level.cover;
         title.text = level.title;
         pageNumber.text = (SelectedIndex + 1) + " / " + levels.Length;
         previousButton.gameObject.SetActive(SelectedIndex > 0);

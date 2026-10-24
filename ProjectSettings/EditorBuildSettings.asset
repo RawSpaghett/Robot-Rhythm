@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Desert Radio Feelings Level.unity
     guid: a4eb2329abaaa6e43a5e94ecbad72cd1
+  - enabled: 1
+    path: Assets/Scenes/Levels/IceLevel.unity
+    guid: 23c9999108a537e4797393e1eb0a5428
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -279,6 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156488388}
   - component: {fileID: 156488389}
+  - component: {fileID: 156488390}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab6fd9ff961403888b42c824f64bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+--- !u!114 &156488390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156488387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530ca5738101d71489e8cef814aabaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ComboTracker
 --- !u!1 &246913223
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class ScoreDisplay : MonoBehaviour
 {
     [Header("Score Text")]
     [SerializeField] private Text liveScore;
+    [SerializeField] private Text liveAccuracy;
     [SerializeField] private Text finalScore;
     [SerializeField] private UiController preferences;
     [SerializeField] private RollingNumber scoreRoll;
@@ -83,6 +84,7 @@ public class ScoreDisplay : MonoBehaviour
         source = value;
         lastScore = source != null ? source.score : 0f;
         lastResolved = source != null ? source.ResolvedObstacles : 0;
+        UpdateLiveAccuracy();
         showingResults = false;
         animatingResult = false;
         liveScore.text = source != null ? Format(lastScore) : "—";
@@ -136,6 +138,7 @@ public class ScoreDisplay : MonoBehaviour
         {
             lastScore = source.score;
             lastResolved = source.ResolvedObstacles;
+            UpdateLiveAccuracy();
             liveScore.text = Format(lastScore);
             liveScore.color = theme != null ? theme.ink : Color.white;
             PaintStars(liveStars, GetRating(source.AverageAccuracy, lastResolved), !reducedMotion);
@@ -168,6 +171,14 @@ public class ScoreDisplay : MonoBehaviour
             if (percent >= accuracyBands[i].minimumPercent)
                 return accuracyBands[i].color;
         return theme != null ? theme.ink : Color.white;
+    }
+
+    private void UpdateLiveAccuracy()
+    {
+        if (liveAccuracy != null)
+            liveAccuracy.text = source != null && source.ResolvedObstacles > 0
+                ? Mathf.RoundToInt(source.AverageAccuracy * 100f) + "% ACCURACY"
+                : "— ACCURACY";
     }
 
     public Color GetScoreColor(float score)

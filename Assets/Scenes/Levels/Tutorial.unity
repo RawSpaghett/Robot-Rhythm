@@ -188,6 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156488388}
   - component: {fileID: 156488389}
+  - component: {fileID: 156488390}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -222,6 +223,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab6fd9ff961403888b42c824f64bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreManager
+--- !u!114 &156488390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156488387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530ca5738101d71489e8cef814aabaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ComboTracker
 --- !u!1 &246913223
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
   actionManager: {fileID: 2097325184}
+  timingFeedback: {fileID: 0}
   longJumpCharge: 0.75
 --- !u!4 &547819207
 Transform:
@@ -2689,6 +2703,16 @@ MonoBehaviour:
     - {fileID: -8611579710663742256, guid: 8bee3922ffc70554589ac7da32ffa5bf, type: 3}
     - {fileID: -6367139769313249868, guid: d0e9c0e4113e02242bbe69e0e7d2f060, type: 3}
     - {fileID: 4124987314193384561, guid: c27d6d692aae3914f86cb9af5c27d118, type: 3}
+    jumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    longJumpVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
+    chargingFrames: []
+    chargingAnimationDuration: 1
     minimumLongJumpHeight: 2.5
     maximumLongJumpHeight: 3.5
     minimumLongJumpDuration: 0.8
@@ -2708,6 +2732,10 @@ MonoBehaviour:
     - {fileID: -5471781979450870487, guid: 0104ae508207eff488a18a71f75b8fb4, type: 3}
     - {fileID: 5566531716887923500, guid: 0104ae508207eff488a18a71f75b8fb4, type: 3}
     - {fileID: 397125837878978247, guid: 0104ae508207eff488a18a71f75b8fb4, type: 3}
+    duckVariations:
+      perfectFrames: []
+      earlyLateFrames: []
+      failedFrames: []
     duckDuration: 0.5
   runningAnimation:
     runFrames:
@@ -2730,6 +2758,7 @@ MonoBehaviour:
     - {fileID: 2937542380364343250, guid: e0b954e978eacb645af9d56fe5a9fb84, type: 3}
     - {fileID: -2344716011290733520, guid: 8bb1d99755485b144ba853a99a830608, type: 3}
     framesPerSecond: 24
+  missedFeedbackDuration: 0.4
 --- !u!1 &2110908123
 GameObject:
   m_ObjectHideFlags: 0
