@@ -947,6 +947,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4963813780889712514, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
   m_PrefabInstance: {fileID: 5784817914215813450}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &547819208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 915488997994208459, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+  m_PrefabInstance: {fileID: 5784817914215813450}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb48a0cb676ef44eb4d4ecaac43ae69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTimingFeedback
 --- !u!1 &623510172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3783,6 +3794,22 @@ PrefabInstance:
       propertyPath: actionManager
       value: 
       objectReference: {fileID: 2097325184}
+    - target: {fileID: 424976395560863469, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: timingFeedback
+      value: 
+      objectReference: {fileID: 547819208}
+    - target: {fileID: 915488997994208459, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: actionManager
+      value: 
+      objectReference: {fileID: 2097325184}
+    - target: {fileID: 915488997994208459, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: rhythmManager
+      value: 
+      objectReference: {fileID: 1333327601}
+    - target: {fileID: 915488997994208459, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: obstacleSpawner
+      value: 
+      objectReference: {fileID: 381480583}
     - target: {fileID: 1319650868729156626, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
       propertyPath: m_Name
       value: InputManager
