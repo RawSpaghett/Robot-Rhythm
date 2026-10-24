@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: ff3d4e9d6c3cae3428d113f3102da11e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5745162992018572232
+    second: Accelerate_YELLOW-Sheet_0
+  - first:
+      213: 4229620733906026054
+    second: Accelerate_YELLOW-Sheet_1
+  - first:
+      213: -2110149362373382530
+    second: Accelerate_YELLOW-Sheet_2
+  - first:
+      213: -1829104092314555558
+    second: Accelerate_YELLOW-Sheet_3
+  - first:
+      213: 2450046583540311546
+    second: Accelerate_YELLOW-Sheet_4
+  - first:
+      213: 6423240192455507586
+    second: Accelerate_YELLOW-Sheet_5
+  - first:
+      213: 5719444989312191620
+    second: Accelerate_YELLOW-Sheet_6
+  - first:
+      213: 5068822530058761579
+    second: Accelerate_YELLOW-Sheet_7
+  - first:
+      213: -272170371324323809
+    second: Accelerate_YELLOW-Sheet_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1995
+        width: 923
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3ccf35d4beabf40800000000000000
+      internalID: 5745162992018572232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1999
+        width: 923
+        height: 926
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e7813e5a1a2ba30800000000000000
+      internalID: 4229620733906026054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3495
+        y: 1975
+        width: 934
+        height: 980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ea7b0c55e37b2e0800000000000000
+      internalID: -2110149362373382530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1014
+        width: 948
+        height: 963
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ba060e487bd96e0800000000000000
+      internalID: -1829104092314555558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1009
+        width: 949
+        height: 799
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af564170360500220800000000000000
+      internalID: 2450046583540311546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 4165
+        y: 1012
+        width: 930
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e725a5ceee32950800000000000000
+      internalID: 6423240192455507586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 5
+        width: 930
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c47543aec8f5f40800000000000000
+      internalID: 5719444989312191620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 15
+        width: 926
+        height: 881
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6536ad3c33185640800000000000000
+      internalID: 5068822530058761579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_YELLOW-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3437
+        y: 26
+        width: 920
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f18d3d24d7e093cf0800000000000000
+      internalID: -272170371324323809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Accelerate_YELLOW-Sheet_0: 5745162992018572232
+      Accelerate_YELLOW-Sheet_1: 4229620733906026054
+      Accelerate_YELLOW-Sheet_2: -2110149362373382530
+      Accelerate_YELLOW-Sheet_3: -1829104092314555558
+      Accelerate_YELLOW-Sheet_4: 2450046583540311546
+      Accelerate_YELLOW-Sheet_5: 6423240192455507586
+      Accelerate_YELLOW-Sheet_6: 5719444989312191620
+      Accelerate_YELLOW-Sheet_7: 5068822530058761579
+      Accelerate_YELLOW-Sheet_8: -272170371324323809
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

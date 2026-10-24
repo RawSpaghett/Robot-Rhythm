@@ -46,8 +46,10 @@ public class UIManager : MonoBehaviour
     public ComboDisplay comboDisplay;
     public GameObject countdownPanel;
     public Text countdownText;
+    public Text countdownLabel;
     private float previousVolume;
     private Coroutine countdownRoutine;
+    private CanvasGroup gameplayInput;
     public bool IsTransitioning { get; private set; }
 
     private void OnEnable()
@@ -73,6 +75,8 @@ public class UIManager : MonoBehaviour
         SetVolume(menu.UiVolume);
         transitionCover.gameObject.SetActive(false);
         countdownPanel.SetActive(false);
+        gameplayInput = playHud.GetComponent<CanvasGroup>();
+        if (gameplayInput == null) gameplayInput = playHud.AddComponent<CanvasGroup>();
         foreach (Graphic graphic in countdownPanel.GetComponentsInChildren<Graphic>(true))
             graphic.raycastTarget = false;
         var trailObject = new GameObject("Swipe Trail", typeof(RectTransform), typeof(CanvasRenderer), typeof(SwipeTrailUI));
@@ -96,8 +100,8 @@ public class UIManager : MonoBehaviour
 
     public void OpenLevels() => OpenMenuPage(UiPage.Routes);
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
-    public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Desert Radio Feelings Level.unity"); StartGame(); }
-    public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Tutorial.unity"); StartGame(); }
+    public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Levels/Desert Level NEW.unity"); StartGame(); }
+    public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Levels/Tutorial.unity"); StartGame(); }
     public void StartLevel(string scenePath)
     {
         if (IsTransitioning || gameManager.IsLoading) return;
@@ -109,7 +113,11 @@ public class UIManager : MonoBehaviour
     {
         Navigate(gameManager.StartGame, true);
     }
-    public void ResumeGame() => Navigate(gameManager.ResumeGame);
+    public void ResumeGame() => Navigate(() =>
+    {
+        StartCountdown(true);
+        gameManager.ResumeGame();
+    });
     public void RestartGame() => Navigate(gameManager.RestartGame, true);
     public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu);
     public void ReturnToLevels() => Navigate(gameManager.ReturnToLevelSelect);
@@ -121,7 +129,7 @@ public class UIManager : MonoBehaviour
     public void PauseGame()
     {
         // Freeze immediately on touch; the overlay can then animate using unscaled time.
-        if (!IsTransitioning)
+        if (!IsTransitioning && countdownRoutine == null)
             StartCoroutine(PauseTransition());
     }
 
@@ -194,9 +202,11 @@ public class UIManager : MonoBehaviour
         gameManager.SetUITransition(false);
     }
 
-    private void StartCountdown()
+    private void StartCountdown(bool resuming = false)
     {
         if (countdownRoutine != null) StopCoroutine(countdownRoutine);
+        countdownLabel.text = resuming ? "RESUMING" : "GET READY";
+        gameplayInput.interactable = false;
         gameManager.SetCountdown(true);
         countdownRoutine = StartCoroutine(Countdown());
     }
@@ -222,6 +232,7 @@ public class UIManager : MonoBehaviour
         }
         countdownPanel.SetActive(false);
         countdownRoutine = null;
+        gameplayInput.interactable = true;
         gameManager.SetCountdown(false);
     }
 

@@ -18,7 +18,7 @@ public class ComboDisplay : MonoBehaviour
         count = Mathf.Max(0, count);
         badge.SetActive(count > 0);
         comboText.text = count.ToString();
-        multiplierText.text = "x" + Mathf.Max(1f, multiplier);
+        multiplierText.text = "x" + Mathf.Max(1f, multiplier).ToString("0.#");
         if (count > previousCount && !preferences.ReducedMotion) pulse = 1;
         previousCount = count;
     }

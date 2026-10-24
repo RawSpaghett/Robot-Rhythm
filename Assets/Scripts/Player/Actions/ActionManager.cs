@@ -139,6 +139,14 @@ public class ActionManager : MonoBehaviour
                     : action == accelerate
                         ? accelerate.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
                         : action.TryBegin(type, Mathf.Clamp01(charge));
+        
+        if (started && this.gameObject.name == "PlayerRobotVisual") //not optimal solution, decouple inputmanager and action calls and then move this there.
+        {
+            if (action == jump) FXManager.Instance.PlaySFX("jump");
+            else if (action == duck)  FXManager.Instance.PlaySFX("duck");
+            else if (action == brake)  FXManager.Instance.PlaySFX("brake");
+            else if (action == accelerate)  FXManager.Instance.PlaySFX("accelerate");
+        }
         if (!started)
         {
             runningAnimation.Play();

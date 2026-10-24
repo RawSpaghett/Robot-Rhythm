@@ -7,6 +7,8 @@ public class RobotTeammate : MonoBehaviour
 {
     [SerializeField] private string jumpID;
     [SerializeField] private string duckID;
+    [SerializeField] private string accelerateID;
+    [SerializeField] private string brakeID;
     
     private struct ObstacleData
     {
@@ -62,18 +64,29 @@ public class RobotTeammate : MonoBehaviour
         switch(type.type)
         {
             case ObstacleInputType.Dodge:
-                //Debug.Log($"Robot team Dodge!");
+                Debug.Log($"Robot team Dodge!");
                 actionManager.TryDuck();
                 FXManager.Instance.PlaySFX(duckID);
                 return;
             case ObstacleInputType.Jump:
-                //Debug.Log($"Robot team Jump!");
+                Debug.Log($"Robot team Jump!");
                 actionManager.TryJump();
                 FXManager.Instance.PlaySFX(jumpID);
                 return;
             case ObstacleInputType.LongJump:
+                Debug.Log($"Robot team ChargeJump!");
                 actionManager.TryLongJump(1f);
                 FXManager.Instance.PlaySFX(jumpID);
+                return;
+            case ObstacleInputType.Accelerate:
+                Debug.Log($"Robot team Accelerate!");
+                actionManager.TryAccelerate();
+                FXManager.Instance.PlaySFX(accelerateID);
+                return;
+            case ObstacleInputType.Brake:
+                Debug.Log($"Robot team Brake!");
+                actionManager.TryBrake();
+                FXManager.Instance.PlaySFX(brakeID);
                 return;
         }
     }

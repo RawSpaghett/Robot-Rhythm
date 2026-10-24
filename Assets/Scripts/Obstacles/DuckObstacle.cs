@@ -16,9 +16,4 @@ public class DuckObstacle : ObstacleBase
         return inputType == ObstacleInputType.Dodge;
 
     }
-
-    void OnEnable()
-    {
-        FXManager.Instance.PlaySFX("duck");
-    }
 }

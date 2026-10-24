@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 namespace RobotRhythm.UI
 {
+    [RequireComponent(typeof(CanvasRenderer))]
     public sealed class RatingStar : MaskableGraphic
     {
         private Sprite Artwork => SuppliedArtwork.Get(FillAmount >= 1f ? "03-Controls-and-Feedback/star-full" : FillAmount > 0f ? "03-Controls-and-Feedback/star-half" : "02-Icons/star-empty");

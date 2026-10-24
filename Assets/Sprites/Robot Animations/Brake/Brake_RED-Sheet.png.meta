@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: 1c8ff28287075fc449aceb7ed7b37761
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8945270967155300725
+    second: Brake_RED-Sheet_0
+  - first:
+      213: -1107153866998414422
+    second: Brake_RED-Sheet_1
+  - first:
+      213: -6752546030247410555
+    second: Brake_RED-Sheet_2
+  - first:
+      213: 3799956862612211440
+    second: Brake_RED-Sheet_3
+  - first:
+      213: -4199653964898070950
+    second: Brake_RED-Sheet_4
+  - first:
+      213: -8028922371470703384
+    second: Brake_RED-Sheet_5
+  - first:
+      213: 7645794639444881164
+    second: Brake_RED-Sheet_6
+  - first:
+      213: 8876582893836379058
+    second: Brake_RED-Sheet_7
+  - first:
+      213: -2584332459158865449
+    second: Brake_RED-Sheet_8
+  - first:
+      213: 7139202698650000525
+    second: Brake_RED-Sheet_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2076
+        width: 923
+        height: 891
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57918e0fc8cf32c70800000000000000
+      internalID: 8945270967155300725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 2073
+        width: 1108
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa30cd58c6992a0f0800000000000000
+      internalID: -1107153866998414422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3383
+        y: 2090
+        width: 1042
+        height: 828
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58401a979232a42a0800000000000000
+      internalID: -6752546030247410555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4734
+        y: 2105
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f60fcd22a82cb430800000000000000
+      internalID: 3799956862612211440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1056
+        width: 1069
+        height: 855
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5e80ba38f4d7b5c0800000000000000
+      internalID: -4199653964898070950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 1043
+        width: 923
+        height: 914
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e44d4764a9839090800000000000000
+      internalID: -8028922371470703384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1051
+        width: 934
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fa2b527b15b1a60800000000000000
+      internalID: 7645794639444881164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 4763
+        y: 1114
+        width: 937
+        height: 927
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b32d6e9c15ff2b70800000000000000
+      internalID: 8876582893836379058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 30
+        width: 923
+        height: 854
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9f25e125b922cd0800000000000000
+      internalID: -2584332459158865449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 28
+        width: 922
+        height: 869
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c1b80870b831360800000000000000
+      internalID: 7139202698650000525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brake_RED-Sheet_0: 8945270967155300725
+      Brake_RED-Sheet_1: -1107153866998414422
+      Brake_RED-Sheet_2: -6752546030247410555
+      Brake_RED-Sheet_3: 3799956862612211440
+      Brake_RED-Sheet_4: -4199653964898070950
+      Brake_RED-Sheet_5: -8028922371470703384
+      Brake_RED-Sheet_6: 7645794639444881164
+      Brake_RED-Sheet_7: 8876582893836379058
+      Brake_RED-Sheet_8: -2584332459158865449
+      Brake_RED-Sheet_9: 7139202698650000525
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,12 +6,26 @@ using UnityEngine;
 public class FXManager: MonoBehaviour
 {
     [SerializeField]private AudioSource speakers;
+    private float sourceVolume;
     public static FXManager Instance {get; private set;}
 
     void Awake()
     {
         IntializeInstance();
         speakers = GetComponent<AudioSource>();
+        if (speakers != null) sourceVolume = speakers.volume;
+        ApplyVolume();
+    }
+
+    void Update()
+    {
+        ApplyVolume();
+    }
+
+    private void ApplyVolume()
+    {
+        if (speakers != null)
+            speakers.volume = sourceVolume * Mathf.Clamp01(PlayerPrefs.GetFloat("rr.effects", 1f));
     }
 
     public void PlaySFX(string SongID)
@@ -24,6 +38,7 @@ public class FXManager: MonoBehaviour
 
         if (AudioFXDatabase.Instance != null && AudioFXDatabase.Instance.fxLibrary.ContainsKey(SongID))
         {
+            ApplyVolume();
             speakers.PlayOneShot(AudioFXDatabase.Instance.GetClip(SongID));
         }
         
