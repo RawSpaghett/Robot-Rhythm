@@ -69,6 +69,8 @@ public class PlayerTimingFeedback : MonoBehaviour
             case ObstacleInputType.Jump: actionManager.ShowMissedObstacle(RobotActionType.Jump); break;
             case ObstacleInputType.LongJump: actionManager.ShowMissedObstacle(RobotActionType.LongJump); break;
             case ObstacleInputType.Dodge: actionManager.ShowMissedObstacle(RobotActionType.Duck); break;
+            case ObstacleInputType.Brake: actionManager.ShowMissedObstacle(RobotActionType.Brake); break;
+            case ObstacleInputType.Accelerate: actionManager.ShowMissedObstacle(RobotActionType.Accelerate); break;
         }
     }
 
@@ -79,6 +81,8 @@ public class PlayerTimingFeedback : MonoBehaviour
             case RobotActionType.Jump: input = ObstacleInputType.Jump; return true;
             case RobotActionType.LongJump: input = ObstacleInputType.LongJump; return true;
             case RobotActionType.Duck: input = ObstacleInputType.Dodge; return true;
+            case RobotActionType.Brake: input = ObstacleInputType.Brake; return true;
+            case RobotActionType.Accelerate: input = ObstacleInputType.Accelerate; return true;
             default: input = default(ObstacleInputType); return false;
         }
     }

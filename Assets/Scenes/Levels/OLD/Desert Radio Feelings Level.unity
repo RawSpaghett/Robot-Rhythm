@@ -564,6 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
   hitLineX: -7.1
   distancePerBeat: 3
+  QOLoffset: 0.1
   spawnTime: 4
   groundY: -4
   rhythmManager: {fileID: 1333327601}
@@ -628,9 +629,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
-  jumpHeight: 0
+  jumpID: 
+  duckID: 
   offset: 0
-  actionManager: {fileID: 0}
+  actionManager: {fileID: 408185576}
 --- !u!114 &408185576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +712,34 @@ MonoBehaviour:
       earlyLateFrames: []
       failedFrames: []
     duckDuration: 0.5
+  brake:
+    animationDuration: 0.5
+    defaultSheet:
+      sheet: {fileID: 0}
+      frames: []
+    perfectSheet:
+      sheet: {fileID: 0}
+      frames: []
+    earlyLateSheet:
+      sheet: {fileID: 0}
+      frames: []
+    failedSheet:
+      sheet: {fileID: 0}
+      frames: []
+  accelerate:
+    animationDuration: 0.5
+    defaultSheet:
+      sheet: {fileID: 0}
+      frames: []
+    perfectSheet:
+      sheet: {fileID: 0}
+      frames: []
+    earlyLateSheet:
+      sheet: {fileID: 0}
+      frames: []
+    failedSheet:
+      sheet: {fileID: 0}
+      frames: []
   runningAnimation:
     runFrames:
     - {fileID: 9063727863196720943, guid: 0859941a77db672458bbd5be706dbfc9, type: 3}
@@ -2898,6 +2928,34 @@ MonoBehaviour:
       earlyLateFrames: []
       failedFrames: []
     duckDuration: 0.5
+  brake:
+    animationDuration: 0.5
+    defaultSheet:
+      sheet: {fileID: 0}
+      frames: []
+    perfectSheet:
+      sheet: {fileID: 0}
+      frames: []
+    earlyLateSheet:
+      sheet: {fileID: 0}
+      frames: []
+    failedSheet:
+      sheet: {fileID: 0}
+      frames: []
+  accelerate:
+    animationDuration: 0.5
+    defaultSheet:
+      sheet: {fileID: 0}
+      frames: []
+    perfectSheet:
+      sheet: {fileID: 0}
+      frames: []
+    earlyLateSheet:
+      sheet: {fileID: 0}
+      frames: []
+    failedSheet:
+      sheet: {fileID: 0}
+      frames: []
   runningAnimation:
     runFrames:
     - {fileID: 9063727863196720943, guid: 0859941a77db672458bbd5be706dbfc9, type: 3}
@@ -2932,9 +2990,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
-  jumpHeight: 0
+  jumpID: 
+  duckID: 
   offset: 1
-  actionManager: {fileID: 0}
+  actionManager: {fileID: 1890109594}
 --- !u!1 &1950308091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,9 +3040,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0e8d25b5eddc545bcbb76901d0d397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
-  jumpHeight: 0
+  jumpID: 
+  duckID: 
   offset: 0.5
-  actionManager: {fileID: 0}
+  actionManager: {fileID: 1950308094}
 --- !u!114 &1950308094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3063,6 +3123,34 @@ MonoBehaviour:
       earlyLateFrames: []
       failedFrames: []
     duckDuration: 0.5
+  brake:
+    animationDuration: 0.5
+    defaultSheet:
+      sheet: {fileID: 0}
+      frames: []
+    perfectSheet:
+      sheet: {fileID: 0}
+      frames: []
+    earlyLateSheet:
+      sheet: {fileID: 0}
+      frames: []
+    failedSheet:
+      sheet: {fileID: 0}
+      frames: []
+  accelerate:
+    animationDuration: 0.5
+    defaultSheet:
+      sheet: {fileID: 0}
+      frames: []
+    perfectSheet:
+      sheet: {fileID: 0}
+      frames: []
+    earlyLateSheet:
+      sheet: {fileID: 0}
+      frames: []
+    failedSheet:
+      sheet: {fileID: 0}
+      frames: []
   runningAnimation:
     runFrames:
     - {fileID: 9063727863196720943, guid: 0859941a77db672458bbd5be706dbfc9, type: 3}
@@ -3526,6 +3614,34 @@ MonoBehaviour:
       earlyLateFrames: []
       failedFrames: []
     duckDuration: 0.5
+  brake:
+    animationDuration: 0.5
+    defaultSheet:
+      sheet: {fileID: 0}
+      frames: []
+    perfectSheet:
+      sheet: {fileID: 0}
+      frames: []
+    earlyLateSheet:
+      sheet: {fileID: 0}
+      frames: []
+    failedSheet:
+      sheet: {fileID: 0}
+      frames: []
+  accelerate:
+    animationDuration: 0.5
+    defaultSheet:
+      sheet: {fileID: 0}
+      frames: []
+    perfectSheet:
+      sheet: {fileID: 0}
+      frames: []
+    earlyLateSheet:
+      sheet: {fileID: 0}
+      frames: []
+    failedSheet:
+      sheet: {fileID: 0}
+      frames: []
   runningAnimation:
     runFrames:
     - {fileID: 9063727863196720943, guid: 0859941a77db672458bbd5be706dbfc9, type: 3}

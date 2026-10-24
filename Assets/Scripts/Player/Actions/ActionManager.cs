@@ -13,6 +13,8 @@ public class ActionManager : MonoBehaviour
     [Header("Action Settings")]
     [SerializeField] private RobotJump jump = new RobotJump();
     [SerializeField] private RobotDuck duck = new RobotDuck();
+    [SerializeField] private RobotBrake brake = new RobotBrake();
+    [SerializeField] private RobotAccelerate accelerate = new RobotAccelerate();
 
     [Header("Default Running Animation")]
     [SerializeField]
@@ -58,16 +60,22 @@ public class ActionManager : MonoBehaviour
 
         if (jump == null) jump = new RobotJump();
         if (duck == null) duck = new RobotDuck();
+        if (brake == null) brake = new RobotBrake();
+        if (accelerate == null) accelerate = new RobotAccelerate();
         if (runningAnimation == null)
             runningAnimation = new RobotRunAnimation();
 
         jump.Initialize(robotVisual, robotRenderer, this);
         duck.Initialize(robotVisual, robotRenderer, this);
+        brake.Initialize(robotVisual, robotRenderer, this);
+        accelerate.Initialize(robotVisual, robotRenderer, this);
         runningAnimation.Initialize(robotRenderer, this);
 
         actions.Add(RobotActionType.Jump, jump);
         actions.Add(RobotActionType.LongJump, jump);
         actions.Add(RobotActionType.Duck, duck);
+        actions.Add(RobotActionType.Brake, brake);
+        actions.Add(RobotActionType.Accelerate, accelerate);
         initialized = true;
     }
 
@@ -76,6 +84,8 @@ public class ActionManager : MonoBehaviour
     public void TryLongJump(float charge) =>
         TryPerform(RobotActionType.LongJump, charge);
     public void TryDuck() => TryPerform(RobotActionType.Duck);
+    public void TryBrake() => TryPerform(RobotActionType.Brake);
+    public void TryAccelerate() => TryPerform(RobotActionType.Accelerate);
 
     // Cosmetic charging preview; it does not make the robot busy or change input.
     public void SetLongJumpCharging(bool charging)
@@ -124,7 +134,19 @@ public class ActionManager : MonoBehaviour
             ? jump.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
             : action == duck
                 ? duck.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
-                : action.TryBegin(type, Mathf.Clamp01(charge));
+                : action == brake
+                    ? brake.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
+                    : action == accelerate
+                        ? accelerate.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
+                        : action.TryBegin(type, Mathf.Clamp01(charge));
+        
+        if (started && this.gameObject.name == "PlayerRobotVisual") //not optimal solution, decouple inputmanager and action calls and then move this there.
+        {
+            if (action == jump) FXManager.Instance.PlaySFX("jump");
+            else if (action == duck)  FXManager.Instance.PlaySFX("duck");
+            else if (action == brake)  FXManager.Instance.PlaySFX("brake");
+            else if (action == accelerate)  FXManager.Instance.PlaySFX("accelerate");
+        }
         if (!started)
         {
             runningAnimation.Play();
@@ -248,7 +270,11 @@ public class ActionManager : MonoBehaviour
         SetLongJumpCharging(false);
         Sprite[] frames = type == RobotActionType.Duck
             ? duck.GetAnimationFrames(RobotTimingVisual.Failed)
-            : jump.GetAnimationFrames(type, RobotTimingVisual.Failed);
+            : type == RobotActionType.Brake
+                ? brake.GetAnimationFrames(RobotTimingVisual.Failed)
+                : type == RobotActionType.Accelerate
+                    ? accelerate.GetAnimationFrames(RobotTimingVisual.Failed)
+                    : jump.GetAnimationFrames(type, RobotTimingVisual.Failed);
         if (robotRenderer == null || !RobotAnimationVariations.IsValid(frames))
         {
             runningAnimation.Play();

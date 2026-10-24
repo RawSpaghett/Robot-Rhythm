@@ -19,6 +19,10 @@ public class InputManager : MonoBehaviour
     private InputAction pressAction;
     private InputAction dragAction;
 
+    [SerializeField] private string jumpID;
+    [SerializeField] private string chargeJumpID;
+    [SerializeField] private string duckID;
+
     public event Action OnPressed;
     public event Action<Direction> OnSwipe;
 
@@ -90,6 +94,7 @@ public class InputManager : MonoBehaviour
             if (displacement.magnitude < 24f * Mathf.Max(.75f, Screen.height / 720f))
             {
                 RequestAction(RobotActionType.Jump);
+                
                 OnPressed?.Invoke();
             }
             else PerformSwipe(GetDirection(displacement));
@@ -118,6 +123,7 @@ public class InputManager : MonoBehaviour
         if (context.control.device is Mouse) return;
         // Request a normal jump.
         RequestAction(RobotActionType.Jump);
+        if (FXManager.Instance != null) FXManager.Instance.PlaySFX(jumpID);
 
         OnPressed?.Invoke();
     }
@@ -139,13 +145,20 @@ public class InputManager : MonoBehaviour
             {
                 case Direction.Up:
                     RequestAction(RobotActionType.LongJump, longJumpCharge);
+                    if (FXManager.Instance != null) FXManager.Instance.PlaySFX(chargeJumpID);
                     break;
 
                 case Direction.Down:
                     RequestAction(RobotActionType.Duck);
+                    if (FXManager.Instance != null) FXManager.Instance.PlaySFX(duckID);
+                    break;
+                case Direction.Left:
+                    RequestAction(RobotActionType.Brake);
+                    break;
+                case Direction.Right:
+                    RequestAction(RobotActionType.Accelerate);
                     break;
 
-                    // Add braking and accelerating here when implemented.
             }
         }
         OnSwipe?.Invoke(direction);

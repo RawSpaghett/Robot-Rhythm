@@ -14,6 +14,8 @@ public class ObstacleSpawner : MonoBehaviour
     // how many world units the level travels in a beat
     public float distancePerBeat = 3f;
 
+    [SerializeField] private float QOLoffset = 0.1f;
+
     // How many beats before the hit time that an obstacle spawns
     public float spawnTime = 4f;
 
@@ -92,7 +94,7 @@ public class ObstacleSpawner : MonoBehaviour
         entry.Obstacle = instance.GetComponent<ObstacleBase>();
         // Cue pictures have no ObstacleBase, so they don't count as hazards.
         if (entry.Obstacle != null)
-            entry.Obstacle.Prepare(placement.Beat * rhythmManager.beatMap.SecondsPerBeat);
+            entry.Obstacle.Prepare((placement.Beat  * rhythmManager.beatMap.SecondsPerBeat) - QOLoffset);
 
         active.Add(entry);
     }

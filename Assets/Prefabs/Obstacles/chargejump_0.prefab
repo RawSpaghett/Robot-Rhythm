@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3122ff81bf12a5e469be1f83eadd3f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleTimingGizmo
-  obstacle: {fileID: 0}
+  obstacle: {fileID: -5641367011392288484}
   rhythmManager: {fileID: 0}
   localOffset: {x: 0, y: 1.5, z: 0}
   width: 3
