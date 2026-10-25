@@ -142,3 +142,5 @@ MonoBehaviour:
     Beat: 200
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
     Beat: 114
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 5.75
