@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93090ce831011e42a6d539bacc60f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  hitLineX: -7.1
+  hitLineX: -6.41
   distancePerBeat: 3
   QOLoffset: 0.1
   spawnTime: 7
