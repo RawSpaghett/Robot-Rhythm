@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ScoreManager: MonoBehaviour
 {
-    public const float PointsPerPerfectHazard = 100f;
+    public  const float PointsPerPerfectHazard = 100f;
     public float score{get; private set;}
     public int ResolvedObstacles { get; private set; }
     public float AverageAccuracy => ResolvedObstacles > 0 ? Mathf.Clamp01(totalAccuracy / ResolvedObstacles) : 0f;
