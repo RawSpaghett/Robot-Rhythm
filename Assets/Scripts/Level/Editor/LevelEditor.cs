@@ -8,7 +8,7 @@ public class LevelEditor : EditorWindow
     private BeatMap beatMap;
 
     // how wide one beat is on the ruler
-    private float pixelsPerBeat = 40f;
+    private float pixelsPerBeat = 100f;
 
     // how far along the song the view has scrolled measured in beats
     private float scrollBeats;
@@ -21,6 +21,7 @@ public class LevelEditor : EditorWindow
     private int selectedTypeIndex;
 
     private AudioClip previewClip;
+    private const int beatDivision = 4;
 
     // adds this to the top menu bar and the slash makes a submenu
     [MenuItem("Robot Rhythm/Level Editor")]
@@ -49,8 +50,7 @@ public class LevelEditor : EditorWindow
         previewClip = (AudioClip)EditorGUILayout.ObjectField("Preview Clip", previewClip, typeof(AudioClip), false);
         beatMap.Bpm = EditorGUILayout.FloatField("BPM", beatMap.Bpm);
         beatMap.FirstBeatOffset = EditorGUILayout.FloatField("First Beat Offset", beatMap.FirstBeatOffset);
-        beatMap.BeatsPerMeasure = EditorGUILayout.IntField("Beats Per Measure", beatMap.BeatsPerMeasure);
-        
+        beatMap.BeatsPerMeasure = EditorGUILayout.IntField("Beats Per Measure", beatMap.BeatsPerMeasure);        
         EditorGUILayout.BeginHorizontal();
 
         if (GUILayout.Button("Play", GUILayout.Width(60f)))
@@ -121,6 +121,14 @@ public class LevelEditor : EditorWindow
 
             Rect line = new Rect(x, timeline.y, 1f, height);
             EditorGUI.DrawRect(line, color);
+
+            // Sub beat lines
+            for (int sub = 1; sub < beatDivision; sub++)
+            {
+                float subX = BeatToX(beat + (float)sub / beatDivision, timeline);
+                Rect subLine = new Rect(subX, timeline.y + timeline.height * 0.4f, 1f, timeline.height * 0.2f);
+                EditorGUI.DrawRect(subLine, new Color(1f, 1f, 1f, 0.2f));
+            }
 
             if (isMeasureStart)
             {
@@ -225,9 +233,9 @@ public class LevelEditor : EditorWindow
             return;
         }
 
-        // turns click position into a beat, then rounds down
+        // turns click position into a beat and snaps to the grid
         float clickedBeat = XToBeat(e.mousePosition.x, timeline);
-        float snappedBeat = Mathf.Floor(clickedBeat);
+        float snappedBeat = Snap(clickedBeat);
 
         ObstaclePlacement placement = new ObstaclePlacement();
         placement.Type = obstacleTypes[selectedTypeIndex];
@@ -257,11 +265,16 @@ public class LevelEditor : EditorWindow
         return scrollBeats + (x - timeline.x) / pixelsPerBeat;
     }
 
+    private float Snap(float beat)
+    {
+        return Mathf.Floor(beat * beatDivision) / beatDivision;
+    }
+
     // Works out the rectangle the obstacle is drawn in 
     private Rect GetBarRect(ObstaclePlacement placement, Rect timeline)
     {
         float barX = BeatToX(placement.Beat, timeline);
-        float barWidth = placement.Type.WidthInBeats * pixelsPerBeat;
+        float barWidth = pixelsPerBeat / beatDivision;
         return new Rect(barX, timeline.y + 20f, barWidth, timeline.height - 40f);
     }
 

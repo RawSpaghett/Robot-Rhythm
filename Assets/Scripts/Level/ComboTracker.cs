@@ -7,11 +7,12 @@ using UnityEngine.Events;
 /// </summary>
 public class ComboTracker : MonoBehaviour
 {
-    private const float multiplierStep = 0.1f;
-    private const float maxMultiplier = 2f;
+    public const float multiplierStep = 0.1f;
+    public const  float maxMultiplier = 2f;
+    public const float multiplierBase = 1f;
 
     public int Count {  get; private set; }
-    public float Multiplier { get; private set; } = 1f;
+    public float Multiplier { get; private set; } = multiplierBase;
     public event UnityAction<float, float> OnScoreReady;
 
     private void OnEnable()
