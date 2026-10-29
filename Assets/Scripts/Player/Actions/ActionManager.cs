@@ -24,6 +24,51 @@ public class ActionManager : MonoBehaviour
     private readonly Dictionary<RobotActionType, ActionBase> actions =
         new Dictionary<RobotActionType, ActionBase>();
 
+    [Header("Input Buffer")]
+    [Tooltip("Accept one next action during the final seconds of the current action. Zero disables buffering.")]
+    [SerializeField, Min(0f)] private float inputBufferWindow = 0.1f;
+
+    private RobotActionType bufferedType;
+    private float bufferedCharge;
+    private System.Action<RobotActionType, float> bufferedRequest;
+    public bool HasBufferedAction => bufferedRequest != null;
+
+    // The callback runs only when the current action ends. PlayerTimingFeedback
+    // uses it to judge SongTime then, rather than judging when input is queued.
+    public bool TryBufferAction(RobotActionType type, float charge,
+        System.Action<RobotActionType, float> request)
+    {
+        if (!isActiveAndEnabled || Time.timeScale <= 0f || AudioListener.pause ||
+            !IsBusy || request == null || inputBufferWindow <= 0f ||
+            activeAction.RemainingTime > inputBufferWindow || !actions.ContainsKey(type))
+            return false;
+
+        bufferedType = type;
+        bufferedCharge = Mathf.Clamp01(charge);
+        bufferedRequest = request; // Latest valid request replaces the previous one.
+        return true;
+    }
+
+    public void ClearBufferedAction()
+    {
+        bufferedRequest = null;
+        bufferedType = default(RobotActionType);
+        bufferedCharge = 0f;
+    }
+
+    private bool PerformBufferedAction()
+    {
+        if (!HasBufferedAction) return false;
+        var request = bufferedRequest;
+        RobotActionType type = bufferedType;
+        float charge = bufferedCharge;
+        ClearBufferedAction(); // Consume once, before invoking any gameplay code.
+        if (!isActiveAndEnabled || Time.timeScale <= 0f || AudioListener.pause)
+            return false;
+        request(type, charge);
+        return IsBusy;
+    }
+
     private ActionBase activeAction;
     private bool initialized;
 
@@ -104,8 +149,8 @@ public class ActionManager : MonoBehaviour
         if (jump.BeginChargingAnimation()) runningAnimation.Suspend();
     }
 
-    // True means the animation started, NOT that the rhythm judgment succeeded.
-    // Busy robots reject requests rather than queueing delayed rhythm actions.
+    // True means started OR accepted into the buffer, not a successful rhythm judgment.
+    // Requests too far from the current action's end are still rejected.
     public bool TryPerform(RobotActionType type, float charge = 0f)
     {
         // NPC callers and existing UnityEvent wrappers keep the default animation.
@@ -114,14 +159,20 @@ public class ActionManager : MonoBehaviour
 
     public bool TryPerformWithFeedback(RobotActionType type, float charge, RobotTimingVisual visual)
     {
-        if (!isActiveAndEnabled || Time.timeScale <= 0f || IsBusy)
+        if (!isActiveAndEnabled || Time.timeScale <= 0f || AudioListener.pause)
             return false;
+
+        if (IsBusy)
+            return TryBufferAction(type, charge,
+                (nextType, nextCharge) => TryPerformWithFeedback(nextType, nextCharge, visual));
 
         // Supports another component calling before this component's Awake.
         InitializeActions();
 
         if (!actions.TryGetValue(type, out ActionBase action))
             return false;
+
+        ClearBufferedAction();
 
         // A new player action takes priority over cosmetic missed feedback.
         pendingMiss = null;
@@ -139,13 +190,13 @@ public class ActionManager : MonoBehaviour
                     : action == accelerate
                         ? accelerate.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
                         : action.TryBegin(type, Mathf.Clamp01(charge));
-        
+
         if (started && this.gameObject.name == "PlayerRobotVisual") //not optimal solution, decouple inputmanager and action calls and then move this there.
         {
             if (action == jump) FXManager.Instance.PlaySFX("jump");
-            else if (action == duck)  FXManager.Instance.PlaySFX("duck");
-            else if (action == brake)  FXManager.Instance.PlaySFX("brake");
-            else if (action == accelerate)  FXManager.Instance.PlaySFX("accelerate");
+            else if (action == duck) FXManager.Instance.PlaySFX("duck");
+            else if (action == brake) FXManager.Instance.PlaySFX("brake");
+            else if (action == accelerate) FXManager.Instance.PlaySFX("accelerate");
         }
         if (!started)
         {
@@ -171,6 +222,9 @@ public class ActionManager : MonoBehaviour
 
     private void Update()
     {
+        // Do not retain an old input across a pause.
+        if (Time.timeScale <= 0f || AudioListener.pause)
+            ClearBufferedAction();
         if (Time.timeScale <= 0f)
             return;
 
@@ -182,6 +236,9 @@ public class ActionManager : MonoBehaviour
             if (!activeAction.IsRunning)
             {
                 activeAction = null;
+
+                // Start the buffered action before idle or cosmetic miss feedback.
+                if (PerformBufferedAction()) return;
 
                 // The action restores its pre-action sprite, then this sets the
                 // first running frame immediately, before the frame is rendered.
@@ -226,6 +283,7 @@ public class ActionManager : MonoBehaviour
 
     public void CancelCurrentAction()
     {
+        ClearBufferedAction();
         bool hadAction = activeAction != null || missedFrames != null || (initialized && jump.IsChargingAnimationPlaying);
         pendingMiss = null;
         StopMissedFeedback();
@@ -240,6 +298,7 @@ public class ActionManager : MonoBehaviour
 
     private void OnDisable()
     {
+        ClearBufferedAction();
         pendingMiss = null;
         StopMissedFeedback();
         // Restore action pose first, then stop the running presentation.
@@ -258,7 +317,7 @@ public class ActionManager : MonoBehaviour
         InitializeActions();
         if (IsBusy)
         {
-            pendingMiss = requiredAction; // Keep only the most recent reaction; never queue gameplay actions.
+            pendingMiss = requiredAction; // Keep only the most recent cosmetic reaction, separate from buffered input.
             return;
         }
         BeginMissedFeedback(requiredAction);

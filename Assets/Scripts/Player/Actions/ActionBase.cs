@@ -21,6 +21,9 @@ public abstract class ActionBase
 
     public bool IsRunning { get; protected set; }
 
+    // Actions do not accept buffered input until they expose a duration.
+    public virtual float RemainingTime => IsRunning ? float.PositiveInfinity : 0f;
+
     public void Initialize(Transform visual, SpriteRenderer renderer,
         UnityEngine.Object logContext)
     {

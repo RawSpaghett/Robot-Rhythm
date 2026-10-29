@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
 
-// Animation-only action owned by ActionManager. Does not change movement speed.
+// Visual action owned by ActionManager. Does not change gameplay movement speed.
 [Serializable]
 public class RobotBrake : ActionBase
 {
     [SerializeField, Min(0.01f)] private float animationDuration = 0.5f;
+    [Tooltip("Maximum backward offset in local units. Zero disables horizontal feedback.")]
+    [SerializeField, Min(0f)] private float movementDistance = 0.3f;
     [SerializeField] private SpriteSheetSequence defaultSheet = new SpriteSheetSequence();
     [SerializeField] private SpriteSheetSequence perfectSheet = new SpriteSheetSequence();
     [SerializeField] private SpriteSheetSequence earlyLateSheet = new SpriteSheetSequence();
@@ -16,6 +18,8 @@ public class RobotBrake : ActionBase
     [NonSerialized] private float timer;
     [NonSerialized] private float duration;
     [NonSerialized] private int currentFrame;
+    [NonSerialized] private Vector3 restingLocalPosition;
+    [NonSerialized] private float activeMovementDistance;
 
     public Sprite[] GetAnimationFrames(RobotTimingVisual visual)
     {
@@ -29,6 +33,10 @@ public class RobotBrake : ActionBase
         if (sequence != null && sequence.IsValid) return sequence.Frames;
         return defaultSheet != null && defaultSheet.IsValid ? defaultSheet.Frames : null;
     }
+
+    // ActionManager uses this to open the input buffer near the action's end.
+    public override float RemainingTime =>
+        IsRunning ? Mathf.Max(0f, duration - timer) : 0f;
 
     public override bool TryBegin(RobotActionType type, float charge)
     {
@@ -47,6 +55,9 @@ public class RobotBrake : ActionBase
         }
         activeFrames = (Sprite[])frames.Clone();
         previousSprite = Renderer.sprite;
+        // Capture each attempt so a later action returns to its own starting pose.
+        if (Visual != null) restingLocalPosition = Visual.localPosition;
+        activeMovementDistance = Mathf.Max(0f, movementDistance);
         timer = 0f;
         duration = Mathf.Max(0.01f, animationDuration);
         currentFrame = 0;
@@ -61,6 +72,12 @@ public class RobotBrake : ActionBase
         if (Renderer == null) { Cancel(); return; }
         timer += Mathf.Max(0f, deltaTime);
         if (timer >= duration) { Cancel(); return; }
+        // Use the sprite animation's timer: zero offset at both ends, peak halfway.
+        float progress = Mathf.Clamp01(timer / duration);
+        float offset = 4f * activeMovementDistance * progress * (1f - progress);
+        if (Visual != null)
+            Visual.localPosition = restingLocalPosition - Vector3.right * offset;
+
         int frame = Mathf.Min(Mathf.FloorToInt(timer / duration * activeFrames.Length),
             activeFrames.Length - 1);
         if (frame != currentFrame)
@@ -72,6 +89,8 @@ public class RobotBrake : ActionBase
 
     public override void Cancel()
     {
+        // Completion, cancellation, and manager disable all restore the visual pose.
+        if (IsRunning && Visual != null) Visual.localPosition = restingLocalPosition;
         if (IsRunning && Renderer != null) Renderer.sprite = previousSprite;
         IsRunning = false;
         activeFrames = null;

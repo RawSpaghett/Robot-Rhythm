@@ -28,6 +28,10 @@ public class RobotDuck : ActionBase
     [NonSerialized] private float activeDuckDuration;
     [NonSerialized] private int currentFrame;
 
+    // ActionManager uses this to open the input buffer near the action's end.
+    public override float RemainingTime =>
+        IsRunning ? Mathf.Max(0f, activeDuckDuration - duckTimer) : 0f;
+
     public override bool TryBegin(RobotActionType type, float charge)
     {
         return TryBeginWithFeedback(type, charge, RobotTimingVisual.Default);
