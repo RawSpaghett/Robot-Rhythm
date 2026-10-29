@@ -132,9 +132,11 @@ public class InputManager : MonoBehaviour
     {
         if (context.control.device is Mouse) return;
         Vector2 dragInput = context.ReadValue<Vector2>();
-        Direction direction = GetDirection(dragInput);
-
-        PerformSwipe(direction);
+        if (dragInput.magnitude >= 24f * Mathf.Max(.75f, Screen.height / 720f))
+        {
+            Direction direction = GetDirection(dragInput);
+            PerformSwipe(direction);
+        }
     }
     private void PerformSwipe(Direction direction)
     {

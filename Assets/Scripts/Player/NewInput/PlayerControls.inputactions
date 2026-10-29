@@ -42,7 +42,7 @@
                     "id": "4e85f2a4-6a95-4346-a421-d113f48b51c9",
                     "path": "<Pointer>/delta",
                     "interactions": "",
-                    "processors": "ScaleVector2(x=0.5,y=0.5)",
+                    "processors": "ScaleVector2(x=0.05,y=0.05)",
                     "groups": "",
                     "action": "Drag",
                     "isComposite": false,
