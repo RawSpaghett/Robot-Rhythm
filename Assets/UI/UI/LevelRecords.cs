@@ -23,6 +23,20 @@ public static class LevelRecords
 
     public const string KeyPrefix = "rr.level-record.v1.";
 
+    public static int CountScoredObstacles(BeatMap beatMap)
+    {
+        if (beatMap == null) return 0;
+        int total = 0;
+        foreach (var placement in beatMap.Obstacles)
+        {
+            // Match ObstacleSpawner: cue pictures have no ObstacleBase and never award points.
+            if (placement.Type != null && placement.Type.Prefab != null &&
+                placement.Type.Prefab.GetComponent<ObstacleBase>() != null)
+                total++;
+        }
+        return total;
+    }
+
     public static float MaximumScore(int obstacles, bool hasCombo = true)
     {
         float score = 0;

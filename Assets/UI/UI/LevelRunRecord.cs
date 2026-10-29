@@ -28,7 +28,7 @@ public class LevelRunRecord : MonoBehaviour
             if (rhythm == null) rhythm = root.GetComponentInChildren<RhythmManager>();
             if (combo == null) combo = root.GetComponentInChildren<ComboTracker>();
         }
-        int total = rhythm != null && rhythm.beatMap != null ? rhythm.beatMap.Obstacles.Count : 0;
+        int total = LevelRecords.CountScoredObstacles(rhythm != null ? rhythm.beatMap : null);
         savedResult = LevelRecords.SaveRun(levelId, score.score, score.AverageAccuracy,
             score.ResolvedObstacles, total, everyObstaclePerfect && observed == total,
             combo != null && combo.isActiveAndEnabled);

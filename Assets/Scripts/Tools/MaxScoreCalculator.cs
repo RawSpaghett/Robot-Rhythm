@@ -15,7 +15,7 @@ public class MaxScoreCalculator
             return;
         }
         // Use the same capped multiplier ramp as gameplay and the perfect-run record check.
-        float tempScore = LevelRecords.MaximumScore(rhythm.beatMap.Obstacles.Count);
+        float tempScore = LevelRecords.MaximumScore(LevelRecords.CountScoredObstacles(rhythm.beatMap));
         Debug.Log($"A perfect score including multi is {tempScore.ToString()}");
     }
 }
