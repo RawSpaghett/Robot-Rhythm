@@ -23,10 +23,10 @@ public class InputManager : MonoBehaviour
     [SerializeField] private string chargeJumpID;
     [SerializeField] private string duckID;
 
+    private bool drag;
     public event Action OnPressed;
     public event Action<Direction> OnSwipe;
-
-
+    
     void Awake()
     {
         if (timingFeedback == null) timingFeedback = GetComponent<PlayerTimingFeedback>();
@@ -120,7 +120,7 @@ public class InputManager : MonoBehaviour
     }
     private void Jump(InputAction.CallbackContext context)
     {
-        if (context.control.device is Mouse) return;
+        if (context.control.device is Mouse || drag) return;
         // Request a normal jump.
         RequestAction(RobotActionType.Jump);
         if (FXManager.Instance != null) FXManager.Instance.PlaySFX(jumpID);
@@ -134,8 +134,10 @@ public class InputManager : MonoBehaviour
         Vector2 dragInput = context.ReadValue<Vector2>();
         if (dragInput.magnitude >= 24f * Mathf.Max(.75f, Screen.height / 720f))
         {
+            drag = true;
             Direction direction = GetDirection(dragInput);
             PerformSwipe(direction);
+            drag = false;
         }
     }
     private void PerformSwipe(Direction direction)
