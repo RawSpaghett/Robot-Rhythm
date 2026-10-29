@@ -15,6 +15,7 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
         public string scenePath;
         [Tooltip("Persistent save ID. Generated from the scene GUID; keep it when renaming a level.")]
         public string recordId;
+        public bool saveRecords = true;
         public Texture2D cover;
         public AudioClip song;
     }
@@ -74,7 +75,7 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
         previousButton.gameObject.SetActive(SelectedIndex > 0);
         nextButton.gameObject.SetActive(SelectedIndex < levels.Length - 1);
         music.PreviewSong(level.song);
-        var record = LevelRecords.Load(level.recordId);
+        var record = level.saveRecords ? LevelRecords.Load(level.recordId) : new LevelRecords.Record();
         LevelRecordResults.SetRecordCard(bestScore, record.completed, "BEST SCORE", record.bestScore.ToString());
         LevelRecordResults.SetRecordCard(bestAccuracy, record.completed, "BEST ACCURACY", LevelRecordResults.Accuracy(record.bestAccuracy));
         if(perfectAward!=null) perfectAward.SetActive(record.perfect);
@@ -83,7 +84,7 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     public string RecordIdForScene(string scenePath)
     {
         if(levels!=null) foreach(var level in levels)
-            if(level.scenePath==scenePath) return level.recordId;
+            if(level.scenePath==scenePath) return level.saveRecords ? level.recordId : null;
         return null;
     }
 

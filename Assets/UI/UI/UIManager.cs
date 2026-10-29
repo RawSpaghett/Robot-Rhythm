@@ -50,6 +50,8 @@ public class UIManager : MonoBehaviour
     private float previousVolume;
     private Coroutine countdownRoutine;
     private CanvasGroup gameplayInput;
+    private bool resultsBackground;
+    private GameObject resultsBackdrop;
     public bool IsTransitioning { get; private set; }
 
     private void OnEnable()
@@ -285,7 +287,7 @@ public class UIManager : MonoBehaviour
         if (sharedMenuBackground)
         {
             bool menuVisible = menu.GetComponent<Canvas>().enabled && menu.CurrentPageRect.gameObject.activeInHierarchy;
-            sharedMenuBackground.SetActive(!gameManager.HasActiveGame || menuVisible || (scoringPanel && scoringPanel.activeInHierarchy));
+            sharedMenuBackground.SetActive(resultsBackground || !gameManager.HasActiveGame || menuVisible || (scoringPanel && scoringPanel.activeInHierarchy));
         }
     }
 
@@ -315,6 +317,8 @@ public class UIManager : MonoBehaviour
 
     public void HideScreens()
     {
+        resultsBackground = false;
+        if (resultsBackdrop != null) resultsBackdrop.SetActive(false);
         menu.SetVisible(false);
         playHud.SetActive(false);
         pausePanel.SetActive(false);
@@ -335,7 +339,7 @@ public class UIManager : MonoBehaviour
         if (beatPulse != null && (!inGame || loading)) beatPulse.Bind(null);
         menuEventSystem.SetActive(!loading);
         if (scoreDisplay != null && (loading || !inGame)) scoreDisplay.Bind(null);
-        if (scoreDisplay != null) scoreDisplay.ShowResults(showResults);
+        if (scoreDisplay != null && !showResults) scoreDisplay.ShowResults(false);
         ShowError();
     }
 
@@ -364,11 +368,66 @@ public class UIManager : MonoBehaviour
 
     public void ShowResults()
     {
-        endPanel.SetActive(true);
-        var records = endPanel.GetComponent<LevelRecordResults>();
         var source = scoreDisplay != null ? scoreDisplay.Source : null;
         var run = source != null ? source.GetComponent<LevelRunRecord>() : null;
-        if (records != null) records.Present(run != null ? run.Finish(source) : null);
+        // Save before the transition so Retry cannot discard a completed run.
+        var result = run != null ? run.Finish(source) : null;
+        StartCoroutine(RevealResults(result));
+    }
+
+    private IEnumerator RevealResults(LevelRecords.UpdateResult result)
+    {
+        IsTransitioning = true;
+        gameManager.SetUITransition(true);
+        transitionCover.gameObject.SetActive(true);
+        transitionCover.blocksRaycasts = true;
+        transitionLoadingLabel.SetActive(false);
+        float duration = menu.ReducedMotion ? .08f : transitionDuration;
+        yield return Fade(0, 1, duration * .4f);
+        resultsBackground = true;
+        sharedMenuBackground.SetActive(true);
+        if (resultsBackdrop == null)
+        {
+            // Keep the menu artwork in the results canvas, above every level camera.
+            resultsBackdrop = Instantiate(sharedMenuBackground.transform.GetChild(0).gameObject, endPanel.transform.parent);
+            resultsBackdrop.name = "Results Background";
+            // The full-screen canvas already clips the pattern at the screen edges.
+            var backgroundMask = resultsBackdrop.GetComponent<RectMask2D>();
+            if (backgroundMask != null) Destroy(backgroundMask);
+            resultsBackdrop.transform.SetSiblingIndex(endPanel.transform.GetSiblingIndex());
+            foreach (Graphic graphic in resultsBackdrop.GetComponentsInChildren<Graphic>(true))
+            {
+                graphic.raycastTarget = false;
+                if (graphic is MaskableGraphic masked) masked.maskable = false;
+                graphic.canvasRenderer.DisableRectClipping();
+            }
+        }
+        resultsBackdrop.SetActive(true);
+        yield return Fade(1, 0, duration * .6f);
+        transitionCover.gameObject.SetActive(false);
+
+        var group = endPanel.GetComponent<CanvasGroup>();
+        if (group == null) group = endPanel.AddComponent<CanvasGroup>();
+        group.interactable = false;
+        group.alpha = 0;
+        Vector3 scale = endPanel.transform.localScale;
+        endPanel.SetActive(true);
+        if (scoreDisplay != null) scoreDisplay.ShowResults(true);
+        var records = endPanel.GetComponent<LevelRecordResults>();
+        if (records != null) records.Present(result);
+        float popDuration = menu.ReducedMotion ? .08f : .25f;
+        for (float time = 0; time < popDuration; time += Time.unscaledDeltaTime)
+        {
+            float progress = Mathf.SmoothStep(0, 1, time / popDuration);
+            group.alpha = progress;
+            if (!menu.ReducedMotion) endPanel.transform.localScale = scale * Mathf.Lerp(.92f, 1, progress);
+            yield return null;
+        }
+        group.alpha = 1;
+        endPanel.transform.localScale = scale;
+        group.interactable = true;
+        IsTransitioning = false;
+        gameManager.SetUITransition(false);
     }
 
     private void ShowError()

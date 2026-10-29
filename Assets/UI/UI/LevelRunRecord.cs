@@ -21,6 +21,7 @@ public class LevelRunRecord : MonoBehaviour
     public LevelRecords.UpdateResult Finish(ScoreManager score)
     {
         if (savedResult != null) return savedResult;
+        if (string.IsNullOrEmpty(levelId)) return null;
         RhythmManager rhythm = null;
         ComboTracker combo = null;
         foreach (var root in gameObject.scene.GetRootGameObjects())
