@@ -34,9 +34,9 @@ public class LevelRecordResults : MonoBehaviour
             announcement.text = "";
             return;
         }
-        announcement.text = result.perfectRun ? "PERFECT DELIVERY!" : result.firstClear ? "FIRST DELIVERY RECORDED!" :
+        announcement.text = result.perfectRun ? "PERFECT DELIVERY!" : result.firstClear ? "" :
             result.newScore && result.newAccuracy ? "NEW BEST SCORE + ACCURACY!" :
-            result.newScore ? "NEW BEST SCORE!" : result.newAccuracy ? "NEW BEST ACCURACY!" : "PERSONAL BESTS";
+            result.newScore ? "NEW BEST SCORE!" : result.newAccuracy ? "NEW BEST ACCURACY!" : "";
         bool personalBest = !result.firstClear && (result.newScore || result.newAccuracy);
         if(result.perfectRun || personalBest) StartCoroutine(Celebrate(result.perfectRun));
     }
