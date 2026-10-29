@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 
@@ -8,17 +8,15 @@ public class MaxScoreCalculator
    [MenuItem("Tools/Score/Get Max Score")]
     public static void GetMaxScore()
     {
-        float tempScore = 0;
-        float tempMulti = ComboTracker.multiplierBase;
-        float tempObstacles = 0;
-        int obstacles = Object.FindFirstObjectByType<RhythmManager>().beatMap.Obstacles.Count;
-        while(ComboTracker.maxMultiplier > tempMulti)
+        var rhythm = Object.FindFirstObjectByType<RhythmManager>();
+        if (rhythm == null || rhythm.beatMap == null)
         {
-            tempMulti += ComboTracker.multiplierStep;
-            tempScore += ScoreManager.PointsPerPerfectHazard * tempMulti;
-            tempObstacles++;
+            Debug.LogWarning("Open a level with a RhythmManager and beat map first.");
+            return;
         }
-        tempScore += ScoreManager.PointsPerPerfectHazard * (obstacles - tempObstacles) * tempMulti;
+        // Use the same capped multiplier ramp as gameplay and the perfect-run record check.
+        float tempScore = LevelRecords.MaximumScore(rhythm.beatMap.Obstacles.Count);
         Debug.Log($"A perfect score including multi is {tempScore.ToString()}");
     }
 }
+#endif

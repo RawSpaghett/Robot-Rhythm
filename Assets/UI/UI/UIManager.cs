@@ -119,9 +119,29 @@ public class UIManager : MonoBehaviour
         gameManager.ResumeGame();
     });
     public void RestartGame() => Navigate(gameManager.RestartGame, true);
-    public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu);
-    public void ReturnToLevels() => Navigate(gameManager.ReturnToLevelSelect);
-    public void ExitGame() => Application.Quit();
+    public void ReturnToMenu() => Navigate(gameManager.ReturnToMenu, gameManager.HasActiveGame);
+    public void ReturnToLevels() => Navigate(gameManager.ReturnToLevelSelect, gameManager.HasActiveGame);
+    public void ExitGame()
+    {
+        if (!IsTransitioning) StartCoroutine(ExitAfterFade());
+    }
+
+    private IEnumerator ExitAfterFade()
+    {
+        yield return PlayExitTransition();
+        PlayerPrefs.Save();
+        Application.Quit();
+    }
+
+    public IEnumerator PlayExitTransition()
+    {
+        IsTransitioning = true;
+        gameManager.SetUITransition(true);
+        var music = FindFirstObjectByType<MenuMusicPreview>();
+        if (music != null) music.FadeForExit();
+        var fade = FindFirstObjectByType<StartupFade>(FindObjectsInactive.Include);
+        if (fade != null) yield return fade.Close();
+    }
     public void OpenSettings() => Navigate(gameManager.OpenOptions);
     public void CloseSettings() => Navigate(gameManager.CloseOptions);
     public void DismissError() => Navigate(gameManager.DismissError);
@@ -196,6 +216,7 @@ public class UIManager : MonoBehaviour
 
         yield return Fade(1f, 0f, duration * 0.6f);
         transitionCover.gameObject.SetActive(false);
+        // The cover is gone before starting the full five-second preparation timer.
         if (gameManager.HasActiveGame)
             StartCountdown();
         IsTransitioning = false;
@@ -270,16 +291,26 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator Fade(float from, float to, float duration)
     {
+        var burst = transitionCover.GetComponentInChildren<LoadingBurst>();
         float elapsed = 0f;
         while (elapsed < duration)
         {
-            float progress = Mathf.Clamp01(elapsed / duration);
-            float eased = Mathf.SmoothStep(0f, 1f, progress);
-            transitionCover.alpha = Mathf.Lerp(from, to, eased);
+            float value = Mathf.Lerp(from, to, Mathf.SmoothStep(0, 1, elapsed / duration));
+            transitionCover.alpha = menu.ReducedMotion || burst == null ? value : 1;
+            if (burst != null)
+            {
+                burst.Progress = menu.ReducedMotion ? 1 : value;
+                burst.SetVerticesDirty();
+            }
             elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
-        transitionCover.alpha = to;
+        transitionCover.alpha = menu.ReducedMotion || burst == null ? to : 1;
+        if (burst != null)
+        {
+            burst.Progress = menu.ReducedMotion ? 1 : to;
+            burst.SetVerticesDirty();
+        }
     }
 
     public void HideScreens()
@@ -334,6 +365,10 @@ public class UIManager : MonoBehaviour
     public void ShowResults()
     {
         endPanel.SetActive(true);
+        var records = endPanel.GetComponent<LevelRecordResults>();
+        var source = scoreDisplay != null ? scoreDisplay.Source : null;
+        var run = source != null ? source.GetComponent<LevelRunRecord>() : null;
+        if (records != null) records.Present(run != null ? run.Finish(source) : null);
     }
 
     private void ShowError()
@@ -371,7 +406,13 @@ public class UIManager : MonoBehaviour
             {
                 ScoreManager score = root.GetComponentInChildren<ScoreManager>();
                 if (score != null)
+                {
                     scoreDisplay.Bind(score);
+                    var carousel = levelSelectPanel != null ? levelSelectPanel.GetComponentInChildren<LevelCarousel>(true) : null;
+                    var run = score.GetComponent<LevelRunRecord>();
+                    if (run == null) run = score.gameObject.AddComponent<LevelRunRecord>();
+                    run.levelId = carousel != null ? carousel.RecordIdForScene(scene.path) : null;
+                }
             }
         }
     }

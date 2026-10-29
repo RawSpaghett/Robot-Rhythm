@@ -13,6 +13,8 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     {
         public string title;
         public string scenePath;
+        [Tooltip("Persistent save ID. Generated from the scene GUID; keep it when renaming a level.")]
+        public string recordId;
         public Texture2D cover;
         public AudioClip song;
     }
@@ -31,6 +33,9 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     public Text pageNumber;
     public Button previousButton;
     public Button nextButton;
+    public Text bestScore;
+    public Text bestAccuracy;
+    public GameObject perfectAward;
     [SerializeField, Min(20)] private float swipeDistance = 70;
 
     public int SelectedIndex { get; private set; }
@@ -69,7 +74,28 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
         previousButton.gameObject.SetActive(SelectedIndex > 0);
         nextButton.gameObject.SetActive(SelectedIndex < levels.Length - 1);
         music.PreviewSong(level.song);
+        var record = LevelRecords.Load(level.recordId);
+        LevelRecordResults.SetRecordCard(bestScore, record.completed, "BEST SCORE", record.bestScore.ToString());
+        LevelRecordResults.SetRecordCard(bestAccuracy, record.completed, "BEST ACCURACY", LevelRecordResults.Accuracy(record.bestAccuracy));
+        if(perfectAward!=null) perfectAward.SetActive(record.perfect);
     }
+
+    public string RecordIdForScene(string scenePath)
+    {
+        if(levels!=null) foreach(var level in levels)
+            if(level.scenePath==scenePath) return level.recordId;
+        return null;
+    }
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if(levels==null) return;
+        foreach(var level in levels)
+            if(string.IsNullOrEmpty(level.recordId) && !string.IsNullOrEmpty(level.scenePath))
+                level.recordId=UnityEditor.AssetDatabase.AssetPathToGUID(level.scenePath);
+    }
+#endif
 
     public void Previous() { ChangeLevel(-1); }
     public void Next() { ChangeLevel(1); }

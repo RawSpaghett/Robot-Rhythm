@@ -7,6 +7,8 @@ public class GameplayFeedback : MonoBehaviour
 {
     [SerializeField] private Text judgment;
     [SerializeField] private Image songFill;
+    public Text songTimeRemaining;
+    public SongProgressBar songProgress;
     [SerializeField] private UiController preferences;
     [SerializeField, Min(.1f)] private float feedbackDuration = .8f;
 
@@ -57,9 +59,17 @@ public class GameplayFeedback : MonoBehaviour
     private void Update()
     {
         var rhythm = RhythmManager.Instance;
-        if (songFill != null)
-            songFill.fillAmount = rhythm != null && rhythm.beatMap != null && rhythm.beatMap.SongLength > 0
-                ? Mathf.Clamp01(rhythm.songPosition / rhythm.beatMap.SongLength) : 0;
+        float progress = rhythm != null && rhythm.beatMap != null && rhythm.beatMap.SongLength > 0
+            ? Mathf.Clamp01(rhythm.songPosition / rhythm.beatMap.SongLength) : 0;
+        if (songProgress != null) songProgress.SetProgress(progress);
+        else if (songFill != null) songFill.fillAmount = progress;
+
+        if (songTimeRemaining != null)
+        {
+            int seconds = rhythm != null && rhythm.beatMap != null
+                ? Mathf.CeilToInt(Mathf.Max(0, rhythm.beatMap.SongLength - rhythm.songPosition)) : 0;
+            songTimeRemaining.text = "SONG  " + (seconds / 60) + ":" + (seconds % 60).ToString("00") + " LEFT";
+        }
 
         if (judgment == null || remaining <= 0) return;
         remaining = Mathf.Max(0, remaining - Time.deltaTime);

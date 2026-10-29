@@ -6,10 +6,13 @@ public class MenuMusicPreview : MonoBehaviour
 {
     public UiController preferences;
     public GameObject settingsPage;
-    public AudioClip tutorialSong;
+    [UnityEngine.Serialization.FormerlySerializedAs("tutorialSong")]
+    public AudioClip menuSong;
     private AudioSource source;
     private float envelope;
     private AudioClip previewSong;
+    private bool exiting;
+    public void FadeForExit() { exiting = true; }
 
     public void PreviewSong(AudioClip song) { previewSong = song; }
     public void RestoreMenuSong() { previewSong = null; }
@@ -18,7 +21,7 @@ public class MenuMusicPreview : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
-        source.clip = tutorialSong;
+        source.clip = menuSong;
         source.loop = true;
         source.playOnAwake = false;
         source.ignoreListenerPause = true;
@@ -30,8 +33,8 @@ public class MenuMusicPreview : MonoBehaviour
     {
         var game = GameManager.Instance;
         bool settingsVisible = preferences.GetComponent<Canvas>().enabled && settingsPage.activeInHierarchy;
-        bool audible = game != null && !game.IsLoading && (!game.HasActiveGame || settingsVisible);
-        AudioClip desiredSong = previewSong != null ? previewSong : tutorialSong;
+        bool audible = !exiting && game != null && !game.IsLoading && (!game.HasActiveGame || settingsVisible);
+        AudioClip desiredSong = previewSong != null ? previewSong : menuSong;
         bool changingSong = source.clip != desiredSong;
         envelope = Mathf.MoveTowards(envelope, audible && !changingSong ? 1 : 0, Time.unscaledDeltaTime / FadeSeconds);
         if (changingSong && envelope == 0)

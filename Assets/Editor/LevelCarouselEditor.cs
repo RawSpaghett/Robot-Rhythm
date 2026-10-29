@@ -74,7 +74,12 @@ public class LevelChoiceDrawer : PropertyDrawer
         var currentScene = AssetDatabase.LoadAssetAtPath<SceneAsset>(path.stringValue);
         EditorGUI.BeginChangeCheck();
         var chosenScene = (SceneAsset)EditorGUI.ObjectField(position, "Scene", currentScene, typeof(SceneAsset), false);
-        if (EditorGUI.EndChangeCheck()) path.stringValue = AssetDatabase.GetAssetPath(chosenScene);
+        if (EditorGUI.EndChangeCheck())
+        {
+            path.stringValue = AssetDatabase.GetAssetPath(chosenScene);
+            // A copied entry gets its own save record when a different scene is assigned.
+            property.FindPropertyRelative("recordId").stringValue = AssetDatabase.AssetPathToGUID(path.stringValue);
+        }
         position.y += step;
         EditorGUI.PropertyField(position, property.FindPropertyRelative("cover"), new GUIContent("Cover image"));
         position.y += step;
