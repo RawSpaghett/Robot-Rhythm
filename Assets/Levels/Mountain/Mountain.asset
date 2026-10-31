@@ -16,7 +16,7 @@ MonoBehaviour:
   SongLength: 150
   Bpm: 110
   FirstBeatOffset: 0
-  BeatsPerMeasure: 5
+  BeatsPerMeasure: 8
   Obstacles:
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 25
@@ -165,8 +165,6 @@ MonoBehaviour:
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
     Beat: 48
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Beat: 32
-  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
     Beat: 64
   - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
     Beat: 199
@@ -216,3 +214,5 @@ MonoBehaviour:
     Beat: 135.75
   - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
     Beat: 141.75
+  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
+    Beat: 32
