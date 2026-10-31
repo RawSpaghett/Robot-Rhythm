@@ -87,6 +87,7 @@ public abstract class ObstacleBase : MonoBehaviour
         if (currentTime > TargetTime + LateWindow)
         {
             if (FXManager.Instance != null) FXManager.Instance.PlaySFX("fail");
+            if(CameraShake.Instance != null) CameraShake.Instance.ShakeCameraStart(0.2f,0.2f);
             Resolve(ObstacleResult.Missed, 0f);
         }
     }
