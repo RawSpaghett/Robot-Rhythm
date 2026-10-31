@@ -481,6 +481,7 @@ MonoBehaviour:
     duckDuration: 0.5
   brake:
     animationDuration: 0.75
+    movementDistance: 0.3
     defaultSheet:
       sheet: {fileID: 2800000, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
       frames:
@@ -535,6 +536,7 @@ MonoBehaviour:
       - {fileID: -2584332459158865449, guid: 1c8ff28287075fc449aceb7ed7b37761, type: 3}
   accelerate:
     animationDuration: 0.75
+    movementDistance: 0.3
     defaultSheet:
       sheet: {fileID: 2800000, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
       frames:
@@ -607,4 +609,5 @@ MonoBehaviour:
     - {fileID: 2937542380364343250, guid: e0b954e978eacb645af9d56fe5a9fb84, type: 3}
     - {fileID: -2344716011290733520, guid: 8bb1d99755485b144ba853a99a830608, type: 3}
     framesPerSecond: 24
+  inputBufferWindow: 0.1
   missedFeedbackDuration: 0.4

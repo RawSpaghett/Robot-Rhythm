@@ -15,6 +15,7 @@ public class PlayerTimingFeedback : MonoBehaviour
     private void OnDisable()
     {
         ObstacleBase.OnObstacleResolved -= OnObstacleResolved;
+        if (actionManager != null) actionManager.ClearBufferedAction();
         evaluatingObstacle = null;
     }
 
@@ -22,6 +23,14 @@ public class PlayerTimingFeedback : MonoBehaviour
     {
         if (!isActiveAndEnabled || actionManager == null || !actionManager.isActiveAndEnabled ||
             Time.timeScale <= 0f || AudioListener.pause) return;
+
+        // Busy input must be accepted by the buffer before it can judge anything.
+        // Perform is called again when the robot is free, using fresh SongTime.
+        if (actionManager.IsBusy)
+        {
+            actionManager.TryBufferAction(action, charge, Perform);
+            return;
+        }
 
         RobotTimingVisual visual = RobotTimingVisual.Default;
         RhythmManager rhythm = rhythmManager != null ? rhythmManager : RhythmManager.Instance;
@@ -44,8 +53,8 @@ public class PlayerTimingFeedback : MonoBehaviour
             }
         }
 
-        // Keep the existing busy policy: no delayed gameplay action is queued.
-        // Judgment still happens even if an earlier action animation is finishing.
+        // Immediate and buffered actions are both judged just before playback.
+        // A buffered request has not resolved an obstacle before reaching here.
         actionManager.TryPerformWithFeedback(action, charge, visual);
     }
 
@@ -60,7 +69,7 @@ public class PlayerTimingFeedback : MonoBehaviour
             return;
         }
 
-        // Only no-input misses from THIS level spawner affect this player.
+        // Only no-input misses from this level spawner affect this player.
         if (result != ObstacleResult.Missed || actionManager == null || obstacleSpawner == null ||
             !obstacle.transform.IsChildOf(obstacleSpawner.transform)) return;
 
