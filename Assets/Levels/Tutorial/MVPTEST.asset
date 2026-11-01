@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0246dd64aedb644db2a63b56db05c41, type: 3}
   m_Name: MVPTEST
   m_EditorClassIdentifier: Assembly-CSharp::BeatMap
-  SongID: TestSong
-  SongLength: 54.07347
+  SongID: Lets Practice
+  SongLength: 90.0735
   Bpm: 125
   FirstBeatOffset: 0
   BeatsPerMeasure: 4
@@ -24,21 +24,29 @@ MonoBehaviour:
     Beat: 28
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
     Beat: 44
-  - Type: {fileID: 11400000, guid: a548c4cfaea89ea4cacdec62892e7215, type: 2}
-    Beat: 40
-  - Type: {fileID: 11400000, guid: a548c4cfaea89ea4cacdec62892e7215, type: 2}
-    Beat: 56
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
     Beat: 60
   - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
-    Beat: 76
-  - Type: {fileID: 11400000, guid: 71bbb77b47d26904893c70059bc9a86a, type: 2}
-    Beat: 74
-  - Type: {fileID: 11400000, guid: 71bbb77b47d26904893c70059bc9a86a, type: 2}
-    Beat: 90
-  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
     Beat: 92
-  - Type: {fileID: 11400000, guid: 71bbb77b47d26904893c70059bc9a86a, type: 2}
-    Beat: 91
-  - Type: {fileID: 11400000, guid: 71bbb77b47d26904893c70059bc9a86a, type: 2}
-    Beat: 75
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 80
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 100
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 117.25
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 133.5
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 149.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 154
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 156
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 160
+  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
+    Beat: 173.5
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 165.75
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 181.25

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8adfce53ebed8c24b969217c8b7c2da6
+guid: 563f657c1007b9d409fb4d54aac3eda3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7437251608562995064
-    second: obstacles.0012_0
+      213: -2960503666070308405
+    second: TutorialBackground_road_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: obstacles.0012_0
+      name: TutorialBackground_road_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 616
-        height: 526
-      alignment: 9
-      pivot: {x: 0.5157779, y: 0.2277655}
+        width: 4000
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87f89990fec663760800000000000000
-      internalID: 7437251608562995064
+      spriteID: bc933a3e99d2ae6d0800000000000000
+      internalID: -2960503666070308405
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f27752ee6b0eb564db5408539aa8571c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      obstacles.0012_0: 7437251608562995064
+      TutorialBackground_road_0: -2960503666070308405
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

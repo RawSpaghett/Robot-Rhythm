@@ -25,25 +25,13 @@ MonoBehaviour:
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 46
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 152
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 156
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 164
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 168
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 172
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 174
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 188
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 4.25
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 8.25
-  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Beat: 16.5
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 12.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
@@ -66,14 +54,10 @@ MonoBehaviour:
     Beat: 60.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 62.25
-  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
-    Beat: 64.75
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 68.25
   - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
     Beat: 72.25
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 76.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 80.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
@@ -81,13 +65,7 @@ MonoBehaviour:
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 83.5
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 85.25
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 87.25
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 89.25
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 91.5
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 93.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
@@ -99,15 +77,11 @@ MonoBehaviour:
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 101.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 103.5
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 105.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 107.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 109.25
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 111.5
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 115.5
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
@@ -133,13 +107,9 @@ MonoBehaviour:
   - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
     Beat: 144.5
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 148.25
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 157
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 158
-  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Beat: 160.25
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 173
   - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
@@ -153,12 +123,42 @@ MonoBehaviour:
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Beat: 190
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Beat: 199.5
-  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
     Beat: 121.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 4.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 8.5
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 65
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 76.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 85.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 87.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 91.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 103.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 111.25
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Beat: 114.25
+    Beat: 137.75
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 148.25
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 152
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 160.25
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 164
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 168
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 199.5
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 16.5
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Beat: 130
+    Beat: 113.75
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Beat: 138
+    Beat: 129.75

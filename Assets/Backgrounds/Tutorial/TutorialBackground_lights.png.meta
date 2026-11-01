@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: cec9b4a5471ddaa43970697e9b46bc3c
+guid: f9ade49669c299f448f472daa4bc94d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5521503060725269866
-    second: duck 1_0
+      213: 2240159632926247774
+    second: TutorialBackground_lights_0
   - first:
-      213: -7014647072283987094
-    second: duck 1_1
+      213: 2412315419067570757
+    second: TutorialBackground_lights_1
   - first:
-      213: 8188730219842850960
-    second: duck 1_2
+      213: -4564705170129062510
+    second: TutorialBackground_lights_2
+  - first:
+      213: -5840783874177727226
+    second: TutorialBackground_lights_3
+  - first:
+      213: 492512008472608432
+    second: TutorialBackground_lights_4
+  - first:
+      213: 7556990437762055240
+    second: TutorialBackground_lights_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,13 +61,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.514154, y: 0.3854398}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 4, z: 0, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -119,67 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duck 1_0
+      name: TutorialBackground_lights_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 707
-        width: 321
-        height: 142
+        x: 35
+        y: 398
+        width: 427
+        height: 682
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a6503c097c150ac40800000000000000
-      internalID: 5521503060725269866
+      spriteID: e5b0db83155a61f10800000000000000
+      internalID: 2240159632926247774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duck 1_1
+      name: TutorialBackground_lights_1
       rect:
         serializedVersion: 2
-        x: 344
-        y: 705
-        width: 321
-        height: 143
+        x: 670
+        y: 398
+        width: 427
+        height: 682
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a6377c727a7f6ae90800000000000000
-      internalID: -7014647072283987094
+      spriteID: 54a58b7b7144a7120800000000000000
+      internalID: 2412315419067570757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duck 1_2
+      name: TutorialBackground_lights_2
       rect:
         serializedVersion: 2
-        x: 158
-        y: 553
-        width: 322
-        height: 143
+        x: 1376
+        y: 398
+        width: 426
+        height: 682
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0905d3bcfb634a170800000000000000
-      internalID: 8188730219842850960
+      spriteID: 295711625d8e6a0c0800000000000000
+      internalID: -4564705170129062510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutorialBackground_lights_3
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 398
+        width: 427
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6058ec1230e51fea0800000000000000
+      internalID: -5840783874177727226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutorialBackground_lights_4
+      rect:
+        serializedVersion: 2
+        x: 2796
+        y: 398
+        width: 426
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bebf90ff01c5d600800000000000000
+      internalID: 492512008472608432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TutorialBackground_lights_5
+      rect:
+        serializedVersion: 2
+        x: 3452
+        y: 398
+        width: 426
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84cb4d5b3c2dfd860800000000000000
+      internalID: 7556990437762055240
       vertices: []
       indices: 
       edges: []
@@ -188,8 +263,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -198,9 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      duck 1_0: 5521503060725269866
-      duck 1_1: -7014647072283987094
-      duck 1_2: 8188730219842850960
+      TutorialBackground_lights_0: 2240159632926247774
+      TutorialBackground_lights_1: 2412315419067570757
+      TutorialBackground_lights_2: -4564705170129062510
+      TutorialBackground_lights_3: -5840783874177727226
+      TutorialBackground_lights_4: 492512008472608432
+      TutorialBackground_lights_5: 7556990437762055240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

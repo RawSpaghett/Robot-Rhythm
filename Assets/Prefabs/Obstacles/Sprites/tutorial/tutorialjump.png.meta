@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fbd587da5a6332f46ace3807c9f51ffd
+guid: 2968286bc8df8964baf86eb805e21c71
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9082364000992468488
-    second: charge barrier 1_0
+      213: 297156067943584400
+    second: tutorialjump_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: charge barrier 1_0
+      name: tutorialjump_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 991
-        width: 414
-        height: 602
+        y: 0
+        width: 301
+        height: 199
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 8, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80e93ff30f90b0e70800000000000000
-      internalID: 9082364000992468488
+      spriteID: 09211a09ed5bf1400800000000000000
+      internalID: 297156067943584400
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 937937c6f8f3a7d4cb879e486f8fd31f
+    spriteID: 4668e6752aae78247b63186a530d1cdb
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      charge barrier 1_0: 9082364000992468488
+      tutorialjump_0: 297156067943584400
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

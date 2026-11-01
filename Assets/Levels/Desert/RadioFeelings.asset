@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RadioFeelings
   m_EditorClassIdentifier: Assembly-CSharp::BeatMap
   SongID: Level1
-  SongLength: 60
+  SongLength: 68
   Bpm: 115
   FirstBeatOffset: 0
   BeatsPerMeasure: 4

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c4f4ac24572106b4684b9dfbcb17ae5a
+guid: 69de5ec495122da4096e6df58f635cca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3507394279127233086
-    second: pothole_0
+      213: -5582699647815453516
+    second: tutorialchargejump_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pothole_0
+      name: tutorialchargejump_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 303
-        height: 199
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 414
+        height: 363
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1341463}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cd42617c7b335fc0800000000000000
-      internalID: -3507394279127233086
+      spriteID: 4b4f24caf344682b0800000000000000
+      internalID: -5582699647815453516
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 73954395f051738438f92e6dfe76afd7
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pothole_0: -3507394279127233086
+      tutorialchargejump_0: -5582699647815453516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
