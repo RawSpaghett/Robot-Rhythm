@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93090ce831011e42a6d539bacc60f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  hitLineX: -7.1
+  hitLineX: -6.41
   distancePerBeat: 3
   QOLoffset: 0.1
   spawnTime: 7
@@ -3714,7 +3714,7 @@ PrefabInstance:
     - target: {fileID: 4281056112932700859, guid: 9d5d508b880cd4a219d83ba5d99f5820, type: 3}
       propertyPath: beatMap
       value: 
-      objectReference: {fileID: 11400000, guid: 2c893e8537a617149be101414f25ab1b, type: 2}
+      objectReference: {fileID: 11400000, guid: 005d67f4b2511b142a998ab48af647f0, type: 2}
     - target: {fileID: 4281056112932700859, guid: 9d5d508b880cd4a219d83ba5d99f5820, type: 3}
       propertyPath: musicManager
       value: 

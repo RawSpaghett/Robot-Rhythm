@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RoadblockObstacle
   earlyWindow: 0.25
   lateWindow: 0.25
-  perfectAccuracyThreshold: 0.983
+  perfectAccuracyThreshold: 0.75
 --- !u!114 &8220606515596276091
 MonoBehaviour:
   m_ObjectHideFlags: 0

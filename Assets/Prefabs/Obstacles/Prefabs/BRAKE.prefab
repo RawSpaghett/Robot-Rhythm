@@ -106,4 +106,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BrakeObstacle
   earlyWindow: 0.25
   lateWindow: 0.25
-  perfectAccuracyThreshold: 0.9
+  perfectAccuracyThreshold: 0.75

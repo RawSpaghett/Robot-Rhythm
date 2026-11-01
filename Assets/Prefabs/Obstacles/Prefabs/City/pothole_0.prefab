@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PotholeObstacle
   earlyWindow: 0.25
   lateWindow: 0.25
-  perfectAccuracyThreshold: 0.9
+  perfectAccuracyThreshold: 0.75
 --- !u!114 &8679426669905581782
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DuckObstacle
   earlyWindow: 0.25
   lateWindow: 0.25
-  perfectAccuracyThreshold: 0.9
+  perfectAccuracyThreshold: 0.75
 --- !u!114 &7861043689874719480
 MonoBehaviour:
   m_ObjectHideFlags: 0
