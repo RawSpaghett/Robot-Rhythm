@@ -4001,7 +4001,7 @@ PrefabInstance:
     - target: {fileID: 4281056112932700859, guid: 9d5d508b880cd4a219d83ba5d99f5820, type: 3}
       propertyPath: beatMap
       value: 
-      objectReference: {fileID: 11400000, guid: 2c893e8537a617149be101414f25ab1b, type: 2}
+      objectReference: {fileID: 11400000, guid: 73deb5d09579c5445aeb35d08a0ab211, type: 2}
     - target: {fileID: 4281056112932700859, guid: 9d5d508b880cd4a219d83ba5d99f5820, type: 3}
       propertyPath: musicManager
       value: 
@@ -4829,9 +4829,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7719533524881936465, guid: e6cf05646778148c6ae32cc1e2aff120, type: 3}
+      propertyPath: audioLoader.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7719533524881936465, guid: e6cf05646778148c6ae32cc1e2aff120, type: 3}
       propertyPath: 'audioLoader.Array.data[2]'
       value: 
       objectReference: {fileID: 8300000, guid: 90091d8c0b52b104eb6be77ef566fd3f, type: 3}
+    - target: {fileID: 7719533524881936465, guid: e6cf05646778148c6ae32cc1e2aff120, type: 3}
+      propertyPath: 'audioLoader.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 60b7a77ba3c777c47a8fdb5477c70e4b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

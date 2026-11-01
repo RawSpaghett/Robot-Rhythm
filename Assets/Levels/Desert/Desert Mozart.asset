@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0246dd64aedb644db2a63b56db05c41, type: 3}
+  m_Name: Desert Mozart
+  m_EditorClassIdentifier: Assembly-CSharp::BeatMap
+  SongID: desertNew
+  SongLength: 120
+  Bpm: 134
+  FirstBeatOffset: 0
+  BeatsPerMeasure: 4
+  Obstacles:
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 8
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 16
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 18.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 22.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 26.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 30.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 34.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 36.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 38.5
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 40.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 48.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 50
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 52
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 53.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 54.5
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 57.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 63.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 71.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 65.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 67.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 69.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 75.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 79.75
+  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
+    Beat: 87.75
+  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
+    Beat: 91.75
+  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
+    Beat: 95.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 104
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 108
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 110.5
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 112.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 118
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 120.5
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 124.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 134
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 137
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 138.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 140.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 145
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 149
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 152.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 157.25
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 158.75
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 162.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 166.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 168.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 172.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 176.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 180.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 184.25
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 188.25
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 190.5
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 194.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 198.5
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 200.25
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 204.25
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 208
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Beat: 211.75
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 214
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 220.75
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Beat: 222.75
