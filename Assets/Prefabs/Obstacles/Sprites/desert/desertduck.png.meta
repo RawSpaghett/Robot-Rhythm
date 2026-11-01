@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f0003b6ebfe27b4bbec95a18c2a436c
+guid: 084c421207c394b4cbb27d657ad40f0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2807743065702112154
-    second: charge barrier_0
+      213: -6477515152762232512
+    second: desertduck_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: charge barrier_0
+      name: desertduck_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 414
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 267
+        height: 462
+      alignment: 9
+      pivot: {x: 0.5, y: -0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9b9db3317b17f620800000000000000
-      internalID: 2807743065702112154
+      spriteID: 041a564b94e3b16a0800000000000000
+      internalID: -6477515152762232512
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 229aabe1580edea4abf43c230da92628
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      charge barrier_0: 2807743065702112154
+      desertduck_0: -6477515152762232512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 9082364000992468488, guid: fbd587da5a6332f46ace3807c9f51ffd, type: 3}
+  m_Sprite: {fileID: 2807743065702112154, guid: 0f0003b6ebfe27b4bbec95a18c2a436c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,9 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e12af4baa540c746ab2fc57208fd158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadblockObstacle
-  earlyWindow: 0.5
+  earlyWindow: 0.25
   lateWindow: 0.25
-  perfectAccuracyThreshold: 0.99
+  perfectAccuracyThreshold: 0.75
 --- !u!114 &8220606515596276091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleTimingGizmo
   obstacle: {fileID: -5641367011392288484}
   rhythmManager: {fileID: 0}
-  localOffset: {x: 0, y: 1.5, z: 0}
+  localOffset: {x: 0, y: 0, z: 0}
   width: 3
   approachSeconds: 1

@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: f2e87ce11ee29dc4c8a7b9cafe20ea3d
+guid: 1dba556c46c4b6b409bdbe554b900658
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8868729072188591806
-    second: duck_0
-  - first:
-      213: -8294748474342274760
-    second: duck_1
-  - first:
-      213: 8781019514964437993
-    second: duck_2
+      213: -6460093328385800913
+    second: desertchargejump_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -119,67 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duck_0
+      name: desertchargejump_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 153
-        width: 321
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebe0bf44a1e041b70800000000000000
-      internalID: 8868729072188591806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duck_1
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 151
-        width: 321
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8398d95c53223ec80800000000000000
-      internalID: -8294748474342274760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duck_2
-      rect:
-        serializedVersion: 2
-        x: 158
         y: 0
-        width: 322
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 390
+        height: 343
+      alignment: 9
+      pivot: {x: 0.5, y: 0.134}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9eb6a3b99b27cd970800000000000000
-      internalID: 8781019514964437993
+      spriteID: f2581b948532956a0800000000000000
+      internalID: -6460093328385800913
       vertices: []
       indices: 
       edges: []
@@ -188,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 791e75f7d6f2ad74ca243dcc7e0d1b6c
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      duck_0: 8868729072188591806
-      duck_1: -8294748474342274760
-      duck_2: 8781019514964437993
+      desertchargejump_0: -6460093328385800913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
