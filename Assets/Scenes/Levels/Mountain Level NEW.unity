@@ -700,6 +700,13 @@ MonoBehaviour:
   QOLoffset: 0.1
   spawnTime: 7
   groundY: -3.2
+  levelSprites:
+  - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
+    Sprite: {fileID: 8762258163820272434, guid: c344f4103f5b5ac418609afa417e20f0, type: 3}
+  - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
+    Sprite: {fileID: 1560509050074795670, guid: 44079632e9c2b0841bc24bc99b876089, type: 3}
+  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
+    Sprite: {fileID: 1679984850579211407, guid: cb7e018d0a6e5394b8148889a323fe05, type: 3}
   rhythmManager: {fileID: 1333327601}
 --- !u!4 &381480584
 Transform:

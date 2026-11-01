@@ -20,6 +20,15 @@ public class ObstacleSpawner : MonoBehaviour
     public float spawnTime = 4f;
 
     public float groundY;
+    [System.Serializable]
+    public class ObstacleSprite
+    {
+        public ObstacleType Type;
+        public Sprite Sprite;
+    }
+
+    [Header("Art")]
+    public ObstacleSprite[] levelSprites = new ObstacleSprite[0];
     [Header("Timing")]
     [SerializeField] private RhythmManager rhythmManager;
     private bool levelFinished;
@@ -87,6 +96,7 @@ public class ObstacleSpawner : MonoBehaviour
             return;
         }
         GameObject instance = Instantiate(placement.Type.Prefab, transform);
+        ChangeSprite(instance, placement.Type);
 
         ActiveObstacle entry = new ActiveObstacle();
         entry.Transform = instance.transform;
@@ -97,6 +107,26 @@ public class ObstacleSpawner : MonoBehaviour
             entry.Obstacle.Prepare((placement.Beat  * rhythmManager.beatMap.SecondsPerBeat) - QOLoffset);
 
         active.Add(entry);
+    }
+
+    // Changes sprite at runtime 
+    private void ChangeSprite(GameObject instance, ObstacleType type)
+    {
+        SpriteRenderer spriteRenderer = instance.GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < levelSprites.Length; i ++)
+        {
+            if (levelSprites[i].Type == type && levelSprites[i].Sprite != null)
+            {
+                spriteRenderer.sprite = levelSprites[i].Sprite;
+                return;
+            }
+        }
     }
 
     private void MoveObstacles(float currentBeat, double currentTime)
