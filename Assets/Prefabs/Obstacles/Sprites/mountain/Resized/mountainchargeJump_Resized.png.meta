@@ -119,9 +119,15 @@ TextureImporter:
         x: 0
         y: 0
         width: 186
+<<<<<<< Updated upstream
         height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
+=======
+        height: 195
+      alignment: 9
+      pivot: {x: 0.52066296, y: 0.068859264}
+>>>>>>> Stashed changes
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
