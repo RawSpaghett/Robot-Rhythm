@@ -22,14 +22,15 @@ public class ScrollingLayer : MonoBehaviour
         startX = transform.position.x;
     }
 
-    private void Update()
+    // Move scenery after gameplay, using the same visual clock as obstacles.
+    private void LateUpdate()
     {
-        if (rhythmManager == null || !rhythmManager.isPlaying)
+        if (rhythmManager == null || !rhythmManager.isPlaying || Time.timeScale <= 0f || AudioListener.pause)
         {
             return;
         }
 
-        float distance = rhythmManager.songPositionInBeats * obstacleSpawner.distancePerBeat * speedMultiplier;
+        float distance = (float)(rhythmManager.VisualSongTime / rhythmManager.beatMap.SecondsPerBeat) * obstacleSpawner.distancePerBeat * speedMultiplier;
 
         // Repeat wraps back to 0 after layerWidth
         float offset = Mathf.Repeat(distance, layerWidth);

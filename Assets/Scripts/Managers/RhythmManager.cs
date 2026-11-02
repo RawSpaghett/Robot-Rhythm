@@ -23,6 +23,36 @@ public class RhythmManager: MonoBehaviour
     public double SongTime => AudioSettings.dspTime - songStartDspTime -
         (beatMap != null ? beatMap.FirstBeatOffset : 0f);
 
+    private double visualSongTime;
+    private int visualFrame = -1;
+    private bool visualClockReady;
+
+    // The audio clock moves in buffer-sized steps. Visuals advance each frame
+    // and gently correct toward it; input judgement still uses SongTime.
+    public double VisualSongTime
+    {
+        get
+        {
+            if (visualFrame == Time.frameCount) return visualSongTime;
+            visualFrame = Time.frameCount;
+            double audioTime = SongTime;
+            if (!visualClockReady)
+            {
+                visualSongTime = audioTime;
+                visualClockReady = true;
+            }
+            else if (isPlaying && Time.timeScale > 0f && !AudioListener.pause)
+            {
+                visualSongTime += Time.deltaTime;
+                double error = audioTime - visualSongTime;
+                if (System.Math.Abs(error) > 0.25) visualSongTime = audioTime;
+                else visualSongTime += Mathf.Clamp((float)error * Time.deltaTime * 3f,
+                    -Time.deltaTime * 0.1f, Time.deltaTime * 0.1f);
+            }
+            return visualSongTime;
+        }
+    }
+
     void Awake()
     {
         IntializeInstance();
@@ -73,6 +103,8 @@ public class RhythmManager: MonoBehaviour
         }
         #endregion
         songStartDspTime = AudioSettings.dspTime + startDelay;
+        visualClockReady = false;
+        visualFrame = -1;
         musicManager.StartPlay(beatMap.SongID,songStartDspTime);
 
         isPlaying = true;

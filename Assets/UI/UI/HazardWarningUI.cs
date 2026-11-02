@@ -56,10 +56,12 @@ public class HazardWarningUI : MonoBehaviour
         bool alert = remaining > advanceWarning - attentionDuration;
         attention.SetActive(alert);
         direction.SetActive(!alert);
-        // The existing obstacle classes decide which action clears the hazard.
-        direction.transform.localRotation = Quaternion.Euler(0f, 0f, obstacle is DuckObstacle ? -90f : 90f);
+        // Use the same required action that the obstacle checks when judging input.
+        direction.transform.localRotation = Quaternion.Euler(0f, 0f, CueRotation(obstacle.RequiredInput));
         var cue = obstacle.GetComponent<HazardWarningCue>();
-        direction.GetComponent<DirectionArrow>().SetDouble(cue != null && cue.DoubleArrow);
+        direction.GetComponent<DirectionArrow>().SetDouble(
+            obstacle.RequiredInput == ObstacleInputType.Brake || obstacle.RequiredInput == ObstacleInputType.Accelerate ||
+            obstacle.RequiredInput == ObstacleInputType.LongJump || (cue != null && cue.DoubleArrow));
         var parent = (RectTransform)bubble.parent;
         Canvas canvas = bubble.GetComponentInParent<Canvas>().rootCanvas;
         Camera uiCamera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
@@ -73,6 +75,17 @@ public class HazardWarningUI : MonoBehaviour
         bubble.anchoredPosition = new Vector2(
             Mathf.Clamp(local.x, parent.rect.xMin + halfWidth, parent.rect.xMax - halfWidth),
             Mathf.Clamp(local.y + rise, parent.rect.yMin + halfHeight, parent.rect.yMax - halfHeight));
+    }
+
+    public static float CueRotation(ObstacleInputType input)
+    {
+        switch (input)
+        {
+            case ObstacleInputType.Brake: return 180f;
+            case ObstacleInputType.Accelerate: return 0f;
+            case ObstacleInputType.Dodge: return -90f;
+            default: return 90f;
+        }
     }
 
     private void OnDisable()

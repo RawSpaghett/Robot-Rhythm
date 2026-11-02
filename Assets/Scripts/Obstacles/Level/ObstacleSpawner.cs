@@ -124,6 +124,12 @@ public class ObstacleSpawner : MonoBehaviour
             if (levelSprites[i].Type == type && levelSprites[i].Sprite != null)
             {
                 spriteRenderer.sprite = levelSprites[i].Sprite;
+                // The resized level art already uses matching dimensions.
+                // Keep the older prefab scale from shrinking or squeezing it.
+                if (instance.GetComponent<RoadblockObstacle>() != null || instance.GetComponent<DuckObstacle>() != null)
+                {
+                    spriteRenderer.transform.localScale = Vector3.one;
+                }
                 return;
             }
         }
@@ -131,6 +137,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void MoveObstacles(float currentBeat, double currentTime)
     {
+        float visualBeat = (float)(rhythmManager.VisualSongTime / rhythmManager.beatMap.SecondsPerBeat);
         // Counting down so when an obstacle is removed it doesnt shift the list
         for (int i = active.Count - 1; i >= 0; i--)
         {
@@ -139,7 +146,7 @@ public class ObstacleSpawner : MonoBehaviour
             if (active[i].Obstacle != null)
                 active[i].Obstacle.CheckForMiss(currentTime);
 
-            active[i].Transform.position = new Vector3(hitLineX + beatsAway * distancePerBeat, groundY, 0f);
+            active[i].Transform.position = new Vector3(hitLineX + (active[i].TargetBeat - visualBeat) * distancePerBeat, groundY, 0f);
 
             if (beatsAway < -despawnBeats &&
                 (active[i].Obstacle == null || active[i].Obstacle.IsResolved))

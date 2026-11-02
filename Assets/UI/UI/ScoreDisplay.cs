@@ -67,6 +67,7 @@ public class ScoreDisplay : MonoBehaviour
     [SerializeField, Min(0.01f)] private float resultDuration = 1.6f;
 
     private ScoreManager source;
+    public ScoreManager Source => source;
     private float lastScore;
     private float resultScore;
     private int lastResolved;
