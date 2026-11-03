@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7744374931705267122}
   - component: {fileID: 2340465443636631975}
   - component: {fileID: 915488997994208459}
+  - component: {fileID: 1060797237750742584}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -47,12 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1de9cfc108f4e9ebda1efa4efafb20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
-  actionManager: {fileID: 0}
-  timingFeedback: {fileID: 0}
-  longJumpCharge: 1
-  jumpID: jump
-  chargeJumpID: sdasd
-  duckID: duck
 --- !u!114 &7744374931705267122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +85,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319650868729156626}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e431d04aff5ebed46bde0501a079eb06, type: 3}
   m_Name: 
@@ -113,3 +108,22 @@ MonoBehaviour:
   actionManager: {fileID: 0}
   obstacleSpawner: {fileID: 0}
   rhythmManager: {fileID: 0}
+--- !u!114 &1060797237750742584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319650868729156626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a5391425360462a91657bc103d83d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  inputManager: {fileID: 424976395560863469}
+  actionManager: {fileID: 0}
+  timingFeedback: {fileID: 915488997994208459}
+  longJumpCharge: 1
+  jumpID: jump
+  chargeJumpID: NA
+  duckID: duck
