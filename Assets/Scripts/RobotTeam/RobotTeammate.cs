@@ -1,7 +1,7 @@
-using System.Diagnostics;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 using System.Collections.Generic;
+using System.Collections;
+using System;
 
 public class RobotTeammate : MonoBehaviour
 {
@@ -9,6 +9,8 @@ public class RobotTeammate : MonoBehaviour
     [SerializeField] private string duckID;
     [SerializeField] private string accelerateID;
     [SerializeField] private string brakeID;
+
+    [SerializeField] private double ChargeOffset = 0.5;
     
     private struct ObstacleData
     {
@@ -44,7 +46,11 @@ public class RobotTeammate : MonoBehaviour
 
     void Update()
     {
-            while (actionQueue.Count > 0 && RhythmManager.Instance.SongTime >= actionQueue.Peek().dspTime)
+        //Gross i know
+      while (actionQueue.Count > 0 && 
+              ((RhythmManager.Instance.SongTime >= actionQueue.Peek().dspTime) || 
+              ((actionQueue.Peek().type == ObstacleInputType.LongJump) && 
+               (RhythmManager.Instance.SongTime >= actionQueue.Peek().dspTime - ChargeOffset))))
             {
                 ObstacleData nextAction = actionQueue.Dequeue();
                 AutomateAction(nextAction);
@@ -60,35 +66,42 @@ public class RobotTeammate : MonoBehaviour
     
     private void AutomateAction(ObstacleData type)
     {
-        
+    
         switch(type.type)
         {
             case ObstacleInputType.Dodge:
-                Debug.Log($"Robot team Dodge!");
+                //Debug.Log($"Robot team Dodge!");
                 actionManager.TryDuck();
                 FXManager.Instance.PlaySFX(duckID);
                 return;
             case ObstacleInputType.Jump:
-                Debug.Log($"Robot team Jump!");
+                //Debug.Log($"Robot team Jump!");
                 actionManager.TryJump();
                 FXManager.Instance.PlaySFX(jumpID);
                 return;
             case ObstacleInputType.LongJump:
-                Debug.Log($"Robot team ChargeJump!");
-                actionManager.TryLongJump(1f);
-                FXManager.Instance.PlaySFX(jumpID);
+                //Debug.Log($"Robot team ChargeJump!");
+                StartCoroutine(LongJumpWait(ChargeOffset));
                 return;
             case ObstacleInputType.Accelerate:
-                Debug.Log($"Robot team Accelerate!");
+                //Debug.Log($"Robot team Accelerate!");
                 actionManager.TryAccelerate();
                 FXManager.Instance.PlaySFX(accelerateID);
                 return;
             case ObstacleInputType.Brake:
-                Debug.Log($"Robot team Brake!");
+                //Debug.Log($"Robot team Brake!");
                 actionManager.TryBrake();
                 FXManager.Instance.PlaySFX(brakeID);
                 return;
         }
+    }
+
+    private IEnumerator LongJumpWait(double time)
+    {
+            actionManager.SetLongJumpCharging(true);
+            yield return new WaitForSeconds(Convert.ToSingle(time));
+            actionManager.TryLongJump(10f);
+            FXManager.Instance.PlaySFX(jumpID);
     }
     
 }

@@ -182,7 +182,7 @@ public class ActionManager : MonoBehaviour
         SetLongJumpCharging(false);
 
         bool started = action == jump
-            ? jump.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
+            ? jump.TryBeginWithFeedback(type, charge , visual)
             : action == duck
                 ? duck.TryBeginWithFeedback(type, Mathf.Clamp01(charge), visual)
                 : action == brake
