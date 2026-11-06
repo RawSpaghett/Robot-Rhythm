@@ -3865,7 +3865,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
   m_PrefabInstance: {fileID: 2231228570725145507}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2231228570725145508}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4ce2f62b679c814eabdb6c5ca596aec, type: 3}
@@ -4461,8 +4461,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8960871062711466483, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2231228570725145509}
   m_SourcePrefab: {fileID: 100100000, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+--- !u!1 &2231228570725145508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8960871062711466483, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+  m_PrefabInstance: {fileID: 2231228570725145507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2231228570725145509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231228570725145508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba9003bca1b9894d966c276fa8b5e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RobotRhythm.Feature5.RobotSkin
+  library: {fileID: 11400000, guid: d79327d4a024e344fbc4f7013b01d55d, type: 2}
 --- !u!1001 &3030588863688069326
 PrefabInstance:
   m_ObjectHideFlags: 0

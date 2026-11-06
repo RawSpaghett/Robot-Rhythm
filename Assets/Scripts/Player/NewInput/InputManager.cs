@@ -28,6 +28,13 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         var userInput = Pointer.current;
+        if (userInput == null)
+        {
+            // A pointer may be unavailable at startup or after device removal.
+            userHeld = false;
+            previousUserDown = false;
+            return;
+        }
         bool down = userInput.press.isPressed;
         bool pressed = down && !previousUserDown;
         bool released = !down && previousUserDown;

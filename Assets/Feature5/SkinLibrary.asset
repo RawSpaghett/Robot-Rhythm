@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b31b62436afd24683f81eff852d7e0, type: 3}
+  m_Name: SkinLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::RobotRhythm.Feature5.SkinLibrary
+  masks: {fileID: 11400000, guid: f0df8f36f2eb3024f9aeb0a255efb647, type: 2}
+  material: {fileID: 2100000, guid: cc63d9e1f9f5dc54ab610c0ac330de81, type: 2}
+  palettes:
+  - {fileID: 11400000, guid: bfb31ddbf6c9ddc44a76d46ec8bb2802, type: 2}
+  - {fileID: 11400000, guid: 56ea9e411e477a74caa9cb30489aead2, type: 2}
+  - {fileID: 11400000, guid: 3ea401572cef8e541a857134c3d869c5, type: 2}
+  - {fileID: 11400000, guid: dd42b62bbc63eb94689f59fc6e0a0f29, type: 2}
+  - {fileID: 11400000, guid: 53d3449c7946bf14ab92742d7e2f91c3, type: 2}
+  - {fileID: 11400000, guid: fdf3768aa65641a4c8bfc21d68dfd553, type: 2}
+  - {fileID: 11400000, guid: 5b15e945210140648a49de6cfd81ae3e, type: 2}
+  names:
+  - Classic
+  - Charcoal
+  - Sandstone
+  - Glacier Blue
+  - Burnt Orange
+  - Space
+  - Prismatic Gold
+  scoredLevelIds:
+  - 1959d4784b6bab04b8a9912b26c2e503
+  - 3cbb3c824e9c3664bba681e76657963b
+  - 546680f6a60a30a4ebd408b17b0ededa
+  - 898ba19b4e01baf42991c4daeabb32bd
+  unlockLevelIds:
+  - 
+  - 1959d4784b6bab04b8a9912b26c2e503
+  - 3cbb3c824e9c3664bba681e76657963b
+  - 546680f6a60a30a4ebd408b17b0ededa
+  - 898ba19b4e01baf42991c4daeabb32bd
+  - 
+  - 
+  objectives:
+  - 
+  - Complete City to unlock
+  - Complete Desert to unlock
+  - Complete Ice to unlock
+  - Complete Mountain Range to unlock
+  - Complete Space to unlock
+  - Perfect every scored level to unlock
+  previewFrames:
+  - {fileID: -4927953047678402319, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: 4134222111149603704, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: -724163221621298011, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: -3482724424896517304, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: -2885141569697968516, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: -4776207345474594759, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: -8347830267759873828, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: 8182542733546408697, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: 7554156090261839703, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  - {fileID: -1349205958170360794, guid: dbd09275d061d884ca08a930226e1019, type: 3}
+  accelerateFrames:
+  - {fileID: -354890797998283522, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  - {fileID: 754121096528762110, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  - {fileID: 1951881943537697680, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  - {fileID: 706367777152432343, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  - {fileID: 898187524489874607, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  - {fileID: 1078431880512417241, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  - {fileID: 6263744156936631737, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  - {fileID: 1239343097159026651, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  - {fileID: 6811991207942179921, guid: 759f5eb28c407f340866dd20b35933fb, type: 3}
+  brakeFrames:
+  - {fileID: -1555346277267487265, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: 6169070929419887914, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: -6318075489427699998, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: 731885856537320321, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: 2103654743645241387, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: 2357277585389555015, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: 4221330159029939773, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: -5484796071973909979, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: -8318551092117636872, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  - {fileID: -8025128702658467282, guid: 7d30a5b3108eb7a48b147851e9928dfb, type: 3}
+  previewAllUnlocked: 0

@@ -15,6 +15,7 @@ public class LevelCarouselEditor : Editor
         serializedObject.ApplyModifiedProperties();
 
         var carousel = (LevelCarousel)target;
+        RobotRhythm.Feature5.SkinRewardEditor.UpdatePerfectLevels(carousel);
         if (GUILayout.Button("Enable listed scenes in Build Settings"))
             EnableScenes(carousel);
 
@@ -60,7 +61,7 @@ public class LevelChoiceDrawer : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        return (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 5;
+        return (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 6;
     }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -86,6 +87,8 @@ public class LevelChoiceDrawer : PropertyDrawer
         EditorGUI.PropertyField(position, property.FindPropertyRelative("song"), new GUIContent("Preview song"));
         position.y += step;
         EditorGUI.PropertyField(position, property.FindPropertyRelative("saveRecords"), new GUIContent("Save records"));
+        position.y += step;
+        RobotRhythm.Feature5.SkinRewardEditor.Draw(position, property);
         EditorGUI.EndProperty();
     }
 }

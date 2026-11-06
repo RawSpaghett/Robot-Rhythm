@@ -184,6 +184,11 @@ public class UIManager : MonoBehaviour
             StartCoroutine(RevealState());
     }
 
+    public void SwitchMenuContent(GameObject from, GameObject to)
+    {
+        Navigate(() => { from.SetActive(false); to.SetActive(true); });
+    }
+
     private void Navigate(Action action, bool fullScreen = false)
     {
         if (!IsTransitioning && !gameManager.IsLoading)
