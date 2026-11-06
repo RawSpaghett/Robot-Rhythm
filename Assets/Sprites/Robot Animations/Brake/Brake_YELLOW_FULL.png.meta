@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: cb0a09c89509766468cd686a9f9456b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8516545942283739098
+    second: Brake_YELLOW_FULL_0
+  - first:
+      213: -3852956553811493377
+    second: Brake_YELLOW_FULL_1
+  - first:
+      213: -3644071451053121276
+    second: Brake_YELLOW_FULL_2
+  - first:
+      213: -1088295568737216385
+    second: Brake_YELLOW_FULL_3
+  - first:
+      213: -1377850457368770074
+    second: Brake_YELLOW_FULL_4
+  - first:
+      213: 7291692272720054742
+    second: Brake_YELLOW_FULL_5
+  - first:
+      213: 4557240254244394491
+    second: Brake_YELLOW_FULL_6
+  - first:
+      213: -1340586646456437281
+    second: Brake_YELLOW_FULL_7
+  - first:
+      213: 3426135071535487058
+    second: Brake_YELLOW_FULL_8
+  - first:
+      213: -7860170825793486154
+    second: Brake_YELLOW_FULL_9
+  - first:
+      213: 2587942236188078085
+    second: Brake_YELLOW_FULL_10
+  - first:
+      213: -4490607940771284796
+    second: Brake_YELLOW_FULL_11
+  - first:
+      213: -7011451724678443799
+    second: Brake_YELLOW_FULL_12
+  - first:
+      213: -4777339393452199894
+    second: Brake_YELLOW_FULL_13
+  - first:
+      213: -1985987439615896135
+    second: Brake_YELLOW_FULL_14
+  - first:
+      213: 3628656971991593049
+    second: Brake_YELLOW_FULL_15
+  - first:
+      213: -8741191164937320053
+    second: Brake_YELLOW_FULL_16
+  - first:
+      213: -4121204810493945647
+    second: Brake_YELLOW_FULL_17
+  - first:
+      213: 2588683961912818843
+    second: Brake_YELLOW_FULL_18
+  - first:
+      213: 4130293047955631485
+    second: Brake_YELLOW_FULL_19
+  - first:
+      213: -5552036502711452361
+    second: Brake_YELLOW_FULL_20
+  - first:
+      213: -6547073594320876893
+    second: Brake_YELLOW_FULL_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_0
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 5187
+        width: 923
+        height: 891
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62022ec86962fc980800000000000000
+      internalID: -8516545942283739098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_1
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 5184
+        width: 1108
+        height: 741
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd7d0b9d6c878ac0800000000000000
+      internalID: -3852956553811493377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_2
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 5184
+        width: 1108
+        height: 741
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40126d78258ad6dc0800000000000000
+      internalID: -3644071451053121276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_3
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 5201
+        width: 1042
+        height: 828
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7859ce32f895e0f0800000000000000
+      internalID: -1088295568737216385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_4
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 4179
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9cce62f44e0ece0800000000000000
+      internalID: -1377850457368770074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_5
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 4179
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d980fe2d7b413560800000000000000
+      internalID: 7291692272720054742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_6
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 4179
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5195eadd19e3f30800000000000000
+      internalID: 4557240254244394491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_7
+      rect:
+        serializedVersion: 2
+        x: 4734
+        y: 4179
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5f45b3c87456de0800000000000000
+      internalID: -1340586646456437281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 3130
+        width: 1069
+        height: 855
+      alignment: 9
+      pivot: {x: 0.3709445, y: 0.4731077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2585163f1b31c8f20800000000000000
+      internalID: 3426135071535487058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_9
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 3130
+        width: 1069
+        height: 855
+      alignment: 9
+      pivot: {x: 0.37811446, y: 0.50896496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2c0b667401be290800000000000000
+      internalID: -7860170825793486154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_10
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 3130
+        width: 1069
+        height: 855
+      alignment: 9
+      pivot: {x: 0.37094507, y: 0.5000003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500783790c73ae320800000000000000
+      internalID: 2587942236188078085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_11
+      rect:
+        serializedVersion: 2
+        x: 4787
+        y: 3130
+        width: 1069
+        height: 855
+      alignment: 9
+      pivot: {x: 0.37094486, y: 0.5000003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c877c0ced72ea1c0800000000000000
+      internalID: -4490607940771284796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2080
+        width: 923
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eccdbefdc152be90800000000000000
+      internalID: -7011451724678443799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_13
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 2080
+        width: 923
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a203dc1122b73bdb0800000000000000
+      internalID: -4777339393452199894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_14
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 2080
+        width: 923
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b59e4522fa5074e0800000000000000
+      internalID: -1985987439615896135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_15
+      rect:
+        serializedVersion: 2
+        x: 4498
+        y: 2088
+        width: 934
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.69694567, y: 0.3802433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 950bd436a449b5230800000000000000
+      internalID: 3628656971991593049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1051
+        width: 933
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.70537114, y: 0.36527324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89c024c2fc01b680800000000000000
+      internalID: -8741191164937320053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_17
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1114
+        width: 937
+        height: 927
+      alignment: 9
+      pivot: {x: 0.6226967, y: 0.39251584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d890e75f0a8ec6c0800000000000000
+      internalID: -4121204810493945647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_18
+      rect:
+        serializedVersion: 2
+        x: 3266
+        y: 1114
+        width: 937
+        height: 927
+      alignment: 9
+      pivot: {x: 0.5981576, y: 0.37598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c7091195adce320800000000000000
+      internalID: 2588683961912818843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_19
+      rect:
+        serializedVersion: 2
+        x: 4886
+        y: 1067
+        width: 923
+        height: 854
+      alignment: 9
+      pivot: {x: 0.6162543, y: 0.41025245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d29a5d4afb15930800000000000000
+      internalID: 4130293047955631485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_20
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 30
+        width: 923
+        height: 854
+      alignment: 9
+      pivot: {x: 0.6079506, y: 0.39230317}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73db1eb773433f2b0800000000000000
+      internalID: -5552036502711452361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_YELLOW_FULL_21
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 28
+        width: 922
+        height: 869
+      alignment: 9
+      pivot: {x: 0.66625714, y: 0.4382616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa0a2cf04f1425a0800000000000000
+      internalID: -6547073594320876893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 18baced8811e0584595300131e94ac2b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brake_YELLOW_FULL_0: -8516545942283739098
+      Brake_YELLOW_FULL_1: -3852956553811493377
+      Brake_YELLOW_FULL_10: 2587942236188078085
+      Brake_YELLOW_FULL_11: -4490607940771284796
+      Brake_YELLOW_FULL_12: -7011451724678443799
+      Brake_YELLOW_FULL_13: -4777339393452199894
+      Brake_YELLOW_FULL_14: -1985987439615896135
+      Brake_YELLOW_FULL_15: 3628656971991593049
+      Brake_YELLOW_FULL_16: -8741191164937320053
+      Brake_YELLOW_FULL_17: -4121204810493945647
+      Brake_YELLOW_FULL_18: 2588683961912818843
+      Brake_YELLOW_FULL_19: 4130293047955631485
+      Brake_YELLOW_FULL_2: -3644071451053121276
+      Brake_YELLOW_FULL_20: -5552036502711452361
+      Brake_YELLOW_FULL_21: -6547073594320876893
+      Brake_YELLOW_FULL_3: -1088295568737216385
+      Brake_YELLOW_FULL_4: -1377850457368770074
+      Brake_YELLOW_FULL_5: 7291692272720054742
+      Brake_YELLOW_FULL_6: 4557240254244394491
+      Brake_YELLOW_FULL_7: -1340586646456437281
+      Brake_YELLOW_FULL_8: 3426135071535487058
+      Brake_YELLOW_FULL_9: -7860170825793486154
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

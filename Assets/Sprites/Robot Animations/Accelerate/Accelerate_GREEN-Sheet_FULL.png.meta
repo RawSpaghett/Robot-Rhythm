@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 3627412105b45cd47a0fc3eaa6f179df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 680983591048045766
+    second: Accelerate_GREEN-Sheet_FULL_0
+  - first:
+      213: -8092940771383180103
+    second: Accelerate_GREEN-Sheet_FULL_1
+  - first:
+      213: -2680792267741779967
+    second: Accelerate_GREEN-Sheet_FULL_2
+  - first:
+      213: 4557038943943228474
+    second: Accelerate_GREEN-Sheet_FULL_3
+  - first:
+      213: 2044984343701211023
+    second: Accelerate_GREEN-Sheet_FULL_4
+  - first:
+      213: -8138973262760022088
+    second: Accelerate_GREEN-Sheet_FULL_5
+  - first:
+      213: -5152343666143890203
+    second: Accelerate_GREEN-Sheet_FULL_6
+  - first:
+      213: 6002197499417537258
+    second: Accelerate_GREEN-Sheet_FULL_7
+  - first:
+      213: -1374563772970736383
+    second: Accelerate_GREEN-Sheet_FULL_8
+  - first:
+      213: -2536919584497975830
+    second: Accelerate_GREEN-Sheet_FULL_9
+  - first:
+      213: -8707938529913237595
+    second: Accelerate_GREEN-Sheet_FULL_10
+  - first:
+      213: -9169378963075046439
+    second: Accelerate_GREEN-Sheet_FULL_11
+  - first:
+      213: -2499366166106482159
+    second: Accelerate_GREEN-Sheet_FULL_12
+  - first:
+      213: 8034562922087346043
+    second: Accelerate_GREEN-Sheet_FULL_13
+  - first:
+      213: -6725930265295291709
+    second: Accelerate_GREEN-Sheet_FULL_14
+  - first:
+      213: -3402841359076053966
+    second: Accelerate_GREEN-Sheet_FULL_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_0
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 2983
+        width: 923
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c4e942d7f6537900800000000000000
+      internalID: 680983591048045766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_1
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 2987
+        width: 923
+        height: 926
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b40e652f3910bf80800000000000000
+      internalID: -8092940771383180103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_2
+      rect:
+        serializedVersion: 2
+        x: 3618
+        y: 2963
+        width: 934
+        height: 980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10823acc2a9ebcad0800000000000000
+      internalID: -2680792267741779967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_3
+      rect:
+        serializedVersion: 2
+        x: 5378
+        y: 2963
+        width: 934
+        height: 980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c7b5976cadd3f30800000000000000
+      internalID: 4557038943943228474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1975
+        width: 934
+        height: 980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87cb810d6e316c10800000000000000
+      internalID: 2044984343701211023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_5
+      rect:
+        serializedVersion: 2
+        x: 2070
+        y: 2002
+        width: 948
+        height: 963
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf69cc80fe8c0f80800000000000000
+      internalID: -8138973262760022088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_6
+      rect:
+        serializedVersion: 2
+        x: 4332
+        y: 1997
+        width: 949
+        height: 799
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e472c2ebb23f78b0800000000000000
+      internalID: -5152343666143890203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_7
+      rect:
+        serializedVersion: 2
+        x: 6048
+        y: 2000
+        width: 930
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea258023d61c4350800000000000000
+      internalID: 6002197499417537258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1012
+        width: 930
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10565fef7819cece0800000000000000
+      internalID: -1374563772970736383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_9
+      rect:
+        serializedVersion: 2
+        x: 2528
+        y: 1012
+        width: 930
+        height: 818
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aed344e341d0bccd0800000000000000
+      internalID: -2536919584497975830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_10
+      rect:
+        serializedVersion: 2
+        x: 3872
+        y: 993
+        width: 930
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af859e2b00372780800000000000000
+      internalID: -8707938529913237595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_11
+      rect:
+        serializedVersion: 2
+        x: 5632
+        y: 993
+        width: 930
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3e8fe1a62dfb080800000000000000
+      internalID: -9169378963075046439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_12
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 15
+        width: 926
+        height: 881
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ad791d6b7705dd0800000000000000
+      internalID: -2499366166106482159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_13
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 15
+        width: 926
+        height: 881
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f6a80a860808f60800000000000000
+      internalID: 8034562922087346043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_14
+      rect:
+        serializedVersion: 2
+        x: 3560
+        y: 26
+        width: 920
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ca76092f02b8a2a0800000000000000
+      internalID: -6725930265295291709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Accelerate_GREEN-Sheet_FULL_15
+      rect:
+        serializedVersion: 2
+        x: 5320
+        y: 26
+        width: 920
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ca34d10dda6c0d0800000000000000
+      internalID: -3402841359076053966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Accelerate_GREEN-Sheet_FULL_0: 680983591048045766
+      Accelerate_GREEN-Sheet_FULL_1: -8092940771383180103
+      Accelerate_GREEN-Sheet_FULL_10: -8707938529913237595
+      Accelerate_GREEN-Sheet_FULL_11: -9169378963075046439
+      Accelerate_GREEN-Sheet_FULL_12: -2499366166106482159
+      Accelerate_GREEN-Sheet_FULL_13: 8034562922087346043
+      Accelerate_GREEN-Sheet_FULL_14: -6725930265295291709
+      Accelerate_GREEN-Sheet_FULL_15: -3402841359076053966
+      Accelerate_GREEN-Sheet_FULL_2: -2680792267741779967
+      Accelerate_GREEN-Sheet_FULL_3: 4557038943943228474
+      Accelerate_GREEN-Sheet_FULL_4: 2044984343701211023
+      Accelerate_GREEN-Sheet_FULL_5: -8138973262760022088
+      Accelerate_GREEN-Sheet_FULL_6: -5152343666143890203
+      Accelerate_GREEN-Sheet_FULL_7: 6002197499417537258
+      Accelerate_GREEN-Sheet_FULL_8: -1374563772970736383
+      Accelerate_GREEN-Sheet_FULL_9: -2536919584497975830
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
