@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9031381321408060262}
   - component: {fileID: 7861043689874719480}
   - component: {fileID: 7859808367522716117}
+  - component: {fileID: -2981485950771585179}
   m_Layer: 0
   m_Name: duck_0
   m_TagString: Untagged
@@ -139,3 +140,25 @@ MonoBehaviour:
   localOffset: {x: 0, y: 1.5, z: 0}
   width: 3
   approachSeconds: 1
+--- !u!114 &-2981485950771585179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7501356601781046500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0831707ce307106458251055774a2e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpriteAnimation
+  playAnimation: 1
+  targetRenderer: {fileID: 0}
+  animationSheet:
+    sheet: {fileID: 2800000, guid: 7771b50c2cffb22459f02ce448cc1d53, type: 3}
+    frames:
+    - {fileID: -2465220092805271187, guid: 7771b50c2cffb22459f02ce448cc1d53, type: 3}
+    - {fileID: 5350742681770192269, guid: 7771b50c2cffb22459f02ce448cc1d53, type: 3}
+    - {fileID: 4407858423780735229, guid: 7771b50c2cffb22459f02ce448cc1d53, type: 3}
+    - {fileID: -6588705930429813370, guid: 7771b50c2cffb22459f02ce448cc1d53, type: 3}
+  framesPerSecond: 8
