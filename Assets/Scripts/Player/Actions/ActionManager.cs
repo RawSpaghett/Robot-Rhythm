@@ -21,6 +21,9 @@ public class ActionManager : MonoBehaviour
     private RobotRunAnimation runningAnimation =
         new RobotRunAnimation();
 
+    [Header("Teammate Reactions (Optional)")]
+    [SerializeField] private RobotReactionAnimations reactionAnimations = new RobotReactionAnimations();
+
     private readonly Dictionary<RobotActionType, ActionBase> actions =
         new Dictionary<RobotActionType, ActionBase>();
 
@@ -109,12 +112,14 @@ public class ActionManager : MonoBehaviour
         if (accelerate == null) accelerate = new RobotAccelerate();
         if (runningAnimation == null)
             runningAnimation = new RobotRunAnimation();
+        if (reactionAnimations == null) reactionAnimations = new RobotReactionAnimations();
 
         jump.Initialize(robotVisual, robotRenderer, this);
         duck.Initialize(robotVisual, robotRenderer, this);
         brake.Initialize(robotVisual, robotRenderer, this);
         accelerate.Initialize(robotVisual, robotRenderer, this);
         runningAnimation.Initialize(robotRenderer, this);
+        reactionAnimations.Initialize(robotRenderer);
 
         actions.Add(RobotActionType.Jump, jump);
         actions.Add(RobotActionType.LongJump, jump);
@@ -132,6 +137,26 @@ public class ActionManager : MonoBehaviour
     public void TryBrake() => TryPerform(RobotActionType.Brake);
     public void TryAccelerate() => TryPerform(RobotActionType.Accelerate);
 
+    // Reactions are cosmetic: never make the robot busy or delay an obstacle action.
+    public bool ShowReaction(RobotTimingVisual visual)
+    {
+        if (!isActiveAndEnabled || Time.timeScale <= 0f || AudioListener.pause || IsBusy || HasBufferedAction)
+            return false;
+        InitializeActions();
+        if (jump.IsChargingAnimationPlaying || missedFrames != null) return false;
+        if (!reactionAnimations.TryPlay(visual)) return false;
+        runningAnimation.Suspend();
+        return true;
+    }
+
+    public void CancelReaction()
+    {
+        if (!initialized || !reactionAnimations.IsPlaying) return;
+        reactionAnimations.Stop();
+        if (isActiveAndEnabled && !IsBusy && missedFrames == null && !jump.IsChargingAnimationPlaying)
+            runningAnimation.Play();
+    }
+
     // Cosmetic charging preview; it does not make the robot busy or change input.
     public void SetLongJumpCharging(bool charging)
     {
@@ -146,6 +171,7 @@ public class ActionManager : MonoBehaviour
         if (!isActiveAndEnabled || Time.timeScale <= 0f || AudioListener.pause || IsBusy || missedFrames != null)
             return;
         InitializeActions();
+        CancelReaction(); // Charging has priority even before the long jump begins.
         if (jump.BeginChargingAnimation()) runningAnimation.Suspend();
     }
 
@@ -173,6 +199,9 @@ public class ActionManager : MonoBehaviour
             return false;
 
         ClearBufferedAction();
+
+        // Restore the pre-reaction sprite before the action saves its starting pose.
+        reactionAnimations.Stop();
 
         // A new player action takes priority over cosmetic missed feedback.
         pendingMiss = null;
@@ -278,13 +307,23 @@ public class ActionManager : MonoBehaviour
             return;
         }
 
+        if (reactionAnimations.IsPlaying)
+        {
+            if (AudioListener.pause) return;
+            reactionAnimations.Tick(Time.deltaTime);
+            if (!reactionAnimations.IsPlaying) runningAnimation.Play();
+            return;
+        }
+
         runningAnimation.Tick(Time.deltaTime);
     }
 
     public void CancelCurrentAction()
     {
         ClearBufferedAction();
-        bool hadAction = activeAction != null || missedFrames != null || (initialized && jump.IsChargingAnimationPlaying);
+        bool hadAction = activeAction != null || missedFrames != null ||
+            (initialized && (jump.IsChargingAnimationPlaying || reactionAnimations.IsPlaying));
+        if (initialized) reactionAnimations.Stop();
         pendingMiss = null;
         StopMissedFeedback();
         if (initialized) jump.StopChargingAnimation();
@@ -298,6 +337,7 @@ public class ActionManager : MonoBehaviour
 
     private void OnDisable()
     {
+        if (initialized) reactionAnimations.Stop();
         ClearBufferedAction();
         pendingMiss = null;
         StopMissedFeedback();
@@ -325,6 +365,7 @@ public class ActionManager : MonoBehaviour
 
     private void BeginMissedFeedback(RobotActionType type)
     {
+        reactionAnimations.Stop();
         StopMissedFeedback();
         SetLongJumpCharging(false);
         Sprite[] frames = type == RobotActionType.Duck
