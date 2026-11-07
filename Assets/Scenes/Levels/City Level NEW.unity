@@ -2678,10 +2678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f548659783a0f4fac8a5671c6c49c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
-  jumpID: 
-  duckID: 
-  accelerateID: 
-  brakeID: 
+  jumpID: jump
+  duckID: duck
+  accelerateID: accelerate
+  brakeID: brake
   ChargeOffset: 0.5
   reactionSpawner: {fileID: 0}
   offset: 0
@@ -2703,10 +2703,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f548659783a0f4fac8a5671c6c49c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
-  jumpID: 
-  duckID: 
-  accelerateID: 
-  brakeID: 
+  jumpID: jump
+  duckID: duck
+  accelerateID: accelerate
+  brakeID: brake
   ChargeOffset: 0.5
   reactionSpawner: {fileID: 0}
   offset: 0
@@ -4183,10 +4183,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f548659783a0f4fac8a5671c6c49c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RobotTeammate
-  jumpID: 
-  duckID: 
-  accelerateID: 
-  brakeID: 
+  jumpID: jump
+  duckID: duck
+  accelerateID: accelerate
+  brakeID: brake
   ChargeOffset: 0.5
   reactionSpawner: {fileID: 0}
   offset: 0
