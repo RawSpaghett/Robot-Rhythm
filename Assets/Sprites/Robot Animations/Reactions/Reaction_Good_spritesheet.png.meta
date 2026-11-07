@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 4f4de4848d5c44440b914689d0845dcc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1516105484091740950
+    second: Reaction_Good_spritesheet_0
+  - first:
+      213: -2868490126994954178
+    second: Reaction_Good_spritesheet_1
+  - first:
+      213: -4274164364287576231
+    second: Reaction_Good_spritesheet_2
+  - first:
+      213: 4849161998430484436
+    second: Reaction_Good_spritesheet_3
+  - first:
+      213: 9056822252509339103
+    second: Reaction_Good_spritesheet_4
+  - first:
+      213: 1734431073733836581
+    second: Reaction_Good_spritesheet_5
+  - first:
+      213: 2296621375341536519
+    second: Reaction_Good_spritesheet_6
+  - first:
+      213: -1329436372668014990
+    second: Reaction_Good_spritesheet_7
+  - first:
+      213: -1167421203424407081
+    second: Reaction_Good_spritesheet_8
+  - first:
+      213: 793201270898608444
+    second: Reaction_Good_spritesheet_9
+  - first:
+      213: 2877897235311708281
+    second: Reaction_Good_spritesheet_10
+  - first:
+      213: 4272204301188920384
+    second: Reaction_Good_spritesheet_11
+  - first:
+      213: 8551598594959225345
+    second: Reaction_Good_spritesheet_12
+  - first:
+      213: -6012553761041528716
+    second: Reaction_Good_spritesheet_13
+  - first:
+      213: -9009930224431691216
+    second: Reaction_Good_spritesheet_14
+  - first:
+      213: 8806872574487415673
+    second: Reaction_Good_spritesheet_15
+  - first:
+      213: -7788348424739849396
+    second: Reaction_Good_spritesheet_16
+  - first:
+      213: 6479444900128536333
+    second: Reaction_Good_spritesheet_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 4497
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeca0ba4816b5fae0800000000000000
+      internalID: -1516105484091740950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 4497
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3820ca6d631138d0800000000000000
+      internalID: -2868490126994954178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 4495
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957710bf72e1fa4c0800000000000000
+      internalID: -4274164364287576231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 5911
+        y: 4495
+        width: 943
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7b5c6452fab4340800000000000000
+      internalID: 4849161998430484436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 3414
+        width: 955
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd1ca28adb40bd70800000000000000
+      internalID: 9056822252509339103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 3414
+        width: 955
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ffd454fdfe11810800000000000000
+      internalID: 1734431073733836581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3982
+        y: 3417
+        width: 955
+        height: 827
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7052dcc09fc3fdf10800000000000000
+      internalID: 2296621375341536519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 5911
+        y: 3417
+        width: 943
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e93a7a9a4ec8de0800000000000000
+      internalID: -1329436372668014990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 2335
+        width: 943
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d111aac99c7ccfe0800000000000000
+      internalID: -1167421203424407081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 2335
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39cc437a54020b00800000000000000
+      internalID: 793201270898608444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 2334
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97845daa94850f720800000000000000
+      internalID: 2877897235311708281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 5917
+        y: 2334
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044f2444d2be94b30800000000000000
+      internalID: 4272204301188920384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1257
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10236422d916da670800000000000000
+      internalID: 8551598594959225345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 1257
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4784e20d53e1f8ca0800000000000000
+      internalID: -6012553761041528716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 1255
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03a81b1923c46f280800000000000000
+      internalID: -9009930224431691216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 5917
+        y: 1255
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bc37812fb483a70800000000000000
+      internalID: 8806872574487415673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 174
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b78644f5a3ae390800000000000000
+      internalID: -7788348424739849396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Good_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 174
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d07b0ed9ecc9be950800000000000000
+      internalID: 6479444900128536333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Reaction_Good_spritesheet_0: -1516105484091740950
+      Reaction_Good_spritesheet_1: -2868490126994954178
+      Reaction_Good_spritesheet_10: 2877897235311708281
+      Reaction_Good_spritesheet_11: 4272204301188920384
+      Reaction_Good_spritesheet_12: 8551598594959225345
+      Reaction_Good_spritesheet_13: -6012553761041528716
+      Reaction_Good_spritesheet_14: -9009930224431691216
+      Reaction_Good_spritesheet_15: 8806872574487415673
+      Reaction_Good_spritesheet_16: -7788348424739849396
+      Reaction_Good_spritesheet_17: 6479444900128536333
+      Reaction_Good_spritesheet_2: -4274164364287576231
+      Reaction_Good_spritesheet_3: 4849161998430484436
+      Reaction_Good_spritesheet_4: 9056822252509339103
+      Reaction_Good_spritesheet_5: 1734431073733836581
+      Reaction_Good_spritesheet_6: 2296621375341536519
+      Reaction_Good_spritesheet_7: -1329436372668014990
+      Reaction_Good_spritesheet_8: -1167421203424407081
+      Reaction_Good_spritesheet_9: 793201270898608444
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

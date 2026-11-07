@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 36363ec7395a66b45a2099fdde7b14fd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5500417480520930295
+    second: Reaction_Mid_spritesheet_0
+  - first:
+      213: -5370575815126906762
+    second: Reaction_Mid_spritesheet_1
+  - first:
+      213: -4300265489310496983
+    second: Reaction_Mid_spritesheet_2
+  - first:
+      213: -1213202071138120726
+    second: Reaction_Mid_spritesheet_3
+  - first:
+      213: -9123506898043249487
+    second: Reaction_Mid_spritesheet_4
+  - first:
+      213: -2177277854195366755
+    second: Reaction_Mid_spritesheet_5
+  - first:
+      213: 4260858818260390628
+    second: Reaction_Mid_spritesheet_6
+  - first:
+      213: -1265362492402785853
+    second: Reaction_Mid_spritesheet_7
+  - first:
+      213: -4981199090934590174
+    second: Reaction_Mid_spritesheet_8
+  - first:
+      213: -4485185698290191925
+    second: Reaction_Mid_spritesheet_9
+  - first:
+      213: 7161954200086461537
+    second: Reaction_Mid_spritesheet_10
+  - first:
+      213: -533968519384602374
+    second: Reaction_Mid_spritesheet_11
+  - first:
+      213: 5164361673189712579
+    second: Reaction_Mid_spritesheet_12
+  - first:
+      213: -7111132129511953771
+    second: Reaction_Mid_spritesheet_13
+  - first:
+      213: -3828509737860077841
+    second: Reaction_Mid_spritesheet_14
+  - first:
+      213: -9019854740795440106
+    second: Reaction_Mid_spritesheet_15
+  - first:
+      213: 8492880526072192588
+    second: Reaction_Mid_spritesheet_16
+  - first:
+      213: -4840563705100223994
+    second: Reaction_Mid_spritesheet_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 4497
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c6335a1779aa3b0800000000000000
+      internalID: -5500417480520930295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 4497
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6788e0c20c1e775b0800000000000000
+      internalID: -5370575815126906762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 4495
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 927c6cd32536254c0800000000000000
+      internalID: -4300265489310496983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 5911
+        y: 4495
+        width: 943
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb4b05e427d92fe0800000000000000
+      internalID: -1213202071138120726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 3414
+        width: 955
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc5e4c80dac26180800000000000000
+      internalID: -9123506898043249487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 3414
+        width: 955
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d944c5bc351c8c1e0800000000000000
+      internalID: -2177277854195366755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3982
+        y: 3417
+        width: 955
+        height: 827
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2508c258c912b30800000000000000
+      internalID: 4260858818260390628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 5911
+        y: 3417
+        width: 943
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c1aa307487807ee0800000000000000
+      internalID: -1265362492402785853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 2335
+        width: 943
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225585d71d93fdab0800000000000000
+      internalID: -4981199090934590174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 2335
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc130c5fe5b61c1c0800000000000000
+      internalID: -4485185698290191925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 2334
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c35c9366f546360800000000000000
+      internalID: 7161954200086461537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 5917
+        y: 2334
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8e6d0f576f698f0800000000000000
+      internalID: -533968519384602374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1257
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c26d1e649f7ba740800000000000000
+      internalID: 5164361673189712579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 1257
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59aa29d210f205d90800000000000000
+      internalID: -7111132129511953771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 1255
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe6e9bf7da66edac0800000000000000
+      internalID: -3828509737860077841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 5917
+        y: 1255
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614c34907e903d280800000000000000
+      internalID: -9019854740795440106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 174
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e9d5c57d5ccd570800000000000000
+      internalID: 8492880526072192588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Mid_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 174
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a3ad4e4fcd2dcb0800000000000000
+      internalID: -4840563705100223994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Reaction_Mid_spritesheet_0: -5500417480520930295
+      Reaction_Mid_spritesheet_1: -5370575815126906762
+      Reaction_Mid_spritesheet_10: 7161954200086461537
+      Reaction_Mid_spritesheet_11: -533968519384602374
+      Reaction_Mid_spritesheet_12: 5164361673189712579
+      Reaction_Mid_spritesheet_13: -7111132129511953771
+      Reaction_Mid_spritesheet_14: -3828509737860077841
+      Reaction_Mid_spritesheet_15: -9019854740795440106
+      Reaction_Mid_spritesheet_16: 8492880526072192588
+      Reaction_Mid_spritesheet_17: -4840563705100223994
+      Reaction_Mid_spritesheet_2: -4300265489310496983
+      Reaction_Mid_spritesheet_3: -1213202071138120726
+      Reaction_Mid_spritesheet_4: -9123506898043249487
+      Reaction_Mid_spritesheet_5: -2177277854195366755
+      Reaction_Mid_spritesheet_6: 4260858818260390628
+      Reaction_Mid_spritesheet_7: -1265362492402785853
+      Reaction_Mid_spritesheet_8: -4981199090934590174
+      Reaction_Mid_spritesheet_9: -4485185698290191925
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

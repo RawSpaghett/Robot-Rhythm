@@ -4256,6 +4256,246 @@ PrefabInstance:
       propertyPath: 'duck.duckFrames.Array.data[20]'
       value: 
       objectReference: {fileID: 2811189526642103466, guid: 5f7f335a6e8933a419616dde145a3017, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: reactionAnimations.failedSheet.sheet
+      value: 
+      objectReference: {fileID: 2800000, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: reactionAnimations.perfectSheet.sheet
+      value: 
+      objectReference: {fileID: 2800000, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: reactionAnimations.earlyLateSheet.sheet
+      value: 
+      objectReference: {fileID: 2800000, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: reactionAnimations.failedSheet.frames.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: reactionAnimations.perfectSheet.frames.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: reactionAnimations.earlyLateSheet.frames.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[0]'
+      value: 
+      objectReference: {fileID: -2764443467156549918, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5514746671561037806, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5393126636895033820, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1811563146998368870, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1447536571642407943, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[5]'
+      value: 
+      objectReference: {fileID: -5398060991628014090, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[6]'
+      value: 
+      objectReference: {fileID: 7248622266484463084, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[7]'
+      value: 
+      objectReference: {fileID: -553327907042179059, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[8]'
+      value: 
+      objectReference: {fileID: -3663369286230703195, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[9]'
+      value: 
+      objectReference: {fileID: 7262216345969939136, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[10]'
+      value: 
+      objectReference: {fileID: -4153221852804519151, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[11]'
+      value: 
+      objectReference: {fileID: 5785656365171097935, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[12]'
+      value: 
+      objectReference: {fileID: -6372337144174900740, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[13]'
+      value: 
+      objectReference: {fileID: 2865171482946306057, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[14]'
+      value: 
+      objectReference: {fileID: -4812213012937141306, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[15]'
+      value: 
+      objectReference: {fileID: -2323887096280799188, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[16]'
+      value: 
+      objectReference: {fileID: -4063718207298917873, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.failedSheet.frames.Array.data[17]'
+      value: 
+      objectReference: {fileID: 965372041395234315, guid: f6ccadce6381ca747af225c832789998, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[0]'
+      value: 
+      objectReference: {fileID: -1516105484091740950, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[1]'
+      value: 
+      objectReference: {fileID: -2868490126994954178, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[2]'
+      value: 
+      objectReference: {fileID: -4274164364287576231, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[3]'
+      value: 
+      objectReference: {fileID: 4849161998430484436, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[4]'
+      value: 
+      objectReference: {fileID: -1329436372668014990, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[5]'
+      value: 
+      objectReference: {fileID: 9056822252509339103, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1734431073733836581, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2296621375341536519, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[8]'
+      value: 
+      objectReference: {fileID: 793201270898608444, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[9]'
+      value: 
+      objectReference: {fileID: 2877897235311708281, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[10]'
+      value: 
+      objectReference: {fileID: 4272204301188920384, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[11]'
+      value: 
+      objectReference: {fileID: -1167421203424407081, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[12]'
+      value: 
+      objectReference: {fileID: 8551598594959225345, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[13]'
+      value: 
+      objectReference: {fileID: -6012553761041528716, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[14]'
+      value: 
+      objectReference: {fileID: -9009930224431691216, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[15]'
+      value: 
+      objectReference: {fileID: 8806872574487415673, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[16]'
+      value: 
+      objectReference: {fileID: -7788348424739849396, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.perfectSheet.frames.Array.data[17]'
+      value: 
+      objectReference: {fileID: 6479444900128536333, guid: 4f4de4848d5c44440b914689d0845dcc, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[0]'
+      value: 
+      objectReference: {fileID: -5500417480520930295, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[1]'
+      value: 
+      objectReference: {fileID: -5370575815126906762, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[2]'
+      value: 
+      objectReference: {fileID: -4300265489310496983, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[3]'
+      value: 
+      objectReference: {fileID: -1213202071138120726, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[4]'
+      value: 
+      objectReference: {fileID: -1265362492402785853, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[5]'
+      value: 
+      objectReference: {fileID: -9123506898043249487, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[6]'
+      value: 
+      objectReference: {fileID: -2177277854195366755, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[7]'
+      value: 
+      objectReference: {fileID: 4260858818260390628, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[8]'
+      value: 
+      objectReference: {fileID: -4485185698290191925, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[9]'
+      value: 
+      objectReference: {fileID: 7161954200086461537, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[10]'
+      value: 
+      objectReference: {fileID: -533968519384602374, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[11]'
+      value: 
+      objectReference: {fileID: -4981199090934590174, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[12]'
+      value: 
+      objectReference: {fileID: 5164361673189712579, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[13]'
+      value: 
+      objectReference: {fileID: -7111132129511953771, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[14]'
+      value: 
+      objectReference: {fileID: -3828509737860077841, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[15]'
+      value: 
+      objectReference: {fileID: -9019854740795440106, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[16]'
+      value: 
+      objectReference: {fileID: 8492880526072192588, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: 'reactionAnimations.earlyLateSheet.frames.Array.data[17]'
+      value: 
+      objectReference: {fileID: -4840563705100223994, guid: 36363ec7395a66b45a2099fdde7b14fd, type: 3}
     - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0941
