@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpaceWaltz
   m_EditorClassIdentifier: Assembly-CSharp::BeatMap
   SongID: Space
-  SongLength: 175
+  SongLength: 190
   Bpm: 68
   FirstBeatOffset: 0
   BeatsPerMeasure: 4
