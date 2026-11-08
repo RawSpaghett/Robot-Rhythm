@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: b131695205653464f9db3ebeb31bcacb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8589238286791714745
+    second: mountainduckanim_0
+  - first:
+      213: -5682875789624613513
+    second: mountainduckanim_1
+  - first:
+      213: -7320784038464288974
+    second: mountainduckanim_2
+  - first:
+      213: -5749324986278517359
+    second: mountainduckanim_3
+  - first:
+      213: -1306643812042531899
+    second: mountainduckanim_4
+  - first:
+      213: 8761767202648303697
+    second: mountainduckanim_5
+  - first:
+      213: -808943889451715657
+    second: mountainduckanim_6
+  - first:
+      213: 7571388887393878620
+    second: mountainduckanim_7
+  - first:
+      213: -2426715102367398940
+    second: mountainduckanim_8
+  - first:
+      213: 191955000283545056
+    second: mountainduckanim_9
+  - first:
+      213: 1153551490704153955
+    second: mountainduckanim_10
+  - first:
+      213: -8035229469202590522
+    second: mountainduckanim_11
+  - first:
+      213: 1982560829039602446
+    second: mountainduckanim_12
+  - first:
+      213: -2426890666771779415
+    second: mountainduckanim_13
+  - first:
+      213: 5272559768946138515
+    second: mountainduckanim_14
+  - first:
+      213: 7540860662154957234
+    second: mountainduckanim_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mountainduckanim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1097
+        width: 490
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7a76fc6ba133770800000000000000
+      internalID: 8589238286791714745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_1
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1097
+        width: 491
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775e1c8149e5221b0800000000000000
+      internalID: -5682875789624613513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_2
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 1097
+        width: 491
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2378cf544b9576a90800000000000000
+      internalID: -7320784038464288974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_3
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 1097
+        width: 490
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195679ed26b4630b0800000000000000
+      internalID: -5749324986278517359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 753
+        width: 486
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb1e37306edddde0800000000000000
+      internalID: -1306643812042531899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_5
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 753
+        width: 486
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158258659dc089970800000000000000
+      internalID: 8761767202648303697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_6
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 753
+        width: 486
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3f10a81dd06c4f0800000000000000
+      internalID: -808943889451715657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_7
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 753
+        width: 486
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52c371041af21960800000000000000
+      internalID: 7571388887393878620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 383
+        width: 479
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3c050c873925ed0800000000000000
+      internalID: -2426715102367398940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_9
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 383
+        width: 479
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0edb2c44e06f9a200800000000000000
+      internalID: 191955000283545056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_10
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 383
+        width: 479
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d1b8118fc320010800000000000000
+      internalID: 1153551490704153955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_11
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 383
+        width: 479
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c4dd67ce512d7090800000000000000
+      internalID: -8035229469202590522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 21
+        width: 486
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b6288e198738b10800000000000000
+      internalID: 1982560829039602446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_13
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 21
+        width: 486
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a07b5afbc3f15ed0800000000000000
+      internalID: -2426890666771779415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_14
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 21
+        width: 486
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ddc05bc25eb2940800000000000000
+      internalID: 5272559768946138515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mountainduckanim_15
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 21
+        width: 486
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1967ca1d486a860800000000000000
+      internalID: 7540860662154957234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mountainduckanim_0: 8589238286791714745
+      mountainduckanim_1: -5682875789624613513
+      mountainduckanim_10: 1153551490704153955
+      mountainduckanim_11: -8035229469202590522
+      mountainduckanim_12: 1982560829039602446
+      mountainduckanim_13: -2426890666771779415
+      mountainduckanim_14: 5272559768946138515
+      mountainduckanim_15: 7540860662154957234
+      mountainduckanim_2: -7320784038464288974
+      mountainduckanim_3: -5749324986278517359
+      mountainduckanim_4: -1306643812042531899
+      mountainduckanim_5: 8761767202648303697
+      mountainduckanim_6: -808943889451715657
+      mountainduckanim_7: 7571388887393878620
+      mountainduckanim_8: -2426715102367398940
+      mountainduckanim_9: 191955000283545056
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
