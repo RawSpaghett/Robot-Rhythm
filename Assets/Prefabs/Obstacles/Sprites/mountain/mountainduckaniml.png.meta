@@ -130,7 +130,7 @@ TextureImporter:
         width: 490
         height: 366
       alignment: 9
-      pivot: {x: 0.5, y: -0.9}
+      pivot: {x: 0.5, y: -0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: mountainduckaniml_1
       rect:
         serializedVersion: 2
-        x: 492
-        y: 21
+        x: 493
+        y: 0
         width: 486
-        height: 244
+        height: 366
       alignment: 9
-      pivot: {x: 0.5, y: -0.9}
+      pivot: {x: 0.5, y: -0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,11 +170,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 983
-        y: 17
+        y: 0
         width: 479
-        height: 269
+        height: 366
       alignment: 9
-      pivot: {x: 0.5, y: -0.9}
+      pivot: {x: 0.5, y: -0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: mountainduckaniml_3
       rect:
         serializedVersion: 2
-        x: 1470
-        y: 21
+        x: 1469
+        y: 0
         width: 486
-        height: 244
+        height: 366
       alignment: 9
-      pivot: {x: 0.5, y: -0.9}
+      pivot: {x: 0.5, y: -0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

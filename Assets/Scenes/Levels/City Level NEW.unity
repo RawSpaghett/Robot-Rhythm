@@ -610,10 +610,25 @@ MonoBehaviour:
   levelSprites:
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
     Sprite: {fileID: -7921834568028751104, guid: e6acf3d6e1b3bdf43b7b6324965bcbc1, type: 3}
+    UseAnimation: 0
+    AnimationSheet:
+      sheet: {fileID: 0}
+      frames: []
+    FramesPerSecond: 12
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
     Sprite: {fileID: -5002932661609022001, guid: e8f406e9a4bd7b8438b6bf217d8f1dd5, type: 3}
+    UseAnimation: 0
+    AnimationSheet:
+      sheet: {fileID: 0}
+      frames: []
+    FramesPerSecond: 12
   - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
     Sprite: {fileID: 21300000, guid: 3047d8a513375d44d8226d6625dbeb9b, type: 3}
+    UseAnimation: 0
+    AnimationSheet:
+      sheet: {fileID: 0}
+      frames: []
+    FramesPerSecond: 12
   rhythmManager: {fileID: 1333327601}
 --- !u!4 &381480584
 Transform:
@@ -1724,6 +1739,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2811189526642103466, guid: 5f7f335a6e8933a419616dde145a3017, type: 3}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.jumpHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.maximumLongJumpHeight
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: reactionAnimations.failedSheet.sheet
       value: 
       objectReference: {fileID: 2800000, guid: f6ccadce6381ca747af225c832789998, type: 3}
@@ -2148,6 +2171,14 @@ PrefabInstance:
       propertyPath: 'duck.duckFrames.Array.data[20]'
       value: 
       objectReference: {fileID: 2811189526642103466, guid: 5f7f335a6e8933a419616dde145a3017, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.jumpHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.maximumLongJumpHeight
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: reactionAnimations.failedSheet.sheet
       value: 
@@ -2684,7 +2715,7 @@ MonoBehaviour:
   brakeID: brake
   ChargeOffset: 0.5
   reactionSpawner: {fileID: 0}
-  offset: 0
+  offset: -0.2
   actionManager: {fileID: 0}
 --- !u!1 &1403445589 stripped
 GameObject:
@@ -2709,7 +2740,7 @@ MonoBehaviour:
   brakeID: brake
   ChargeOffset: 0.5
   reactionSpawner: {fileID: 0}
-  offset: 0
+  offset: -0.2
   actionManager: {fileID: 0}
 --- !u!1 &1409268063
 GameObject:
@@ -4189,7 +4220,7 @@ MonoBehaviour:
   brakeID: brake
   ChargeOffset: 0.5
   reactionSpawner: {fileID: 0}
-  offset: 0
+  offset: -0.2
   actionManager: {fileID: 0}
 --- !u!4 &2097325180 stripped
 Transform:
@@ -4817,6 +4848,14 @@ PrefabInstance:
       propertyPath: 'duck.duckFrames.Array.data[20]'
       value: 
       objectReference: {fileID: 2811189526642103466, guid: 5f7f335a6e8933a419616dde145a3017, type: 3}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.jumpHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.maximumLongJumpHeight
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: reactionAnimations.failedSheet.sheet
       value: 
