@@ -25,6 +25,10 @@ public class ObstacleSpawner : MonoBehaviour
     {
         public ObstacleType Type;
         public Sprite Sprite;
+        [Tooltip("Enable a stage-specific loop. Off keeps this stage's static sprite, even if the prefab has an animation.")]
+        public bool UseAnimation;
+        public SpriteSheetSequence AnimationSheet = new SpriteSheetSequence();
+        [Min(0.01f)] public float FramesPerSecond = 12f;
     }
 
     [Header("Art")]
@@ -104,34 +108,44 @@ public class ObstacleSpawner : MonoBehaviour
         entry.Obstacle = instance.GetComponent<ObstacleBase>();
         // Cue pictures have no ObstacleBase, so they don't count as hazards.
         if (entry.Obstacle != null)
-            entry.Obstacle.Prepare((placement.Beat  * rhythmManager.beatMap.SecondsPerBeat) - QOLoffset);
+            entry.Obstacle.Prepare((placement.Beat * rhythmManager.beatMap.SecondsPerBeat) - QOLoffset);
 
         active.Add(entry);
     }
 
-    // Changes sprite at runtime 
+    // A matching level entry owns both static art and animation for this spawn.
+    // Unlisted obstacle types keep their prefab defaults.
     private void ChangeSprite(GameObject instance, ObstacleType type)
     {
         SpriteRenderer spriteRenderer = instance.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null || levelSprites == null) return;
 
-        if (spriteRenderer == null)
+        for (int i = 0; i < levelSprites.Length; i++)
         {
-            return;
-        }
+            ObstacleSprite art = levelSprites[i];
+            if (art == null || art.Type != type) continue;
 
-        for (int i = 0; i < levelSprites.Length; i ++)
-        {
-            if (levelSprites[i].Type == type && levelSprites[i].Sprite != null)
+            ObstacleSpriteAnimation animation = instance.GetComponent<ObstacleSpriteAnimation>();
+            // Restore any previous animation BEFORE assigning the stage's static art.
+            if (animation != null) animation.SetAnimationEnabled(false);
+
+            if (art.Sprite != null)
             {
-                spriteRenderer.sprite = levelSprites[i].Sprite;
-                // The resized level art already uses matching dimensions.
-                // Keep the older prefab scale from shrinking or squeezing it.
+                spriteRenderer.sprite = art.Sprite;
+                // Preserve the existing level-art scale handling.
                 if (instance.GetComponent<RoadblockObstacle>() != null || instance.GetComponent<DuckObstacle>() != null)
-                {
                     spriteRenderer.transform.localScale = Vector3.one;
-                }
-                return;
             }
+
+            if (animation == null && art.UseAnimation)
+                animation = instance.AddComponent<ObstacleSpriteAnimation>();
+            if (animation != null)
+            {
+                animation.ConfigureForStage(spriteRenderer, art.AnimationSheet,
+                    art.FramesPerSecond, art.UseAnimation);
+                if (art.UseAnimation) animation.enabled = true;
+            }
+            return; // Configure one entry per obstacle type in each stage.
         }
     }
 
@@ -152,7 +166,7 @@ public class ObstacleSpawner : MonoBehaviour
                 (active[i].Obstacle == null || active[i].Obstacle.IsResolved))
             {
                 Destroy(active[i].Transform.gameObject);
-                active.RemoveAt(i); 
+                active.RemoveAt(i);
             }
         }
     }

@@ -52,6 +52,19 @@ public class ObstacleSpriteAnimation : MonoBehaviour
         targetRenderer.sprite = activeFrames[frame];
     }
 
+    // Called by the spawner after it assigns this stage's static fallback sprite.
+    // Changes only the spawned instance, never the shared prefab or sheet asset.
+    public void ConfigureForStage(SpriteRenderer renderer, SpriteSheetSequence sheet,
+        float fps, bool useAnimation)
+    {
+        StopAnimation();
+        targetRenderer = renderer;
+        animationSheet = sheet;
+        framesPerSecond = Mathf.Max(0.01f, fps);
+        // An invalid stage sheet must not fall back to another stage's prefab loop.
+        playAnimation = useAnimation && sheet != null && sheet.IsValid;
+    }
+
     // Optional runtime API; the Inspector toggle is enough for prefab setup.
     public void SetAnimationEnabled(bool value)
     {
