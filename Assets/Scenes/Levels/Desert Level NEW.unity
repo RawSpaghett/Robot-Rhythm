@@ -6448,6 +6448,10 @@ PrefabInstance:
       propertyPath: obstacleSpawner
       value: 
       objectReference: {fileID: 381480583}
+    - target: {fileID: 1060797237750742584, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
+      propertyPath: actionManager
+      value: 
+      objectReference: {fileID: 2097325184}
     - target: {fileID: 1319650868729156626, guid: ca6931ff4b8704cb5b5fa748064b47b0, type: 3}
       propertyPath: m_Name
       value: InputManager
