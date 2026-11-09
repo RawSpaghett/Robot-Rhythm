@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: dbfee62b705b2be40a40d7befd15d251
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2260542019296385809
+    second: Lvl5Background_stars_0
+  - first:
+      213: -3941488852597834336
+    second: Lvl5Background_stars_1
+  - first:
+      213: -5272840033264794499
+    second: Lvl5Background_stars_2
+  - first:
+      213: 1030909672344485515
+    second: Lvl5Background_stars_3
+  - first:
+      213: 8925613894729851327
+    second: Lvl5Background_stars_4
+  - first:
+      213: 5032777407028843619
+    second: Lvl5Background_stars_5
+  - first:
+      213: 3964112252573896242
+    second: Lvl5Background_stars_6
+  - first:
+      213: -9217596289442311733
+    second: Lvl5Background_stars_7
+  - first:
+      213: 631575817731912148
+    second: Lvl5Background_stars_8
+  - first:
+      213: 6811611854862307535
+    second: Lvl5Background_stars_9
+  - first:
+      213: -3754642035033980072
+    second: Lvl5Background_stars_10
+  - first:
+      213: -5189082165383809000
+    second: Lvl5Background_stars_11
+  - first:
+      213: -7597925324897332246
+    second: Lvl5Background_stars_12
+  - first:
+      213: -2027097230651912366
+    second: Lvl5Background_stars_13
+  - first:
+      213: 6831999793174539004
+    second: Lvl5Background_stars_14
+  - first:
+      213: -8184926400792187129
+    second: Lvl5Background_stars_15
+  - first:
+      213: -3886187186443536802
+    second: Lvl5Background_stars_16
+  - first:
+      213: 490813521157750374
+    second: Lvl5Background_stars_17
+  - first:
+      213: -3653260454373826967
+    second: Lvl5Background_stars_18
+  - first:
+      213: 3539249457596228336
+    second: Lvl5Background_stars_19
+  - first:
+      213: -3834095793114862112
+    second: Lvl5Background_stars_20
+  - first:
+      213: -4173720998778503352
+    second: Lvl5Background_stars_21
+  - first:
+      213: -6144883331813268395
+    second: Lvl5Background_stars_22
+  - first:
+      213: 2449347835915272325
+    second: Lvl5Background_stars_23
+  - first:
+      213: 7830045958355990251
+    second: Lvl5Background_stars_24
+  - first:
+      213: 4735473736207405013
+    second: Lvl5Background_stars_25
+  - first:
+      213: 6499235565093896884
+    second: Lvl5Background_stars_26
+  - first:
+      213: 4517227045349959276
+    second: Lvl5Background_stars_27
+  - first:
+      213: 423376726062359332
+    second: Lvl5Background_stars_28
+  - first:
+      213: -6922709142830574757
+    second: Lvl5Background_stars_29
+  - first:
+      213: 7292130307046101951
+    second: Lvl5Background_stars_30
+  - first:
+      213: -4117778280702651426
+    second: Lvl5Background_stars_31
+  - first:
+      213: 6517263674625020770
+    second: Lvl5Background_stars_32
+  - first:
+      213: -7066602393280894334
+    second: Lvl5Background_stars_33
+  - first:
+      213: 4946992307108166087
+    second: Lvl5Background_stars_34
+  - first:
+      213: -1253336784755100891
+    second: Lvl5Background_stars_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lvl5Background_stars_0
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 998
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b510c5dfe0f5f10800000000000000
+      internalID: 2260542019296385809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 902
+        width: 110
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad7ebe75c40d49c0800000000000000
+      internalID: -3941488852597834336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_2
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 930
+        width: 62
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d740bcb2deb13d6b0800000000000000
+      internalID: -5272840033264794499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_3
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 905
+        width: 132
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e7b9f82e68e4e00800000000000000
+      internalID: 1030909672344485515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_4
+      rect:
+        serializedVersion: 2
+        x: 2817
+        y: 949
+        width: 49
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1e9ad1c862edb70800000000000000
+      internalID: 8925613894729851327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_5
+      rect:
+        serializedVersion: 2
+        x: 3845
+        y: 926
+        width: 74
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364d09b036408d540800000000000000
+      internalID: 5032777407028843619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_6
+      rect:
+        serializedVersion: 2
+        x: 3308
+        y: 910
+        width: 48
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ec078471b530730800000000000000
+      internalID: 3964112252573896242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_7
+      rect:
+        serializedVersion: 2
+        x: 3382
+        y: 735
+        width: 178
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc115dcf205841080800000000000000
+      internalID: -9217596289442311733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_8
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 762
+        width: 125
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d133a82cdec3c800800000000000000
+      internalID: 631575817731912148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_9
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 840
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc058ec74e4b78e50800000000000000
+      internalID: 6811611854862307535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_10
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 786
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853cc0b46f4d4ebc0800000000000000
+      internalID: -3754642035033980072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_11
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 658
+        width: 57
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818bbf5734dacf7b0800000000000000
+      internalID: -5189082165383809000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_12
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 572
+        width: 124
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3dc8b2c2fbe8690800000000000000
+      internalID: -7597925324897332246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_13
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 692
+        width: 78
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f80d90fcd4ed3e0800000000000000
+      internalID: -2027097230651912366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_14
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 633
+        width: 84
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfae5b94d9320de50800000000000000
+      internalID: 6831999793174539004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_15
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 531
+        width: 172
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fa018ddcc496e80800000000000000
+      internalID: -8184926400792187129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_16
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 618
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56bb55085d711ac0800000000000000
+      internalID: -3886187186443536802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_17
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 578
+        width: 111
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ef09b0c48bfc600800000000000000
+      internalID: 490813521157750374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_18
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 493
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ed019f8f20d4dc0800000000000000
+      internalID: -3653260454373826967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_19
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 465
+        width: 90
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2648341a0fd1130800000000000000
+      internalID: 3539249457596228336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_20
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 413
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eda198a03e8acac0800000000000000
+      internalID: -3834095793114862112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_21
+      rect:
+        serializedVersion: 2
+        x: 3254
+        y: 382
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ff73c6dd6f316c0800000000000000
+      internalID: -4173720998778503352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_22
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 284
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5542d0daa2df8baa0800000000000000
+      internalID: -6144883331813268395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_23
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 288
+        width: 99
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5800a1b21e4ddf120800000000000000
+      internalID: 2449347835915272325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_24
+      rect:
+        serializedVersion: 2
+        x: 2758
+        y: 237
+        width: 111
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6bac25059e9ac60800000000000000
+      internalID: 7830045958355990251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_25
+      rect:
+        serializedVersion: 2
+        x: 3330
+        y: 233
+        width: 109
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df85d10648c7b140800000000000000
+      internalID: 4735473736207405013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_26
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 105
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2c101ef4ce13a50800000000000000
+      internalID: 6499235565093896884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_27
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 40
+        width: 131
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c662fdf701a60be30800000000000000
+      internalID: 4517227045349959276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_28
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 178
+        width: 109
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4236d13a3e220e500800000000000000
+      internalID: 423376726062359332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_29
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 154
+        width: 80
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b531c3276b89def90800000000000000
+      internalID: -6922709142830574757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_30
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 135
+        width: 52
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3d75ff0e9d23560800000000000000
+      internalID: 7292130307046101951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_31
+      rect:
+        serializedVersion: 2
+        x: 3019
+        y: 81
+        width: 167
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed356ea7876bad6c0800000000000000
+      internalID: -4117778280702651426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_32
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 155
+        width: 67
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263d49938c8f17a50800000000000000
+      internalID: 6517263674625020770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_33
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 21
+        width: 99
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a219350926eed90800000000000000
+      internalID: -7066602393280894334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_34
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 23
+        width: 53
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c9b5c30b4f37a440800000000000000
+      internalID: 4946992307108166087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lvl5Background_stars_35
+      rect:
+        serializedVersion: 2
+        x: 2612
+        y: 24
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523fdb0b5d04b9ee0800000000000000
+      internalID: -1253336784755100891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lvl5Background_stars_0: 2260542019296385809
+      Lvl5Background_stars_1: -3941488852597834336
+      Lvl5Background_stars_10: -3754642035033980072
+      Lvl5Background_stars_11: -5189082165383809000
+      Lvl5Background_stars_12: -7597925324897332246
+      Lvl5Background_stars_13: -2027097230651912366
+      Lvl5Background_stars_14: 6831999793174539004
+      Lvl5Background_stars_15: -8184926400792187129
+      Lvl5Background_stars_16: -3886187186443536802
+      Lvl5Background_stars_17: 490813521157750374
+      Lvl5Background_stars_18: -3653260454373826967
+      Lvl5Background_stars_19: 3539249457596228336
+      Lvl5Background_stars_2: -5272840033264794499
+      Lvl5Background_stars_20: -3834095793114862112
+      Lvl5Background_stars_21: -4173720998778503352
+      Lvl5Background_stars_22: -6144883331813268395
+      Lvl5Background_stars_23: 2449347835915272325
+      Lvl5Background_stars_24: 7830045958355990251
+      Lvl5Background_stars_25: 4735473736207405013
+      Lvl5Background_stars_26: 6499235565093896884
+      Lvl5Background_stars_27: 4517227045349959276
+      Lvl5Background_stars_28: 423376726062359332
+      Lvl5Background_stars_29: -6922709142830574757
+      Lvl5Background_stars_3: 1030909672344485515
+      Lvl5Background_stars_30: 7292130307046101951
+      Lvl5Background_stars_31: -4117778280702651426
+      Lvl5Background_stars_32: 6517263674625020770
+      Lvl5Background_stars_33: -7066602393280894334
+      Lvl5Background_stars_34: 4946992307108166087
+      Lvl5Background_stars_35: -1253336784755100891
+      Lvl5Background_stars_4: 8925613894729851327
+      Lvl5Background_stars_5: 5032777407028843619
+      Lvl5Background_stars_6: 3964112252573896242
+      Lvl5Background_stars_7: -9217596289442311733
+      Lvl5Background_stars_8: 631575817731912148
+      Lvl5Background_stars_9: 6811611854862307535
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

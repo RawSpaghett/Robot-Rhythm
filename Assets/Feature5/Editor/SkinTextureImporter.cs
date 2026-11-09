@@ -7,7 +7,7 @@ namespace RobotRhythm.Feature5
 {
     public class SkinTextureImporter : AssetPostprocessor
     {
-        [Serializable] private class Entry { public string source, folder; }
+        [Serializable] private class Entry { public string source, folder; public int maxTextureSize; }
         [Serializable] private class Manifest { public Entry[] entries; }
         private static Manifest manifest;
 
@@ -22,6 +22,7 @@ namespace RobotRhythm.Feature5
                 if (entry.folder != Path.GetDirectoryName(assetPath).Replace('\\', '/')) continue;
                 // A sheet contains several frames, so it needs more resolution than a single frame.
                 if (entry.source.Contains("Sheet") || entry.source.Contains("FULL")) size = 2048;
+                if (entry.maxTextureSize > 0) size = entry.maxTextureSize;
                 break;
             }
             var texture = (TextureImporter)assetImporter;

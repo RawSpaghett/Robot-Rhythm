@@ -4,7 +4,7 @@ Open Skins from the main menu. Swipe right for Accelerate and left for Brake, or
 
 - Classic is available from the start.
 - City unlocks Charcoal; Desert unlocks Sandstone; Ice unlocks Glacier Blue; Mountain Range unlocks Burnt Orange.
-- Space is prepared but has no level assigned yet.
+- Space unlocks Spectrum, the multicolor skin.
 - Prismatic Gold unlocks after perfect completion of every configured scored level. Tutorial does not count. Gold stays unlocked once earned.
 
 Locked robots are black silhouettes with a red lock and an objective underneath. Locked Gold shows `???` above and `????????` below.
@@ -14,7 +14,7 @@ Locked robots are black silhouettes with a red lock and an objective underneath.
 1. Open MainMenu and select GameOverlay > LevelSelectPanel > Layout > SafeAreaFrame > LevelCard.
 2. Add a Levels entry and assign the title, scene, cover image, and preview song.
 3. Enable Save records for scored levels. Leave it off for Tutorial.
-4. Choose Skin reward. Available skins can be selected; skins assigned elsewhere are checked and disabled. Space is currently available. None removes a link.
+4. Choose Skin reward. Available skins can be selected; skins assigned elsewhere are checked and disabled. Spectrum is assigned to Space. None removes a link.
 5. Save MainMenu and click Enable listed scenes in Build Settings. Keep MainMenu first.
 
 The card does not create a gameplay scene or a new skin. Set up the scene's beatmap, music, obstacles, and gameplay references separately.
@@ -29,4 +29,4 @@ Keep SkinLibrary.previewAllUnlocked off for normal builds. The all-unlocked opti
 
 ## Integration
 
-This update includes the latest Staging obstacle sizes and main's robot jump-height fix. The team's separated input/controller flow, input prefab, and pointer bindings are preserved. InputManager has one additional guard for a missing pointer device, so startup or device removal does not throw errors. Skins change the player's material in LateUpdate; the action system still owns animation playback.
+This update includes the latest Staging obstacle sizes and main's robot jump-height fix. The team's separated input/controller flow, input prefab, and pointer bindings are preserved. The current InputManager and PlayerController match the team’s Dev_Jadon versions, including the held-direction charge preview. Skins change the player's material in LateUpdate; the action system still owns animation playback.

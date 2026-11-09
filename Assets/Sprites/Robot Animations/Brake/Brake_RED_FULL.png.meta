@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 04c3fc060145b8a45b0d2515fa392055
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2150350962679103014
+    second: Brake_RED_FULL_0
+  - first:
+      213: 1425865985937613639
+    second: Brake_RED_FULL_1
+  - first:
+      213: -7023807440754344077
+    second: Brake_RED_FULL_2
+  - first:
+      213: 1439228167485835885
+    second: Brake_RED_FULL_3
+  - first:
+      213: -2123798068961522774
+    second: Brake_RED_FULL_4
+  - first:
+      213: -9040179149129956842
+    second: Brake_RED_FULL_5
+  - first:
+      213: -5959015107036164388
+    second: Brake_RED_FULL_6
+  - first:
+      213: -2533069095554039099
+    second: Brake_RED_FULL_7
+  - first:
+      213: 5646419918280694082
+    second: Brake_RED_FULL_8
+  - first:
+      213: 7636224887347298818
+    second: Brake_RED_FULL_9
+  - first:
+      213: -5038867352234296920
+    second: Brake_RED_FULL_10
+  - first:
+      213: 6118077516446531683
+    second: Brake_RED_FULL_11
+  - first:
+      213: 6096923133717521015
+    second: Brake_RED_FULL_12
+  - first:
+      213: 5256080720588992143
+    second: Brake_RED_FULL_13
+  - first:
+      213: -6804666867543191199
+    second: Brake_RED_FULL_14
+  - first:
+      213: 224321676312675879
+    second: Brake_RED_FULL_15
+  - first:
+      213: 4799441587819541349
+    second: Brake_RED_FULL_16
+  - first:
+      213: -8941798346952764759
+    second: Brake_RED_FULL_17
+  - first:
+      213: 1972089754268024569
+    second: Brake_RED_FULL_18
+  - first:
+      213: 3118540947003588896
+    second: Brake_RED_FULL_19
+  - first:
+      213: 4628357637551640016
+    second: Brake_RED_FULL_20
+  - first:
+      213: 4238658995336866296
+    second: Brake_RED_FULL_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brake_RED_FULL_0
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 5187
+        width: 923
+        height: 891
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e38e8bec497dd10800000000000000
+      internalID: 2150350962679103014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_1
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 5184
+        width: 1108
+        height: 741
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743af154f81b9c310800000000000000
+      internalID: 1425865985937613639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_2
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 5184
+        width: 1108
+        height: 741
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f771ba85c668e90800000000000000
+      internalID: -7023807440754344077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_3
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 5201
+        width: 1042
+        height: 828
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6acab9946a29f310800000000000000
+      internalID: 1439228167485835885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_4
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 4179
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab43ec98e0c682e0800000000000000
+      internalID: -2123798068961522774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_5
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 4179
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6124736f5f4da8280800000000000000
+      internalID: -9040179149129956842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_6
+      rect:
+        serializedVersion: 2
+        x: 3237
+        y: 4179
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde4ce515535d4da0800000000000000
+      internalID: -5959015107036164388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_7
+      rect:
+        serializedVersion: 2
+        x: 4734
+        y: 4179
+        width: 1050
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c24bff041bb8dcd0800000000000000
+      internalID: -2533069095554039099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 3130
+        width: 1069
+        height: 855
+      alignment: 9
+      pivot: {x: 0.39245394, y: 0.5000003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2499fc9effc1c5e40800000000000000
+      internalID: 5646419918280694082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_9
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 3130
+        width: 1069
+        height: 855
+      alignment: 9
+      pivot: {x: 0.3852845, y: 0.5000003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 202455b931259f960800000000000000
+      internalID: 7636224887347298818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_10
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 3130
+        width: 1069
+        height: 855
+      alignment: 9
+      pivot: {x: 0.39245388, y: 0.5000003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9f2c717d8521ab0800000000000000
+      internalID: -5038867352234296920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_11
+      rect:
+        serializedVersion: 2
+        x: 4787
+        y: 3130
+        width: 1069
+        height: 855
+      alignment: 9
+      pivot: {x: 0.37811515, y: 0.5000003}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36089141617c7e450800000000000000
+      internalID: 6118077516446531683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2080
+        width: 923
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7722818894f9c9450800000000000000
+      internalID: 6096923133717521015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_13
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 2080
+        width: 923
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e6c75419951f840800000000000000
+      internalID: 5256080720588992143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_14
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 2080
+        width: 923
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 161d7316987f091a0800000000000000
+      internalID: -6804666867543191199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_15
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 2088
+        width: 934
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.70515186, y: 0.38772798}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72689084063fc1300800000000000000
+      internalID: 224321676312675879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1051
+        width: 933
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.6971564, y: 0.3727585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563783212ba0b9240800000000000000
+      internalID: 4799441587819541349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_17
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1114
+        width: 937
+        height: 927
+      alignment: 9
+      pivot: {x: 0.6226967, y: 0.37598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a294b477c958e380800000000000000
+      internalID: -8941798346952764759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_18
+      rect:
+        serializedVersion: 2
+        x: 3266
+        y: 1114
+        width: 937
+        height: 927
+      alignment: 9
+      pivot: {x: 0.5981576, y: 0.35944426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe3554de254e5b10800000000000000
+      internalID: 1972089754268024569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_19
+      rect:
+        serializedVersion: 2
+        x: 4886
+        y: 1067
+        width: 923
+        height: 854
+      alignment: 9
+      pivot: {x: 0.59964585, y: 0.38332793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021c8a3f778474b20800000000000000
+      internalID: 3118540947003588896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_20
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 30
+        width: 923
+        height: 854
+      alignment: 9
+      pivot: {x: 0.5913432, y: 0.41025245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd4bbfcfba3b3040800000000000000
+      internalID: 4628357637551640016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brake_RED_FULL_21
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 28
+        width: 922
+        height: 869
+      alignment: 9
+      pivot: {x: 0.6579439, y: 0.47354048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9611d16edb2da30800000000000000
+      internalID: 4238658995336866296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c8f62ff6e86d98744a6da9255d2e84b4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Brake_RED_FULL_0: 2150350962679103014
+      Brake_RED_FULL_1: 1425865985937613639
+      Brake_RED_FULL_10: -5038867352234296920
+      Brake_RED_FULL_11: 6118077516446531683
+      Brake_RED_FULL_12: 6096923133717521015
+      Brake_RED_FULL_13: 5256080720588992143
+      Brake_RED_FULL_14: -6804666867543191199
+      Brake_RED_FULL_15: 224321676312675879
+      Brake_RED_FULL_16: 4799441587819541349
+      Brake_RED_FULL_17: -8941798346952764759
+      Brake_RED_FULL_18: 1972089754268024569
+      Brake_RED_FULL_19: 3118540947003588896
+      Brake_RED_FULL_2: -7023807440754344077
+      Brake_RED_FULL_20: 4628357637551640016
+      Brake_RED_FULL_21: 4238658995336866296
+      Brake_RED_FULL_3: 1439228167485835885
+      Brake_RED_FULL_4: -2123798068961522774
+      Brake_RED_FULL_5: -9040179149129956842
+      Brake_RED_FULL_6: -5959015107036164388
+      Brake_RED_FULL_7: -2533069095554039099
+      Brake_RED_FULL_8: 5646419918280694082
+      Brake_RED_FULL_9: 7636224887347298818
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

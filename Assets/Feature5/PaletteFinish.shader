@@ -123,6 +123,9 @@ Shader "RobotRhythm/Feature5/PaletteFinish"
                     if (regions.a > .98) source.rgb=hubs;
                     if (accent > .98) source.rgb=accentColor;
                     if (faceMask.r > .98) source.rgb=face;
+                    if (faceMask.g > .98) source.rgb=eye;
+                    if (faceMask.b > .98) source.rgb=eye*.83;
+                    if (faceMask.a > .98) source.rgb=eye*.52;
                 }
                 #ifndef UNITY_COLORSPACE_GAMMA
                 source.rgb=GammaToLinearSpace(source.rgb);

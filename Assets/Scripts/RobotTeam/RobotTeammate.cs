@@ -11,6 +11,11 @@ public class RobotTeammate : MonoBehaviour
     [SerializeField] private string brakeID;
 
     [SerializeField] private double ChargeOffset = 0.5;
+
+    [Header("Player Result Reactions")]
+    [Tooltip("Only react to obstacles spawned by this level's spawner. Auto-found if unassigned.")]
+    [SerializeField] private ObstacleSpawner reactionSpawner;
+    private bool isPreparingLongJump;
     
     private struct ObstacleData
     {
@@ -26,18 +31,30 @@ public class RobotTeammate : MonoBehaviour
     private void OnEnable()
     {
         ObstacleBase.OnPerfectTiming += PrepareQueue;
+        ObstacleBase.OnObstacleResolved += ReactToPlayerResult;
         actionQueue.Clear();
+        isPreparingLongJump = false;
         actionManager = GetComponent<ActionManager>();
     }
 
     private void OnDisable()
     {
         ObstacleBase.OnPerfectTiming -= PrepareQueue;
+        ObstacleBase.OnObstacleResolved -= ReactToPlayerResult;
+        // Do not leave a charging coroutine or reaction alive on a disabled teammate.
+        StopAllCoroutines();
+        isPreparingLongJump = false;
+        if (actionManager != null)
+        {
+            actionManager.SetLongJumpCharging(false);
+            actionManager.CancelReaction();
+        }
     }
 
     private void Start() //for alignment, GEMINI ASSISTED
     {  
-        ObstacleSpawner spawner = FindFirstObjectByType<ObstacleSpawner>();
+        if (reactionSpawner == null) reactionSpawner = FindFirstObjectByType<ObstacleSpawner>();
+        ObstacleSpawner spawner = reactionSpawner;
 
         float distance = transform.position.x - spawner.hitLineX;
         float speed = spawner.distancePerBeat / (float)RhythmManager.Instance.beatMap.SecondsPerBeat;
@@ -58,6 +75,32 @@ public class RobotTeammate : MonoBehaviour
     }
     
     
+
+    private void ReactToPlayerResult(ObstacleBase obstacle, ObstacleResult result, float accuracy)
+    {
+        if (actionManager == null || reactionSpawner == null || obstacle == null ||
+            !obstacle.transform.IsChildOf(reactionSpawner.transform) || isPreparingLongJump)
+            return;
+        if (result == ObstacleResult.None) return;
+
+        // If an action/charge is already due this frame, do not flash a reaction
+        // before Update processes it. Future actions can interrupt an active reaction.
+        RhythmManager rhythm = RhythmManager.Instance;
+        if (rhythm == null || !rhythm.isPlaying) return;
+        if (actionQueue.Count > 0)
+        {
+            ObstacleData next = actionQueue.Peek();
+            double dueTime = next.type == ObstacleInputType.LongJump
+                ? System.Math.Min(next.dspTime, next.dspTime - ChargeOffset) : next.dspTime;
+            if (rhythm.SongTime >= dueTime) return;
+        }
+
+        RobotTimingVisual visual = result == ObstacleResult.Success
+            ? (obstacle.WasPerfect ? RobotTimingVisual.Perfect : RobotTimingVisual.EarlyLate)
+            : RobotTimingVisual.Failed;
+        // Busy robots skip this reaction; old reactions are never queued for later.
+        actionManager.ShowReaction(visual);
+    }
 
     private void PrepareQueue(ObstacleInputType Type, double DspTime)
     {
@@ -98,9 +141,12 @@ public class RobotTeammate : MonoBehaviour
 
     private IEnumerator LongJumpWait(double time)
     {
+            isPreparingLongJump = true;
+            actionManager.CancelReaction();
             actionManager.SetLongJumpCharging(true);
             yield return new WaitForSeconds(Convert.ToSingle(time));
             actionManager.TryLongJump(10f);
+            isPreparingLongJump = false;
             FXManager.Instance.PlaySFX(jumpID);
     }
     

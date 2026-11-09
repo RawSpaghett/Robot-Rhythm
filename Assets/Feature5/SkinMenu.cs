@@ -146,6 +146,12 @@ namespace RobotRhythm.Feature5
 
         void Refresh()
         {
+            // Update the sprite and its palette together before the next canvas render.
+            if (previewMaterial != null && library.previewFrames.Length > 0)
+            {
+                preview.sprite = library.previewFrames[(int)frame % library.previewFrames.Length];
+                library.Apply(previewMaterial, preview.sprite.texture, index, audioControls.ReducedMotion);
+            }
             bool available = Available(index);
             bool selected = index == library.Selected;
             UpdateLabels(index, available);

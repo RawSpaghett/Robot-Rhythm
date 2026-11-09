@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 0d904731bbc139746878f6922b8ec4ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3533368681410600253
+    second: charge_jump_air_red_0
+  - first:
+      213: 134163669159297803
+    second: charge_jump_air_red_1
+  - first:
+      213: -5956240962536828344
+    second: charge_jump_air_red_2
+  - first:
+      213: -9132664432937587379
+    second: charge_jump_air_red_3
+  - first:
+      213: 8126931271980180565
+    second: charge_jump_air_red_4
+  - first:
+      213: -2983876825491957809
+    second: charge_jump_air_red_5
+  - first:
+      213: 8114167869926666446
+    second: charge_jump_air_red_6
+  - first:
+      213: 1842478328279353673
+    second: charge_jump_air_red_7
+  - first:
+      213: -8599772042186070075
+    second: charge_jump_air_red_8
+  - first:
+      213: -4632795620674631774
+    second: charge_jump_air_red_9
+  - first:
+      213: 2458287345439786719
+    second: charge_jump_air_red_10
+  - first:
+      213: -7294731198648775116
+    second: charge_jump_air_red_11
+  - first:
+      213: 5445337549563337319
+    second: charge_jump_air_red_12
+  - first:
+      213: 5555378982900932012
+    second: charge_jump_air_red_13
+  - first:
+      213: -3055557381270719310
+    second: charge_jump_air_red_14
+  - first:
+      213: -1788567648906747648
+    second: charge_jump_air_red_15
+  - first:
+      213: -8883468819306964695
+    second: charge_jump_air_red_16
+  - first:
+      213: -1029257508731020668
+    second: charge_jump_air_red_17
+  - first:
+      213: 241204696586320873
+    second: charge_jump_air_red_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: charge_jump_air_red_0
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 4255
+        width: 793
+        height: 1065
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c2e704a7e3f6fec0800000000000000
+      internalID: -3533368681410600253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_1
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 4255
+        width: 793
+        height: 1065
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03c0027525acd100800000000000000
+      internalID: 134163669159297803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_2
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 4273
+        width: 622
+        height: 1047
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8429c5fe66e275da0800000000000000
+      internalID: -5956240962536828344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_3
+      rect:
+        serializedVersion: 2
+        x: 3722
+        y: 4282
+        width: 492
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d29edc512424180800000000000000
+      internalID: -9132664432937587379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 3236
+        width: 631
+        height: 979
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554646cfee8a8c070800000000000000
+      internalID: 8126931271980180565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_5
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 3278
+        width: 844
+        height: 903
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7180326d32796d0800000000000000
+      internalID: -2983876825491957809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_6
+      rect:
+        serializedVersion: 2
+        x: 2433
+        y: 3278
+        width: 844
+        height: 903
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0fddedfa05b9070800000000000000
+      internalID: 8114167869926666446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_7
+      rect:
+        serializedVersion: 2
+        x: 3546
+        y: 3310
+        width: 893
+        height: 884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9494277174cc19910800000000000000
+      internalID: 1842478328279353673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_8
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2246
+        width: 893
+        height: 884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7e92424e877a880800000000000000
+      internalID: -8599772042186070075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_9
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 2246
+        width: 893
+        height: 884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a704b8bde005bfb0800000000000000
+      internalID: -4632795620674631774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_10
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 2246
+        width: 893
+        height: 884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd6c6cce0579d1220800000000000000
+      internalID: 2458287345439786719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_11
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 2242
+        width: 923
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e849cbf98e3ca90800000000000000
+      internalID: -7294731198648775116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_12
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 1178
+        width: 923
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a91d396a9b19b40800000000000000
+      internalID: 5445337549563337319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_13
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 1178
+        width: 923
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad1b7450cba81d40800000000000000
+      internalID: 5555378982900932012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_14
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 1178
+        width: 923
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b4398230ca7895d0800000000000000
+      internalID: -3055557381270719310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_15
+      rect:
+        serializedVersion: 2
+        x: 3581
+        y: 1119
+        width: 858
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0016826133bbd27e0800000000000000
+      internalID: -1788567648906747648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_16
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 55
+        width: 858
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92913fbec2497b480800000000000000
+      internalID: -8883468819306964695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_17
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 55
+        width: 858
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a1fa1cfb757b1f0800000000000000
+      internalID: -1029257508731020668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charge_jump_air_red_18
+      rect:
+        serializedVersion: 2
+        x: 2439
+        y: 55
+        width: 858
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ebfe22c46ee85300800000000000000
+      internalID: 241204696586320873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      charge_jump_air_red_0: -3533368681410600253
+      charge_jump_air_red_1: 134163669159297803
+      charge_jump_air_red_10: 2458287345439786719
+      charge_jump_air_red_11: -7294731198648775116
+      charge_jump_air_red_12: 5445337549563337319
+      charge_jump_air_red_13: 5555378982900932012
+      charge_jump_air_red_14: -3055557381270719310
+      charge_jump_air_red_15: -1788567648906747648
+      charge_jump_air_red_16: -8883468819306964695
+      charge_jump_air_red_17: -1029257508731020668
+      charge_jump_air_red_18: 241204696586320873
+      charge_jump_air_red_2: -5956240962536828344
+      charge_jump_air_red_3: -9132664432937587379
+      charge_jump_air_red_4: 8126931271980180565
+      charge_jump_air_red_5: -2983876825491957809
+      charge_jump_air_red_6: 8114167869926666446
+      charge_jump_air_red_7: 1842478328279353673
+      charge_jump_air_red_8: -8599772042186070075
+      charge_jump_air_red_9: -4632795620674631774
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

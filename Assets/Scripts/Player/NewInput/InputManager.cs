@@ -15,7 +15,11 @@ public class InputManager : MonoBehaviour
     private bool drag;
     public event Action OnPressed;
     public event Action<Direction> OnSwipe;
-    
+
+    // Preview signal only. Confirmed actions still use OnPressed/OnSwipe on release.
+    public event Action<Direction> OnHeldDirectionChanged;
+    public Direction HeldDirection { get; private set; } = Direction.None;
+
     void Awake()
     {
         inputSystem = GetComponent<PlayerInput>();
@@ -28,35 +32,73 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         var userInput = Pointer.current;
-        if (userInput == null)
+        if (userInput == null || Time.timeScale <= 0f || AudioListener.pause || !Application.isFocused)
         {
-            // A pointer may be unavailable at startup or after device removal.
-            userHeld = false;
-            previousUserDown = false;
+            CancelGesture();
             return;
         }
+
         bool down = userInput.press.isPressed;
         bool pressed = down && !previousUserDown;
         bool released = !down && previousUserDown;
         previousUserDown = down;
-        
+
         if (pressed)
         {
             userStart = userInput.position.ReadValue();
             userHeld = !IsOverUI(userStart);
         }
-        
+
+        // Use the same displacement, threshold and direction rules as release.
+        if (down && userHeld)
+        {
+            Vector2 displacement = userInput.position.ReadValue() - userStart;
+            SetHeldDirection(displacement.magnitude >= SwipeThreshold
+                ? GetDirection(displacement) : Direction.None);
+        }
+        else SetHeldDirection(Direction.None); // Stop preview BEFORE the release action.
+
         if (released && userHeld)
         {
             userHeld = false;
             Vector2 displacement = userInput.position.ReadValue() - userStart;
-            if (displacement.magnitude < 24f * Mathf.Max(.75f, Screen.height / 720f))
+            if (displacement.magnitude < SwipeThreshold)
             {
                 OnPressed?.Invoke();
             }
             else PerformSwipe(GetDirection(displacement));
         }
     }
+    private float SwipeThreshold => 24f * Mathf.Max(.75f, Screen.height / 720f);
+
+    private void SetHeldDirection(Direction direction)
+    {
+        if (HeldDirection == direction) return;
+        HeldDirection = direction;
+        OnHeldDirectionChanged?.Invoke(direction);
+    }
+
+    private void CancelGesture()
+    {
+        userHeld = false;
+        // A cancelled hold must not become an action on release or resume mid-hold.
+        previousUserDown = Pointer.current != null && Pointer.current.press.isPressed;
+        SetHeldDirection(Direction.None);
+    }
+
+    private void OnEnable() => CancelGesture();
+    private void OnDisable() => CancelGesture();
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (!hasFocus) CancelGesture();
+    }
+
+    private void OnApplicationPause(bool paused)
+    {
+        if (paused) CancelGesture();
+    }
+
     private bool IsOverUI(Vector2 position)
     {
         if (EventSystem.current == null) return false;
@@ -66,11 +108,11 @@ public class InputManager : MonoBehaviour
         EventSystem.current.RaycastAll(pointer, hits);
         return hits.Count > 0;
     }
-    
+
     private void Drag(InputAction.CallbackContext context)
     {
         Vector2 dragInput = context.ReadValue<Vector2>();
-        if (dragInput.magnitude >= 24f * Mathf.Max(.75f, Screen.height / 720f))
+        if (dragInput.magnitude >= SwipeThreshold)
         {
             drag = true;
             Direction direction = GetDirection(dragInput);
@@ -82,7 +124,7 @@ public class InputManager : MonoBehaviour
     {
         OnSwipe?.Invoke(direction);
     }
-    
+
 
     public enum Direction { Up, Down, Left, Right, None }
     private Direction GetDirection(Vector2 vector) //helper function for drag
