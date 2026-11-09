@@ -19,6 +19,7 @@ namespace RobotRhythm.Feature5
         private Coroutine transition;
         private int index;
         private float frame;
+        private bool previewWasVisible;
         private bool[] previewLocked;
         private Button lockPreviewButton;
         private Text lockPreviewLabel;
@@ -28,6 +29,7 @@ namespace RobotRhythm.Feature5
             if (GameManager.Instance.UI.IsTransitioning) return;
             index = library.Selected;
             frame = 0;
+            previewWasVisible = false;
             if (previewMaterial == null) previewMaterial = new Material(library.material);
             preview.material = previewMaterial;
             previewMaterial.SetFloat("_SheenScale", 1f / Mathf.Max(1, preview.rectTransform.rect.height));
@@ -126,8 +128,8 @@ namespace RobotRhythm.Feature5
                 incoming.rectTransform.anchoredPosition = new Vector2(-direction * 620 * (1 - arrive), 0);
                 var sprite = frames[Mathf.Min((int)(t * frames.Length), frames.Length - 1)];
                 preview.sprite = incoming.sprite = sprite;
-                library.Apply(previewMaterial, sprite.texture, index, false);
-                library.Apply(incomingMaterial, sprite.texture, target, false);
+                library.Apply(previewMaterial, sprite.texture, Available(index) ? index : 0, false);
+                library.Apply(incomingMaterial, sprite.texture, available ? target : 0, false);
                 yield return null;
             }
             index = target;
@@ -141,7 +143,7 @@ namespace RobotRhythm.Feature5
         void ClearIncoming()
         {
             if (incoming != null) Destroy(incoming.gameObject);
-            if (incomingMaterial != null) Destroy(incomingMaterial);
+            if (incomingMaterial != null) { SkinTextureCache.Release(incomingMaterial); Destroy(incomingMaterial); incomingMaterial = null; }
         }
 
         void Refresh()
@@ -150,7 +152,7 @@ namespace RobotRhythm.Feature5
             if (previewMaterial != null && library.previewFrames.Length > 0)
             {
                 preview.sprite = library.previewFrames[(int)frame % library.previewFrames.Length];
-                library.Apply(previewMaterial, preview.sprite.texture, index, audioControls.ReducedMotion);
+                library.Apply(previewMaterial, preview.sprite.texture, Available(index) ? index : 0, audioControls.ReducedMotion);
             }
             bool available = Available(index);
             bool selected = index == library.Selected;
@@ -173,16 +175,30 @@ namespace RobotRhythm.Feature5
 
         void Update()
         {
+            if (panel.activeSelf) previewWasVisible = true;
+            if (previewWasVisible && !panel.activeSelf && previewMaterial != null)
+            {
+                SkinTextureCache.Release(previewMaterial);
+                Destroy(previewMaterial);
+                previewMaterial = null;
+                preview.material = null;
+            }
             if (!panel.activeSelf || previewMaterial == null || transition != null || library.previewFrames.Length == 0) return;
             if (!audioControls.ReducedMotion) frame += Time.unscaledDeltaTime * 12;
             preview.sprite = library.previewFrames[(int)frame % library.previewFrames.Length];
-            library.Apply(previewMaterial, preview.sprite.texture, index, audioControls.ReducedMotion);
+            library.Apply(previewMaterial, preview.sprite.texture, Available(index) ? index : 0, audioControls.ReducedMotion);
+        }
+
+        void OnDisable()
+        {
+            if (previewMaterial != null) SkinTextureCache.Release(previewMaterial);
+            ClearIncoming();
         }
 
         void OnDestroy()
         {
-            if (previewMaterial != null) Destroy(previewMaterial);
-            if (incomingMaterial != null) Destroy(incomingMaterial);
+            if (previewMaterial != null) { SkinTextureCache.Release(previewMaterial); Destroy(previewMaterial); }
+            if (incomingMaterial != null) { SkinTextureCache.Release(incomingMaterial); Destroy(incomingMaterial); incomingMaterial = null; }
         }
     }
 }

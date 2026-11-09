@@ -60,12 +60,17 @@ namespace RobotRhythm.Feature5
 
         public void Apply(Material target, Texture source, int index, bool reducedMotion)
         {
+            index = Mathf.Clamp(index, 0, palettes.Length - 1);
             var entry = masks.Find(source);
-            var palette = palettes[Mathf.Clamp(index, 0, palettes.Length - 1)];
-            target.SetTexture("_CleanTex", entry != null ? (palette.spaceColors && entry.space != null ? entry.space : entry.cleanSource) : source);
-            target.SetTexture("_Regions", entry != null ? entry.regions : Texture2D.blackTexture);
-            target.SetTexture("_Accents", entry != null ? entry.accents : Texture2D.blackTexture);
-            target.SetTexture("_FaceMask", entry != null ? entry.face : Texture2D.blackTexture);
+            var palette = palettes[index];
+            SkinTextureCache.Begin(target, index);
+            bool recolor = entry != null && !palette.original && !palette.spaceColors;
+            target.SetTexture("_CleanTex", entry != null
+                ? SkinTextureCache.Load(target, entry.resourceFolder, palette.spaceColors ? "Space" : "Source") : source);
+            target.SetTexture("_Regions", recolor ? SkinTextureCache.Load(target, entry.resourceFolder, "Regions") : Texture2D.blackTexture);
+            target.SetTexture("_Accents", recolor ? SkinTextureCache.Load(target, entry.resourceFolder, "Accents") : Texture2D.blackTexture);
+            target.SetTexture("_FaceMask", recolor ? SkinTextureCache.Load(target, entry.resourceFolder, "Face") : Texture2D.blackTexture);
+            SkinTextureCache.Trim();
             target.SetColor("_BodyColor", palette.body);
             target.SetColor("_AccentColor", palette.accent);
             target.SetColor("_FaceColor", palette.face);

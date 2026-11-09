@@ -25,6 +25,7 @@ public class GameSceneLoader
                 SceneManager.SetActiveScene(menuScene);
             yield return SceneManager.UnloadSceneAsync(GameplayScene);
             GameplayScene = default;
+            yield return Resources.UnloadUnusedAssets();
         }
 
         if (loadGame)
