@@ -609,21 +609,21 @@ MonoBehaviour:
   groundY: -3.2
   levelSprites:
   - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
-    Sprite: {fileID: 8762258163820272434, guid: c344f4103f5b5ac418609afa417e20f0, type: 3}
+    Sprite: {fileID: 1236316868517940909, guid: 52bb6963279c09c4aa85701d173a4c55, type: 3}
     UseAnimation: 0
     AnimationSheet:
       sheet: {fileID: 0}
       frames: []
     FramesPerSecond: 12
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
-    Sprite: {fileID: 1560509050074795670, guid: 44079632e9c2b0841bc24bc99b876089, type: 3}
+    Sprite: {fileID: 8793311794736428053, guid: fc9216515b6d5f046afe3727c606d4fa, type: 3}
     UseAnimation: 0
     AnimationSheet:
       sheet: {fileID: 0}
       frames: []
     FramesPerSecond: 12
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Sprite: {fileID: 1679984850579211407, guid: cb7e018d0a6e5394b8148889a323fe05, type: 3}
+    Sprite: {fileID: 2268931368352911697, guid: 3badba2d90747064a87faee648d1a48d, type: 3}
     UseAnimation: 0
     AnimationSheet:
       sheet: {fileID: 0}
