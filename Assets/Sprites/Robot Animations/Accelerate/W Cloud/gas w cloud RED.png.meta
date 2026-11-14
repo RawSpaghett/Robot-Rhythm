@@ -1,0 +1,570 @@
+fileFormatVersion: 2
+guid: 796a107c200cc774ba1c0de4589d4954
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7616844573006479939
+    second: gas w cloud RED_0
+  - first:
+      213: -471732725666051434
+    second: gas w cloud RED_1
+  - first:
+      213: -8726910074201509423
+    second: gas w cloud RED_2
+  - first:
+      213: -4114814614630001231
+    second: gas w cloud RED_3
+  - first:
+      213: -1244183372491964061
+    second: gas w cloud RED_4
+  - first:
+      213: -1932920026463899905
+    second: gas w cloud RED_5
+  - first:
+      213: -4461272380788307099
+    second: gas w cloud RED_6
+  - first:
+      213: 2980883146944818585
+    second: gas w cloud RED_7
+  - first:
+      213: -8358273837059780342
+    second: gas w cloud RED_8
+  - first:
+      213: 5065769980138050964
+    second: gas w cloud RED_9
+  - first:
+      213: 4128674541202955851
+    second: gas w cloud RED_10
+  - first:
+      213: 3864169410999161067
+    second: gas w cloud RED_11
+  - first:
+      213: 8814125347445725151
+    second: gas w cloud RED_12
+  - first:
+      213: -3383576404292257578
+    second: gas w cloud RED_13
+  - first:
+      213: -3006555423956326091
+    second: gas w cloud RED_14
+  - first:
+      213: 7731946765274426924
+    second: gas w cloud RED_15
+  - first:
+      213: 8210742961536886640
+    second: gas w cloud RED_16
+  - first:
+      213: -1655656037482510363
+    second: gas w cloud RED_17
+  - first:
+      213: 7738252564637248901
+    second: gas w cloud RED_18
+  - first:
+      213: -1546928634952447444
+    second: gas w cloud RED_19
+  - first:
+      213: -7379189049667944840
+    second: gas w cloud RED_20
+  - first:
+      213: 6698960721226775050
+    second: gas w cloud RED_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gas w cloud RED_0
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 3294
+        width: 923
+        height: 951
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd369477388b4690800000000000000
+      internalID: -7616844573006479939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_1
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 3288
+        width: 1076
+        height: 953
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a8fb9d5911479f0800000000000000
+      internalID: -471732725666051434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_2
+      rect:
+        serializedVersion: 2
+        x: 4439
+        y: 3235
+        width: 1274
+        height: 1036
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1f0705689c3e680800000000000000
+      internalID: -8726910074201509423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_3
+      rect:
+        serializedVersion: 2
+        x: 6586
+        y: 3235
+        width: 1274
+        height: 1036
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b59462c8ed35e6c0800000000000000
+      internalID: -4114814614630001231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2139
+        width: 1419
+        height: 1062
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3614b2f80d5cbbee0800000000000000
+      internalID: -1244183372491964061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_5
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 2182
+        width: 1507
+        height: 1029
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe616b1a73ec25e0800000000000000
+      internalID: -1932920026463899905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_9
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 2243
+        width: 1870
+        height: 843
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49557f315fa3d4640800000000000000
+      internalID: 5065769980138050964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_10
+      rect:
+        serializedVersion: 2
+        x: 7596
+        y: 2246
+        width: 930
+        height: 818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ed99dde9ffb4930800000000000000
+      internalID: 4128674541202955851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_14
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1176
+        width: 930
+        height: 818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5392f8575c19646d0800000000000000
+      internalID: -3006555423956326091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_15
+      rect:
+        serializedVersion: 2
+        x: 3302
+        y: 1176
+        width: 930
+        height: 818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ea96e0e946d4b60800000000000000
+      internalID: 7731946765274426924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_16
+      rect:
+        serializedVersion: 2
+        x: 5033
+        y: 1157
+        width: 930
+        height: 898
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077e17c983b62f170800000000000000
+      internalID: 8210742961536886640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_17
+      rect:
+        serializedVersion: 2
+        x: 7180
+        y: 1157
+        width: 930
+        height: 898
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7cf9f1b9de509e0800000000000000
+      internalID: -1655656037482510363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_18
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 97
+        width: 926
+        height: 881
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d657165bbc36b60800000000000000
+      internalID: 7738252564637248901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_19
+      rect:
+        serializedVersion: 2
+        x: 2754
+        y: 97
+        width: 926
+        height: 881
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a87cc3a94388ae0800000000000000
+      internalID: -1546928634952447444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_20
+      rect:
+        serializedVersion: 2
+        x: 4721
+        y: 108
+        width: 920
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87ef61ce7aad79990800000000000000
+      internalID: -7379189049667944840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gas w cloud RED_21
+      rect:
+        serializedVersion: 2
+        x: 6868
+        y: 108
+        width: 920
+        height: 913
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a3409884d77fc50800000000000000
+      internalID: 6698960721226775050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c61f877504c57c04fae6382b4913818e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gas w cloud RED_0: -7616844573006479939
+      gas w cloud RED_1: -471732725666051434
+      gas w cloud RED_10: 4128674541202955851
+      gas w cloud RED_11: 3864169410999161067
+      gas w cloud RED_12: 8814125347445725151
+      gas w cloud RED_13: -3383576404292257578
+      gas w cloud RED_14: -3006555423956326091
+      gas w cloud RED_15: 7731946765274426924
+      gas w cloud RED_16: 8210742961536886640
+      gas w cloud RED_17: -1655656037482510363
+      gas w cloud RED_18: 7738252564637248901
+      gas w cloud RED_19: -1546928634952447444
+      gas w cloud RED_2: -8726910074201509423
+      gas w cloud RED_20: -7379189049667944840
+      gas w cloud RED_21: 6698960721226775050
+      gas w cloud RED_3: -4114814614630001231
+      gas w cloud RED_4: -1244183372491964061
+      gas w cloud RED_5: -1932920026463899905
+      gas w cloud RED_6: -4461272380788307099
+      gas w cloud RED_7: 2980883146944818585
+      gas w cloud RED_8: -8358273837059780342
+      gas w cloud RED_9: 5065769980138050964
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

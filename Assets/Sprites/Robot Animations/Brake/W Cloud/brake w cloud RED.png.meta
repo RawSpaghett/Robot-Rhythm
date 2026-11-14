@@ -1,0 +1,746 @@
+fileFormatVersion: 2
+guid: e92532a6db610b346b804da16ef110b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1169673711101612065
+    second: brake w cloud RED_0
+  - first:
+      213: 6565883129152889669
+    second: brake w cloud RED_1
+  - first:
+      213: -9003184662666997077
+    second: brake w cloud RED_2
+  - first:
+      213: 7904996739727555006
+    second: brake w cloud RED_3
+  - first:
+      213: -8941113939355017342
+    second: brake w cloud RED_4
+  - first:
+      213: 6978104169300257011
+    second: brake w cloud RED_5
+  - first:
+      213: -2202260286124675465
+    second: brake w cloud RED_6
+  - first:
+      213: -2380550248857154429
+    second: brake w cloud RED_7
+  - first:
+      213: -1583647435382780670
+    second: brake w cloud RED_8
+  - first:
+      213: 4248518671498037168
+    second: brake w cloud RED_9
+  - first:
+      213: -6700209646482907299
+    second: brake w cloud RED_10
+  - first:
+      213: -2030170229149970944
+    second: brake w cloud RED_11
+  - first:
+      213: -5318378363077235148
+    second: brake w cloud RED_12
+  - first:
+      213: 638147581866162767
+    second: brake w cloud RED_13
+  - first:
+      213: -6559438976213712960
+    second: brake w cloud RED_14
+  - first:
+      213: -2646952932412299409
+    second: brake w cloud RED_15
+  - first:
+      213: -2049233301815880372
+    second: brake w cloud RED_16
+  - first:
+      213: 7959248556029971605
+    second: brake w cloud RED_17
+  - first:
+      213: 3338494654130415946
+    second: brake w cloud RED_18
+  - first:
+      213: 285266258917599662
+    second: brake w cloud RED_19
+  - first:
+      213: -2232549831344379505
+    second: brake w cloud RED_20
+  - first:
+      213: -967116725517771193
+    second: brake w cloud RED_21
+  - first:
+      213: 4733085802968095414
+    second: brake w cloud RED_22
+  - first:
+      213: -5390904313987748884
+    second: brake w cloud RED_23
+  - first:
+      213: 4246782911622533594
+    second: brake w cloud RED_24
+  - first:
+      213: -2279640904216842558
+    second: brake w cloud RED_25
+  - first:
+      213: -6167826117617939187
+    second: brake w cloud RED_26
+  - first:
+      213: -5760396539341255017
+    second: brake w cloud RED_27
+  - first:
+      213: 6420384190428829255
+    second: brake w cloud RED_28
+  - first:
+      213: -2893789264030890995
+    second: brake w cloud RED_29
+  - first:
+      213: -5888875483437427233
+    second: brake w cloud RED_30
+  - first:
+      213: -1806655266341915921
+    second: brake w cloud RED_31
+  - first:
+      213: 5734845530304028898
+    second: brake w cloud RED_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brake w cloud RED_0
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 5727
+        width: 923
+        height: 891
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdfecaaf4fb74cfe0800000000000000
+      internalID: -1169673711101612065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_1
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 5723
+        width: 1298
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54363ed1be3be1b50800000000000000
+      internalID: 6565883129152889669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_2
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 5723
+        width: 1298
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba21d7e00434e0380800000000000000
+      internalID: -9003184662666997077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_3
+      rect:
+        serializedVersion: 2
+        x: 5543
+        y: 5693
+        width: 1259
+        height: 876
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb9f41ef6a034bd60800000000000000
+      internalID: 7904996739727555006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 4549
+        width: 1410
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f53748e38cae380800000000000000
+      internalID: -8941113939355017342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_5
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 4549
+        width: 1410
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f860d835c437d060800000000000000
+      internalID: 6978104169300257011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_6
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 4507
+        width: 1461
+        height: 942
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ea69610ffff61e0800000000000000
+      internalID: -2202260286124675465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_7
+      rect:
+        serializedVersion: 2
+        x: 5203
+        y: 4507
+        width: 1461
+        height: 942
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cc6ee492696fed0800000000000000
+      internalID: -2380550248857154429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3402
+        width: 1581
+        height: 943
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d0d8c4c01c50ae0800000000000000
+      internalID: -1583647435382780670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_9
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 3402
+        width: 1581
+        height: 943
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7414cd835c5fa30800000000000000
+      internalID: 4248518671498037168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_12
+      rect:
+        serializedVersion: 2
+        x: 3431
+        y: 3428
+        width: 1588
+        height: 917
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e68a78e035136b0800000000000000
+      internalID: -5318378363077235148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_15
+      rect:
+        serializedVersion: 2
+        x: 5148
+        y: 3428
+        width: 1588
+        height: 942
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67e2660552244bd0800000000000000
+      internalID: -2646952932412299409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_17
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2301
+        width: 1327
+        height: 963
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c053d446ee47e60800000000000000
+      internalID: 7959248556029971605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_21
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 2350
+        width: 1280
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e9c2f467c1492f0800000000000000
+      internalID: -967116725517771193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_25
+      rect:
+        serializedVersion: 2
+        x: 3501
+        y: 2350
+        width: 1280
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce64b8fca61d50e0800000000000000
+      internalID: -2279640904216842558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_26
+      rect:
+        serializedVersion: 2
+        x: 5370
+        y: 2358
+        width: 934
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d810713da776aa0800000000000000
+      internalID: -6167826117617939187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_27
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1231
+        width: 934
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ecc2b0ed5fe00b0800000000000000
+      internalID: -5760396539341255017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_28
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 1294
+        width: 937
+        height: 927
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7465b009769c91950800000000000000
+      internalID: 6420384190428829255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_29
+      rect:
+        serializedVersion: 2
+        x: 3926
+        y: 1294
+        width: 937
+        height: 927
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04899e0ff137d7d0800000000000000
+      internalID: -2893789264030890995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_30
+      rect:
+        serializedVersion: 2
+        x: 5766
+        y: 1247
+        width: 923
+        height: 854
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5943bc2f2864ea0800000000000000
+      internalID: -5888875483437427233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_31
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 120
+        width: 923
+        height: 854
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe2f91a7b987de6e0800000000000000
+      internalID: -1806655266341915921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud RED_32
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 118
+        width: 922
+        height: 869
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0228310a3469f40800000000000000
+      internalID: 5734845530304028898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 54de3996a8fe6524f91dc0d626c02722
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      brake w cloud RED_0: -1169673711101612065
+      brake w cloud RED_1: 6565883129152889669
+      brake w cloud RED_10: -6700209646482907299
+      brake w cloud RED_11: -2030170229149970944
+      brake w cloud RED_12: -5318378363077235148
+      brake w cloud RED_13: 638147581866162767
+      brake w cloud RED_14: -6559438976213712960
+      brake w cloud RED_15: -2646952932412299409
+      brake w cloud RED_16: -2049233301815880372
+      brake w cloud RED_17: 7959248556029971605
+      brake w cloud RED_18: 3338494654130415946
+      brake w cloud RED_19: 285266258917599662
+      brake w cloud RED_2: -9003184662666997077
+      brake w cloud RED_20: -2232549831344379505
+      brake w cloud RED_21: -967116725517771193
+      brake w cloud RED_22: 4733085802968095414
+      brake w cloud RED_23: -5390904313987748884
+      brake w cloud RED_24: 4246782911622533594
+      brake w cloud RED_25: -2279640904216842558
+      brake w cloud RED_26: -6167826117617939187
+      brake w cloud RED_27: -5760396539341255017
+      brake w cloud RED_28: 6420384190428829255
+      brake w cloud RED_29: -2893789264030890995
+      brake w cloud RED_3: 7904996739727555006
+      brake w cloud RED_30: -5888875483437427233
+      brake w cloud RED_31: -1806655266341915921
+      brake w cloud RED_32: 5734845530304028898
+      brake w cloud RED_4: -8941113939355017342
+      brake w cloud RED_5: 6978104169300257011
+      brake w cloud RED_6: -2202260286124675465
+      brake w cloud RED_7: -2380550248857154429
+      brake w cloud RED_8: -1583647435382780670
+      brake w cloud RED_9: 4248518671498037168
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
