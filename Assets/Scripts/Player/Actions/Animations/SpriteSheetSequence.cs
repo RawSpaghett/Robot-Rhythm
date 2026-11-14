@@ -7,6 +7,8 @@ using UnityEngine;
 public class SpriteSheetSequence
 {
     [SerializeField] private Texture2D sheet;
+    // False preserves the original layout order for existing animation slots.
+    [SerializeField] private bool sortByNumericName;
     [SerializeField, HideInInspector] private Sprite[] frames = new Sprite[0];
 
     public Sprite[] Frames => frames;
