@@ -9,6 +9,34 @@ public class RobotJump : ActionBase
     [SerializeField, Min(0f)] private float jumpHeight = 2f;
     [SerializeField, Min(0.01f)] private float jumpDuration = 0.5f;
 
+    [Header("Optional Squat and Landing")]
+    [Tooltip("Grounded anticipation after confirmed input. Skipped if its selected sheet is missing.")]
+    [SerializeField, Min(0f)] private float squatDuration = 0.06f;
+    [Tooltip("Grounded recovery after the airborne phase. Skipped if its selected sheet is missing.")]
+    [SerializeField, Min(0f)] private float landingDuration = 0.08f;
+
+    [Header("Normal Jump Squat")]
+    [SerializeField] private SpriteSheetSequence jumpSquatSheet = new SpriteSheetSequence();
+    [SerializeField] private RobotAnimationVariations jumpSquatVariations = new RobotAnimationVariations();
+    [Header("Normal Jump Landing")]
+    [SerializeField] private SpriteSheetSequence jumpLandingSheet = new SpriteSheetSequence();
+    [SerializeField] private RobotAnimationVariations jumpLandingVariations = new RobotAnimationVariations();
+    [Header("Long Jump Squat")]
+    [SerializeField] private SpriteSheetSequence longJumpSquatSheet = new SpriteSheetSequence();
+    [SerializeField] private RobotAnimationVariations longJumpSquatVariations = new RobotAnimationVariations();
+    [Header("Long Jump Landing")]
+    [SerializeField] private SpriteSheetSequence longJumpLandingSheet = new SpriteSheetSequence();
+    [SerializeField] private RobotAnimationVariations longJumpLandingVariations = new RobotAnimationVariations();
+
+    public enum JumpPhase { Idle, Squat, Airborne, Landing }
+    public JumpPhase CurrentPhase { get; private set; }
+    [NonSerialized] private float activeSquatDuration;
+    [NonSerialized] private float activeLandingDuration;
+    [NonSerialized] private Sprite[] squatSequence;
+    [NonSerialized] private Sprite[] airborneSequence;
+    [NonSerialized] private Sprite[] landingSequence;
+    [NonSerialized] private bool hasWrittenSprite;
+
     [Header("Normal Jump Animation")]
     [SerializeField] private SpriteSheetSequence jumpSheet = new SpriteSheetSequence();
     [SerializeField, HideInInspector] private Sprite[] jumpFrames = new Sprite[0];
@@ -103,7 +131,7 @@ public class RobotJump : ActionBase
 
     // ActionManager uses this to open the input buffer near the action's end.
     public override float RemainingTime =>
-        IsRunning ? Mathf.Max(0f, activeJumpDuration - jumpTimer) : 0f;
+        IsRunning ? Mathf.Max(0f, activeSquatDuration + activeJumpDuration + activeLandingDuration - jumpTimer) : 0f;
 
     public override bool TryBegin(RobotActionType type, float charge)
     {
@@ -143,9 +171,22 @@ public class RobotJump : ActionBase
         jumpTimer = 0f;
         IsRunning = true;
 
-        // Each jump type has its own sequence. Charge determines long-jump
-        // duration, so its frames automatically stretch across that duration.
-        BeginSpriteAnimation(GetAnimationFrames(type, visual));
+        // Existing jump duration still means AIRTIME. Optional grounded phases
+        // extend the action, and RemainingTime includes them for input buffering.
+        bool longJump = type == RobotActionType.LongJump;
+        squatSequence = GetPhaseFrames(
+            longJump ? longJumpSquatSheet : jumpSquatSheet,
+            longJump ? longJumpSquatVariations : jumpSquatVariations, visual);
+        landingSequence = GetPhaseFrames(
+            longJump ? longJumpLandingSheet : jumpLandingSheet,
+            longJump ? longJumpLandingVariations : jumpLandingVariations, visual);
+        airborneSequence = GetAnimationFrames(type, visual);
+        if (airborneSequence != null) airborneSequence = (Sprite[])airborneSequence.Clone();
+        activeSquatDuration = squatSequence != null ? Mathf.Max(0f, squatDuration) : 0f;
+        activeLandingDuration = landingSequence != null ? Mathf.Max(0f, landingDuration) : 0f;
+        hasWrittenSprite = false;
+        CurrentPhase = JumpPhase.Idle;
+        SetPhase(activeSquatDuration > 0f ? JumpPhase.Squat : JumpPhase.Airborne);
         //if (FXManager.Instance != null) FXManager.Instance.PlaySFX("jump");
         return true;
     }
@@ -156,20 +197,57 @@ public class RobotJump : ActionBase
         if (Visual == null) { Cancel(); return; }
 
         jumpTimer += Mathf.Max(0f, deltaTime);
-        float progress = Mathf.Clamp01(jumpTimer / activeJumpDuration);
-        float verticalOffset =
-            4f * activeJumpHeight * progress * (1f - progress);
-
-        Visual.localPosition =
-            restingLocalPosition + Vector3.up * verticalOffset;
-
-        if (progress >= 1f)
+        float airborneEnd = activeSquatDuration + activeJumpDuration;
+        float totalDuration = airborneEnd + activeLandingDuration;
+        if (jumpTimer >= totalDuration)
         {
             Cancel();
             return;
         }
 
-        UpdateSpriteAnimation(progress);
+        float progress;
+        if (jumpTimer < activeSquatDuration)
+        {
+            SetPhase(JumpPhase.Squat);
+            Visual.localPosition = restingLocalPosition;
+            progress = jumpTimer / activeSquatDuration;
+        }
+        else if (jumpTimer < airborneEnd)
+        {
+            SetPhase(JumpPhase.Airborne);
+            progress = Mathf.Clamp01((jumpTimer - activeSquatDuration) / activeJumpDuration);
+            float verticalOffset = 4f * activeJumpHeight * progress * (1f - progress);
+            Visual.localPosition = restingLocalPosition + Vector3.up * verticalOffset;
+        }
+        else
+        {
+            SetPhase(JumpPhase.Landing);
+            Visual.localPosition = restingLocalPosition;
+            progress = (jumpTimer - airborneEnd) / activeLandingDuration;
+        }
+        // Total elapsed time carries across boundaries even on a slow frame.
+        UpdateSpriteAnimation(Mathf.Clamp01(progress));
+    }
+
+    private Sprite[] GetPhaseFrames(SpriteSheetSequence sheet,
+        RobotAnimationVariations variations, RobotTimingVisual visual)
+    {
+        Sprite[] frames = sheet != null && sheet.IsValid ? sheet.Frames : null;
+        if (variations != null) frames = variations.Select(visual, frames);
+        // No invisible anticipation/recovery delay when its artwork is absent.
+        return Renderer != null && RobotAnimationVariations.IsValid(frames)
+            ? (Sprite[])frames.Clone() : null;
+    }
+
+    private void SetPhase(JumpPhase phase)
+    {
+        if (CurrentPhase == phase) return;
+        CurrentPhase = phase;
+        BeginSpriteAnimation(phase == JumpPhase.Squat ? squatSequence
+            : phase == JumpPhase.Landing ? landingSequence : airborneSequence);
+        // Missing airborne art should not leave the squat pose frozen in midair.
+        if (!playingSpriteAnimation && hasWrittenSprite && Renderer != null)
+            Renderer.sprite = spriteBeforeJump;
     }
 
     public override void Cancel()
@@ -178,13 +256,20 @@ public class RobotJump : ActionBase
             Visual.localPosition = restingLocalPosition;
 
         // Restore only if this attempt actually changed the sprite.
-        if (playingSpriteAnimation && Renderer != null)
+        if (hasWrittenSprite && Renderer != null)
             Renderer.sprite = spriteBeforeJump;
 
         activeFrames = null;
         spriteBeforeJump = null;
         currentFrame = 0;
         playingSpriteAnimation = false;
+        hasWrittenSprite = false;
+        squatSequence = null;
+        airborneSequence = null;
+        landingSequence = null;
+        activeSquatDuration = 0f;
+        activeLandingDuration = 0f;
+        CurrentPhase = JumpPhase.Idle;
         jumpTimer = 0f;
         IsRunning = false;
     }
@@ -220,7 +305,9 @@ public class RobotJump : ActionBase
 
         // Freeze this attempt's sequence against Inspector edits during play.
         activeFrames = (Sprite[])frames.Clone();
-        spriteBeforeJump = Renderer.sprite;
+        // Save the pre-action sprite once, not again at every phase transition.
+        if (!hasWrittenSprite) spriteBeforeJump = Renderer.sprite;
+        hasWrittenSprite = true;
         playingSpriteAnimation = true;
         Renderer.sprite = activeFrames[0];
     }

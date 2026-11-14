@@ -1,0 +1,775 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06466a5d1c43f1c48ab4aef2cffa27a6, type: 3}
+  m_Name: Catalog
+  m_EditorClassIdentifier: Assembly-CSharp::RobotRhythm.Feature5.CleanAnimationCatalog
+  entries:
+  - sourceName: Accelerate_DEFAULT-Sheet
+    resourceFolder: SkinAnimations/759f5eb28c407f340866dd20b35933fb
+  - sourceName: Accelerate_GREEN-Sheet
+    resourceFolder: SkinAnimations/bd99095ee0fc6b348806f74fe69ac450
+  - sourceName: Accelerate_RED-Sheet
+    resourceFolder: SkinAnimations/e2dd72c8962b9aa44a199baaec552645
+  - sourceName: Accelerate_YELLOW-Sheet
+    resourceFolder: SkinAnimations/ff3d4e9d6c3cae3428d113f3102da11e
+  - sourceName: Brake_DEFAULT-Sheet
+    resourceFolder: SkinAnimations/7d30a5b3108eb7a48b147851e9928dfb
+  - sourceName: Brake_GREEN-Sheet
+    resourceFolder: SkinAnimations/f10880807ffc36447aa0c8934d8ba5ea
+  - sourceName: Brake_RED-Sheet
+    resourceFolder: SkinAnimations/1c8ff28287075fc449aceb7ed7b37761
+  - sourceName: Brake_YELLOW-Sheet
+    resourceFolder: SkinAnimations/1bf5d90df8538b2429d5edcd7340cf0b
+  - sourceName: BrakeDefaultFULL
+    resourceFolder: SkinAnimations/205a3fceff379d24583c9ed85a58a6ca
+  - sourceName: charge_jump_Color1
+    resourceFolder: SkinAnimations/3f9a1a0ad24374d498491c03e78cd025
+  - sourceName: charge_jump_Color10
+    resourceFolder: SkinAnimations/08117096ba784e941a39cbec2caa2c3b
+  - sourceName: charge_jump_Color11
+    resourceFolder: SkinAnimations/ad39a1d0a5ece6e4a950c9d13c3e4ade
+  - sourceName: charge_jump_Color12
+    resourceFolder: SkinAnimations/e835ed6c1098d8943a245e10eff62d78
+  - sourceName: charge_jump_Color13
+    resourceFolder: SkinAnimations/7a3d7b07aa55eba48906164018e1528b
+  - sourceName: charge_jump_Color14
+    resourceFolder: SkinAnimations/7fec8553ffea2a2438993680cac5ea65
+  - sourceName: charge_jump_Color15
+    resourceFolder: SkinAnimations/9e735090479192a419f7abbf9071bbf1
+  - sourceName: charge_jump_Color16
+    resourceFolder: SkinAnimations/5aefeceea020cf34583aeedacfdd1e93
+  - sourceName: charge_jump_Color17
+    resourceFolder: SkinAnimations/77412a6b5085aba458d1ebd36d79a41c
+  - sourceName: charge_jump_Color18
+    resourceFolder: SkinAnimations/a1709176c59a75546a5112287d69a721
+  - sourceName: charge_jump_Color19
+    resourceFolder: SkinAnimations/728b000bf69c4d7488f8bd68767ee175
+  - sourceName: charge_jump_Color2
+    resourceFolder: SkinAnimations/b95aa112959c8bc4e99b1e6ae0b1ca6c
+  - sourceName: charge_jump_Color20
+    resourceFolder: SkinAnimations/c7e53fffcca515841a714b94807a97fa
+  - sourceName: charge_jump_Color21
+    resourceFolder: SkinAnimations/0d9eab0cbeaab5c4f8c2d36f086ba1f0
+  - sourceName: charge_jump_Color22
+    resourceFolder: SkinAnimations/8f2874e8d84ead54d8f1a72b506caa47
+  - sourceName: charge_jump_Color23
+    resourceFolder: SkinAnimations/0a1e475dc790bbb40b1a500fa410e34e
+  - sourceName: charge_jump_Color24
+    resourceFolder: SkinAnimations/808b2e16b3f9fed41ad590ff27b63167
+  - sourceName: charge_jump_Color25
+    resourceFolder: SkinAnimations/ecf09fefe83736f42a1969b04c07763a
+  - sourceName: charge_jump_Color26
+    resourceFolder: SkinAnimations/76924b77ccacee941b05c69904e701c0
+  - sourceName: charge_jump_Color27
+    resourceFolder: SkinAnimations/e1c40203985b7f342b4a6ebf15d98999
+  - sourceName: charge_jump_Color28
+    resourceFolder: SkinAnimations/30ff49dde1cbef64fb6482a37dfb87a1
+  - sourceName: charge_jump_Color29
+    resourceFolder: SkinAnimations/4cff39aec24cd28478c94119d2011239
+  - sourceName: charge_jump_Color3
+    resourceFolder: SkinAnimations/cec668ef096899543972d603681ff04d
+  - sourceName: charge_jump_Color30
+    resourceFolder: SkinAnimations/0d2f083d8f0f2984fb69e324551323d4
+  - sourceName: charge_jump_Color31
+    resourceFolder: SkinAnimations/2d6de9ff274e3454ba24d0597e0fa82f
+  - sourceName: charge_jump_Color32
+    resourceFolder: SkinAnimations/1c6267dfb1fedc84db4f5fa1a804a027
+  - sourceName: charge_jump_Color33
+    resourceFolder: SkinAnimations/73696e77233111d4c82724cc0b5540a6
+  - sourceName: charge_jump_Color34
+    resourceFolder: SkinAnimations/5f84fda2b65f9594eaecf8797dbf7be7
+  - sourceName: charge_jump_Color35
+    resourceFolder: SkinAnimations/0cbbd3377d1a1d34f8ca61349918c825
+  - sourceName: charge_jump_Color36
+    resourceFolder: SkinAnimations/005353b7c12452e4dadb58b8b2cb98da
+  - sourceName: charge_jump_Color37
+    resourceFolder: SkinAnimations/08a0b7774c30c96499e6c2227d6cb320
+  - sourceName: charge_jump_Color4
+    resourceFolder: SkinAnimations/d9c923ccac845504e9672d9c3f9a9fee
+  - sourceName: charge_jump_Color5
+    resourceFolder: SkinAnimations/02848df088418c645b0012b6363a11b7
+  - sourceName: charge_jump_Color6
+    resourceFolder: SkinAnimations/ae3e6f774c4e6b645ae4d66fabe7c9f7
+  - sourceName: charge_jump_Color7
+    resourceFolder: SkinAnimations/15c8615993f64334cbb4f349cc84ed63
+  - sourceName: charge_jump_Color8
+    resourceFolder: SkinAnimations/d045a01f8311b934ebeb36ddf09b2c93
+  - sourceName: charge_jump_Color9
+    resourceFolder: SkinAnimations/404dc97e8c61fdb4396523293497b450
+  - sourceName: charge_jump_green1
+    resourceFolder: SkinAnimations/bc82bf3d514b1fd4596f299c4133ba92
+  - sourceName: charge_jump_green10
+    resourceFolder: SkinAnimations/ca1c13c6d0e342a4f833d9a5b7cb9436
+  - sourceName: charge_jump_green11
+    resourceFolder: SkinAnimations/35fb5df81c784f8489fa82450d6f5fdf
+  - sourceName: charge_jump_green12
+    resourceFolder: SkinAnimations/b23770906bcd0ad45ab34c333614072b
+  - sourceName: charge_jump_green13
+    resourceFolder: SkinAnimations/6c4a63cdc02094140b21f284b309efc7
+  - sourceName: charge_jump_green14
+    resourceFolder: SkinAnimations/5d376664a98b2ae459d97179bb311b6e
+  - sourceName: charge_jump_green15
+    resourceFolder: SkinAnimations/7a6fee6d8fa1dda4fb70864db4ee53fd
+  - sourceName: charge_jump_green16
+    resourceFolder: SkinAnimations/b1bf5611a360c6444b0a8b442012f4bf
+  - sourceName: charge_jump_green17
+    resourceFolder: SkinAnimations/871fe804a11a8f341bce320cc7debefc
+  - sourceName: charge_jump_green18
+    resourceFolder: SkinAnimations/5f34cd4a32520ba428e2758c8ab451ea
+  - sourceName: charge_jump_green19
+    resourceFolder: SkinAnimations/53928f8dd40f9f6449a0d679dbeb8070
+  - sourceName: charge_jump_green2
+    resourceFolder: SkinAnimations/3bb4cac51bef7cd45a4c71a0ebf638c9
+  - sourceName: charge_jump_green20
+    resourceFolder: SkinAnimations/e709d5fd8ac330e429f3561e33df2d0d
+  - sourceName: charge_jump_green21
+    resourceFolder: SkinAnimations/231c94d705ea168428ef3b1589f4284c
+  - sourceName: charge_jump_green22
+    resourceFolder: SkinAnimations/e9213a8a6f4193b439d4d7a905eeece7
+  - sourceName: charge_jump_green23
+    resourceFolder: SkinAnimations/7e6467b8482f3cb42a5eff357685ee58
+  - sourceName: charge_jump_green24
+    resourceFolder: SkinAnimations/b2040bb018506444094f187422db251a
+  - sourceName: charge_jump_green25
+    resourceFolder: SkinAnimations/d6b883cadf3c55745a31999ffb8fad87
+  - sourceName: charge_jump_green26
+    resourceFolder: SkinAnimations/a8e840a03722c774e823cdf8305c1e33
+  - sourceName: charge_jump_green27
+    resourceFolder: SkinAnimations/7ecac4b81c7ac7d4c9b69837ce4cbe06
+  - sourceName: charge_jump_green28
+    resourceFolder: SkinAnimations/d0254c4ae1da7fe46badc2d08c913400
+  - sourceName: charge_jump_green29
+    resourceFolder: SkinAnimations/38e10b3e1c717644a9c988a177847601
+  - sourceName: charge_jump_green3
+    resourceFolder: SkinAnimations/c125970d6190e2d41844b2fb404e5dc2
+  - sourceName: charge_jump_green30
+    resourceFolder: SkinAnimations/56dedbfe80e34e248ae297a3fe4c2d06
+  - sourceName: charge_jump_green31
+    resourceFolder: SkinAnimations/45b951b4cc9610b458d9620010039eae
+  - sourceName: charge_jump_green32
+    resourceFolder: SkinAnimations/414ac72ccdf9efe439377c9c233a83b2
+  - sourceName: charge_jump_green33
+    resourceFolder: SkinAnimations/0d33e1d20cc0fa34095a4450529c425d
+  - sourceName: charge_jump_green34
+    resourceFolder: SkinAnimations/a1a7e463ab1944b40a08bfedbff9d916
+  - sourceName: charge_jump_green35
+    resourceFolder: SkinAnimations/c4160900909aa484f966faafe6685ff9
+  - sourceName: charge_jump_green36
+    resourceFolder: SkinAnimations/63b58f8614b4d4c4498da6342da5e101
+  - sourceName: charge_jump_green37
+    resourceFolder: SkinAnimations/e66834a104a834d438018928dbe1761f
+  - sourceName: charge_jump_green4
+    resourceFolder: SkinAnimations/e5782f27366a7a341a73965c748e2c8a
+  - sourceName: charge_jump_green5
+    resourceFolder: SkinAnimations/35c93d7da9104524892ffee3d8453b9c
+  - sourceName: charge_jump_green6
+    resourceFolder: SkinAnimations/48c2e224ae87d1d4d9d1ff15674c5058
+  - sourceName: charge_jump_green7
+    resourceFolder: SkinAnimations/e2824864d27347f48ba50c71bf081280
+  - sourceName: charge_jump_green8
+    resourceFolder: SkinAnimations/5f76402eeb319a04e9adb713308aec57
+  - sourceName: charge_jump_green9
+    resourceFolder: SkinAnimations/00e15b8b9abfb584e902f6a451deab6e
+  - sourceName: charge_jump_red1
+    resourceFolder: SkinAnimations/8035c913f441b864ca1681ea75f6ae33
+  - sourceName: charge_jump_red10
+    resourceFolder: SkinAnimations/4b3ca566d7af2044486ea9a9c3150ac3
+  - sourceName: charge_jump_red11
+    resourceFolder: SkinAnimations/3f3664ee33437ac44a5c7ca52a180dd6
+  - sourceName: charge_jump_red12
+    resourceFolder: SkinAnimations/f04e87739a7637e4aa7d924e6190df7d
+  - sourceName: charge_jump_red13
+    resourceFolder: SkinAnimations/b36903565f9a5064da6eae09679ae6aa
+  - sourceName: charge_jump_red14
+    resourceFolder: SkinAnimations/6b821ba7f6175d844ab307e15ad37ce7
+  - sourceName: charge_jump_red15
+    resourceFolder: SkinAnimations/b8435bbe3a9532a48b65f86bbd8a5c83
+  - sourceName: charge_jump_red16
+    resourceFolder: SkinAnimations/c387c5d9e39b263468475f8417df67f7
+  - sourceName: charge_jump_red17
+    resourceFolder: SkinAnimations/949733b72ca904843a71921bed36d62c
+  - sourceName: charge_jump_red18
+    resourceFolder: SkinAnimations/fb5537bdf4854a243ac195d73f2c1360
+  - sourceName: charge_jump_red19
+    resourceFolder: SkinAnimations/e6033cb490f12c04f9b31a42b0577cff
+  - sourceName: charge_jump_red2
+    resourceFolder: SkinAnimations/d06726bf85be08840b9afa4413c8c1d5
+  - sourceName: charge_jump_red20
+    resourceFolder: SkinAnimations/a6dc3835a9d136d4daff8f77f92eabc1
+  - sourceName: charge_jump_red21
+    resourceFolder: SkinAnimations/98ef105d890c5d341a72062c4dd32f3f
+  - sourceName: charge_jump_red22
+    resourceFolder: SkinAnimations/d66ec28e83e1510458f8a830d7746517
+  - sourceName: charge_jump_red23
+    resourceFolder: SkinAnimations/98d20c4796978284fa779917a6f68245
+  - sourceName: charge_jump_red24
+    resourceFolder: SkinAnimations/4097727103354354b9721f8d7981f0b0
+  - sourceName: charge_jump_red25
+    resourceFolder: SkinAnimations/2ed03953536c38146b1ddcce0e572b46
+  - sourceName: charge_jump_red26
+    resourceFolder: SkinAnimations/5aafa3a5f5b64c2459bcd4fdce3be868
+  - sourceName: charge_jump_red27
+    resourceFolder: SkinAnimations/f55cf00c5e0de034f94ce5b04d0c337f
+  - sourceName: charge_jump_red28
+    resourceFolder: SkinAnimations/11422e2401537814d85cc31e6a2a51a8
+  - sourceName: charge_jump_red29
+    resourceFolder: SkinAnimations/c2461cc3555794f4f850bb215e9fa3d9
+  - sourceName: charge_jump_red3
+    resourceFolder: SkinAnimations/41cda416947f4af4983ab5f535c38c7a
+  - sourceName: charge_jump_red30
+    resourceFolder: SkinAnimations/20a92916bd0c4c941a5756c6385d5815
+  - sourceName: charge_jump_red31
+    resourceFolder: SkinAnimations/e1cfafe083df7ec4a94b049e5a20daed
+  - sourceName: charge_jump_red32
+    resourceFolder: SkinAnimations/d6f9543ca0816034cbeb5e52bef57313
+  - sourceName: charge_jump_red33
+    resourceFolder: SkinAnimations/5db5018ab067fa341940e6b82b574e28
+  - sourceName: charge_jump_red34
+    resourceFolder: SkinAnimations/44ac1eb4e2d56624fa6babd4f2abedd7
+  - sourceName: charge_jump_red35
+    resourceFolder: SkinAnimations/55cf57f3ca982e1488fd83e486dab235
+  - sourceName: charge_jump_red36
+    resourceFolder: SkinAnimations/7ddd985f2c79f78458adb070d1886694
+  - sourceName: charge_jump_red37
+    resourceFolder: SkinAnimations/a89ae3b21c89e434aa7b5ab035c1fc43
+  - sourceName: charge_jump_red4
+    resourceFolder: SkinAnimations/6fee4d40028c5f540a66837a5d0e07dd
+  - sourceName: charge_jump_red5
+    resourceFolder: SkinAnimations/8c789b2d637f7de4fa0459b44b96c299
+  - sourceName: charge_jump_red6
+    resourceFolder: SkinAnimations/a68c83fa08a579e40af82cf0b987284c
+  - sourceName: charge_jump_red7
+    resourceFolder: SkinAnimations/6576a573fedaf624686e63ba18d88901
+  - sourceName: charge_jump_red8
+    resourceFolder: SkinAnimations/3a5e790a6960b6045ab65533d46e34c6
+  - sourceName: charge_jump_red9
+    resourceFolder: SkinAnimations/2c45c80aecf59e3408883af623e49716
+  - sourceName: charge_jump_yellow1
+    resourceFolder: SkinAnimations/303469e0d803c304188f0f806fe561d6
+  - sourceName: charge_jump_yellow10
+    resourceFolder: SkinAnimations/68e4886f4357b22498f4fc4db29eb2c6
+  - sourceName: charge_jump_yellow11
+    resourceFolder: SkinAnimations/43db1c0e81895a54bbfbdefcf7f7336d
+  - sourceName: charge_jump_yellow12
+    resourceFolder: SkinAnimations/f7f64ae10effac543b9d33a24f34387f
+  - sourceName: charge_jump_yellow13
+    resourceFolder: SkinAnimations/c6a8b22be14fde94db8a7352d49d6b6c
+  - sourceName: charge_jump_yellow14
+    resourceFolder: SkinAnimations/d2d6e9a585e3da347a88719f7cedfe56
+  - sourceName: charge_jump_yellow15
+    resourceFolder: SkinAnimations/e70461b1a6cb1e842b1d5b50cf525949
+  - sourceName: charge_jump_yellow16
+    resourceFolder: SkinAnimations/65e3b2108610093448528ffbfcb2178a
+  - sourceName: charge_jump_yellow17
+    resourceFolder: SkinAnimations/33851d5a316db0547840a5f1798d6076
+  - sourceName: charge_jump_yellow18
+    resourceFolder: SkinAnimations/cc2ba5d3a8c56624399242ab43b9f0c5
+  - sourceName: charge_jump_yellow19
+    resourceFolder: SkinAnimations/2f3e0431661943044ae818e1066c2a1e
+  - sourceName: charge_jump_yellow2
+    resourceFolder: SkinAnimations/fe4e89798b91c2144870300282c391cf
+  - sourceName: charge_jump_yellow20
+    resourceFolder: SkinAnimations/d48111e5ad309864f8418df1cbc8347a
+  - sourceName: charge_jump_yellow21
+    resourceFolder: SkinAnimations/8234b138be4c7844db581b596f8b856a
+  - sourceName: charge_jump_yellow22
+    resourceFolder: SkinAnimations/c819fe12bfdf0cc4581ec03d2c7a3688
+  - sourceName: charge_jump_yellow23
+    resourceFolder: SkinAnimations/273878a45c236fd409709ad51cf4d181
+  - sourceName: charge_jump_yellow24
+    resourceFolder: SkinAnimations/83f5609166297b3499c2aafb85567d9f
+  - sourceName: charge_jump_yellow25
+    resourceFolder: SkinAnimations/ab807b2bf2bc2114cb1737056cbcf488
+  - sourceName: charge_jump_yellow26
+    resourceFolder: SkinAnimations/6eb31516d092a0e45b1a180f8b2bca43
+  - sourceName: charge_jump_yellow27
+    resourceFolder: SkinAnimations/108aa11489b87324dbc8185cbc26b281
+  - sourceName: charge_jump_yellow28
+    resourceFolder: SkinAnimations/266425855de8bb24e9d2861584840cbc
+  - sourceName: charge_jump_yellow29
+    resourceFolder: SkinAnimations/686a5ae2f64b5854da9f35afde936707
+  - sourceName: charge_jump_yellow3
+    resourceFolder: SkinAnimations/6da05b7e204cca845bb7884763b4ac12
+  - sourceName: charge_jump_yellow30
+    resourceFolder: SkinAnimations/3316247fff9d4fb469756b8afcacf9c4
+  - sourceName: charge_jump_yellow31
+    resourceFolder: SkinAnimations/1c81f52b5798ce04a9517545f660cccd
+  - sourceName: charge_jump_yellow32
+    resourceFolder: SkinAnimations/185a20bc33051754ca9b398f8f06fc1b
+  - sourceName: charge_jump_yellow33
+    resourceFolder: SkinAnimations/ec4aba53e1c289247a9f2be90db67b5e
+  - sourceName: charge_jump_yellow34
+    resourceFolder: SkinAnimations/65ccf2d4815a6c54497b2cec9e650aae
+  - sourceName: charge_jump_yellow35
+    resourceFolder: SkinAnimations/7c962001ddab2d644ae141ef2de62510
+  - sourceName: charge_jump_yellow36
+    resourceFolder: SkinAnimations/f83ec92a131e8454092b05096f13bbe7
+  - sourceName: charge_jump_yellow37
+    resourceFolder: SkinAnimations/b0d8209fcb90df349b79266cdd2b3a96
+  - sourceName: charge_jump_yellow4
+    resourceFolder: SkinAnimations/1448eae498f2aef4a8a837ff9de1a50a
+  - sourceName: charge_jump_yellow5
+    resourceFolder: SkinAnimations/1850965616e9bf04988cf687c73e0fc9
+  - sourceName: charge_jump_yellow6
+    resourceFolder: SkinAnimations/c21af0496938fbb4cb5a2862f1645ca8
+  - sourceName: charge_jump_yellow7
+    resourceFolder: SkinAnimations/5da9cb4458c04f140b9375158edd0680
+  - sourceName: charge_jump_yellow8
+    resourceFolder: SkinAnimations/715adf8d926c14d44aa0890039021436
+  - sourceName: charge_jump_yellow9
+    resourceFolder: SkinAnimations/7ff96537ac739cd428cf2ceb833f8470
+  - sourceName: duck_color_blue1
+    resourceFolder: SkinAnimations/b9c4cb42a6c8182458f9688af4457572
+  - sourceName: duck_color_blue10
+    resourceFolder: SkinAnimations/44e05a1f37d309046bc9a682c00e4191
+  - sourceName: duck_color_blue11
+    resourceFolder: SkinAnimations/fb78fdee2c2c2f249b4c46d650b8f9a4
+  - sourceName: duck_color_blue12
+    resourceFolder: SkinAnimations/06c8717948e32914f97d700e757e35d0
+  - sourceName: duck_color_blue13
+    resourceFolder: SkinAnimations/8c290f6998ac5ac43978543716b90abd
+  - sourceName: duck_color_blue14
+    resourceFolder: SkinAnimations/356e58dfc5db59941be25bf1a31ab630
+  - sourceName: duck_color_blue15
+    resourceFolder: SkinAnimations/52a5784cbc489d54fa8172218c2a5302
+  - sourceName: duck_color_blue16
+    resourceFolder: SkinAnimations/7c253565c62df584fa30d979cb3a267b
+  - sourceName: duck_color_blue17
+    resourceFolder: SkinAnimations/bfb5b31c9cc31704e9260da98f8a28df
+  - sourceName: duck_color_blue18
+    resourceFolder: SkinAnimations/91326ef474791d14f9120ee7660286a3
+  - sourceName: duck_color_blue19
+    resourceFolder: SkinAnimations/7a291efac932fc44e834e8046eeb95d8
+  - sourceName: duck_color_blue2
+    resourceFolder: SkinAnimations/f457172a16f03994192cba89862749f7
+  - sourceName: duck_color_blue20
+    resourceFolder: SkinAnimations/ec2ed035c50b26147a7a0e5031ed0e23
+  - sourceName: duck_color_blue21
+    resourceFolder: SkinAnimations/507b83867352a284794f7683d92372e7
+  - sourceName: duck_color_blue22
+    resourceFolder: SkinAnimations/5f7f335a6e8933a419616dde145a3017
+  - sourceName: duck_color_blue23
+    resourceFolder: SkinAnimations/7677af1a7ccac024aa8691d307b3883e
+  - sourceName: duck_color_blue24
+    resourceFolder: SkinAnimations/95440083427fec24c84068c5eb4f3095
+  - sourceName: duck_color_blue3
+    resourceFolder: SkinAnimations/23337b7580e7c4b4184307d5c96c967a
+  - sourceName: duck_color_blue4
+    resourceFolder: SkinAnimations/3aeb2546ee3584d4c8571dd42a9cde07
+  - sourceName: duck_color_blue5
+    resourceFolder: SkinAnimations/676fbea31a493d04c9257b379c7bcfcb
+  - sourceName: duck_color_blue6
+    resourceFolder: SkinAnimations/c614af33de5f55346bea12d57d6cb4f4
+  - sourceName: duck_color_blue7
+    resourceFolder: SkinAnimations/e9d81f976b3be0a409044613751c1ea4
+  - sourceName: duck_color_blue8
+    resourceFolder: SkinAnimations/ad5d9b6bfcecd3146a414f15ecceced8
+  - sourceName: duck_color_blue9
+    resourceFolder: SkinAnimations/70ba82e52664e9448bf562c5e621fb28
+  - sourceName: duck_color-Sheet
+    resourceFolder: SkinAnimations/0104ae508207eff488a18a71f75b8fb4
+  - sourceName: duck_color_green1
+    resourceFolder: SkinAnimations/3f547ecd6cc4478458dece0dafdbef75
+  - sourceName: duck_color_green10
+    resourceFolder: SkinAnimations/9d1ba6fbe076e114bb7d524c7e2dd1e8
+  - sourceName: duck_color_green11
+    resourceFolder: SkinAnimations/65e8f4bac536c154a9300f6c596acc34
+  - sourceName: duck_color_green12
+    resourceFolder: SkinAnimations/dc94bf01854be5e4191806a8402b7769
+  - sourceName: duck_color_green13
+    resourceFolder: SkinAnimations/f752d124b4cee3b4eafe90e7718de8e4
+  - sourceName: duck_color_green14
+    resourceFolder: SkinAnimations/e87857278be602d4ba4ea42ac3549c95
+  - sourceName: duck_color_green15
+    resourceFolder: SkinAnimations/c48d48b1ae019134498efb21078302a0
+  - sourceName: duck_color_green16
+    resourceFolder: SkinAnimations/bf6ea5340d74b264b852f7e53082900b
+  - sourceName: duck_color_green17
+    resourceFolder: SkinAnimations/ab238620be69b524898595c3e350f2b6
+  - sourceName: duck_color_green18
+    resourceFolder: SkinAnimations/8be9022b1954d8d4fbcf9ae76d1372d4
+  - sourceName: duck_color_green19
+    resourceFolder: SkinAnimations/de6f06e8cbeac6d408da068707851c20
+  - sourceName: duck_color_green2
+    resourceFolder: SkinAnimations/34d3533b019ca1742bcf5083309b09a2
+  - sourceName: duck_color_green20
+    resourceFolder: SkinAnimations/cf6652831ce68b44dbd0c5972aee6910
+  - sourceName: duck_color_green21
+    resourceFolder: SkinAnimations/f050657a54740ce4a9002a01fe25e488
+  - sourceName: duck_color_green22
+    resourceFolder: SkinAnimations/17e2813359eb3964192499a9a8ccfb3c
+  - sourceName: duck_color_green23
+    resourceFolder: SkinAnimations/cbc780c1364dbe641a8562236b88c9b6
+  - sourceName: duck_color_green24
+    resourceFolder: SkinAnimations/3f93d7d391cf2a04b9317491d53bd4a5
+  - sourceName: duck_color_green3
+    resourceFolder: SkinAnimations/4f2ce6e09180d4748b0624c1c516296d
+  - sourceName: duck_color_green4
+    resourceFolder: SkinAnimations/58ad58af0971c9b4789f4aef397653c6
+  - sourceName: duck_color_green5
+    resourceFolder: SkinAnimations/18cf00751db9c8b4ebd429e8251fcf4f
+  - sourceName: duck_color_green6
+    resourceFolder: SkinAnimations/82a3118334c5c814997db06863c20ed8
+  - sourceName: duck_color_green7
+    resourceFolder: SkinAnimations/1f1d9fe1fd2268843a0ed6fef0f9c3e5
+  - sourceName: duck_color_green8
+    resourceFolder: SkinAnimations/0bf3b9c161827fc438b2e945041de6c9
+  - sourceName: duck_color_green9
+    resourceFolder: SkinAnimations/627a522615bf25f44be2d26881dd0130
+  - sourceName: duck_color_red1
+    resourceFolder: SkinAnimations/061ef8f625751d74b8b043b01a7b5561
+  - sourceName: duck_color_red10
+    resourceFolder: SkinAnimations/5d9ad0618d1abdf499f127111a187d4c
+  - sourceName: duck_color_red11
+    resourceFolder: SkinAnimations/ec186f0982dbf22458e11ca55afa9152
+  - sourceName: duck_color_red12
+    resourceFolder: SkinAnimations/94294473d28233d43a06f6e3eebf85c5
+  - sourceName: duck_color_red13
+    resourceFolder: SkinAnimations/0fee08ae109c7044596d46b0283af339
+  - sourceName: duck_color_red14
+    resourceFolder: SkinAnimations/4de09599d6d14054488a5df7df411883
+  - sourceName: duck_color_red15
+    resourceFolder: SkinAnimations/517195dcfbad0bb44a99f2d4dc5f3657
+  - sourceName: duck_color_red16
+    resourceFolder: SkinAnimations/78f1e66bb6a74df48a528cb2d834277f
+  - sourceName: duck_color_red17
+    resourceFolder: SkinAnimations/7a6a6b4215d092b41bd0ef29988b7510
+  - sourceName: duck_color_red18
+    resourceFolder: SkinAnimations/086576dcb1c08c54d969ead116ed4089
+  - sourceName: duck_color_red19
+    resourceFolder: SkinAnimations/1d5525c69d499bf4aa49edcf9cba73e0
+  - sourceName: duck_color_red2
+    resourceFolder: SkinAnimations/37b2297810bfd4c4d92c727dcd0c98b6
+  - sourceName: duck_color_red20
+    resourceFolder: SkinAnimations/de8b43830afc27d4a8064c944aa2a205
+  - sourceName: duck_color_red21
+    resourceFolder: SkinAnimations/4a28606b42e586740b9d3570d40c186e
+  - sourceName: duck_color_red22
+    resourceFolder: SkinAnimations/8812f261394fdce47a6b398e915599bf
+  - sourceName: duck_color_red23
+    resourceFolder: SkinAnimations/f6382705da0e56b4ab33f5e62d7c609f
+  - sourceName: duck_color_red24
+    resourceFolder: SkinAnimations/319567d089c185644b13906e455dd4fc
+  - sourceName: duck_color_red3
+    resourceFolder: SkinAnimations/cbe2277b51a21484eae23873dea0315a
+  - sourceName: duck_color_red4
+    resourceFolder: SkinAnimations/5ed8bf25dd71bb14797c15bca1a2cc33
+  - sourceName: duck_color_red5
+    resourceFolder: SkinAnimations/2e62cf34caf09ac4ebd58734f70c1552
+  - sourceName: duck_color_red6
+    resourceFolder: SkinAnimations/fee828c25752bc64085eaecd14f02c02
+  - sourceName: duck_color_red7
+    resourceFolder: SkinAnimations/19932d2a99f09a04d906e21055ace351
+  - sourceName: duck_color_red8
+    resourceFolder: SkinAnimations/ffc0078baaf522e47ac1245d58f094dc
+  - sourceName: duck_color_red9
+    resourceFolder: SkinAnimations/321f2baa3404be54c9f2a37289c50eae
+  - sourceName: duck_color_edit1
+    resourceFolder: SkinAnimations/a5a74d61b86e44b49b315ba5731d5f18
+  - sourceName: duck_color_edit10
+    resourceFolder: SkinAnimations/f1585559088688f4b9a98f7db600166f
+  - sourceName: duck_color_edit11
+    resourceFolder: SkinAnimations/4806db566b75cb04087daf9266adc391
+  - sourceName: duck_color_edit12
+    resourceFolder: SkinAnimations/80ea4ebdfc7eefc45812bb4d929ce3ea
+  - sourceName: duck_color_edit13
+    resourceFolder: SkinAnimations/dafa28df3b5bb8b428312c1a76186b6b
+  - sourceName: duck_color_edit14
+    resourceFolder: SkinAnimations/03ec85d1541f17d4fbca27bd1b88392c
+  - sourceName: duck_color_edit15
+    resourceFolder: SkinAnimations/c1e7254bdc54b664094fb9b4f4ef600f
+  - sourceName: duck_color_edit16
+    resourceFolder: SkinAnimations/3b2d88b3416249d4a9d4307f3ba97fff
+  - sourceName: duck_color_edit17
+    resourceFolder: SkinAnimations/a32b9634bf5b13f4394c801198988ce9
+  - sourceName: duck_color_edit18
+    resourceFolder: SkinAnimations/ebdeb6a2210766142ab2100d3537f7e9
+  - sourceName: duck_color_edit19
+    resourceFolder: SkinAnimations/6ec763508f770f2408439f4ff5fc3971
+  - sourceName: duck_color_edit2
+    resourceFolder: SkinAnimations/54f7df322c719354eb95c87671cd6bcf
+  - sourceName: duck_color_edit20
+    resourceFolder: SkinAnimations/8297643e75f860841ae7866bffb5c088
+  - sourceName: duck_color_edit21
+    resourceFolder: SkinAnimations/f9603d9aaca15fe4abcfe1cad1a3218a
+  - sourceName: duck_color_edit3
+    resourceFolder: SkinAnimations/05fc2ce4b79611440aa3011c4a08d4af
+  - sourceName: duck_color_edit4
+    resourceFolder: SkinAnimations/b9257c6af85450047ab893e2e4eed13f
+  - sourceName: duck_color_edit5
+    resourceFolder: SkinAnimations/73b07cc8e92f85546a9d634f0d836594
+  - sourceName: duck_color_edit6
+    resourceFolder: SkinAnimations/76428d988dfb5f3438253a414924dff9
+  - sourceName: duck_color_edit7
+    resourceFolder: SkinAnimations/3fa3b31e0c6984b49babd57d49de77bb
+  - sourceName: duck_color_edit8
+    resourceFolder: SkinAnimations/d25ec580971da3c4a83717356dc0b7e6
+  - sourceName: duck_color_edit9
+    resourceFolder: SkinAnimations/971f0b42f03fefe4ea76967189340551
+  - sourceName: idle_color-Sheet
+    resourceFolder: SkinAnimations/dbd09275d061d884ca08a930226e1019
+  - sourceName: idle_color1
+    resourceFolder: SkinAnimations/0859941a77db672458bbd5be706dbfc9
+  - sourceName: idle_color10
+    resourceFolder: SkinAnimations/218a5bb98fbf1a34aa5c98e590afc3aa
+  - sourceName: idle_color11
+    resourceFolder: SkinAnimations/7fb3ac380dda5f147838342dfe5ce903
+  - sourceName: idle_color12
+    resourceFolder: SkinAnimations/60ff286745da1c34794ee1dceae4d5f3
+  - sourceName: idle_color13
+    resourceFolder: SkinAnimations/dc55f500e04a7204f81005a96b549d5d
+  - sourceName: idle_color14
+    resourceFolder: SkinAnimations/3afd8ea3d9289fb4281729de4d865c75
+  - sourceName: idle_color15
+    resourceFolder: SkinAnimations/b55f9af7c08508845a6537a063aaf7c3
+  - sourceName: idle_color16
+    resourceFolder: SkinAnimations/5c68bfdd1f625854d9b5d14501334acc
+  - sourceName: idle_color17
+    resourceFolder: SkinAnimations/e0b954e978eacb645af9d56fe5a9fb84
+  - sourceName: idle_color18
+    resourceFolder: SkinAnimations/8bb1d99755485b144ba853a99a830608
+  - sourceName: idle_color2
+    resourceFolder: SkinAnimations/8146199be1a1ec4469a3178661383cc9
+  - sourceName: idle_color3
+    resourceFolder: SkinAnimations/1150c02605d1afd439fa23b31de638cf
+  - sourceName: idle_color4
+    resourceFolder: SkinAnimations/60516f36cd1fc764ca548900280a4c02
+  - sourceName: idle_color5
+    resourceFolder: SkinAnimations/12ef4acc607637746b2e432b20938db9
+  - sourceName: idle_color6
+    resourceFolder: SkinAnimations/b8fc3df2dcc376e4b96cd605ab4763da
+  - sourceName: idle_color7
+    resourceFolder: SkinAnimations/054f532170b3a4b4482e336da31bc232
+  - sourceName: idle_color8
+    resourceFolder: SkinAnimations/cfc3be0d6cf5e9445a9ccc0e79a8aeaf
+  - sourceName: idle_color9
+    resourceFolder: SkinAnimations/d3b95bf9fcfa7e942bb596c2475f388b
+  - sourceName: jump_color1
+    resourceFolder: SkinAnimations/0bfb002a9a5488944b5491302880ce69
+  - sourceName: jump_color10
+    resourceFolder: SkinAnimations/1ac508b95efaab64f9064b529120cdc0
+  - sourceName: jump_color11
+    resourceFolder: SkinAnimations/c17bccfbb8118fe41bd913870aacb8a6
+  - sourceName: jump_color12
+    resourceFolder: SkinAnimations/45f0df9430fbf104a9b82223d78342eb
+  - sourceName: jump_color13
+    resourceFolder: SkinAnimations/110e156d10f8ec043aa647b965be5538
+  - sourceName: jump_color14
+    resourceFolder: SkinAnimations/170294c54a599624293e8be44535d08f
+  - sourceName: jump_color15
+    resourceFolder: SkinAnimations/96c70bd25f5c94d4aa131506f4193c34
+  - sourceName: jump_color16
+    resourceFolder: SkinAnimations/8bee3922ffc70554589ac7da32ffa5bf
+  - sourceName: jump_color17
+    resourceFolder: SkinAnimations/d0e9c0e4113e02242bbe69e0e7d2f060
+  - sourceName: jump_color18
+    resourceFolder: SkinAnimations/c27d6d692aae3914f86cb9af5c27d118
+  - sourceName: jump_color2
+    resourceFolder: SkinAnimations/3acc45688b2407e4fbafd9d611d20d4f
+  - sourceName: jump_color3
+    resourceFolder: SkinAnimations/e4ee3cc0d215f314c8c7d00382a7b8f6
+  - sourceName: jump_color4
+    resourceFolder: SkinAnimations/691b2209a736d1549ae89440f72e7026
+  - sourceName: jump_color5
+    resourceFolder: SkinAnimations/d6a83586c3a37b7409897eb2ba0e065c
+  - sourceName: jump_color6
+    resourceFolder: SkinAnimations/6b2632cdc699feb4eb88ce758ce357a4
+  - sourceName: jump_color7
+    resourceFolder: SkinAnimations/c00e96ba712b78c4f9f2c1745272fea1
+  - sourceName: jump_color8
+    resourceFolder: SkinAnimations/5e519cf7d7dc83e468542bfc93df7fc8
+  - sourceName: jump_color9
+    resourceFolder: SkinAnimations/61487cb22031d0d48b5143b83ea28ed5
+  - sourceName: jump_color-Sheet
+    resourceFolder: SkinAnimations/361b62a97d70b0f41a23754e5107a898
+  - sourceName: jump_color_green1
+    resourceFolder: SkinAnimations/50f649559ae1b1f4298482046c2a3fbd
+  - sourceName: jump_color_green10
+    resourceFolder: SkinAnimations/15442aa60391770478a6930a966bda08
+  - sourceName: jump_color_green11
+    resourceFolder: SkinAnimations/d84f2299f8220ba4ca274781e4a81dc8
+  - sourceName: jump_color_green12
+    resourceFolder: SkinAnimations/e8530a826dc0ecb43a580518685f81ba
+  - sourceName: jump_color_green13
+    resourceFolder: SkinAnimations/4ade2e365bd5d5c48bfe6aa4347b7a4b
+  - sourceName: jump_color_green14
+    resourceFolder: SkinAnimations/5d95978826b6ddf4aadeff5bc7674db0
+  - sourceName: jump_color_green15
+    resourceFolder: SkinAnimations/e5188e8a7c28a2043ab0e05e9f685aa3
+  - sourceName: jump_color_green16
+    resourceFolder: SkinAnimations/76ef74b987a90c845892368acc5e4eba
+  - sourceName: jump_color_green17
+    resourceFolder: SkinAnimations/e444881d9681e364dbae74f391ceb1e6
+  - sourceName: jump_color_green18
+    resourceFolder: SkinAnimations/1db226e55789e764bbedb7abacae4be5
+  - sourceName: jump_color_green19
+    resourceFolder: SkinAnimations/06fd383479877d3458cb524be7ac3799
+  - sourceName: jump_color_green2
+    resourceFolder: SkinAnimations/ebe104984cbe83341b628233800a7f65
+  - sourceName: jump_color_green20
+    resourceFolder: SkinAnimations/1d61a5c5dddc4024b85d2f5f0f52566f
+  - sourceName: jump_color_green3
+    resourceFolder: SkinAnimations/3bc63ce645d93d14ebdbc478b8ca18c9
+  - sourceName: jump_color_green4
+    resourceFolder: SkinAnimations/e27703d38397ddd499e8fa2428d6f103
+  - sourceName: jump_color_green5
+    resourceFolder: SkinAnimations/afb7a9013b4ae7048ae13729c160f425
+  - sourceName: jump_color_green6
+    resourceFolder: SkinAnimations/f2077aaa7dd5ecd4581f7bbc7b146e60
+  - sourceName: jump_color_green7
+    resourceFolder: SkinAnimations/e13c4fdd28deea946835f194f50ccb0f
+  - sourceName: jump_color_green8
+    resourceFolder: SkinAnimations/c92cee83b7657f64489503b4a0469d73
+  - sourceName: jump_color_green9
+    resourceFolder: SkinAnimations/1b1f740b34ed3054dbbe864b69a150bd
+  - sourceName: jump_color_red1
+    resourceFolder: SkinAnimations/ed2aa3308c0d4c146abcf2b5bfa8ea6e
+  - sourceName: jump_color_red10
+    resourceFolder: SkinAnimations/86f2ad52933e11a4e88ca246abdf0fa6
+  - sourceName: jump_color_red11
+    resourceFolder: SkinAnimations/661ed4fcee7e66a418dd757d88794868
+  - sourceName: jump_color_red12
+    resourceFolder: SkinAnimations/3a1536563ec345045ad363e43b0a1845
+  - sourceName: jump_color_red13
+    resourceFolder: SkinAnimations/4de60c35594144d41b4e5a707bc515b6
+  - sourceName: jump_color_red14
+    resourceFolder: SkinAnimations/e57cff3add9fa9b498c614db9db0012a
+  - sourceName: jump_color_red15
+    resourceFolder: SkinAnimations/f04b247b95bafe442bb61723f375f135
+  - sourceName: jump_color_red16
+    resourceFolder: SkinAnimations/fd7af855214ed864bb5e70f9a2221b87
+  - sourceName: jump_color_red17
+    resourceFolder: SkinAnimations/111e6d32d349fea4698c9759f9290856
+  - sourceName: jump_color_red18
+    resourceFolder: SkinAnimations/c282c71e00b283d48bb99b95605da5ff
+  - sourceName: jump_color_red19
+    resourceFolder: SkinAnimations/d16e9e200fb0e304d9f7b878d66f9848
+  - sourceName: jump_color_red2
+    resourceFolder: SkinAnimations/437c5871ef3255b4e830a066b26e7e22
+  - sourceName: jump_color_red20
+    resourceFolder: SkinAnimations/25e4028d6dc72824690bf7179fac878e
+  - sourceName: jump_color_red3
+    resourceFolder: SkinAnimations/9cd25279d91b3d2458d39b4f144a8b19
+  - sourceName: jump_color_red4
+    resourceFolder: SkinAnimations/0757752b368971f4b82fec31e52dbaf7
+  - sourceName: jump_color_red5
+    resourceFolder: SkinAnimations/757b0c65d68d014449b6fbaf6afbd55a
+  - sourceName: jump_color_red6
+    resourceFolder: SkinAnimations/5d1e2fb40c4e9394d9c168caec854ce0
+  - sourceName: jump_color_red7
+    resourceFolder: SkinAnimations/2264d2ac45163d647bcb870431f7aaa2
+  - sourceName: jump_color_red8
+    resourceFolder: SkinAnimations/e5bd46a48687a814b938db947c8651b5
+  - sourceName: jump_color_red9
+    resourceFolder: SkinAnimations/c1e5ff39c7da6c243832cb0b9b20da56
+  - sourceName: jump_color_yellow1
+    resourceFolder: SkinAnimations/1b978a9f1b3971541b1aab21c8151c68
+  - sourceName: jump_color_yellow10
+    resourceFolder: SkinAnimations/6736ccaf07ffabc46b9da233d920d53d
+  - sourceName: jump_color_yellow11
+    resourceFolder: SkinAnimations/31f4da3db429ca444aeb5569f1bbce2c
+  - sourceName: jump_color_yellow12
+    resourceFolder: SkinAnimations/e751f6b2835bfdd4cbb4794ff75df6b8
+  - sourceName: jump_color_yellow13
+    resourceFolder: SkinAnimations/d27fb792c1707d14c97314a5f3f15754
+  - sourceName: jump_color_yellow14
+    resourceFolder: SkinAnimations/003bb123251e3c9408dccc4bae0b23f9
+  - sourceName: jump_color_yellow15
+    resourceFolder: SkinAnimations/c042fdfff84cc75428fc63644d799534
+  - sourceName: jump_color_yellow16
+    resourceFolder: SkinAnimations/0b3387b4d5cf9114a98dee9f0719b891
+  - sourceName: jump_color_yellow17
+    resourceFolder: SkinAnimations/0d7d8e40787ca8246a1de5816a8ca726
+  - sourceName: jump_color_yellow18
+    resourceFolder: SkinAnimations/a6d1910bc20f57b4b8e5247b56c04119
+  - sourceName: jump_color_yellow19
+    resourceFolder: SkinAnimations/981b5b633dda8224d81c411711485b6f
+  - sourceName: jump_color_yellow2
+    resourceFolder: SkinAnimations/ac0d9b80a3bc6a049ba542076de749f0
+  - sourceName: jump_color_yellow20
+    resourceFolder: SkinAnimations/922e6d5d8ab0867489de39c30f889139
+  - sourceName: jump_color_yellow3
+    resourceFolder: SkinAnimations/bd949792583a80e41bb6f1da34c79304
+  - sourceName: jump_color_yellow4
+    resourceFolder: SkinAnimations/9125c3ea380dafc4cb7876c320a8ff4e
+  - sourceName: jump_color_yellow5
+    resourceFolder: SkinAnimations/d9bc3879062bd3e4a9391188825406ad
+  - sourceName: jump_color_yellow6
+    resourceFolder: SkinAnimations/d751031e3b374424fba43ea7aadf14d0
+  - sourceName: jump_color_yellow7
+    resourceFolder: SkinAnimations/3fd3ac72a04fd2941b42e7c0bf0a26cb
+  - sourceName: jump_color_yellow8
+    resourceFolder: SkinAnimations/98db6f56f0c6f6648be3c79a7fde483f
+  - sourceName: jump_color_yellow9
+    resourceFolder: SkinAnimations/08de747f1f591964880d7685c69cc575
+  - sourceName: Accelerate_DEFAULT-Sheet_FULL
+    resourceFolder: SkinAnimations/36b9970a2fef87844b65e23ad4552065
+  - sourceName: Accelerate_GREEN-Sheet_FULL
+    resourceFolder: SkinAnimations/3627412105b45cd47a0fc3eaa6f179df
+  - sourceName: Accelerate_RED-Sheet_FULL
+    resourceFolder: SkinAnimations/b63f3dc8c93673a4f8a989b3bfeb510d
+  - sourceName: Accelerate_YELLOW_FULL
+    resourceFolder: SkinAnimations/bb9a510ce85eda541a39d679df16737d
+  - sourceName: Brake_color_FULL
+    resourceFolder: SkinAnimations/7b035c9915e6ed4499435b1752a15009
+  - sourceName: Brake_GREEN_FULL
+    resourceFolder: SkinAnimations/c062558ce77fe6446863d583a1d5d217
+  - sourceName: Brake_RED_FULL
+    resourceFolder: SkinAnimations/04c3fc060145b8a45b0d2515fa392055
+  - sourceName: Brake_YELLOW_FULL
+    resourceFolder: SkinAnimations/cb0a09c89509766468cd686a9f9456b4
+  - sourceName: charge_jump_air
+    resourceFolder: SkinAnimations/05b9c887ec3dea4438d6ea8d45f4ebc5
+  - sourceName: charge_jump_land
+    resourceFolder: SkinAnimations/51d9821d96923ab4aa6f69683a348358
+  - sourceName: charge_jump_air_green
+    resourceFolder: SkinAnimations/01b44692362d61049afe642757d77b2e
+  - sourceName: charge_jump_land_green
+    resourceFolder: SkinAnimations/cb29c5c620fc5b14d92a68dbaf689f0a
+  - sourceName: charge_jump_air_red
+    resourceFolder: SkinAnimations/0d904731bbc139746878f6922b8ec4ac
+  - sourceName: charge_jump_land_red1
+    resourceFolder: SkinAnimations/c61f8c830d86b344a88949b830df4763
+  - sourceName: charge_jump_air_yellow1
+    resourceFolder: SkinAnimations/4e7508688f8478f40b73620530bf5833
+  - sourceName: charge_jump_land_yellow1
+    resourceFolder: SkinAnimations/a65bc02d40d4afc4db23c7a1ba2519b6
+  - sourceName: jump_air_color
+    resourceFolder: SkinAnimations/35b6f26228454ac4db28e2b564c6d955
+  - sourceName: jump_land_color
+    resourceFolder: SkinAnimations/9f1b3bab04956d4459548d9a6fa539e9
+  - sourceName: jump_squat_color
+    resourceFolder: SkinAnimations/bdf86f2ccdcd98245afcc00ccd718615
+  - sourceName: jump_air_green1
+    resourceFolder: SkinAnimations/3554e15523598b344a8ce0bcf9ffa1dc
+  - sourceName: jump_land_green1
+    resourceFolder: SkinAnimations/fbe98f673a89eaa498575ff443693204
+  - sourceName: jump_squat_green1
+    resourceFolder: SkinAnimations/3a0dfeea06124184b91729033a153694
+  - sourceName: jump_air_red
+    resourceFolder: SkinAnimations/cc86d7faa8ee1704bba762e86da147a2
+  - sourceName: jump_land_red
+    resourceFolder: SkinAnimations/d6c8f4228166d574dbee62d17f644a1c
+  - sourceName: jump_squat_red
+    resourceFolder: SkinAnimations/b795d85db2e95b2499b61fb235cda32f
+  - sourceName: jump_air_yellow
+    resourceFolder: SkinAnimations/4fcb65785a7c6164f9f623b362fd678f
+  - sourceName: jump_land_yellow
+    resourceFolder: SkinAnimations/b2536aac86aff4c4a818c2401aff7ebe
+  - sourceName: jump_squat_yellow
+    resourceFolder: SkinAnimations/09113dedf8419884a8f2988927e3ef5c
+  - sourceName: Reaction_Fail_spritesheet
+    resourceFolder: SkinAnimations/f6ccadce6381ca747af225c832789998
+  - sourceName: Reaction_Good_spritesheet
+    resourceFolder: SkinAnimations/4f4de4848d5c44440b914689d0845dcc
+  - sourceName: Reaction_Mid_spritesheet
+    resourceFolder: SkinAnimations/36363ec7395a66b45a2099fdde7b14fd

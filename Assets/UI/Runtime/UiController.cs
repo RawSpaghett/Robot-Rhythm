@@ -180,13 +180,25 @@ namespace RobotRhythm.UI
         public void PlayClick()
         {
             if (audioSource != null)
-                audioSource.PlayOneShot(clickSound != null ? clickSound : defaultClick, UiVolume * EffectsVolume);
+                PlayMenuSound(clickSound != null ? clickSound : defaultClick);
         }
 
         public void PlayBackClick()
         {
             if (audioSource != null)
-                audioSource.PlayOneShot(backSound != null ? backSound : clickSound != null ? clickSound : defaultClick, UiVolume * EffectsVolume);
+                PlayMenuSound(backSound != null ? backSound : clickSound != null ? clickSound : defaultClick);
+        }
+
+        private float nextMenuSound;
+
+        private void PlayMenuSound(AudioClip clip)
+        {
+            if (clip == null || Time.unscaledTime < nextMenuSound) return;
+            nextMenuSound = Time.unscaledTime + .12f;
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.volume = UiVolume * EffectsVolume;
+            audioSource.Play();
         }
 
         private AudioClip CreateDefaultClick()

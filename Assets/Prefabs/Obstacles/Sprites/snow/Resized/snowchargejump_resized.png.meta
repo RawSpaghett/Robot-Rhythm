@@ -100,12 +100,12 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 48
     textureCompression: 1
-    compressionQuality: 50
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -119,6 +119,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 186
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         height: 163
       alignment: 0
@@ -128,6 +129,11 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.5, y: 0.1341463}
 >>>>>>> Stashed changes
+=======
+        height: 211
+      alignment: 9
+      pivot: {x: 0.48882085, y: 0.20436065}
+>>>>>>> Staging
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -144,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7b8be1db5acc87e4caee5a23a4e65f3b
     internalID: 0
     vertices: []
     indices: 

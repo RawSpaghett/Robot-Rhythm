@@ -8,98 +8,97 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    // Assign the player robot's ActionManager
-    [SerializeField] private ActionManager actionManager;
-    [Tooltip("Optional player timing/animation bridge. Assign it to enable judged variations.")]
-    [SerializeField] private PlayerTimingFeedback timingFeedback;
-
-    [SerializeField, Range(0f, 1f)]
-    private float longJumpCharge = 1f;
     private PlayerInput inputSystem;
     private InputAction pressAction;
     private InputAction dragAction;
 
-    [SerializeField] private string jumpID;
-    [SerializeField] private string chargeJumpID;
-    [SerializeField] private string duckID;
-
     private bool drag;
     public event Action OnPressed;
     public event Action<Direction> OnSwipe;
-    
+
+    // Preview signal only. Confirmed actions still use OnPressed/OnSwipe on release.
+    public event Action<Direction> OnHeldDirectionChanged;
+    public Direction HeldDirection { get; private set; } = Direction.None;
+
     void Awake()
     {
-        if (timingFeedback == null) timingFeedback = GetComponent<PlayerTimingFeedback>();
         inputSystem = GetComponent<PlayerInput>();
         pressAction = inputSystem.actions.FindAction("Press");
         dragAction = inputSystem.actions.FindAction("Drag");
     }
-
-    private void OnEnable()
-    {
-        pressAction.performed += Jump;
-        dragAction.performed += Drag;
-    }
-
-    private void OnDisable()
-    {
-        if (actionManager != null) actionManager.SetLongJumpCharging(false);
-        pressAction.performed -= Jump;
-        dragAction.performed -= Drag;
-    }
-
-
-    private bool mouseHeld;
-    private bool previousMouseDown;
-    private Vector2 mouseStart;
+    private bool userHeld;
+    private bool previousUserDown;
+    private Vector2 userStart;
     private void Update()
     {
-        var mouse = Mouse.current;
-        if (mouse == null)
+        var userInput = Pointer.current;
+        if (userInput == null || Time.timeScale <= 0f || AudioListener.pause || !Application.isFocused)
         {
-            if (actionManager != null) actionManager.SetLongJumpCharging(false);
+            CancelGesture();
             return;
         }
-        bool down = mouse.leftButton.isPressed;
-        bool pressed = down && !previousMouseDown;
-        bool released = !down && previousMouseDown;
-        previousMouseDown = down;
-        if (Time.timeScale <= 0 || AudioListener.pause)
-        {
-            mouseHeld = false;
-            if (actionManager != null) actionManager.SetLongJumpCharging(false);
-            return;
-        }
+
+        bool down = userInput.press.isPressed;
+        bool pressed = down && !previousUserDown;
+        bool released = !down && previousUserDown;
+        previousUserDown = down;
+
         if (pressed)
         {
-            mouseStart = mouse.position.ReadValue();
-            mouseHeld = !IsOverUI(mouseStart);
+            userStart = userInput.position.ReadValue();
+            userHeld = !IsOverUI(userStart);
         }
 
-        // Animation only: use the same displacement threshold/direction as release.
-        // Begin after swiping up, keep showing it while held, stop if direction changes.
-        if (actionManager != null)
+        // Use the same displacement, threshold and direction rules as release.
+        if (down && userHeld)
         {
-            Vector2 heldDisplacement = mouse.position.ReadValue() - mouseStart;
-            bool showCharging = down && mouseHeld &&
-                heldDisplacement.magnitude >= 24f * Mathf.Max(.75f, Screen.height / 720f) &&
-                GetDirection(heldDisplacement) == Direction.Up;
-            actionManager.SetLongJumpCharging(showCharging);
+            Vector2 displacement = userInput.position.ReadValue() - userStart;
+            SetHeldDirection(displacement.magnitude >= SwipeThreshold
+                ? GetDirection(displacement) : Direction.None);
         }
+        else SetHeldDirection(Direction.None); // Stop preview BEFORE the release action.
 
-        if (released && mouseHeld)
+        if (released && userHeld)
         {
-            mouseHeld = false;
-            Vector2 displacement = mouse.position.ReadValue() - mouseStart;
-            if (displacement.magnitude < 24f * Mathf.Max(.75f, Screen.height / 720f))
+            userHeld = false;
+            Vector2 displacement = userInput.position.ReadValue() - userStart;
+            if (displacement.magnitude < SwipeThreshold)
             {
-                RequestAction(RobotActionType.Jump);
-                
                 OnPressed?.Invoke();
             }
             else PerformSwipe(GetDirection(displacement));
         }
     }
+    private float SwipeThreshold => 24f * Mathf.Max(.75f, Screen.height / 720f);
+
+    private void SetHeldDirection(Direction direction)
+    {
+        if (HeldDirection == direction) return;
+        HeldDirection = direction;
+        OnHeldDirectionChanged?.Invoke(direction);
+    }
+
+    private void CancelGesture()
+    {
+        userHeld = false;
+        // A cancelled hold must not become an action on release or resume mid-hold.
+        previousUserDown = Pointer.current != null && Pointer.current.press.isPressed;
+        SetHeldDirection(Direction.None);
+    }
+
+    private void OnEnable() => CancelGesture();
+    private void OnDisable() => CancelGesture();
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (!hasFocus) CancelGesture();
+    }
+
+    private void OnApplicationPause(bool paused)
+    {
+        if (paused) CancelGesture();
+    }
+
     private bool IsOverUI(Vector2 position)
     {
         if (EventSystem.current == null) return false;
@@ -110,29 +109,10 @@ public class InputManager : MonoBehaviour
         return hits.Count > 0;
     }
 
-    private void OnApplicationFocus(bool focused)
-    {
-        if (!focused)
-        {
-            mouseHeld = false;
-            if (actionManager != null) actionManager.SetLongJumpCharging(false);
-        }
-    }
-    private void Jump(InputAction.CallbackContext context)
-    {
-        if (context.control.device is Mouse || drag) return;
-        // Request a normal jump.
-        RequestAction(RobotActionType.Jump);
-        if (FXManager.Instance != null) FXManager.Instance.PlaySFX(jumpID);
-
-        OnPressed?.Invoke();
-    }
-
     private void Drag(InputAction.CallbackContext context)
     {
-        if (context.control.device is Mouse) return;
         Vector2 dragInput = context.ReadValue<Vector2>();
-        if (dragInput.magnitude >= 24f * Mathf.Max(.75f, Screen.height / 720f))
+        if (dragInput.magnitude >= SwipeThreshold)
         {
             drag = true;
             Direction direction = GetDirection(dragInput);
@@ -142,39 +122,9 @@ public class InputManager : MonoBehaviour
     }
     private void PerformSwipe(Direction direction)
     {
-        // Request the action matching the swipe direction.
-        if (actionManager != null)
-        {
-            switch (direction)
-            {
-                case Direction.Up:
-                    RequestAction(RobotActionType.LongJump, longJumpCharge);
-                    if (FXManager.Instance != null) FXManager.Instance.PlaySFX(chargeJumpID);
-                    break;
-
-                case Direction.Down:
-                    RequestAction(RobotActionType.Duck);
-                    if (FXManager.Instance != null) FXManager.Instance.PlaySFX(duckID);
-                    break;
-                case Direction.Left:
-                    RequestAction(RobotActionType.Brake);
-                    break;
-                case Direction.Right:
-                    RequestAction(RobotActionType.Accelerate);
-                    break;
-
-            }
-        }
         OnSwipe?.Invoke(direction);
     }
 
-    private void RequestAction(RobotActionType action, float charge = 0f)
-    {
-        if (timingFeedback != null && timingFeedback.isActiveAndEnabled)
-            timingFeedback.Perform(action, charge);
-        else if (actionManager != null)
-            actionManager.TryPerform(action, charge);
-    }
 
     public enum Direction { Up, Down, Left, Right, None }
     private Direction GetDirection(Vector2 vector) //helper function for drag

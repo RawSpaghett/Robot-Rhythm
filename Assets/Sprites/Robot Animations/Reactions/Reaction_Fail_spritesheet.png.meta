@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: f6ccadce6381ca747af225c832789998
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2764443467156549918
+    second: Reaction_Fail_spritesheet_0
+  - first:
+      213: 5514746671561037806
+    second: Reaction_Fail_spritesheet_1
+  - first:
+      213: 5393126636895033820
+    second: Reaction_Fail_spritesheet_2
+  - first:
+      213: 1811563146998368870
+    second: Reaction_Fail_spritesheet_3
+  - first:
+      213: -5398060991628014090
+    second: Reaction_Fail_spritesheet_4
+  - first:
+      213: 7248622266484463084
+    second: Reaction_Fail_spritesheet_5
+  - first:
+      213: -553327907042179059
+    second: Reaction_Fail_spritesheet_6
+  - first:
+      213: 1447536571642407943
+    second: Reaction_Fail_spritesheet_7
+  - first:
+      213: 5785656365171097935
+    second: Reaction_Fail_spritesheet_8
+  - first:
+      213: -3663369286230703195
+    second: Reaction_Fail_spritesheet_9
+  - first:
+      213: 7262216345969939136
+    second: Reaction_Fail_spritesheet_10
+  - first:
+      213: -4153221852804519151
+    second: Reaction_Fail_spritesheet_11
+  - first:
+      213: -6372337144174900740
+    second: Reaction_Fail_spritesheet_12
+  - first:
+      213: 2865171482946306057
+    second: Reaction_Fail_spritesheet_13
+  - first:
+      213: -4812213012937141306
+    second: Reaction_Fail_spritesheet_14
+  - first:
+      213: -2323887096280799188
+    second: Reaction_Fail_spritesheet_15
+  - first:
+      213: -4063718207298917873
+    second: Reaction_Fail_spritesheet_16
+  - first:
+      213: 965372041395234315
+    second: Reaction_Fail_spritesheet_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 48
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 4497
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee0c723059b2a9d0800000000000000
+      internalID: -2764443467156549918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 4497
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee7d9a021e0588c40800000000000000
+      internalID: 5514746671561037806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 4495
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd953dc2a1c38da40800000000000000
+      internalID: 5393126636895033820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 5911
+        y: 4495
+        width: 943
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ac6098517f32910800000000000000
+      internalID: 1811563146998368870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 3414
+        width: 955
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd8e16d02c3615b0800000000000000
+      internalID: -5398060991628014090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2062
+        y: 3414
+        width: 955
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce51bc8eb87489460800000000000000
+      internalID: 7248622266484463084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3982
+        y: 3417
+        width: 955
+        height: 827
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d08c070433f2258f0800000000000000
+      internalID: -553327907042179059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 5911
+        y: 3417
+        width: 943
+        height: 862
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ce120b7dea61410800000000000000
+      internalID: 1447536571642407943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 2335
+        width: 943
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4140867fc7ca4050800000000000000
+      internalID: 5785656365171097935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 2335
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a384252b09192dc0800000000000000
+      internalID: -3663369286230703195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 2334
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2d29f2a4398c460800000000000000
+      internalID: 7262216345969939136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 5917
+        y: 2334
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11b6236cabacc56c0800000000000000
+      internalID: -4153221852804519151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1257
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf98d642129e097a0800000000000000
+      internalID: -6372337144174900740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 1257
+        width: 923
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 900089d884223c720800000000000000
+      internalID: 2865171482946306057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3997
+        y: 1255
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c39e5cc2c5973db0800000000000000
+      internalID: -4812213012937141306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 5917
+        y: 1255
+        width: 923
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c28a1189ff4efbfd0800000000000000
+      internalID: -2323887096280799188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 174
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a29aa22d5ca97c0800000000000000
+      internalID: -4063718207298917873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reaction_Fail_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 174
+        width: 923
+        height: 900
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06e473c1c0b56d00800000000000000
+      internalID: 965372041395234315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Reaction_Fail_spritesheet_0: -2764443467156549918
+      Reaction_Fail_spritesheet_1: 5514746671561037806
+      Reaction_Fail_spritesheet_10: 7262216345969939136
+      Reaction_Fail_spritesheet_11: -4153221852804519151
+      Reaction_Fail_spritesheet_12: -6372337144174900740
+      Reaction_Fail_spritesheet_13: 2865171482946306057
+      Reaction_Fail_spritesheet_14: -4812213012937141306
+      Reaction_Fail_spritesheet_15: -2323887096280799188
+      Reaction_Fail_spritesheet_16: -4063718207298917873
+      Reaction_Fail_spritesheet_17: 965372041395234315
+      Reaction_Fail_spritesheet_2: 5393126636895033820
+      Reaction_Fail_spritesheet_3: 1811563146998368870
+      Reaction_Fail_spritesheet_4: -5398060991628014090
+      Reaction_Fail_spritesheet_5: 7248622266484463084
+      Reaction_Fail_spritesheet_6: -553327907042179059
+      Reaction_Fail_spritesheet_7: 1447536571642407943
+      Reaction_Fail_spritesheet_8: 5785656365171097935
+      Reaction_Fail_spritesheet_9: -3663369286230703195
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

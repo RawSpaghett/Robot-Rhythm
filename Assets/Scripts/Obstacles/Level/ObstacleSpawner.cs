@@ -20,6 +20,19 @@ public class ObstacleSpawner : MonoBehaviour
     public float spawnTime = 4f;
 
     public float groundY;
+    [System.Serializable]
+    public class ObstacleSprite
+    {
+        public ObstacleType Type;
+        public Sprite Sprite;
+        [Tooltip("Enable a stage-specific loop. Off keeps this stage's static sprite, even if the prefab has an animation.")]
+        public bool UseAnimation;
+        public SpriteSheetSequence AnimationSheet = new SpriteSheetSequence();
+        [Min(0.01f)] public float FramesPerSecond = 12f;
+    }
+
+    [Header("Art")]
+    public ObstacleSprite[] levelSprites = new ObstacleSprite[0];
     [Header("Timing")]
     [SerializeField] private RhythmManager rhythmManager;
     private bool levelFinished;
@@ -87,6 +100,7 @@ public class ObstacleSpawner : MonoBehaviour
             return;
         }
         GameObject instance = Instantiate(placement.Type.Prefab, transform);
+        ChangeSprite(instance, placement.Type);
 
         ActiveObstacle entry = new ActiveObstacle();
         entry.Transform = instance.transform;
@@ -94,13 +108,50 @@ public class ObstacleSpawner : MonoBehaviour
         entry.Obstacle = instance.GetComponent<ObstacleBase>();
         // Cue pictures have no ObstacleBase, so they don't count as hazards.
         if (entry.Obstacle != null)
-            entry.Obstacle.Prepare((placement.Beat  * rhythmManager.beatMap.SecondsPerBeat) - QOLoffset);
+            entry.Obstacle.Prepare((placement.Beat * rhythmManager.beatMap.SecondsPerBeat) - QOLoffset);
 
         active.Add(entry);
     }
 
+    // A matching level entry owns both static art and animation for this spawn.
+    // Unlisted obstacle types keep their prefab defaults.
+    private void ChangeSprite(GameObject instance, ObstacleType type)
+    {
+        SpriteRenderer spriteRenderer = instance.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null || levelSprites == null) return;
+
+        for (int i = 0; i < levelSprites.Length; i++)
+        {
+            ObstacleSprite art = levelSprites[i];
+            if (art == null || art.Type != type) continue;
+
+            ObstacleSpriteAnimation animation = instance.GetComponent<ObstacleSpriteAnimation>();
+            // Restore any previous animation BEFORE assigning the stage's static art.
+            if (animation != null) animation.SetAnimationEnabled(false);
+
+            if (art.Sprite != null)
+            {
+                spriteRenderer.sprite = art.Sprite;
+                // Preserve the existing level-art scale handling.
+                if (instance.GetComponent<RoadblockObstacle>() != null || instance.GetComponent<DuckObstacle>() != null)
+                    spriteRenderer.transform.localScale = Vector3.one;
+            }
+
+            if (animation == null && art.UseAnimation)
+                animation = instance.AddComponent<ObstacleSpriteAnimation>();
+            if (animation != null)
+            {
+                animation.ConfigureForStage(spriteRenderer, art.AnimationSheet,
+                    art.FramesPerSecond, art.UseAnimation);
+                if (art.UseAnimation) animation.enabled = true;
+            }
+            return; // Configure one entry per obstacle type in each stage.
+        }
+    }
+
     private void MoveObstacles(float currentBeat, double currentTime)
     {
+        float visualBeat = (float)(rhythmManager.VisualSongTime / rhythmManager.beatMap.SecondsPerBeat);
         // Counting down so when an obstacle is removed it doesnt shift the list
         for (int i = active.Count - 1; i >= 0; i--)
         {
@@ -109,13 +160,13 @@ public class ObstacleSpawner : MonoBehaviour
             if (active[i].Obstacle != null)
                 active[i].Obstacle.CheckForMiss(currentTime);
 
-            active[i].Transform.position = new Vector3(hitLineX + beatsAway * distancePerBeat, groundY, 0f);
+            active[i].Transform.position = new Vector3(hitLineX + (active[i].TargetBeat - visualBeat) * distancePerBeat, groundY, 0f);
 
             if (beatsAway < -despawnBeats &&
                 (active[i].Obstacle == null || active[i].Obstacle.IsResolved))
             {
                 Destroy(active[i].Transform.gameObject);
-                active.RemoveAt(i); 
+                active.RemoveAt(i);
             }
         }
     }

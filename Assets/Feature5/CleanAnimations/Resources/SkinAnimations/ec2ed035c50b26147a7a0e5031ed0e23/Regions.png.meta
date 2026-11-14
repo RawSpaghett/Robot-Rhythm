@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 3ce69b6636cae384588466d7502a72f5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6575090369479965663
+    second: Regions_0
+  - first:
+      213: 2297277212847308481
+    second: Regions_1
+  - first:
+      213: 4111980359754618151
+    second: Regions_2
+  - first:
+      213: -8658101604554013012
+    second: Regions_3
+  - first:
+      213: -6099204129172981078
+    second: Regions_4
+  - first:
+      213: 6775259778139790287
+    second: Regions_5
+  - first:
+      213: 759431215300165590
+    second: Regions_6
+  - first:
+      213: -4415646544736345360
+    second: Regions_7
+  - first:
+      213: 6969125966817354188
+    second: Regions_8
+  - first:
+      213: -7192556134917658246
+    second: Regions_9
+  - first:
+      213: 6885746476239663304
+    second: Regions_10
+  - first:
+      213: 4339503224412552696
+    second: Regions_11
+  - first:
+      213: 6014061710417555485
+    second: Regions_12
+  - first:
+      213: 3904369647396565537
+    second: Regions_13
+  - first:
+      213: 5783622507187943708
+    second: Regions_14
+  - first:
+      213: 762751155680510788
+    second: Regions_15
+  - first:
+      213: 2556298331309114621
+    second: Regions_16
+  - first:
+      213: 9073942037978327746
+    second: Regions_17
+  - first:
+      213: 7001683413051680529
+    second: Regions_18
+  - first:
+      213: 4695695151363903984
+    second: Regions_19
+  - first:
+      213: 982772137168503759
+    second: Regions_20
+  - first:
+      213: 3690788327697535473
+    second: Regions_21
+  - first:
+      213: 3117349257278004597
+    second: Regions_22
+  - first:
+      213: 692999317440232562
+    second: Regions_23
+  - first:
+      213: 861792874158380445
+    second: Regions_24
+  - first:
+      213: 1051580926603340072
+    second: Regions_25
+  - first:
+      213: -364773521343327327
+    second: Regions_26
+  - first:
+      213: -9198678995169272476
+    second: Regions_27
+  - first:
+      213: -6706266390756874240
+    second: Regions_28
+  - first:
+      213: 3148772568237812024
+    second: Regions_29
+  - first:
+      213: 5716521957502154592
+    second: Regions_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 48
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 25
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Regions_0
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 725
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdbf1fecad96f3b50800000000000000
+      internalID: 6575090369479965663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_1
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 743
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cefc5e147191ef10800000000000000
+      internalID: 2297277212847308481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_2
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 676
+        width: 98
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7259e8ad950b01930800000000000000
+      internalID: 4111980359754618151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_3
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 696
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca68157967e38d780800000000000000
+      internalID: -8658101604554013012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_4
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 699
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa7c04d8264b5ba0800000000000000
+      internalID: -6099204129172981078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_5
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 633
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb93011fde860e50800000000000000
+      internalID: 6775259778139790287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_6
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 630
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df3f4baaaa0a8a00800000000000000
+      internalID: 759431215300165590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_7
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 624
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f22f47dcd878b2c0800000000000000
+      internalID: -4415646544736345360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_8
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 622
+        width: 33
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1691f842f47b060800000000000000
+      internalID: 6969125966817354188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_9
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 648
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a792d279d48ee2c90800000000000000
+      internalID: -7192556134917658246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_10
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 640
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0b9a910f51f8f50800000000000000
+      internalID: 6885746476239663304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_11
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 586
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fdb5c0e033093c30800000000000000
+      internalID: 4339503224412552696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_12
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 427
+        width: 213
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1077b2034d367350800000000000000
+      internalID: 6014061710417555485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_13
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 597
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 122b3e0128b1f2630800000000000000
+      internalID: 3904369647396565537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_14
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 546
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1934eff60e834050800000000000000
+      internalID: 5783622507187943708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_15
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 414
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4430b568226d59a00800000000000000
+      internalID: 762751155680510788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_16
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 278
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df48a99d9cbc97320800000000000000
+      internalID: 2556298331309114621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_17
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 280
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2caae2e253e1ded70800000000000000
+      internalID: 9073942037978327746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_18
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 202
+        width: 136
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117a0b8b7f9fa2160800000000000000
+      internalID: 7001683413051680529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_19
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 286
+        width: 33
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1d19e7cd57a2140800000000000000
+      internalID: 4695695151363903984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_20
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 291
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc384134d0283ad00800000000000000
+      internalID: 982772137168503759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_21
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 203
+        width: 67
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1d19ded60583330800000000000000
+      internalID: 3690788327697535473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_22
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 260
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d12e012ac034b20800000000000000
+      internalID: 3117349257278004597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_23
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 214
+        width: 110
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27cfc9125370e9900800000000000000
+      internalID: 692999317440232562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_24
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 260
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d955c269d04b5fb00800000000000000
+      internalID: 861792874158380445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_25
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 248
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829a4cef747f79e00800000000000000
+      internalID: 1051580926603340072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_26
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 237
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3dcdc3a6010faf0800000000000000
+      internalID: -364773521343327327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_27
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 247
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d961ac03ab75080800000000000000
+      internalID: -9198678995169272476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_28
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 204
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008abc9bf3e8ee2a0800000000000000
+      internalID: -6706266390756874240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_29
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 209
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8392f48c7ffa2bb20800000000000000
+      internalID: 3148772568237812024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Regions_30
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 217
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 067f2a3de6a255f40800000000000000
+      internalID: 5716521957502154592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Regions_0: 6575090369479965663
+      Regions_1: 2297277212847308481
+      Regions_10: 6885746476239663304
+      Regions_11: 4339503224412552696
+      Regions_12: 6014061710417555485
+      Regions_13: 3904369647396565537
+      Regions_14: 5783622507187943708
+      Regions_15: 762751155680510788
+      Regions_16: 2556298331309114621
+      Regions_17: 9073942037978327746
+      Regions_18: 7001683413051680529
+      Regions_19: 4695695151363903984
+      Regions_2: 4111980359754618151
+      Regions_20: 982772137168503759
+      Regions_21: 3690788327697535473
+      Regions_22: 3117349257278004597
+      Regions_23: 692999317440232562
+      Regions_24: 861792874158380445
+      Regions_25: 1051580926603340072
+      Regions_26: -364773521343327327
+      Regions_27: -9198678995169272476
+      Regions_28: -6706266390756874240
+      Regions_29: 3148772568237812024
+      Regions_3: -8658101604554013012
+      Regions_30: 5716521957502154592
+      Regions_4: -6099204129172981078
+      Regions_5: 6775259778139790287
+      Regions_6: 759431215300165590
+      Regions_7: -4415646544736345360
+      Regions_8: 6969125966817354188
+      Regions_9: -7192556134917658246
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

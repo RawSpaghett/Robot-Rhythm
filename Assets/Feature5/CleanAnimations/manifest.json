@@ -1,0 +1,3549 @@
+{
+  "entries": [
+    {
+      "visible_pixels": 3834472,
+      "blended_pixels": 243960,
+      "blend_rms_error_99_percentile": 1.8411895036697388,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/Accelerate_DEFAULT-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/759f5eb28c407f340866dd20b35933fb"
+    },
+    {
+      "visible_pixels": 3834472,
+      "blended_pixels": 228208,
+      "blend_rms_error_99_percentile": 2.494438409805298,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/Accelerate_GREEN-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/bd99095ee0fc6b348806f74fe69ac450"
+    },
+    {
+      "visible_pixels": 3834472,
+      "blended_pixels": 227022,
+      "blend_rms_error_99_percentile": 3.6449670791625977,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/Accelerate_RED-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e2dd72c8962b9aa44a199baaec552645"
+    },
+    {
+      "visible_pixels": 3834472,
+      "blended_pixels": 227115,
+      "blend_rms_error_99_percentile": 2.9299159049987793,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/Accelerate_YELLOW-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ff3d4e9d6c3cae3428d113f3102da11e"
+    },
+    {
+      "visible_pixels": 4256724,
+      "blended_pixels": 256166,
+      "blend_rms_error_99_percentile": 2.054804563522339,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/Brake_DEFAULT-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7d30a5b3108eb7a48b147851e9928dfb"
+    },
+    {
+      "visible_pixels": 4256724,
+      "blended_pixels": 252318,
+      "blend_rms_error_99_percentile": 2.475268602371216,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/Brake_GREEN-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f10880807ffc36447aa0c8934d8ba5ea"
+    },
+    {
+      "visible_pixels": 4256724,
+      "blended_pixels": 251757,
+      "blend_rms_error_99_percentile": 3.1618621349334717,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/Brake_RED-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1c8ff28287075fc449aceb7ed7b37761"
+    },
+    {
+      "visible_pixels": 4256724,
+      "blended_pixels": 249250,
+      "blend_rms_error_99_percentile": 2.9433822631835938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/Brake_YELLOW-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1bf5d90df8538b2429d5edcd7340cf0b"
+    },
+    {
+      "visible_pixels": 9341024,
+      "blended_pixels": 581266,
+      "blend_rms_error_99_percentile": 2.357022762298584,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/BrakeDefaultFULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/205a3fceff379d24583c9ed85a58a6ca"
+    },
+    {
+      "visible_pixels": 458031,
+      "blended_pixels": 20852,
+      "blend_rms_error_99_percentile": 1.6694918870925903,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3f9a1a0ad24374d498491c03e78cd025"
+    },
+    {
+      "visible_pixels": 434184,
+      "blended_pixels": 24915,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/08117096ba784e941a39cbec2caa2c3b"
+    },
+    {
+      "visible_pixels": 339305,
+      "blended_pixels": 25339,
+      "blend_rms_error_99_percentile": 1.2235873937606812,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ad39a1d0a5ece6e4a950c9d13c3e4ade"
+    },
+    {
+      "visible_pixels": 319065,
+      "blended_pixels": 13796,
+      "blend_rms_error_99_percentile": 1.2235873937606812,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e835ed6c1098d8943a245e10eff62d78"
+    },
+    {
+      "visible_pixels": 359281,
+      "blended_pixels": 19673,
+      "blend_rms_error_99_percentile": 1.068975567817688,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7a3d7b07aa55eba48906164018e1528b"
+    },
+    {
+      "visible_pixels": 362170,
+      "blended_pixels": 16777,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7fec8553ffea2a2438993680cac5ea65"
+    },
+    {
+      "visible_pixels": 362170,
+      "blended_pixels": 16777,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/9e735090479192a419f7abbf9071bbf1"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22470,
+      "blend_rms_error_99_percentile": 1.2235873937606812,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5aefeceea020cf34583aeedacfdd1e93"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22470,
+      "blend_rms_error_99_percentile": 1.2235873937606812,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/77412a6b5085aba458d1ebd36d79a41c"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22470,
+      "blend_rms_error_99_percentile": 1.2235873937606812,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a1709176c59a75546a5112287d69a721"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22470,
+      "blend_rms_error_99_percentile": 1.2235873937606812,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/728b000bf69c4d7488f8bd68767ee175"
+    },
+    {
+      "visible_pixels": 468283,
+      "blended_pixels": 22455,
+      "blend_rms_error_99_percentile": 1.2266464233398438,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b95aa112959c8bc4e99b1e6ae0b1ca6c"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 26148,
+      "blend_rms_error_99_percentile": 1.6694918870925903,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c7e53fffcca515841a714b94807a97fa"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 26148,
+      "blend_rms_error_99_percentile": 1.6694918870925903,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color21.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0d9eab0cbeaab5c4f8c2d36f086ba1f0"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 26148,
+      "blend_rms_error_99_percentile": 1.6694918870925903,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color22.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8f2874e8d84ead54d8f1a72b506caa47"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 26148,
+      "blend_rms_error_99_percentile": 1.6694918870925903,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color23.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0a1e475dc790bbb40b1a500fa410e34e"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 27176,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color24.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/808b2e16b3f9fed41ad590ff27b63167"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 27176,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color25.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ecf09fefe83736f42a1969b04c07763a"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 27176,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color26.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/76924b77ccacee941b05c69904e701c0"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 27176,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color27.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e1c40203985b7f342b4a6ebf15d98999"
+    },
+    {
+      "visible_pixels": 430746,
+      "blended_pixels": 30841,
+      "blend_rms_error_99_percentile": 1.2266464233398438,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color28.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/30ff49dde1cbef64fb6482a37dfb87a1"
+    },
+    {
+      "visible_pixels": 466963,
+      "blended_pixels": 32961,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color29.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4cff39aec24cd28478c94119d2011239"
+    },
+    {
+      "visible_pixels": 468283,
+      "blended_pixels": 22455,
+      "blend_rms_error_99_percentile": 1.2266464233398438,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cec668ef096899543972d603681ff04d"
+    },
+    {
+      "visible_pixels": 466963,
+      "blended_pixels": 32961,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color30.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0d2f083d8f0f2984fb69e324551323d4"
+    },
+    {
+      "visible_pixels": 477335,
+      "blended_pixels": 44422,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color31.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/2d6de9ff274e3454ba24d0597e0fa82f"
+    },
+    {
+      "visible_pixels": 471056,
+      "blended_pixels": 34503,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color32.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1c6267dfb1fedc84db4f5fa1a804a027"
+    },
+    {
+      "visible_pixels": 471056,
+      "blended_pixels": 34503,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color33.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/73696e77233111d4c82724cc0b5540a6"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 32082,
+      "blend_rms_error_99_percentile": 1.1544874906539917,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color34.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5f84fda2b65f9594eaecf8797dbf7be7"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 32082,
+      "blend_rms_error_99_percentile": 1.1544874906539917,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color35.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0cbbd3377d1a1d34f8ca61349918c825"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 32082,
+      "blend_rms_error_99_percentile": 1.1544874906539917,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color36.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/005353b7c12452e4dadb58b8b2cb98da"
+    },
+    {
+      "visible_pixels": 458031,
+      "blended_pixels": 20852,
+      "blend_rms_error_99_percentile": 1.6694918870925903,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color37.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/08a0b7774c30c96499e6c2227d6cb320"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27331,
+      "blend_rms_error_99_percentile": 1.5544041395187378,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d9c923ccac845504e9672d9c3f9a9fee"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27331,
+      "blend_rms_error_99_percentile": 1.5544041395187378,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/02848df088418c645b0012b6363a11b7"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27331,
+      "blend_rms_error_99_percentile": 1.5544041395187378,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ae3e6f774c4e6b645ae4d66fabe7c9f7"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27331,
+      "blend_rms_error_99_percentile": 1.5544041395187378,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/15c8615993f64334cbb4f349cc84ed63"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27331,
+      "blend_rms_error_99_percentile": 1.5544041395187378,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d045a01f8311b934ebeb36ddf09b2c93"
+    },
+    {
+      "visible_pixels": 434184,
+      "blended_pixels": 24915,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_Color9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/404dc97e8c61fdb4396523293497b450"
+    },
+    {
+      "visible_pixels": 458031,
+      "blended_pixels": 20514,
+      "blend_rms_error_99_percentile": 2.164670467376709,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/bc82bf3d514b1fd4596f299c4133ba92"
+    },
+    {
+      "visible_pixels": 434184,
+      "blended_pixels": 24530,
+      "blend_rms_error_99_percentile": 2.021442174911499,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ca1c13c6d0e342a4f833d9a5b7cb9436"
+    },
+    {
+      "visible_pixels": 339305,
+      "blended_pixels": 25132,
+      "blend_rms_error_99_percentile": 1.6340070962905884,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/35fb5df81c784f8489fa82450d6f5fdf"
+    },
+    {
+      "visible_pixels": 319065,
+      "blended_pixels": 13686,
+      "blend_rms_error_99_percentile": 1.6052093505859375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b23770906bcd0ad45ab34c333614072b"
+    },
+    {
+      "visible_pixels": 359281,
+      "blended_pixels": 19459,
+      "blend_rms_error_99_percentile": 1.6171538829803467,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6c4a63cdc02094140b21f284b309efc7"
+    },
+    {
+      "visible_pixels": 362170,
+      "blended_pixels": 16581,
+      "blend_rms_error_99_percentile": 2.021442174911499,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5d376664a98b2ae459d97179bb311b6e"
+    },
+    {
+      "visible_pixels": 362170,
+      "blended_pixels": 16581,
+      "blend_rms_error_99_percentile": 2.021442174911499,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7a6fee6d8fa1dda4fb70864db4ee53fd"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22157,
+      "blend_rms_error_99_percentile": 1.6340070962905884,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b1bf5611a360c6444b0a8b442012f4bf"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22157,
+      "blend_rms_error_99_percentile": 1.6340070962905884,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/871fe804a11a8f341bce320cc7debefc"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22157,
+      "blend_rms_error_99_percentile": 1.6340070962905884,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5f34cd4a32520ba428e2758c8ab451ea"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22157,
+      "blend_rms_error_99_percentile": 1.6340070962905884,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/53928f8dd40f9f6449a0d679dbeb8070"
+    },
+    {
+      "visible_pixels": 468283,
+      "blended_pixels": 22128,
+      "blend_rms_error_99_percentile": 2.092507839202881,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3bb4cac51bef7cd45a4c71a0ebf638c9"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 25770,
+      "blend_rms_error_99_percentile": 2.2786316871643066,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e709d5fd8ac330e429f3561e33df2d0d"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 25770,
+      "blend_rms_error_99_percentile": 2.2786316871643066,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green21.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/231c94d705ea168428ef3b1589f4284c"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 25770,
+      "blend_rms_error_99_percentile": 2.2786316871643066,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green22.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e9213a8a6f4193b439d4d7a905eeece7"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 25770,
+      "blend_rms_error_99_percentile": 2.2786316871643066,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green23.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7e6467b8482f3cb42a5eff357685ee58"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 26823,
+      "blend_rms_error_99_percentile": 2.021442174911499,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green24.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b2040bb018506444094f187422db251a"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 26823,
+      "blend_rms_error_99_percentile": 2.021442174911499,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green25.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d6b883cadf3c55745a31999ffb8fad87"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 26823,
+      "blend_rms_error_99_percentile": 2.021442174911499,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green26.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a8e840a03722c774e823cdf8305c1e33"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 26823,
+      "blend_rms_error_99_percentile": 2.021442174911499,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green27.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7ecac4b81c7ac7d4c9b69837ce4cbe06"
+    },
+    {
+      "visible_pixels": 430746,
+      "blended_pixels": 30488,
+      "blend_rms_error_99_percentile": 2.092507839202881,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green28.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d0254c4ae1da7fe46badc2d08c913400"
+    },
+    {
+      "visible_pixels": 466963,
+      "blended_pixels": 32621,
+      "blend_rms_error_99_percentile": 2.092507839202881,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green29.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/38e10b3e1c717644a9c988a177847601"
+    },
+    {
+      "visible_pixels": 468283,
+      "blended_pixels": 22128,
+      "blend_rms_error_99_percentile": 2.092507839202881,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c125970d6190e2d41844b2fb404e5dc2"
+    },
+    {
+      "visible_pixels": 466963,
+      "blended_pixels": 32621,
+      "blend_rms_error_99_percentile": 2.092507839202881,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green30.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/56dedbfe80e34e248ae297a3fe4c2d06"
+    },
+    {
+      "visible_pixels": 477335,
+      "blended_pixels": 43801,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green31.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/45b951b4cc9610b458d9620010039eae"
+    },
+    {
+      "visible_pixels": 471056,
+      "blended_pixels": 34146,
+      "blend_rms_error_99_percentile": 2.092507839202881,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green32.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/414ac72ccdf9efe439377c9c233a83b2"
+    },
+    {
+      "visible_pixels": 471056,
+      "blended_pixels": 34146,
+      "blend_rms_error_99_percentile": 2.092507839202881,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green33.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0d33e1d20cc0fa34095a4450529c425d"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 31716,
+      "blend_rms_error_99_percentile": 1.4431113004684448,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green34.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a1a7e463ab1944b40a08bfedbff9d916"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 31716,
+      "blend_rms_error_99_percentile": 1.4431113004684448,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green35.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c4160900909aa484f966faafe6685ff9"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 31716,
+      "blend_rms_error_99_percentile": 1.4431113004684448,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green36.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/63b58f8614b4d4c4498da6342da5e101"
+    },
+    {
+      "visible_pixels": 458031,
+      "blended_pixels": 20514,
+      "blend_rms_error_99_percentile": 2.164670467376709,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green37.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e66834a104a834d438018928dbe1761f"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 26923,
+      "blend_rms_error_99_percentile": 2.164670467376709,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e5782f27366a7a341a73965c748e2c8a"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 26923,
+      "blend_rms_error_99_percentile": 2.164670467376709,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/35c93d7da9104524892ffee3d8453b9c"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 26923,
+      "blend_rms_error_99_percentile": 2.164670467376709,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/48c2e224ae87d1d4d9d1ff15674c5058"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 26923,
+      "blend_rms_error_99_percentile": 2.164670467376709,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e2824864d27347f48ba50c71bf081280"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 26923,
+      "blend_rms_error_99_percentile": 2.164670467376709,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5f76402eeb319a04e9adb713308aec57"
+    },
+    {
+      "visible_pixels": 434184,
+      "blended_pixels": 24530,
+      "blend_rms_error_99_percentile": 2.021442174911499,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_green9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/00e15b8b9abfb584e902f6a451deab6e"
+    },
+    {
+      "visible_pixels": 458031,
+      "blended_pixels": 20786,
+      "blend_rms_error_99_percentile": 2.7425215244293213,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8035c913f441b864ca1681ea75f6ae33"
+    },
+    {
+      "visible_pixels": 434184,
+      "blended_pixels": 24712,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4b3ca566d7af2044486ea9a9c3150ac3"
+    },
+    {
+      "visible_pixels": 339305,
+      "blended_pixels": 24825,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3f3664ee33437ac44a5c7ca52a180dd6"
+    },
+    {
+      "visible_pixels": 319065,
+      "blended_pixels": 13781,
+      "blend_rms_error_99_percentile": 1.5146571397781372,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f04e87739a7637e4aa7d924e6190df7d"
+    },
+    {
+      "visible_pixels": 359281,
+      "blended_pixels": 19655,
+      "blend_rms_error_99_percentile": 1.7320507764816284,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b36903565f9a5064da6eae09679ae6aa"
+    },
+    {
+      "visible_pixels": 362170,
+      "blended_pixels": 16609,
+      "blend_rms_error_99_percentile": 2.6648643016815186,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6b821ba7f6175d844ab307e15ad37ce7"
+    },
+    {
+      "visible_pixels": 362170,
+      "blended_pixels": 16609,
+      "blend_rms_error_99_percentile": 2.6648643016815186,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b8435bbe3a9532a48b65f86bbd8a5c83"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22106,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c387c5d9e39b263468475f8417df67f7"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22106,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/949733b72ca904843a71921bed36d62c"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22106,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/fb5537bdf4854a243ac195d73f2c1360"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22106,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e6033cb490f12c04f9b31a42b0577cff"
+    },
+    {
+      "visible_pixels": 468283,
+      "blended_pixels": 22373,
+      "blend_rms_error_99_percentile": 2.68267822265625,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d06726bf85be08840b9afa4413c8c1d5"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 25781,
+      "blend_rms_error_99_percentile": 2.5285234451293945,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a6dc3835a9d136d4daff8f77f92eabc1"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 25781,
+      "blend_rms_error_99_percentile": 2.5285234451293945,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red21.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/98ef105d890c5d341a72062c4dd32f3f"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 25781,
+      "blend_rms_error_99_percentile": 2.5285234451293945,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red22.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d66ec28e83e1510458f8a830d7746517"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 25781,
+      "blend_rms_error_99_percentile": 2.5285234451293945,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red23.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/98d20c4796978284fa779917a6f68245"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 26736,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red24.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4097727103354354b9721f8d7981f0b0"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 26736,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red25.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/2ed03953536c38146b1ddcce0e572b46"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 26736,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red26.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5aafa3a5f5b64c2459bcd4fdce3be868"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 26736,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red27.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f55cf00c5e0de034f94ce5b04d0c337f"
+    },
+    {
+      "visible_pixels": 430746,
+      "blended_pixels": 30154,
+      "blend_rms_error_99_percentile": 2.2787938117980957,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red28.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/11422e2401537814d85cc31e6a2a51a8"
+    },
+    {
+      "visible_pixels": 466963,
+      "blended_pixels": 32236,
+      "blend_rms_error_99_percentile": 2.2787938117980957,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red29.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c2461cc3555794f4f850bb215e9fa3d9"
+    },
+    {
+      "visible_pixels": 468283,
+      "blended_pixels": 22373,
+      "blend_rms_error_99_percentile": 2.68267822265625,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/41cda416947f4af4983ab5f535c38c7a"
+    },
+    {
+      "visible_pixels": 466963,
+      "blended_pixels": 32236,
+      "blend_rms_error_99_percentile": 2.2787938117980957,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red30.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/20a92916bd0c4c941a5756c6385d5815"
+    },
+    {
+      "visible_pixels": 477335,
+      "blended_pixels": 43607,
+      "blend_rms_error_99_percentile": 2.7425215244293213,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red31.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e1cfafe083df7ec4a94b049e5a20daed"
+    },
+    {
+      "visible_pixels": 471056,
+      "blended_pixels": 33834,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red32.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d6f9543ca0816034cbeb5e52bef57313"
+    },
+    {
+      "visible_pixels": 471056,
+      "blended_pixels": 33834,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red33.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5db5018ab067fa341940e6b82b574e28"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 31303,
+      "blend_rms_error_99_percentile": 2.1394731998443604,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red34.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/44ac1eb4e2d56624fa6babd4f2abedd7"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 31303,
+      "blend_rms_error_99_percentile": 2.1394731998443604,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red35.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/55cf57f3ca982e1488fd83e486dab235"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 31303,
+      "blend_rms_error_99_percentile": 2.1394731998443604,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red36.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7ddd985f2c79f78458adb070d1886694"
+    },
+    {
+      "visible_pixels": 458031,
+      "blended_pixels": 20786,
+      "blend_rms_error_99_percentile": 2.7425215244293213,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red37.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a89ae3b21c89e434aa7b5ab035c1fc43"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27142,
+      "blend_rms_error_99_percentile": 2.6648643016815186,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6fee4d40028c5f540a66837a5d0e07dd"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27142,
+      "blend_rms_error_99_percentile": 2.6648643016815186,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8c789b2d637f7de4fa0459b44b96c299"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27142,
+      "blend_rms_error_99_percentile": 2.6648643016815186,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a68c83fa08a579e40af82cf0b987284c"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27142,
+      "blend_rms_error_99_percentile": 2.6648643016815186,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6576a573fedaf624686e63ba18d88901"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27142,
+      "blend_rms_error_99_percentile": 2.6648643016815186,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3a5e790a6960b6045ab65533d46e34c6"
+    },
+    {
+      "visible_pixels": 434184,
+      "blended_pixels": 24712,
+      "blend_rms_error_99_percentile": 2.2968480587005615,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_red9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/2c45c80aecf59e3408883af623e49716"
+    },
+    {
+      "visible_pixels": 458031,
+      "blended_pixels": 20715,
+      "blend_rms_error_99_percentile": 2.316051959991455,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/303469e0d803c304188f0f806fe561d6"
+    },
+    {
+      "visible_pixels": 434184,
+      "blended_pixels": 24897,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/68e4886f4357b22498f4fc4db29eb2c6"
+    },
+    {
+      "visible_pixels": 339305,
+      "blended_pixels": 25283,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/43db1c0e81895a54bbfbdefcf7f7336d"
+    },
+    {
+      "visible_pixels": 319065,
+      "blended_pixels": 13826,
+      "blend_rms_error_99_percentile": 2.054804801940918,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f7f64ae10effac543b9d33a24f34387f"
+    },
+    {
+      "visible_pixels": 359281,
+      "blended_pixels": 19639,
+      "blend_rms_error_99_percentile": 2.054804801940918,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c6a8b22be14fde94db8a7352d49d6b6c"
+    },
+    {
+      "visible_pixels": 362170,
+      "blended_pixels": 16643,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d2d6e9a585e3da347a88719f7cedfe56"
+    },
+    {
+      "visible_pixels": 362170,
+      "blended_pixels": 16643,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e70461b1a6cb1e842b1d5b50cf525949"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22312,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/65e3b2108610093448528ffbfcb2178a"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22312,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/33851d5a316db0547840a5f1798d6076"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22312,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cc2ba5d3a8c56624399242ab43b9f0c5"
+    },
+    {
+      "visible_pixels": 422074,
+      "blended_pixels": 22312,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/2f3e0431661943044ae818e1066c2a1e"
+    },
+    {
+      "visible_pixels": 468283,
+      "blended_pixels": 22393,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/fe4e89798b91c2144870300282c391cf"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 26032,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d48111e5ad309864f8418df1cbc8347a"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 26032,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow21.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8234b138be4c7844db581b596f8b856a"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 26032,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow22.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c819fe12bfdf0cc4581ec03d2c7a3688"
+    },
+    {
+      "visible_pixels": 435654,
+      "blended_pixels": 26032,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow23.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/273878a45c236fd409709ad51cf4d181"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 27030,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow24.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/83f5609166297b3499c2aafb85567d9f"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 27030,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow25.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ab807b2bf2bc2114cb1737056cbcf488"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 27030,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow26.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6eb31516d092a0e45b1a180f8b2bca43"
+    },
+    {
+      "visible_pixels": 417198,
+      "blended_pixels": 27030,
+      "blend_rms_error_99_percentile": 2.2222747802734375,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow27.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/108aa11489b87324dbc8185cbc26b281"
+    },
+    {
+      "visible_pixels": 430746,
+      "blended_pixels": 30687,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow28.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/266425855de8bb24e9d2861584840cbc"
+    },
+    {
+      "visible_pixels": 466963,
+      "blended_pixels": 32909,
+      "blend_rms_error_99_percentile": 2.3011844158172607,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow29.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/686a5ae2f64b5854da9f35afde936707"
+    },
+    {
+      "visible_pixels": 468283,
+      "blended_pixels": 22393,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6da05b7e204cca845bb7884763b4ac12"
+    },
+    {
+      "visible_pixels": 466963,
+      "blended_pixels": 32909,
+      "blend_rms_error_99_percentile": 2.3011844158172607,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow30.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3316247fff9d4fb469756b8afcacf9c4"
+    },
+    {
+      "visible_pixels": 477335,
+      "blended_pixels": 44239,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow31.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1c81f52b5798ce04a9517545f660cccd"
+    },
+    {
+      "visible_pixels": 471056,
+      "blended_pixels": 34456,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow32.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/185a20bc33051754ca9b398f8f06fc1b"
+    },
+    {
+      "visible_pixels": 471056,
+      "blended_pixels": 34456,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow33.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ec4aba53e1c289247a9f2be90db67b5e"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 32029,
+      "blend_rms_error_99_percentile": 2.054804801940918,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow34.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/65ccf2d4815a6c54497b2cec9e650aae"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 32029,
+      "blend_rms_error_99_percentile": 2.054804801940918,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow35.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7c962001ddab2d644ae141ef2de62510"
+    },
+    {
+      "visible_pixels": 463648,
+      "blended_pixels": 32029,
+      "blend_rms_error_99_percentile": 2.054804801940918,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow36.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f83ec92a131e8454092b05096f13bbe7"
+    },
+    {
+      "visible_pixels": 458031,
+      "blended_pixels": 20715,
+      "blend_rms_error_99_percentile": 2.316051959991455,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow37.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b0d8209fcb90df349b79266cdd2b3a96"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27301,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1448eae498f2aef4a8a837ff9de1a50a"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27301,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1850965616e9bf04988cf687c73e0fc9"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27301,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c21af0496938fbb4cb5a2862f1645ca8"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27301,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5da9cb4458c04f140b9375158edd0680"
+    },
+    {
+      "visible_pixels": 451774,
+      "blended_pixels": 27301,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/715adf8d926c14d44aa0890039021436"
+    },
+    {
+      "visible_pixels": 434184,
+      "blended_pixels": 24897,
+      "blend_rms_error_99_percentile": 2.3073387145996094,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_yellow9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7ff96537ac739cd428cf2ceb833f8470"
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 25071,
+      "blend_rms_error_99_percentile": 1.954804539680481,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b9c4cb42a6c8182458f9688af4457572",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 26345,
+      "blend_rms_error_99_percentile": 1.9394785165786743,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/44e05a1f37d309046bc9a682c00e4191",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 26345,
+      "blend_rms_error_99_percentile": 1.9394785165786743,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/fb78fdee2c2c2f249b4c46d650b8f9a4",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369214,
+      "blended_pixels": 25649,
+      "blend_rms_error_99_percentile": 1.7468137741088867,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/06c8717948e32914f97d700e757e35d0",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369214,
+      "blended_pixels": 25649,
+      "blend_rms_error_99_percentile": 1.7468137741088867,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8c290f6998ac5ac43978543716b90abd",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369213,
+      "blended_pixels": 24415,
+      "blend_rms_error_99_percentile": 1.6996731758117676,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/356e58dfc5db59941be25bf1a31ab630",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369213,
+      "blended_pixels": 24415,
+      "blend_rms_error_99_percentile": 1.6996731758117676,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/52a5784cbc489d54fa8172218c2a5302",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25508,
+      "blend_rms_error_99_percentile": 1.6996731758117676,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7c253565c62df584fa30d979cb3a267b",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25508,
+      "blend_rms_error_99_percentile": 1.6996731758117676,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/bfb5b31c9cc31704e9260da98f8a28df",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25508,
+      "blend_rms_error_99_percentile": 1.6996731758117676,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/91326ef474791d14f9120ee7660286a3",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 391196,
+      "blended_pixels": 30331,
+      "blend_rms_error_99_percentile": 1.7468137741088867,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7a291efac932fc44e834e8046eeb95d8",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 447983,
+      "blended_pixels": 25140,
+      "blend_rms_error_99_percentile": 1.7468137741088867,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f457172a16f03994192cba89862749f7",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 391196,
+      "blended_pixels": 30331,
+      "blend_rms_error_99_percentile": 1.7468137741088867,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ec2ed035c50b26147a7a0e5031ed0e23",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 406829,
+      "blended_pixels": 35750,
+      "blend_rms_error_99_percentile": 1.7834001779556274,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue21.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/507b83867352a284794f7683d92372e7",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 406829,
+      "blended_pixels": 35750,
+      "blend_rms_error_99_percentile": 1.7834001779556274,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue22.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5f7f335a6e8933a419616dde145a3017",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 25071,
+      "blend_rms_error_99_percentile": 1.954804539680481,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue23.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7677af1a7ccac024aa8691d307b3883e",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 25071,
+      "blend_rms_error_99_percentile": 1.954804539680481,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue24.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/95440083427fec24c84068c5eb4f3095",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 458056,
+      "blended_pixels": 27683,
+      "blend_rms_error_99_percentile": 1.993692398071289,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/23337b7580e7c4b4184307d5c96c967a",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 458056,
+      "blended_pixels": 27683,
+      "blend_rms_error_99_percentile": 1.993692398071289,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3aeb2546ee3584d4c8571dd42a9cde07",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 695706,
+      "blended_pixels": 30791,
+      "blend_rms_error_99_percentile": 3.2343077659606934,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/676fbea31a493d04c9257b379c7bcfcb",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 374475,
+      "blended_pixels": 21053,
+      "blend_rms_error_99_percentile": 1.993692398071289,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c614af33de5f55346bea12d57d6cb4f4",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 373993,
+      "blended_pixels": 27290,
+      "blend_rms_error_99_percentile": 2.495701789855957,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e9d81f976b3be0a409044613751c1ea4",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25544,
+      "blend_rms_error_99_percentile": 1.9394785165786743,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ad5d9b6bfcecd3146a414f15ecceced8",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25544,
+      "blend_rms_error_99_percentile": 1.9394785165786743,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/Default/duck_color_blue9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/70ba82e52664e9448bf562c5e621fb28",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 5443481,
+      "blended_pixels": 349611,
+      "blend_rms_error_99_percentile": 3.7501673698425293,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duck_color-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0104ae508207eff488a18a71f75b8fb4",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 24551,
+      "blend_rms_error_99_percentile": 1.7317372560501099,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3f547ecd6cc4478458dece0dafdbef75",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25959,
+      "blend_rms_error_99_percentile": 4.032934665679932,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/9d1ba6fbe076e114bb7d524c7e2dd1e8",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25959,
+      "blend_rms_error_99_percentile": 4.032934665679932,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/65e8f4bac536c154a9300f6c596acc34",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369214,
+      "blended_pixels": 25255,
+      "blend_rms_error_99_percentile": 3.8964078426361084,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/dc94bf01854be5e4191806a8402b7769",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369214,
+      "blended_pixels": 25255,
+      "blend_rms_error_99_percentile": 3.8964078426361084,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f752d124b4cee3b4eafe90e7718de8e4",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369213,
+      "blended_pixels": 24004,
+      "blend_rms_error_99_percentile": 3.7501673698425293,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e87857278be602d4ba4ea42ac3549c95",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369213,
+      "blended_pixels": 24004,
+      "blend_rms_error_99_percentile": 3.7501673698425293,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c48d48b1ae019134498efb21078302a0",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25513,
+      "blend_rms_error_99_percentile": 3.7501673698425293,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/bf6ea5340d74b264b852f7e53082900b",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25513,
+      "blend_rms_error_99_percentile": 3.7501673698425293,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ab238620be69b524898595c3e350f2b6",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25513,
+      "blend_rms_error_99_percentile": 3.7501673698425293,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8be9022b1954d8d4fbcf9ae76d1372d4",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 391196,
+      "blended_pixels": 29804,
+      "blend_rms_error_99_percentile": 1.6996731758117676,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/de6f06e8cbeac6d408da068707851c20",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 447983,
+      "blended_pixels": 24865,
+      "blend_rms_error_99_percentile": 4.032934665679932,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/34d3533b019ca1742bcf5083309b09a2",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 391196,
+      "blended_pixels": 29804,
+      "blend_rms_error_99_percentile": 1.6996731758117676,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cf6652831ce68b44dbd0c5972aee6910",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 406829,
+      "blended_pixels": 35089,
+      "blend_rms_error_99_percentile": 1.8750836849212646,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green21.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f050657a54740ce4a9002a01fe25e488",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 406829,
+      "blended_pixels": 35089,
+      "blend_rms_error_99_percentile": 1.8750836849212646,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green22.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/17e2813359eb3964192499a9a8ccfb3c",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 24551,
+      "blend_rms_error_99_percentile": 1.7317372560501099,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green23.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cbc780c1364dbe641a8562236b88c9b6",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 24551,
+      "blend_rms_error_99_percentile": 1.7317372560501099,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green24.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3f93d7d391cf2a04b9317491d53bd4a5",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 458056,
+      "blended_pixels": 27479,
+      "blend_rms_error_99_percentile": 4.455399036407471,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4f2ce6e09180d4748b0624c1c516296d",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 458056,
+      "blended_pixels": 27479,
+      "blend_rms_error_99_percentile": 4.455399036407471,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/58ad58af0971c9b4789f4aef397653c6",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 695707,
+      "blended_pixels": 30200,
+      "blend_rms_error_99_percentile": 5.710762023925781,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/18cf00751db9c8b4ebd429e8251fcf4f",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 374475,
+      "blended_pixels": 20672,
+      "blend_rms_error_99_percentile": 4.455399036407471,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/82a3118334c5c814997db06863c20ed8",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 373993,
+      "blended_pixels": 26851,
+      "blend_rms_error_99_percentile": 4.455399036407471,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1f1d9fe1fd2268843a0ed6fef0f9c3e5",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25158,
+      "blend_rms_error_99_percentile": 4.032934665679932,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0bf3b9c161827fc438b2e945041de6c9",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25158,
+      "blend_rms_error_99_percentile": 4.032934665679932,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckGREEN/duck_color_green9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/627a522615bf25f44be2d26881dd0130",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 24652,
+      "blend_rms_error_99_percentile": 3.2483627796173096,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/061ef8f625751d74b8b043b01a7b5561",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25941,
+      "blend_rms_error_99_percentile": 3.867462635040283,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5d9ad0618d1abdf499f127111a187d4c",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25941,
+      "blend_rms_error_99_percentile": 3.867462635040283,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ec186f0982dbf22458e11ca55afa9152",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369214,
+      "blended_pixels": 25265,
+      "blend_rms_error_99_percentile": 3.5333054065704346,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/94294473d28233d43a06f6e3eebf85c5",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369214,
+      "blended_pixels": 25265,
+      "blend_rms_error_99_percentile": 3.5333054065704346,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0fee08ae109c7044596d46b0283af339",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369213,
+      "blended_pixels": 24027,
+      "blend_rms_error_99_percentile": 3.3011186122894287,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4de09599d6d14054488a5df7df411883",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369213,
+      "blended_pixels": 24027,
+      "blend_rms_error_99_percentile": 3.3011186122894287,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/517195dcfbad0bb44a99f2d4dc5f3657",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25566,
+      "blend_rms_error_99_percentile": 3.3011186122894287,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/78f1e66bb6a74df48a528cb2d834277f",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25566,
+      "blend_rms_error_99_percentile": 3.3011186122894287,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7a6a6b4215d092b41bd0ef29988b7510",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369215,
+      "blended_pixels": 25566,
+      "blend_rms_error_99_percentile": 3.3011186122894287,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/086576dcb1c08c54d969ead116ed4089",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 391196,
+      "blended_pixels": 29492,
+      "blend_rms_error_99_percentile": 3.2598540782928467,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1d5525c69d499bf4aa49edcf9cba73e0",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 447983,
+      "blended_pixels": 24706,
+      "blend_rms_error_99_percentile": 3.5333054065704346,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/37b2297810bfd4c4d92c727dcd0c98b6",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 391196,
+      "blended_pixels": 29492,
+      "blend_rms_error_99_percentile": 3.2598540782928467,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/de8b43830afc27d4a8064c944aa2a205",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 406829,
+      "blended_pixels": 34869,
+      "blend_rms_error_99_percentile": 3.2598540782928467,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red21.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4a28606b42e586740b9d3570d40c186e",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 406829,
+      "blended_pixels": 34869,
+      "blend_rms_error_99_percentile": 3.2598540782928467,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red22.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8812f261394fdce47a6b398e915599bf",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 24652,
+      "blend_rms_error_99_percentile": 3.2483627796173096,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red23.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f6382705da0e56b4ab33f5e62d7c609f",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 449177,
+      "blended_pixels": 24652,
+      "blend_rms_error_99_percentile": 3.2483627796173096,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red24.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/319567d089c185644b13906e455dd4fc",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 458056,
+      "blended_pixels": 27190,
+      "blend_rms_error_99_percentile": 4.43352746963501,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cbe2277b51a21484eae23873dea0315a",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 458056,
+      "blended_pixels": 27190,
+      "blend_rms_error_99_percentile": 4.43352746963501,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5ed8bf25dd71bb14797c15bca1a2cc33",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 695706,
+      "blended_pixels": 30691,
+      "blend_rms_error_99_percentile": 3.936951160430908,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/2e62cf34caf09ac4ebd58734f70c1552",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 374475,
+      "blended_pixels": 20929,
+      "blend_rms_error_99_percentile": 3.8955399990081787,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/fee828c25752bc64085eaecd14f02c02",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 373993,
+      "blended_pixels": 27055,
+      "blend_rms_error_99_percentile": 3.8955399990081787,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/19932d2a99f09a04d906e21055ace351",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25147,
+      "blend_rms_error_99_percentile": 3.867462635040283,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ffc0078baaf522e47ac1245d58f094dc",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369212,
+      "blended_pixels": 25147,
+      "blend_rms_error_99_percentile": 3.867462635040283,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/duckRED/duck_color_red9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/321f2baa3404be54c9f2a37289c50eae",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 447971,
+      "blended_pixels": 24907,
+      "blend_rms_error_99_percentile": 3.3913156986236572,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a5a74d61b86e44b49b315ba5731d5f18",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369126,
+      "blended_pixels": 25903,
+      "blend_rms_error_99_percentile": 4.219508171081543,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f1585559088688f4b9a98f7db600166f",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369128,
+      "blended_pixels": 25214,
+      "blend_rms_error_99_percentile": 3.8964078426361084,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4806db566b75cb04087daf9266adc391",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369128,
+      "blended_pixels": 25214,
+      "blend_rms_error_99_percentile": 3.8964078426361084,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/80ea4ebdfc7eefc45812bb4d929ce3ea",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369127,
+      "blended_pixels": 24028,
+      "blend_rms_error_99_percentile": 3.7501673698425293,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/dafa28df3b5bb8b428312c1a76186b6b",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369127,
+      "blended_pixels": 24028,
+      "blend_rms_error_99_percentile": 3.7501673698425293,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/03ec85d1541f17d4fbca27bd1b88392c",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369129,
+      "blended_pixels": 25481,
+      "blend_rms_error_99_percentile": 3.214690923690796,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c1e7254bdc54b664094fb9b4f4ef600f",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369129,
+      "blended_pixels": 25481,
+      "blend_rms_error_99_percentile": 3.214690923690796,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3b2d88b3416249d4a9d4307f3ba97fff",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369129,
+      "blended_pixels": 25481,
+      "blend_rms_error_99_percentile": 3.214690923690796,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a32b9634bf5b13f4394c801198988ce9",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 391136,
+      "blended_pixels": 29758,
+      "blend_rms_error_99_percentile": 1.8321566581726074,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ebdeb6a2210766142ab2100d3537f7e9",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 391136,
+      "blended_pixels": 29758,
+      "blend_rms_error_99_percentile": 1.8321566581726074,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6ec763508f770f2408439f4ff5fc3971",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 455661,
+      "blended_pixels": 27447,
+      "blend_rms_error_99_percentile": 4.219508171081543,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/54f7df322c719354eb95c87671cd6bcf",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 406528,
+      "blended_pixels": 35071,
+      "blend_rms_error_99_percentile": 1.8321566581726074,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8297643e75f860841ae7866bffb5c088",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 406528,
+      "blended_pixels": 35071,
+      "blend_rms_error_99_percentile": 1.8321566581726074,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit21.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f9603d9aaca15fe4abcfe1cad1a3218a",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 455661,
+      "blended_pixels": 27447,
+      "blend_rms_error_99_percentile": 4.219508171081543,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/05fc2ce4b79611440aa3011c4a08d4af",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 688784,
+      "blended_pixels": 29738,
+      "blend_rms_error_99_percentile": 5.639947414398193,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b9257c6af85450047ab893e2e4eed13f",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 368913,
+      "blended_pixels": 20226,
+      "blend_rms_error_99_percentile": 4.32753324508667,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/73b07cc8e92f85546a9d634f0d836594",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 370447,
+      "blended_pixels": 26654,
+      "blend_rms_error_99_percentile": 5.107327461242676,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/76428d988dfb5f3438253a414924dff9",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369126,
+      "blended_pixels": 25160,
+      "blend_rms_error_99_percentile": 4.219508171081543,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3fa3b31e0c6984b49babd57d49de77bb",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369126,
+      "blended_pixels": 25160,
+      "blend_rms_error_99_percentile": 4.219508171081543,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d25ec580971da3c4a83717356dc0b7e6",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 369126,
+      "blended_pixels": 25903,
+      "blend_rms_error_99_percentile": 4.219508171081543,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/duck/DuckYELLOW/duck_color_edit9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/971f0b42f03fefe4ea76967189340551",
+      "maxTextureSize": 1024
+    },
+    {
+      "visible_pixels": 4506724,
+      "blended_pixels": 291534,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idle_color-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/dbd09275d061d884ca08a930226e1019"
+    },
+    {
+      "visible_pixels": 458024,
+      "blended_pixels": 19827,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0859941a77db672458bbd5be706dbfc9"
+    },
+    {
+      "visible_pixels": 457410,
+      "blended_pixels": 21388,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/218a5bb98fbf1a34aa5c98e590afc3aa"
+    },
+    {
+      "visible_pixels": 455999,
+      "blended_pixels": 20767,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7fb3ac380dda5f147838342dfe5ce903"
+    },
+    {
+      "visible_pixels": 457705,
+      "blended_pixels": 20877,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/60ff286745da1c34794ee1dceae4d5f3"
+    },
+    {
+      "visible_pixels": 458024,
+      "blended_pixels": 19827,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/dc55f500e04a7204f81005a96b549d5d"
+    },
+    {
+      "visible_pixels": 458024,
+      "blended_pixels": 19827,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3afd8ea3d9289fb4281729de4d865c75"
+    },
+    {
+      "visible_pixels": 459121,
+      "blended_pixels": 21479,
+      "blend_rms_error_99_percentile": 1.2655622959136963,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b55f9af7c08508845a6537a063aaf7c3"
+    },
+    {
+      "visible_pixels": 459121,
+      "blended_pixels": 21479,
+      "blend_rms_error_99_percentile": 1.2655622959136963,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5c68bfdd1f625854d9b5d14501334acc"
+    },
+    {
+      "visible_pixels": 457705,
+      "blended_pixels": 20877,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e0b954e978eacb645af9d56fe5a9fb84"
+    },
+    {
+      "visible_pixels": 457705,
+      "blended_pixels": 20877,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8bb1d99755485b144ba853a99a830608"
+    },
+    {
+      "visible_pixels": 458024,
+      "blended_pixels": 19827,
+      "blend_rms_error_99_percentile": 1.2988018989562988,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8146199be1a1ec4469a3178661383cc9"
+    },
+    {
+      "visible_pixels": 459121,
+      "blended_pixels": 21479,
+      "blend_rms_error_99_percentile": 1.2655622959136963,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1150c02605d1afd439fa23b31de638cf"
+    },
+    {
+      "visible_pixels": 444538,
+      "blended_pixels": 35999,
+      "blend_rms_error_99_percentile": 1.8038878440856934,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/60516f36cd1fc764ca548900280a4c02"
+    },
+    {
+      "visible_pixels": 448899,
+      "blended_pixels": 42859,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/12ef4acc607637746b2e432b20938db9"
+    },
+    {
+      "visible_pixels": 448899,
+      "blended_pixels": 42859,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b8fc3df2dcc376e4b96cd605ab4763da"
+    },
+    {
+      "visible_pixels": 448212,
+      "blended_pixels": 40890,
+      "blend_rms_error_99_percentile": 1.8038878440856934,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/054f532170b3a4b4482e336da31bc232"
+    },
+    {
+      "visible_pixels": 437854,
+      "blended_pixels": 32898,
+      "blend_rms_error_99_percentile": 1.8750836849212646,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cfc3be0d6cf5e9445a9ccc0e79a8aeaf"
+    },
+    {
+      "visible_pixels": 438962,
+      "blended_pixels": 34550,
+      "blend_rms_error_99_percentile": 1.8750836849212646,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Idle/idlePNGS/idle_color9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d3b95bf9fcfa7e942bb596c2475f388b"
+    },
+    {
+      "visible_pixels": 455051,
+      "blended_pixels": 22746,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0bfb002a9a5488944b5491302880ce69"
+    },
+    {
+      "visible_pixels": 441844,
+      "blended_pixels": 30386,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1ac508b95efaab64f9064b529120cdc0"
+    },
+    {
+      "visible_pixels": 441844,
+      "blended_pixels": 30386,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c17bccfbb8118fe41bd913870aacb8a6"
+    },
+    {
+      "visible_pixels": 441089,
+      "blended_pixels": 31715,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/45f0df9430fbf104a9b82223d78342eb"
+    },
+    {
+      "visible_pixels": 469213,
+      "blended_pixels": 32915,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/110e156d10f8ec043aa647b965be5538"
+    },
+    {
+      "visible_pixels": 475969,
+      "blended_pixels": 50668,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/170294c54a599624293e8be44535d08f"
+    },
+    {
+      "visible_pixels": 468808,
+      "blended_pixels": 32884,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/96c70bd25f5c94d4aa131506f4193c34"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 31827,
+      "blend_rms_error_99_percentile": 1.158996820449829,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/8bee3922ffc70554589ac7da32ffa5bf"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 31827,
+      "blend_rms_error_99_percentile": 1.158996820449829,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d0e9c0e4113e02242bbe69e0e7d2f060"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 31827,
+      "blend_rms_error_99_percentile": 1.158996820449829,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c27d6d692aae3914f86cb9af5c27d118"
+    },
+    {
+      "visible_pixels": 467475,
+      "blended_pixels": 25016,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3acc45688b2407e4fbafd9d611d20d4f"
+    },
+    {
+      "visible_pixels": 479191,
+      "blended_pixels": 35831,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e4ee3cc0d215f314c8c7d00382a7b8f6"
+    },
+    {
+      "visible_pixels": 467475,
+      "blended_pixels": 25016,
+      "blend_rms_error_99_percentile": 1.4716911315917969,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/691b2209a736d1549ae89440f72e7026"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 27737,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d6a83586c3a37b7409897eb2ba0e065c"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 27737,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6b2632cdc699feb4eb88ce758ce357a4"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 27737,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c00e96ba712b78c4f9f2c1745272fea1"
+    },
+    {
+      "visible_pixels": 453275,
+      "blended_pixels": 30304,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5e519cf7d7dc83e468542bfc93df7fc8"
+    },
+    {
+      "visible_pixels": 453275,
+      "blended_pixels": 30304,
+      "blend_rms_error_99_percentile": 1.247219204902649,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_color9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/61487cb22031d0d48b5143b83ea28ed5"
+    },
+    {
+      "visible_pixels": 6456312,
+      "blended_pixels": 415986,
+      "blend_rms_error_99_percentile": 1.2653166055679321,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jump_color-Sheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/361b62a97d70b0f41a23754e5107a898"
+    },
+    {
+      "visible_pixels": 458718,
+      "blended_pixels": 19612,
+      "blend_rms_error_99_percentile": 2.7746143341064453,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/50f649559ae1b1f4298482046c2a3fbd"
+    },
+    {
+      "visible_pixels": 453275,
+      "blended_pixels": 31156,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/15442aa60391770478a6930a966bda08"
+    },
+    {
+      "visible_pixels": 441844,
+      "blended_pixels": 31332,
+      "blend_rms_error_99_percentile": 2.1602468490600586,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d84f2299f8220ba4ca274781e4a81dc8"
+    },
+    {
+      "visible_pixels": 441844,
+      "blended_pixels": 31332,
+      "blend_rms_error_99_percentile": 2.1602468490600586,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e8530a826dc0ecb43a580518685f81ba"
+    },
+    {
+      "visible_pixels": 441089,
+      "blended_pixels": 32803,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4ade2e365bd5d5c48bfe6aa4347b7a4b"
+    },
+    {
+      "visible_pixels": 469213,
+      "blended_pixels": 33844,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5d95978826b6ddf4aadeff5bc7674db0"
+    },
+    {
+      "visible_pixels": 475969,
+      "blended_pixels": 52011,
+      "blend_rms_error_99_percentile": 3.0908913612365723,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e5188e8a7c28a2043ab0e05e9f685aa3"
+    },
+    {
+      "visible_pixels": 468808,
+      "blended_pixels": 33802,
+      "blend_rms_error_99_percentile": 2.5315136909484863,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/76ef74b987a90c845892368acc5e4eba"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32818,
+      "blend_rms_error_99_percentile": 2.1602468490600586,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e444881d9681e364dbae74f391ceb1e6"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32818,
+      "blend_rms_error_99_percentile": 2.1602468490600586,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1db226e55789e764bbedb7abacae4be5"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32818,
+      "blend_rms_error_99_percentile": 2.1602468490600586,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/06fd383479877d3458cb524be7ac3799"
+    },
+    {
+      "visible_pixels": 455051,
+      "blended_pixels": 23058,
+      "blend_rms_error_99_percentile": 3.8242499828338623,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ebe104984cbe83341b628233800a7f65"
+    },
+    {
+      "visible_pixels": 458718,
+      "blended_pixels": 19612,
+      "blend_rms_error_99_percentile": 2.7746143341064453,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1d61a5c5dddc4024b85d2f5f0f52566f"
+    },
+    {
+      "visible_pixels": 467475,
+      "blended_pixels": 25524,
+      "blend_rms_error_99_percentile": 2.814065933227539,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3bc63ce645d93d14ebdbc478b8ca18c9"
+    },
+    {
+      "visible_pixels": 479191,
+      "blended_pixels": 36585,
+      "blend_rms_error_99_percentile": 3.8242499828338623,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e27703d38397ddd499e8fa2428d6f103"
+    },
+    {
+      "visible_pixels": 467475,
+      "blended_pixels": 25524,
+      "blend_rms_error_99_percentile": 2.814065933227539,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/afb7a9013b4ae7048ae13729c160f425"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28387,
+      "blend_rms_error_99_percentile": 2.531888246536255,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f2077aaa7dd5ecd4581f7bbc7b146e60"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28387,
+      "blend_rms_error_99_percentile": 2.531888246536255,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e13c4fdd28deea946835f194f50ccb0f"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28387,
+      "blend_rms_error_99_percentile": 2.531888246536255,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c92cee83b7657f64489503b4a0469d73"
+    },
+    {
+      "visible_pixels": 453275,
+      "blended_pixels": 31156,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_color_green9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1b1f740b34ed3054dbbe864b69a150bd"
+    },
+    {
+      "visible_pixels": 458718,
+      "blended_pixels": 19317,
+      "blend_rms_error_99_percentile": 2.68267822265625,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ed2aa3308c0d4c146abcf2b5bfa8ea6e"
+    },
+    {
+      "visible_pixels": 453275,
+      "blended_pixels": 30855,
+      "blend_rms_error_99_percentile": 2.9916632175445557,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/86f2ad52933e11a4e88ca246abdf0fa6"
+    },
+    {
+      "visible_pixels": 441844,
+      "blended_pixels": 31026,
+      "blend_rms_error_99_percentile": 2.814065933227539,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/661ed4fcee7e66a418dd757d88794868"
+    },
+    {
+      "visible_pixels": 441844,
+      "blended_pixels": 31026,
+      "blend_rms_error_99_percentile": 2.814065933227539,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3a1536563ec345045ad363e43b0a1845"
+    },
+    {
+      "visible_pixels": 441089,
+      "blended_pixels": 32500,
+      "blend_rms_error_99_percentile": 2.9916632175445557,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4de60c35594144d41b4e5a707bc515b6"
+    },
+    {
+      "visible_pixels": 469213,
+      "blended_pixels": 33535,
+      "blend_rms_error_99_percentile": 3.5681345462799072,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e57cff3add9fa9b498c614db9db0012a"
+    },
+    {
+      "visible_pixels": 475969,
+      "blended_pixels": 51110,
+      "blend_rms_error_99_percentile": 4.298975467681885,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f04b247b95bafe442bb61723f375f135"
+    },
+    {
+      "visible_pixels": 468808,
+      "blended_pixels": 33500,
+      "blend_rms_error_99_percentile": 3.6068460941314697,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/fd7af855214ed864bb5e70f9a2221b87"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32528,
+      "blend_rms_error_99_percentile": 2.68267822265625,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/111e6d32d349fea4698c9759f9290856"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32528,
+      "blend_rms_error_99_percentile": 2.68267822265625,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c282c71e00b283d48bb99b95605da5ff"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32528,
+      "blend_rms_error_99_percentile": 2.68267822265625,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d16e9e200fb0e304d9f7b878d66f9848"
+    },
+    {
+      "visible_pixels": 455051,
+      "blended_pixels": 22751,
+      "blend_rms_error_99_percentile": 4.949177265167236,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/437c5871ef3255b4e830a066b26e7e22"
+    },
+    {
+      "visible_pixels": 458718,
+      "blended_pixels": 19317,
+      "blend_rms_error_99_percentile": 2.68267822265625,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/25e4028d6dc72824690bf7179fac878e"
+    },
+    {
+      "visible_pixels": 467475,
+      "blended_pixels": 25228,
+      "blend_rms_error_99_percentile": 4.044981956481934,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/9cd25279d91b3d2458d39b4f144a8b19"
+    },
+    {
+      "visible_pixels": 479191,
+      "blended_pixels": 35984,
+      "blend_rms_error_99_percentile": 4.298975467681885,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0757752b368971f4b82fec31e52dbaf7"
+    },
+    {
+      "visible_pixels": 467475,
+      "blended_pixels": 25228,
+      "blend_rms_error_99_percentile": 4.044981956481934,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/757b0c65d68d014449b6fbaf6afbd55a"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28094,
+      "blend_rms_error_99_percentile": 4.298975467681885,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/5d1e2fb40c4e9394d9c168caec854ce0"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28094,
+      "blend_rms_error_99_percentile": 4.298975467681885,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/2264d2ac45163d647bcb870431f7aaa2"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28094,
+      "blend_rms_error_99_percentile": 4.298975467681885,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e5bd46a48687a814b938db947c8651b5"
+    },
+    {
+      "visible_pixels": 453275,
+      "blended_pixels": 30855,
+      "blend_rms_error_99_percentile": 2.9916632175445557,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_color_red9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c1e5ff39c7da6c243832cb0b9b20da56"
+    },
+    {
+      "visible_pixels": 458718,
+      "blended_pixels": 19708,
+      "blend_rms_error_99_percentile": 2.814065933227539,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/1b978a9f1b3971541b1aab21c8151c68"
+    },
+    {
+      "visible_pixels": 453275,
+      "blended_pixels": 31283,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow10.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/6736ccaf07ffabc46b9da233d920d53d"
+    },
+    {
+      "visible_pixels": 441844,
+      "blended_pixels": 31493,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow11.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/31f4da3db429ca444aeb5569f1bbce2c"
+    },
+    {
+      "visible_pixels": 441844,
+      "blended_pixels": 31493,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow12.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e751f6b2835bfdd4cbb4794ff75df6b8"
+    },
+    {
+      "visible_pixels": 441089,
+      "blended_pixels": 32933,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow13.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d27fb792c1707d14c97314a5f3f15754"
+    },
+    {
+      "visible_pixels": 469213,
+      "blended_pixels": 34001,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow14.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/003bb123251e3c9408dccc4bae0b23f9"
+    },
+    {
+      "visible_pixels": 475969,
+      "blended_pixels": 52510,
+      "blend_rms_error_99_percentile": 3.324131488800049,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow15.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c042fdfff84cc75428fc63644d799534"
+    },
+    {
+      "visible_pixels": 468808,
+      "blended_pixels": 33966,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow16.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0b3387b4d5cf9114a98dee9f0719b891"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32973,
+      "blend_rms_error_99_percentile": 2.1602468490600586,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow17.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0d7d8e40787ca8246a1de5816a8ca726"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32973,
+      "blend_rms_error_99_percentile": 2.1602468490600586,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow18.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a6d1910bc20f57b4b8e5247b56c04119"
+    },
+    {
+      "visible_pixels": 464210,
+      "blended_pixels": 32973,
+      "blend_rms_error_99_percentile": 2.1602468490600586,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow19.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/981b5b633dda8224d81c411711485b6f"
+    },
+    {
+      "visible_pixels": 455051,
+      "blended_pixels": 23204,
+      "blend_rms_error_99_percentile": 3.3913156986236572,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow2.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/ac0d9b80a3bc6a049ba542076de749f0"
+    },
+    {
+      "visible_pixels": 458718,
+      "blended_pixels": 19708,
+      "blend_rms_error_99_percentile": 2.814065933227539,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow20.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/922e6d5d8ab0867489de39c30f889139"
+    },
+    {
+      "visible_pixels": 467475,
+      "blended_pixels": 25694,
+      "blend_rms_error_99_percentile": 3.1026906967163086,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow3.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/bd949792583a80e41bb6f1da34c79304"
+    },
+    {
+      "visible_pixels": 479191,
+      "blended_pixels": 36895,
+      "blend_rms_error_99_percentile": 3.324131488800049,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow4.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/9125c3ea380dafc4cb7876c320a8ff4e"
+    },
+    {
+      "visible_pixels": 467475,
+      "blended_pixels": 25694,
+      "blend_rms_error_99_percentile": 3.1026906967163086,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow5.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d9bc3879062bd3e4a9391188825406ad"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28524,
+      "blend_rms_error_99_percentile": 2.783846855163574,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow6.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d751031e3b374424fba43ea7aadf14d0"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28524,
+      "blend_rms_error_99_percentile": 2.783846855163574,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow7.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3fd3ac72a04fd2941b42e7c0bf0a26cb"
+    },
+    {
+      "visible_pixels": 455275,
+      "blended_pixels": 28524,
+      "blend_rms_error_99_percentile": 2.783846855163574,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow8.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/98db6f56f0c6f6648be3c79a7fde483f"
+    },
+    {
+      "visible_pixels": 453275,
+      "blended_pixels": 31283,
+      "blend_rms_error_99_percentile": 2.4944381713867188,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_color_yellow9.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/08de747f1f591964880d7685c69cc575"
+    },
+    {
+      "visible_pixels": 610238,
+      "blended_pixels": 152836,
+      "blend_rms_error_99_percentile": 12.342338562011719,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/Accelerate_DEFAULT-Sheet_FULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/36b9970a2fef87844b65e23ad4552065",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 610238,
+      "blended_pixels": 152774,
+      "blend_rms_error_99_percentile": 12.342338562011719,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/Accelerate_GREEN-Sheet_FULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3627412105b45cd47a0fc3eaa6f179df",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 610238,
+      "blended_pixels": 152824,
+      "blend_rms_error_99_percentile": 12.754084587097168,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/Accelerate_RED-Sheet_FULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b63f3dc8c93673a4f8a989b3bfeb510d",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 610238,
+      "blended_pixels": 152840,
+      "blend_rms_error_99_percentile": 12.342338562011719,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/Accelerate_YELLOW_FULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/bb9a510ce85eda541a39d679df16737d",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1065158,
+      "blended_pixels": 236669,
+      "blend_rms_error_99_percentile": 11.972189903259277,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/Brake_color_FULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/7b035c9915e6ed4499435b1752a15009",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1065158,
+      "blended_pixels": 236355,
+      "blend_rms_error_99_percentile": 11.972189903259277,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/Brake_GREEN_FULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c062558ce77fe6446863d583a1d5d217",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1065158,
+      "blended_pixels": 236478,
+      "blend_rms_error_99_percentile": 11.972189903259277,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/Brake_RED_FULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/04c3fc060145b8a45b0d2515fa392055",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1065158,
+      "blended_pixels": 236607,
+      "blend_rms_error_99_percentile": 11.972189903259277,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/Brake_YELLOW_FULL.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cb0a09c89509766468cd686a9f9456b4",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1194455,
+      "blended_pixels": 240428,
+      "blend_rms_error_99_percentile": 11.972189903259277,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_air.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/05b9c887ec3dea4438d6ea8d45f4ebc5",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 871795,
+      "blended_pixels": 151973,
+      "blend_rms_error_99_percentile": 11.195237159729004,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpDefault/charge_jump_land.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/51d9821d96923ab4aa6f69683a348358",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1194455,
+      "blended_pixels": 240328,
+      "blend_rms_error_99_percentile": 11.972189903259277,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_air_green.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/01b44692362d61049afe642757d77b2e",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 871795,
+      "blended_pixels": 152158,
+      "blend_rms_error_99_percentile": 11.195237159729004,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpGREEN/charge_jump_land_green.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cb29c5c620fc5b14d92a68dbaf689f0a",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1194455,
+      "blended_pixels": 240678,
+      "blend_rms_error_99_percentile": 11.972189903259277,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_air_red.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/0d904731bbc139746878f6922b8ec4ac",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 871795,
+      "blended_pixels": 153428,
+      "blend_rms_error_99_percentile": 11.195237159729004,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/ChargejumpRED/charge_jump_land_red1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c61f8c830d86b344a88949b830df4763",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1194455,
+      "blended_pixels": 240925,
+      "blend_rms_error_99_percentile": 11.972189903259277,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_air_yellow1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4e7508688f8478f40b73620530bf5833",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 871795,
+      "blended_pixels": 153243,
+      "blend_rms_error_99_percentile": 11.195237159729004,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/ChargeJump/chargejumpYELLOW/charge_jump_land_yellow1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/a65bc02d40d4afc4db23c7a1ba2519b6",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 804643,
+      "blended_pixels": 133926,
+      "blend_rms_error_99_percentile": 11.195237159729004,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_air_color.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/35b6f26228454ac4db28e2b564c6d955",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 828477,
+      "blended_pixels": 134487,
+      "blend_rms_error_99_percentile": 10.78579330444336,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_land_color.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/9f1b3bab04956d4459548d9a6fa539e9",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 478155,
+      "blended_pixels": 77307,
+      "blend_rms_error_99_percentile": 10.78579330444336,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/default/jump_squat_color.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/bdf86f2ccdcd98245afcc00ccd718615",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 804643,
+      "blended_pixels": 133916,
+      "blend_rms_error_99_percentile": 35.81458282470703,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_air_green1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3554e15523598b344a8ce0bcf9ffa1dc",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 828477,
+      "blended_pixels": 135736,
+      "blend_rms_error_99_percentile": 35.44792938232422,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_land_green1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/fbe98f673a89eaa498575ff443693204",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 478155,
+      "blended_pixels": 77704,
+      "blend_rms_error_99_percentile": 35.81458282470703,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpGREEN/jump_squat_green1.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3a0dfeea06124184b91729033a153694",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 804643,
+      "blended_pixels": 134107,
+      "blend_rms_error_99_percentile": 25.09316062927246,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_air_red.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/cc86d7faa8ee1704bba762e86da147a2",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 828477,
+      "blended_pixels": 136250,
+      "blend_rms_error_99_percentile": 24.752103805541992,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_land_red.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/d6c8f4228166d574dbee62d17f644a1c",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 478155,
+      "blended_pixels": 77672,
+      "blend_rms_error_99_percentile": 25.09316062927246,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpRED/jump_squat_red.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b795d85db2e95b2499b61fb235cda32f",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 804643,
+      "blended_pixels": 133718,
+      "blend_rms_error_99_percentile": 24.447221755981445,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_air_yellow.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4fcb65785a7c6164f9f623b362fd678f",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 828477,
+      "blended_pixels": 134799,
+      "blend_rms_error_99_percentile": 24.426761627197266,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_land_yellow.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/b2536aac86aff4c4a818c2401aff7ebe",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 478155,
+      "blended_pixels": 77549,
+      "blend_rms_error_99_percentile": 24.501699447631836,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/jump/jumpYELLOW/jump_squat_yellow.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/09113dedf8419884a8f2988927e3ef5c",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 615071,
+      "blended_pixels": 170884,
+      "blend_rms_error_99_percentile": 17.66352081298828,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Reactions/Reaction_Fail_spritesheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/f6ccadce6381ca747af225c832789998",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 615071,
+      "blended_pixels": 173540,
+      "blend_rms_error_99_percentile": 82.62345886230469,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Reactions/Reaction_Good_spritesheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/4f4de4848d5c44440b914689d0845dcc",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 615071,
+      "blended_pixels": 171781,
+      "blend_rms_error_99_percentile": 26.414533615112305,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Reactions/Reaction_Mid_spritesheet.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/36363ec7395a66b45a2099fdde7b14fd",
+      "maxTextureSize": 2048
+    }
+  ]
+}
