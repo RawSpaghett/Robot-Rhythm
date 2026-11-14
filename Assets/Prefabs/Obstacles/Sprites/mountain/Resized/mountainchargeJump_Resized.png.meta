@@ -119,21 +119,9 @@ TextureImporter:
         x: 0
         y: 0
         width: 186
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-        height: 163
+        height: 0
       alignment: 0
       pivot: {x: 0, y: 0}
-=======
-        height: 195
-      alignment: 9
-      pivot: {x: 0.52066296, y: 0.068859264}
->>>>>>> Stashed changes
-=======
-        height: 242
-      alignment: 9
-      pivot: {x: 0.52747107, y: 0.17637469}
->>>>>>> Staging
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b0947408aca32204eaae18e58807ddcf
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
