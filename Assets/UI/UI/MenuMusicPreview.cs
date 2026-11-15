@@ -21,6 +21,7 @@ public class MenuMusicPreview : MonoBehaviour
     private void Awake()
     {
         source = GetComponent<AudioSource>();
+        source.Stop();
         source.clip = menuSong;
         source.loop = true;
         source.playOnAwake = false;
@@ -33,7 +34,7 @@ public class MenuMusicPreview : MonoBehaviour
     {
         var game = GameManager.Instance;
         bool settingsVisible = preferences.GetComponent<Canvas>().enabled && settingsPage.activeInHierarchy;
-        bool audible = !exiting && game != null && !game.IsLoading && (!game.HasActiveGame || settingsVisible);
+        bool audible = !StudioSplash.Playing && !exiting && game != null && !game.IsLoading && (!game.HasActiveGame || settingsVisible);
         AudioClip desiredSong = previewSong != null ? previewSong : menuSong;
         bool changingSong = source.clip != desiredSong;
         envelope = Mathf.MoveTowards(envelope, audible && !changingSong ? 1 : 0, Time.unscaledDeltaTime / FadeSeconds);

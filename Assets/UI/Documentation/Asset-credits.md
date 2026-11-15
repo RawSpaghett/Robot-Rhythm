@@ -26,3 +26,14 @@ Pixabay Content License: https://pixabay.com/service/license-summary/
 
 Used under the Pixabay Content License: https://pixabay.com/service/license-summary/
 Clips are trimmed, mixed, faded, and volume-adjusted. Confetti pops have reduced bass and softened transients.
+
+## Studio splash
+
+Misfits Studios logo, orange scribbles, and Presents artwork: Daniel Chaviano.
+
+- Marker writing: Sharpie Marker Pen Writing and Scribbling on Paper, luke2578 (Freesound), distributed by freesound_community. https://pixabay.com/sound-effects/household-sharpie-marker-pen-writing-and-scribbling-on-paper-30607/
+- Laugh: Laugh High Pitch, arjuntalan79089. Edited by Daniel Chaviano. https://pixabay.com/sound-effects/film-special-effects-laugh-high-pitch-154516/
+- Presents impact: Smack Sound, Alex_Jauk. https://pixabay.com/sound-effects/film-special-effects-smack-sound-192020/
+
+Used under the Pixabay Content License: https://pixabay.com/service/license-summary/
+Writing clips are timed to the lettering. The laugh and slap use the supplied edits.
