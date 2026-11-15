@@ -15,7 +15,7 @@ public class CameraShake: MonoBehaviour
     private IEnumerator ShakeCamera(float duration, float magnitude)
     {
         Debug.Log("SHAKEEE");
-        Vector3 OriginalPosition = transform.localPosition;
+        Vector3 OriginalPosition = MainCamera.transform.localPosition;
         float elapsed = 0f;
 
         while (elapsed < duration)
@@ -23,18 +23,17 @@ public class CameraShake: MonoBehaviour
             float x = Random.Range(-1f,1f) * magnitude;
             float y = Random.Range(-1f,1f) * magnitude;
 
-            transform.localPosition = new Vector3(OriginalPosition.x + x, OriginalPosition.y + y, OriginalPosition.z);
+            MainCamera.transform.localPosition = new Vector3(OriginalPosition.x + x, OriginalPosition.y + y, OriginalPosition.z);
             elapsed+= Time.deltaTime;
             yield return null;
         }
 
-        transform.localPosition = OriginalPosition;
+        MainCamera.transform.localPosition = OriginalPosition;
 
     }
 
     public void ShakeCameraStart(float duration, float magnitude)
-    {
-        Debug.Log("SHAKEEE");
+    { 
         StartCoroutine(ShakeCamera(duration,magnitude));
     }
 
