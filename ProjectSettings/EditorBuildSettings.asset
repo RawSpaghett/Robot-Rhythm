@@ -9,23 +9,23 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: edebaaa4f5d86ae4ca5aaa47c573db18
   - enabled: 1
-    path: Assets/Scenes/Levels/Tutorial Level NEW.unity
-    guid: cb007a0efbdfb584b946140284c58550
+    path: Assets/Scenes/Levels/NEW DISTANCE/Tutorial Level ALT.unity
+    guid: 206a7613aa9dc8542a3e8db490b6dd3e
   - enabled: 1
-    path: Assets/Scenes/Levels/City Level NEW.unity
-    guid: 1959d4784b6bab04b8a9912b26c2e503
+    path: Assets/Scenes/Levels/NEW DISTANCE/City Level ALT.unity
+    guid: be1168c7002d2d94d90a3e3a8c926307
   - enabled: 1
-    path: Assets/Scenes/Levels/Desert Level NEW.unity
-    guid: 3cbb3c824e9c3664bba681e76657963b
+    path: Assets/Scenes/Levels/NEW DISTANCE/Desert Level ALT.unity
+    guid: 7ca04b80eb184164c88fa4bd09a9254e
   - enabled: 1
-    path: Assets/Scenes/Levels/IceLevel NEW.unity
-    guid: 546680f6a60a30a4ebd408b17b0ededa
+    path: Assets/Scenes/Levels/NEW DISTANCE/IceLevel ALT.unity
+    guid: 981d5f1cbb9bae445b94e52a845eb10b
   - enabled: 1
-    path: Assets/Scenes/Levels/Mountain Level NEW.unity
-    guid: 898ba19b4e01baf42991c4daeabb32bd
+    path: Assets/Scenes/Levels/NEW DISTANCE/Mountain Level ALT.unity
+    guid: 543bc91ac44a3ad448925d2b76b97512
   - enabled: 1
-    path: Assets/Scenes/Levels/Space Level.unity
-    guid: c068561953bec4d49b0814c2f4c274ef
+    path: Assets/Scenes/Levels/NEW DISTANCE/Space Level ALT.unity
+    guid: bc583fe7d0907ce4c8727d50d9f33bfa
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ec9478efb8a1649b195c801b941da076, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 93ca0ed513a0c49368955073d4be18f0, type: 3}
