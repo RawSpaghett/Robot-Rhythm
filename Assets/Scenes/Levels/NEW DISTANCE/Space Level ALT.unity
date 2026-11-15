@@ -1628,7 +1628,11 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: cb0a09c89509766468cd686a9f9456b4, type: 3}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: jump.maximumLongJumpHeight
-      value: 4
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.minimumLongJumpHeight
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: accelerate.movementDistance
@@ -3800,7 +3804,11 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: cb0a09c89509766468cd686a9f9456b4, type: 3}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: jump.maximumLongJumpHeight
-      value: 4
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.minimumLongJumpHeight
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: accelerate.movementDistance
@@ -9180,7 +9188,11 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: cb0a09c89509766468cd686a9f9456b4, type: 3}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: jump.maximumLongJumpHeight
-      value: 4
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: jump.minimumLongJumpHeight
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6268589061873731464, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: accelerate.movementDistance
