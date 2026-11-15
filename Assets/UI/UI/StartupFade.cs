@@ -6,30 +6,23 @@ public class StartupFade : MonoBehaviour
 {
     public UiController preferences;
     public StartupSunburst burst;
+    private void Awake()
+    {
+        // Block menu audio before its first Update, including during asset loading.
+        StudioSplash.Prepare();
+        GetComponent<CanvasGroup>().alpha = 1;
+        burst.Progress = 0;
+        burst.SetVerticesDirty();
+    }
     private IEnumerator Start()
     {
         var group = GetComponent<CanvasGroup>();
         group.alpha = 1;
         burst.Progress = 0;
         yield return null;
-        var menu = preferences.CurrentPageRect;
-        Vector3 scale = menu.localScale;
-        bool reduced = preferences.ReducedMotion;
-        float duration = reduced ? .2f : 1.4f;
-        for (float elapsed = 0; elapsed < duration; elapsed += Time.unscaledDeltaTime)
-        {
-            float progress = Mathf.Clamp01(elapsed / duration);
-            if(reduced) group.alpha = 1-Mathf.SmoothStep(0,1,progress);
-            else
-            {
-                burst.Progress = Mathf.SmoothStep(0,1,progress);
-                burst.SetVerticesDirty();
-                float pop = Mathf.Clamp01((progress-.1f)/.8f);
-                menu.localScale = scale * (1-.2f*Mathf.Pow(1-pop,3)+.06f*Mathf.Sin(pop*Mathf.PI));
-            }
-            yield return null;
-        }
-        menu.localScale = scale;
+        var studio = gameObject.AddComponent<StudioSplash>();
+        yield return studio.Play(preferences, burst);
+        Destroy(studio);
         gameObject.SetActive(false);
     }
     public IEnumerator Close()
