@@ -19,7 +19,7 @@ public class ScoreDisplay : MonoBehaviour
     [SerializeField] private RatingStar[] resultStars;
     [SerializeField] private Text accuracyText;
     [SerializeField] private Text deliveryReview;
-    [SerializeField] private float[] starThresholds = { .2f, .4f, .6f, .8f, 1f };
+    [SerializeField] private float[] starThresholds = { .2f, .4f, .6f, .8f, .98f };
 
     [SerializeField] private float[] halfStarThresholds = { .1f, .3f, .5f, .7f, .9f };
 

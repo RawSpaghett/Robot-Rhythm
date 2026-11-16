@@ -4049,11 +4049,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'FULL STARS: 20 / 40 / 60 / 80 / 100%
+  m_Text: 'FULL STARS: 20 / 40 / 60 / 80 / 98%
 
     HALF STARS: 10 / 30 / 50 / 70 / 90%
 
-    43% ACCURACY = 2 STARS'
+    100% PERFECT RUN = RIBBON'
 --- !u!222 &322709732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28394,7 +28394,7 @@ MonoBehaviour:
   - 0.4
   - 0.6
   - 0.8
-  - 1
+  - 0.98
   halfStarThresholds:
   - 0.1
   - 0.3
