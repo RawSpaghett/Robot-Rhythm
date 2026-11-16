@@ -19,9 +19,9 @@ public class ScoreDisplay : MonoBehaviour
     [SerializeField] private RatingStar[] resultStars;
     [SerializeField] private Text accuracyText;
     [SerializeField] private Text deliveryReview;
-    [SerializeField] private float[] starThresholds = { 0.5f, 0.65f, 0.8f, 0.9f, 0.98f };
+    [SerializeField] private float[] starThresholds = { .2f, .4f, .6f, .8f, 1f };
 
-    [SerializeField] private float[] halfStarThresholds = { .25f, .575f, .725f, .85f, .94f };
+    [SerializeField] private float[] halfStarThresholds = { .1f, .3f, .5f, .7f, .9f };
 
     [System.Serializable]
     private class AccuracyBand
@@ -77,6 +77,30 @@ public class ScoreDisplay : MonoBehaviour
     private float resultTime;
     private bool showingResults;
     private bool animatingResult;
+    private Text nextStarTarget;
+    private Vector3 accuracyScale;
+    private float accuracyPulse = 1f;
+    private float lastAccuracy;
+
+    private void Awake()
+    {
+        if (liveAccuracy == null) return;
+        accuracyScale = liveAccuracy.rectTransform.localScale;
+        liveAccuracy.rectTransform.anchoredPosition += Vector2.up * 6f;
+        nextStarTarget = new GameObject("Next star target", typeof(RectTransform), typeof(Text)).GetComponent<Text>();
+        nextStarTarget.transform.SetParent(liveAccuracy.transform.parent, false);
+        var rect = nextStarTarget.rectTransform;
+        rect.anchorMin = liveAccuracy.rectTransform.anchorMin;
+        rect.anchorMax = liveAccuracy.rectTransform.anchorMax;
+        rect.pivot = liveAccuracy.rectTransform.pivot;
+        rect.anchoredPosition = liveAccuracy.rectTransform.anchoredPosition + Vector2.down * 16f;
+        rect.sizeDelta = new Vector2(liveAccuracy.rectTransform.sizeDelta.x, 18f);
+        nextStarTarget.font = liveAccuracy.font;
+        nextStarTarget.fontSize = 11;
+        nextStarTarget.alignment = TextAnchor.MiddleCenter;
+        nextStarTarget.color = liveAccuracy.color;
+        nextStarTarget.raycastTarget = false;
+    }
 
     public void Bind(ScoreManager value)
     {
@@ -85,6 +109,8 @@ public class ScoreDisplay : MonoBehaviour
         source = value;
         lastScore = source != null ? source.score : 0f;
         lastResolved = source != null ? source.ResolvedObstacles : 0;
+        lastAccuracy = source != null ? source.AverageAccuracy : 0f;
+        accuracyPulse = 1f;
         UpdateLiveAccuracy();
         showingResults = false;
         animatingResult = false;
@@ -139,10 +165,18 @@ public class ScoreDisplay : MonoBehaviour
         {
             lastScore = source.score;
             lastResolved = source.ResolvedObstacles;
+            if (source.AverageAccuracy > lastAccuracy && !reducedMotion) accuracyPulse = 0f;
+            lastAccuracy = source.AverageAccuracy;
             UpdateLiveAccuracy();
             liveScore.text = Format(lastScore);
             liveScore.color = theme != null ? theme.ink : Color.white;
             PaintStars(liveStars, GetRating(source.AverageAccuracy, lastResolved), !reducedMotion);
+        }
+
+        if (liveAccuracy != null)
+        {
+            accuracyPulse = reducedMotion ? 1f : Mathf.Min(1f, accuracyPulse + Time.unscaledDeltaTime / .35f);
+            liveAccuracy.rectTransform.localScale = accuracyScale * (1f + .07f * Mathf.Sin(accuracyPulse * Mathf.PI));
         }
 
         if (reducedMotion)
@@ -160,7 +194,7 @@ public class ScoreDisplay : MonoBehaviour
         UpdateResultColors(eased);
         if (scoreRoll != null) scoreRoll.SetProgress(Mathf.RoundToInt(resultScore), progress);
         if (accuracyRoll != null && resultHasAccuracy) accuracyRoll.SetProgress(resultAccuracy, progress);
-        PaintStars(resultStars, reducedMotion ? resultRating : Mathf.Min(resultRating, Mathf.FloorToInt(progress * 6f)), !reducedMotion);
+        PaintStars(resultStars, reducedMotion ? resultRating : Mathf.Min(resultRating, Mathf.Floor(progress * 12f) * .5f), !reducedMotion);
         if (progress >= 1f)
             animatingResult = false;
     }
@@ -177,9 +211,26 @@ public class ScoreDisplay : MonoBehaviour
     private void UpdateLiveAccuracy()
     {
         if (liveAccuracy != null)
-            liveAccuracy.text = source != null && source.ResolvedObstacles > 0
-                ? Mathf.RoundToInt(source.AverageAccuracy * 100f) + "% ACCURACY"
+        {
+            bool hasAccuracy = source != null && source.ResolvedObstacles > 0;
+            float accuracy = hasAccuracy ? source.AverageAccuracy : 0f;
+            string tint = ColorUtility.ToHtmlStringRGB(GetAccuracyColor(accuracy));
+            liveAccuracy.text = hasAccuracy
+                ? "<color=#" + tint + ">" + Mathf.RoundToInt(accuracy * 100f) + "%</color> ACCURACY"
                 : "— ACCURACY";
+            if (nextStarTarget != null) nextStarTarget.text = hasAccuracy ? GetNextStarTarget(accuracy) : "";
+        }
+    }
+
+    // Read the existing rating thresholds; this is a target label, not a new scoring rule.
+    private string GetNextStarTarget(float accuracy)
+    {
+        if (starThresholds == null) return "";
+        for (int i = 0; i < Mathf.Min(5, starThresholds.Length); i++)
+            if (accuracy < Mathf.Clamp01(starThresholds[i]))
+                return (starThresholds[i] * 100f).ToString("0.#", CultureInfo.InvariantCulture) + "% FOR " +
+                    (i + 1) + (i == 0 ? " STAR" : " STARS");
+        return "5 STARS!";
     }
 
     public Color GetScoreColor(float score)

@@ -41,7 +41,8 @@ namespace RobotRhythm.UI
                 return;
             }
             Sprite previous = Artwork;
-            jumping = animate && isActiveAndEnabled;
+            // Only celebrate gains. Losing a half-star should settle quietly.
+            jumping = animate && amount > FillAmount && isActiveAndEnabled;
             if (jumping)
             {
                 if (previousDrawing == null)
@@ -97,8 +98,13 @@ namespace RobotRhythm.UI
         {
             if (Artwork != null)
             {
-                float blend = jumping ? Mathf.SmoothStep(0,1,Mathf.Clamp01(jumpTime / jumpDuration)) : 1;
-                SuppliedArtwork.Draw(mesh, rectTransform.rect, Artwork, color.a * blend, true);
+                float artProgress = Mathf.Clamp01(jumpTime / jumpDuration);
+                float blend = jumping ? Mathf.SmoothStep(0,1,Mathf.Clamp01(artProgress * 4f)) : 1;
+                float artLift = jumping ? Mathf.Sin(artProgress * Mathf.PI) : 0f;
+                Rect drawing = rectTransform.rect;
+                Vector2 artCenter = drawing.center + Vector2.up * drawing.height * jumpHeight * artLift * .45f;
+                Vector2 artSize = drawing.size * (1f + jumpScale * artLift * .65f);
+                SuppliedArtwork.Draw(mesh, new Rect(artCenter - artSize * .5f, artSize), Artwork, color.a * blend, true);
                 return;
             }
             var rect = rectTransform.rect;

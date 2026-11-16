@@ -4014,7 +4014,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 345, y: -390}
-  m_SizeDelta: {x: 550, y: 70}
+  m_SizeDelta: {x: 550, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &322709731
 MonoBehaviour:
@@ -4049,9 +4049,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'ACCURACY = POINTS / POSSIBLE POINTS
+  m_Text: 'FULL STARS: 20 / 40 / 60 / 80 / 100%
 
-    300 points from 4 hazards = 75%'
+    HALF STARS: 10 / 30 / 50 / 70 / 90%
+
+    43% ACCURACY = 2 STARS'
 --- !u!222 &322709732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7568,15 +7570,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HIT THE TIMING
+  m_Text: 'Closer to the beat = more points.
 
-    Closer to the beat = more points.
+    Perfect timing = 100 base points.
 
-    A perfect hit
-    earns 100.
+    Combos multiply points, not accuracy.
 
+    Accuracy is your average timing.
 
-    Miss a hazard? You earn 0.'
+    Misses count as 0% accuracy.'
 --- !u!222 &566565201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28388,17 +28390,17 @@ MonoBehaviour:
   accuracyText: {fileID: 58855794}
   deliveryReview: {fileID: 1082537603}
   starThresholds:
-  - 0.5
-  - 0.65
+  - 0.2
+  - 0.4
+  - 0.6
   - 0.8
-  - 0.9
-  - 0.98
+  - 1
   halfStarThresholds:
-  - 0.25
-  - 0.575
-  - 0.725
-  - 0.85
-  - 0.94
+  - 0.1
+  - 0.3
+  - 0.5
+  - 0.7
+  - 0.9
   accuracyBands:
   - minimumPercent: 0
     color: {r: 1, g: 0.36078432, b: 0.29803923, a: 1}
