@@ -666,13 +666,14 @@ MonoBehaviour:
   distancePerBeat: 3
   QOLoffset: 0.1
   spawnTime: 7
-  groundY: -3.2
+  groundY: -3.15
   levelSprites:
   - Type: {fileID: 11400000, guid: 80691a8ae2c4a0745987bedccbc21f97, type: 2}
     Sprite: {fileID: 21300000, guid: 69bc1755411f50540bc0fe1483028cb4, type: 3}
     UseAnimation: 0
     AnimationSheet:
       sheet: {fileID: 0}
+      sortByNumericName: 0
       frames: []
     FramesPerSecond: 12
   - Type: {fileID: 11400000, guid: 00df4632ec734b34db506406f381d8a1, type: 2}
@@ -680,6 +681,7 @@ MonoBehaviour:
     UseAnimation: 0
     AnimationSheet:
       sheet: {fileID: 0}
+      sortByNumericName: 0
       frames: []
     FramesPerSecond: 12
   - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
@@ -687,6 +689,7 @@ MonoBehaviour:
     UseAnimation: 0
     AnimationSheet:
       sheet: {fileID: 0}
+      sortByNumericName: 0
       frames: []
     FramesPerSecond: 12
   rhythmManager: {fileID: 1333327601}
@@ -3654,6 +3657,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -357601691449176008, guid: a65bc02d40d4afc4db23c7a1ba2519b6, type: 3}
     - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3255251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3255251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4816663
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.88
       objectReference: {fileID: 0}
@@ -3692,6 +3707,10 @@ PrefabInstance:
     - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5660,6 +5679,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -357601691449176008, guid: a65bc02d40d4afc4db23c7a1ba2519b6, type: 3}
     - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3255251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3255251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4816663
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.27
       objectReference: {fileID: 0}
@@ -5698,6 +5729,10 @@ PrefabInstance:
     - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7451,6 +7486,18 @@ PrefabInstance:
       value: RobotPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 2378486367289694335, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.83029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378486367289694335, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.83029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378486367289694335, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.148969
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378486367289694335, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.23
       objectReference: {fileID: 0}
@@ -7490,6 +7537,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2378486367289694335, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
       propertyPath: jump.squatDuration
       value: 0.08
@@ -7501,6 +7552,10 @@ PrefabInstance:
     - target: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
       propertyPath: jump.landingDuration
       value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      propertyPath: brake.movementDistance
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
       propertyPath: brake.failedSheet.sheet
@@ -7526,6 +7581,18 @@ PrefabInstance:
       propertyPath: brake.earlyLateSheet.sheet
       value: 
       objectReference: {fileID: 2800000, guid: cb0a09c89509766468cd686a9f9456b4, type: 3}
+    - target: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      propertyPath: jump.maximumLongJumpHeight
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      propertyPath: jump.minimumLongJumpHeight
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
+      propertyPath: accelerate.movementDistance
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3753208197656373729, guid: 3bbcf818f9aeddc4691b3b308b6a53d7, type: 3}
       propertyPath: jump.jumpLandingSheet.sheet
       value: 
@@ -11581,6 +11648,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -357601691449176008, guid: a65bc02d40d4afc4db23c7a1ba2519b6, type: 3}
     - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3255251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3255251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2959319
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.0941
       objectReference: {fileID: 0}
@@ -11619,6 +11698,10 @@ PrefabInstance:
     - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7204787440444102416, guid: f5010771819922c48aa8f361e61314a9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

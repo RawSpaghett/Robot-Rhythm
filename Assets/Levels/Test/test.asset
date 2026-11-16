@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0246dd64aedb644db2a63b56db05c41, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: Assembly-CSharp::BeatMap
+  SongID: 
+  SongLength: 150
+  Bpm: 120
+  FirstBeatOffset: 0
+  BeatsPerMeasure: 4
+  Obstacles:
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 12
+  - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
+    Beat: 16
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 20
+  - Type: {fileID: 11400000, guid: df220faa4c0d5804d9e17746a4084b83, type: 2}
+    Beat: 24

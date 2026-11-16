@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace RobotRhythm.Feature5
@@ -9,33 +10,23 @@ namespace RobotRhythm.Feature5
         [Serializable]
         public class Entry
         {
-            public Texture2D source;
             public string sourceName;
-            public Texture2D cleanSource;
-            public Texture2D regions;
-            public Texture2D accents;
-            public Texture2D face;
-            public Texture2D space;
+            public string resourceFolder;
         }
         public Entry[] entries;
-        private Texture lastTexture;
-        private Entry lastEntry;
+        private Dictionary<string, Entry> lookup;
 
         public Entry Find(Texture texture)
         {
             if (texture == null || entries == null) return null;
-            if (texture == lastTexture) return lastEntry;
-            lastTexture = texture;
-            lastEntry = null;
-            string name = texture.name;
-            foreach (var entry in entries)
-                if (entry.source == texture || entry.cleanSource == texture || entry.sourceName == name)
-                {
-                    lastEntry = entry;
-                    break;
-                }
-            return lastEntry;
+            if (lookup == null)
+            {
+                lookup = new Dictionary<string, Entry>();
+                foreach (var entry in entries) lookup[entry.sourceName] = entry;
+            }
+            return lookup.TryGetValue(texture.name, out var found) ? found : null;
         }
+
+        void OnEnable() { lookup = null; }
     }
 }
-

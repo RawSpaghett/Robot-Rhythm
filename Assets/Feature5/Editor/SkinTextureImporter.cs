@@ -19,7 +19,7 @@ namespace RobotRhythm.Feature5
             int size = 256;
             foreach (var entry in manifest.entries)
             {
-                if (entry.folder != Path.GetDirectoryName(assetPath).Replace('\\', '/')) continue;
+                if (Path.GetFileName(entry.folder) != Path.GetFileName(Path.GetDirectoryName(assetPath))) continue;
                 // A sheet contains several frames, so it needs more resolution than a single frame.
                 if (entry.source.Contains("Sheet") || entry.source.Contains("FULL")) size = 2048;
                 if (entry.maxTextureSize > 0) size = entry.maxTextureSize;

@@ -1,0 +1,746 @@
+fileFormatVersion: 2
+guid: c429bf95f71b56c4395ec8a773ac694c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4805811712288752351
+    second: brake w cloud YELLOW_0
+  - first:
+      213: -8269244398839945315
+    second: brake w cloud YELLOW_1
+  - first:
+      213: 5784311415781166737
+    second: brake w cloud YELLOW_2
+  - first:
+      213: -5045143887104118254
+    second: brake w cloud YELLOW_3
+  - first:
+      213: 1580203459597237167
+    second: brake w cloud YELLOW_4
+  - first:
+      213: -8267170716735282074
+    second: brake w cloud YELLOW_5
+  - first:
+      213: -5557583998642681203
+    second: brake w cloud YELLOW_6
+  - first:
+      213: -6639518829826339854
+    second: brake w cloud YELLOW_7
+  - first:
+      213: 1344474319874302049
+    second: brake w cloud YELLOW_8
+  - first:
+      213: 7534190067350836653
+    second: brake w cloud YELLOW_9
+  - first:
+      213: -8012604201362564545
+    second: brake w cloud YELLOW_10
+  - first:
+      213: -8455719528134476006
+    second: brake w cloud YELLOW_11
+  - first:
+      213: -8310662890955608025
+    second: brake w cloud YELLOW_12
+  - first:
+      213: 1302727517571491234
+    second: brake w cloud YELLOW_13
+  - first:
+      213: 3244522635663477187
+    second: brake w cloud YELLOW_14
+  - first:
+      213: 51840220601891523
+    second: brake w cloud YELLOW_15
+  - first:
+      213: 7684652889115476099
+    second: brake w cloud YELLOW_16
+  - first:
+      213: 5250215667383830056
+    second: brake w cloud YELLOW_17
+  - first:
+      213: 2428400930827382833
+    second: brake w cloud YELLOW_18
+  - first:
+      213: 3085083262236928894
+    second: brake w cloud YELLOW_19
+  - first:
+      213: 6630862531753831282
+    second: brake w cloud YELLOW_20
+  - first:
+      213: 3658469963879912241
+    second: brake w cloud YELLOW_21
+  - first:
+      213: 7623461558615391366
+    second: brake w cloud YELLOW_22
+  - first:
+      213: 7687568533837038256
+    second: brake w cloud YELLOW_23
+  - first:
+      213: 7275789415022847196
+    second: brake w cloud YELLOW_24
+  - first:
+      213: -8026310245570281952
+    second: brake w cloud YELLOW_25
+  - first:
+      213: 9176887436034637050
+    second: brake w cloud YELLOW_26
+  - first:
+      213: -5259247805715943799
+    second: brake w cloud YELLOW_27
+  - first:
+      213: 8254043829027854699
+    second: brake w cloud YELLOW_28
+  - first:
+      213: -5414924601286461429
+    second: brake w cloud YELLOW_29
+  - first:
+      213: -3614381625688977091
+    second: brake w cloud YELLOW_30
+  - first:
+      213: 2878223958772756675
+    second: brake w cloud YELLOW_31
+  - first:
+      213: 713614296799221220
+    second: brake w cloud YELLOW_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_0
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 5727
+        width: 923
+        height: 891
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12dfd9fb5b35e4db0800000000000000
+      internalID: -4805811712288752351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_1
+      rect:
+        serializedVersion: 2
+        x: 2137
+        y: 5723
+        width: 1298
+        height: 742
+      alignment: 9
+      pivot: {x: 0.5855615, y: 0.49999934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d97a146180ebd3d80800000000000000
+      internalID: -8269244398839945315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_2
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 5723
+        width: 1298
+        height: 742
+      alignment: 9
+      pivot: {x: 0.5855617, y: 0.49999934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e8fd70690064050800000000000000
+      internalID: 5784311415781166737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_3
+      rect:
+        serializedVersion: 2
+        x: 5543
+        y: 5693
+        width: 1259
+        height: 876
+      alignment: 9
+      pivot: {x: 0.5882118, y: 0.49999943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212fc607d5c0cf9b0800000000000000
+      internalID: -5045143887104118254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_4
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 4549
+        width: 1410
+        height: 900
+      alignment: 9
+      pivot: {x: 0.62530833, y: 0.52243596}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fabf22a9ca20ee510800000000000000
+      internalID: 1580203459597237167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_5
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 4549
+        width: 1410
+        height: 900
+      alignment: 9
+      pivot: {x: 0.6253084, y: 0.5168267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6646b73d80c154d80800000000000000
+      internalID: -8267170716735282074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_6
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 4507
+        width: 1461
+        height: 942
+      alignment: 9
+      pivot: {x: 0.63475496, y: 0.5428713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a028f6cce7fd2b0800000000000000
+      internalID: -5557583998642681203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_7
+      rect:
+        serializedVersion: 2
+        x: 5203
+        y: 4507
+        width: 1461
+        height: 942
+      alignment: 9
+      pivot: {x: 0.63821036, y: 0.5375121}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb0fac4dc0bbd3a0800000000000000
+      internalID: -6639518829826339854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3402
+        width: 1581
+        height: 943
+      alignment: 9
+      pivot: {x: 0.598983, y: 0.5481791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1602eb5454888a210800000000000000
+      internalID: 1344474319874302049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_9
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 3402
+        width: 1581
+        height: 943
+      alignment: 9
+      pivot: {x: 0.6053693, y: 0.5535323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da519bac2f1de8860800000000000000
+      internalID: 7534190067350836653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_12
+      rect:
+        serializedVersion: 2
+        x: 3445
+        y: 3428
+        width: 1574
+        height: 917
+      alignment: 9
+      pivot: {x: 0.5994235, y: 0.5440404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720f198e1289aac80800000000000000
+      internalID: -8310662890955608025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_15
+      rect:
+        serializedVersion: 2
+        x: 5162
+        y: 3428
+        width: 1574
+        height: 917
+      alignment: 9
+      pivot: {x: 0.5962162, y: 0.5330301}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cabd0ee76c28b000800000000000000
+      internalID: 51840220601891523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2301
+        width: 1347
+        height: 963
+      alignment: 9
+      pivot: {x: 0.6611506, y: 0.51048386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8268a9825538cd840800000000000000
+      internalID: 5250215667383830056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_21
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 2350
+        width: 1295
+        height: 914
+      alignment: 9
+      pivot: {x: 0.6520293, y: 0.47790688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1339f7a7c0f75c230800000000000000
+      internalID: 3658469963879912241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_25
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 2350
+        width: 1287
+        height: 914
+      alignment: 9
+      pivot: {x: 0.64905137, y: 0.4779066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02e74bb5b51dc9090800000000000000
+      internalID: -8026310245570281952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_26
+      rect:
+        serializedVersion: 2
+        x: 5370
+        y: 2358
+        width: 934
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.72700477, y: 0.34224558}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcf698708ada5f70800000000000000
+      internalID: 9176887436034637050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_27
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 1231
+        width: 934
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.72159916, y: 0.32745588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e6c824cf56307b0800000000000000
+      internalID: -5259247805715943799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_28
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 1294
+        width: 937
+        height: 927
+      alignment: 9
+      pivot: {x: 0.62930125, y: 0.3257377}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69d5b571214c8270800000000000000
+      internalID: 8254043829027854699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_29
+      rect:
+        serializedVersion: 2
+        x: 3926
+        y: 1294
+        width: 937
+        height: 927
+      alignment: 9
+      pivot: {x: 0.63468903, y: 0.3257377}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08fbceb3c25ad4b0800000000000000
+      internalID: -5414924601286461429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_30
+      rect:
+        serializedVersion: 2
+        x: 5766
+        y: 1247
+        width: 923
+        height: 854
+      alignment: 9
+      pivot: {x: 0.6203235, y: 0.36404282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d311c1eaf0327ddc0800000000000000
+      internalID: -3614381625688977091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_31
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 120
+        width: 923
+        height: 854
+      alignment: 9
+      pivot: {x: 0.6148547, y: 0.35813203}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c03ba6e07181f720800000000000000
+      internalID: 2878223958772756675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brake w cloud YELLOW_32
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 118
+        width: 922
+        height: 869
+      alignment: 9
+      pivot: {x: 0.6642558, y: 0.38962588}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e59b5b0c6447e900800000000000000
+      internalID: 713614296799221220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fb525d6e451154f4a945fe3c1475d027
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      brake w cloud YELLOW_0: -4805811712288752351
+      brake w cloud YELLOW_1: -8269244398839945315
+      brake w cloud YELLOW_10: -8012604201362564545
+      brake w cloud YELLOW_11: -8455719528134476006
+      brake w cloud YELLOW_12: -8310662890955608025
+      brake w cloud YELLOW_13: 1302727517571491234
+      brake w cloud YELLOW_14: 3244522635663477187
+      brake w cloud YELLOW_15: 51840220601891523
+      brake w cloud YELLOW_16: 7684652889115476099
+      brake w cloud YELLOW_17: 5250215667383830056
+      brake w cloud YELLOW_18: 2428400930827382833
+      brake w cloud YELLOW_19: 3085083262236928894
+      brake w cloud YELLOW_2: 5784311415781166737
+      brake w cloud YELLOW_20: 6630862531753831282
+      brake w cloud YELLOW_21: 3658469963879912241
+      brake w cloud YELLOW_22: 7623461558615391366
+      brake w cloud YELLOW_23: 7687568533837038256
+      brake w cloud YELLOW_24: 7275789415022847196
+      brake w cloud YELLOW_25: -8026310245570281952
+      brake w cloud YELLOW_26: 9176887436034637050
+      brake w cloud YELLOW_27: -5259247805715943799
+      brake w cloud YELLOW_28: 8254043829027854699
+      brake w cloud YELLOW_29: -5414924601286461429
+      brake w cloud YELLOW_3: -5045143887104118254
+      brake w cloud YELLOW_30: -3614381625688977091
+      brake w cloud YELLOW_31: 2878223958772756675
+      brake w cloud YELLOW_32: 713614296799221220
+      brake w cloud YELLOW_4: 1580203459597237167
+      brake w cloud YELLOW_5: -8267170716735282074
+      brake w cloud YELLOW_6: -5557583998642681203
+      brake w cloud YELLOW_7: -6639518829826339854
+      brake w cloud YELLOW_8: 1344474319874302049
+      brake w cloud YELLOW_9: 7534190067350836653
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

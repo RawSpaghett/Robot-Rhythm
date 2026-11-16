@@ -102,8 +102,8 @@ public class UIManager : MonoBehaviour
 
     public void OpenLevels() => OpenMenuPage(UiPage.Routes);
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
-    public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Levels/Desert Level NEW.unity"); StartGame(); }
-    public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Levels/Tutorial.unity"); StartGame(); }
+    public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Levels/NEW DISTANCE/Desert Level ALT.unity"); StartGame(); }
+    public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Levels/NEW DISTANCE/Tutorial Level ALT.unity"); StartGame(); }
     public void StartLevel(string scenePath)
     {
         if (IsTransitioning || gameManager.IsLoading) return;

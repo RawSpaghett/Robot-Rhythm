@@ -39,7 +39,7 @@ namespace RobotRhythm.Feature5
         void OnDisable()
         {
             if (robot != null) robot.sharedMaterial = originalMaterial;
-            if (skinMaterial != null) Destroy(skinMaterial);
+            if (skinMaterial != null) { SkinTextureCache.Release(skinMaterial); Destroy(skinMaterial); }
         }
     }
 }
