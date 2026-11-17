@@ -1,17 +1,23 @@
 ## Modifier menu
 
-Open MainMenu. The level's Play button opens the modifier menu. Tutorial starts normally.
+Open MainMenu and choose a level. Play starts a standard run. Modifiers opens the separate game-mode options. Tutorial only has Play.
 
-Select any modifiers you want, then press Play. Leaving everything off starts a standard run. Retry keeps the current selection. Choosing a level again clears the choices.
+Tap a modifier to turn it on or off, then press Start Run. Gold cards are selected. Retry keeps the selection. Choosing a level again clears it.
 
 ## Adding a modifier
 
-Select ModifierDatabase in MainMenu and use Add modifier. The menu reads this list each time it opens, so you do not need to add a UI button yourself. The list scrolls when there are more options.
+Select ModifierDatabase in MainMenu and use Add modifier. The menu rebuilds from the database each time it opens. Do not add buttons by hand.
 
-A modifier needs to inherit ModifierBase, have [System.Serializable], and implement Enabled(). The gameplay effect stays in that class. The UI passes the selected instances into ModifierManager.activeModifiers before they run.
+A modifier must inherit ModifierBase, have [System.Serializable], and implement Enabled(). Its gameplay effect stays in that class. The UI fills ModifierManager.activeModifiers before the effects run. Selected instances are reused on Retry, so reset any per-run state in Enabled().
 
-Brutal is connected to Justin's existing modifier. Add the other modifiers once their gameplay code is ready.
+On ModifierMenu, add a matching entry under Descriptions: use the exact class name for modifierType, the player-facing name for title, a short subtitle for badge, an accent color, and an explanation. NO SIGHT is the displayed name for the existing Modifier_Brutal class.
 
-## Records
+One card is wider and centered. Two sit side by side. Three have a centered last row. Four use a two-by-two layout. Larger lists scroll without shrinking the text. Longer descriptions can increase card height.
 
-Modified runs show their current score but do not overwrite standard best scores or award standard perfect ribbons. Standard runs keep the existing save behavior.
+## Records and unlocks
+
+Modifiers are a separate game mode. Modified runs display score and accuracy, but do not save standard records, award standard perfect ribbons, or unlock skins. Standard runs keep the existing behavior.
+
+## Gameplay issue found in Android testing
+
+No Sight selection reaches the modifier system, but obstacles can remain visible. Modifier_Brutal.Enabled() clears levelSprites[].Sprite. ObstacleSpawner.ChangeSprite() only replaces the prefab sprite when that value is not null, so a cleared override leaves the default art visible. Animated obstacles also have their own art path. The programmers need to handle hiding the rendered obstacle in the gameplay implementation; the menu does not control obstacle rendering.

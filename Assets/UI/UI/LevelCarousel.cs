@@ -26,6 +26,10 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     public UiController preferences;
     public MenuMusicPreview music;
     public ModifierMenu modifiers;
+    public RectTransform playButton;
+    public Text recordStatus;
+    public Button modifiersButton;
+    public ScoreDisplay scoreColors;
 
     [Header("Card")]
     public RectTransform card;
@@ -70,6 +74,20 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
         if (levels == null || levels.Length == 0) return;
         SelectedIndex = Mathf.Clamp(SelectedIndex, 0, levels.Length - 1);
         Level level = levels[SelectedIndex];
+        if (modifiersButton != null) modifiersButton.gameObject.SetActive(level.saveRecords);
+        if (playButton != null)
+        {
+            float width = level.saveRecords ? 195 : 400;
+            playButton.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
+            var face = (RectTransform)playButton.Find("StyledFace");
+            face.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, width);
+            var label = playButton.Find("StyledLabel").GetComponent<Text>();
+            float textWidth = label.preferredWidth;
+            float left = (width - textWidth - 40) * .5f;
+            ((RectTransform)playButton.Find("Icon")).anchoredPosition = new Vector2(left, -25);
+            label.rectTransform.anchoredPosition = new Vector2(left + 40, -12);
+            label.rectTransform.sizeDelta = new Vector2(textWidth + 2, 54);
+        }
         coverImage.texture = level.cover;
         title.text = level.title;
         pageNumber.text = (SelectedIndex + 1) + " / " + levels.Length;
@@ -80,6 +98,15 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
         LevelRecordResults.SetRecordCard(bestScore, record.completed, "BEST SCORE", record.bestScore.ToString());
         LevelRecordResults.SetRecordCard(bestAccuracy, record.completed, "BEST ACCURACY", LevelRecordResults.Accuracy(record.bestAccuracy));
         if(perfectAward!=null) perfectAward.SetActive(record.perfect);
+        if (bestScore != null) bestScore.text = record.completed ? record.bestScore.ToString() : "";
+        if (bestAccuracy != null) bestAccuracy.text = record.completed ? LevelRecordResults.Accuracy(record.bestAccuracy) : "";
+        if (scoreColors != null && record.completed)
+        {
+            bestScore.color = scoreColors.GetScoreColor(record.bestScore);
+            bestAccuracy.color = scoreColors.GetAccuracyColor(record.bestAccuracy);
+        }
+        if (recordStatus != null) recordStatus.text = !level.saveRecords ? "Learn the controls and practice your timing." : record.completed ? "PERSONAL BEST" : "Finish a run to set your personal best.";
+
     }
 
     public string RecordIdForScene(string scenePath)
@@ -109,7 +136,7 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
         if (next < 0 || next >= levels.Length) return;
         if (direction > 0) preferences.PlayClick();
         else preferences.PlayBackClick();
-        StartCoroutine(Slide(next, direction));
+        StartCoroutine(Slide(next, direction > 0 ? 1 : -1));
     }
 
     private IEnumerator Slide(int next, int direction)
@@ -141,13 +168,14 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     {
         if (changing || ui.IsTransitioning || levels == null || levels.Length == 0) return;
         preferences.PlayClick();
-        if (modifiers != null && levels[SelectedIndex].saveRecords)
-            modifiers.Open(levels[SelectedIndex].scenePath);
-        else
-        {
-            ModifierMenu.UseStandard();
-            ui.StartLevel(levels[SelectedIndex].scenePath);
-        }
+        ModifierMenu.UseStandard();
+        ui.StartLevel(levels[SelectedIndex].scenePath);
+    }
+
+    public void OpenModifiers()
+    {
+        if (modifiers == null || levels == null || levels.Length == 0) return;
+        modifiers.Open(levels[SelectedIndex].saveRecords ? levels[SelectedIndex].scenePath : null);
     }
 
     public void OnPointerDown(PointerEventData eventData)

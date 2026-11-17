@@ -9,6 +9,9 @@ public class ComboDisplay : MonoBehaviour
     public Text comboText;
     public Text multiplierText;
     public UiController preferences;
+    public Color lowColor = new Color32(255, 211, 70, 255);
+    public Color middleColor = new Color32(255, 112, 55, 255);
+    public Color highColor = new Color32(190, 85, 255, 255);
 
     private int previousCount;
     private float pulse;
@@ -19,6 +22,10 @@ public class ComboDisplay : MonoBehaviour
         badge.SetActive(count > 0);
         comboText.text = count.ToString();
         multiplierText.text = "x" + Mathf.Max(1f, multiplier).ToString("0.#");
+        float progress = Mathf.InverseLerp(1f, ComboTracker.maxMultiplier, multiplier);
+        multiplierText.color = progress < .5f
+            ? Color.Lerp(lowColor, middleColor, progress * 2f)
+            : Color.Lerp(middleColor, highColor, (progress - .5f) * 2f);
         if (count > previousCount && !preferences.ReducedMotion) pulse = 1;
         previousCount = count;
     }

@@ -77,7 +77,6 @@ public class ScoreDisplay : MonoBehaviour
     private float resultTime;
     private bool showingResults;
     private bool animatingResult;
-    private Text nextStarTarget;
     private Vector3 accuracyScale;
     private float accuracyPulse = 1f;
     private float lastAccuracy;
@@ -86,20 +85,6 @@ public class ScoreDisplay : MonoBehaviour
     {
         if (liveAccuracy == null) return;
         accuracyScale = liveAccuracy.rectTransform.localScale;
-        liveAccuracy.rectTransform.anchoredPosition += Vector2.up * 6f;
-        nextStarTarget = new GameObject("Next star target", typeof(RectTransform), typeof(Text)).GetComponent<Text>();
-        nextStarTarget.transform.SetParent(liveAccuracy.transform.parent, false);
-        var rect = nextStarTarget.rectTransform;
-        rect.anchorMin = liveAccuracy.rectTransform.anchorMin;
-        rect.anchorMax = liveAccuracy.rectTransform.anchorMax;
-        rect.pivot = liveAccuracy.rectTransform.pivot;
-        rect.anchoredPosition = liveAccuracy.rectTransform.anchoredPosition + Vector2.down * 16f;
-        rect.sizeDelta = new Vector2(liveAccuracy.rectTransform.sizeDelta.x, 18f);
-        nextStarTarget.font = liveAccuracy.font;
-        nextStarTarget.fontSize = 11;
-        nextStarTarget.alignment = TextAnchor.MiddleCenter;
-        nextStarTarget.color = liveAccuracy.color;
-        nextStarTarget.raycastTarget = false;
     }
 
     public void Bind(ScoreManager value)
@@ -218,19 +203,7 @@ public class ScoreDisplay : MonoBehaviour
             liveAccuracy.text = hasAccuracy
                 ? "<color=#" + tint + ">" + Mathf.RoundToInt(accuracy * 100f) + "%</color> ACCURACY"
                 : "— ACCURACY";
-            if (nextStarTarget != null) nextStarTarget.text = hasAccuracy ? GetNextStarTarget(accuracy) : "";
         }
-    }
-
-    // Read the existing rating thresholds; this is a target label, not a new scoring rule.
-    private string GetNextStarTarget(float accuracy)
-    {
-        if (starThresholds == null) return "";
-        for (int i = 0; i < Mathf.Min(5, starThresholds.Length); i++)
-            if (accuracy < Mathf.Clamp01(starThresholds[i]))
-                return (starThresholds[i] * 100f).ToString("0.#", CultureInfo.InvariantCulture) + "% FOR " +
-                    (i + 1) + (i == 0 ? " STAR" : " STARS");
-        return "5 STARS!";
     }
 
     public Color GetScoreColor(float score)
@@ -286,4 +259,5 @@ public class ScoreDisplay : MonoBehaviour
     }
 
 }
+
 
