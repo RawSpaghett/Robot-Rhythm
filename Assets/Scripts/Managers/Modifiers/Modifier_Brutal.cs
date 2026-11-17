@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 
+[Serializable]
 public class Modifier_Brutal: ModifierBase
 {
     

@@ -114,7 +114,8 @@ public class StudioSplash : MonoBehaviour
         if (content) Destroy(content);
         if (logoMaterial) Destroy(logoMaterial);
         if (scribbleMaterial) Destroy(scribbleMaterial);
-        for (int i=0;i<loaded.Length;i++) { if (loaded[i] && !(loaded[i] is Shader)) Resources.UnloadAsset(loaded[i]);loaded[i]=null; }
+        // The menu and credits also use the studio logo. Release only the splash-only assets.
+        for (int i=0;i<loaded.Length;i++) { if (i != 0 && loaded[i] && !(loaded[i] is Shader)) Resources.UnloadAsset(loaded[i]);loaded[i]=null; }
     }
     private void OnDestroy() { Release(); }
 }

@@ -25,6 +25,7 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     public UIManager ui;
     public UiController preferences;
     public MenuMusicPreview music;
+    public ModifierMenu modifiers;
 
     [Header("Card")]
     public RectTransform card;
@@ -140,7 +141,13 @@ public class LevelCarousel : MonoBehaviour, IPointerDownHandler, IPointerClickHa
     {
         if (changing || ui.IsTransitioning || levels == null || levels.Length == 0) return;
         preferences.PlayClick();
-        ui.StartLevel(levels[SelectedIndex].scenePath);
+        if (modifiers != null && levels[SelectedIndex].saveRecords)
+            modifiers.Open(levels[SelectedIndex].scenePath);
+        else
+        {
+            ModifierMenu.UseStandard();
+            ui.StartLevel(levels[SelectedIndex].scenePath);
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class ModifierDatabase: MonoBehaviour
 {
     public static ModifierDatabase Instance {get; private set;}//singleton
-    public ModifierBase[] modifierLoader;
+    [SerializeReference] public ModifierBase[] modifierLoader;
     public Dictionary<string, ModifierBase> ModifierLibrary = new Dictionary<string, ModifierBase>();
 
     void Awake()
@@ -27,6 +27,7 @@ public class ModifierDatabase: MonoBehaviour
 
     private void LoadDatabase()
     {
+        if (modifierLoader == null) return;
         foreach (ModifierBase modifier in modifierLoader)
         {
             if (modifier != null && !ModifierLibrary.ContainsKey(modifier.ToString()))

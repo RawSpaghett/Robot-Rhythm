@@ -7,9 +7,11 @@ public class ModifierManager : MonoBehaviour
     
     private void OnEnable()
     {
+        ModifierMenu.ApplySelection(this);
+        if (activeModifiers == null) return;
         foreach (ModifierBase modifier in activeModifiers)
         {
-            modifier.Enabled();
+            if (modifier != null) modifier.Enabled();
         }
     }
 }

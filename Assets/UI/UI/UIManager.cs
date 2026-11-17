@@ -103,7 +103,7 @@ public class UIManager : MonoBehaviour
     public void OpenLevels() => OpenMenuPage(UiPage.Routes);
     public void CloseLevels() => OpenMenuPage(UiPage.Home);
     public void StartDesert() { gameManager.SelectLevel("Assets/Scenes/Levels/NEW DISTANCE/Desert Level ALT.unity"); StartGame(); }
-    public void StartTutorial() { gameManager.SelectLevel("Assets/Scenes/Levels/NEW DISTANCE/Tutorial Level ALT.unity"); StartGame(); }
+    public void StartTutorial() { ModifierMenu.UseStandard(); gameManager.SelectLevel("Assets/Scenes/Levels/NEW DISTANCE/Tutorial Level ALT.unity"); StartGame(); }
     public void StartLevel(string scenePath)
     {
         if (IsTransitioning || gameManager.IsLoading) return;
@@ -446,6 +446,18 @@ public class UIManager : MonoBehaviour
         if (!gameManager.IsLoading || mode != LoadSceneMode.Additive)
             return;
         menuCamera.SetActive(false);
+        if (ModifierMenu.HasModifiers)
+        {
+            bool hasManager = false;
+            foreach (var root in scene.GetRootGameObjects())
+                if (root.GetComponentInChildren<ModifierManager>(true) != null) hasManager = true;
+            if (!hasManager)
+            {
+                var modifiers = new GameObject("Modifiers");
+                SceneManager.MoveGameObjectToScene(modifiers, scene);
+                modifiers.AddComponent<ModifierManager>();
+            }
+        }
         swipeTrail.Bind(null, trailMarkSize, trailSpacing, trailFadeDuration);
         // The menu owns touch input while it hosts a level. Keep the level's standalone setup intact.
         foreach (GameObject root in scene.GetRootGameObjects())
@@ -475,7 +487,7 @@ public class UIManager : MonoBehaviour
                     var carousel = levelSelectPanel != null ? levelSelectPanel.GetComponentInChildren<LevelCarousel>(true) : null;
                     var run = score.GetComponent<LevelRunRecord>();
                     if (run == null) run = score.gameObject.AddComponent<LevelRunRecord>();
-                    run.levelId = carousel != null ? carousel.RecordIdForScene(scene.path) : null;
+                    run.levelId = carousel != null && !ModifierMenu.HasModifiers ? carousel.RecordIdForScene(scene.path) : null;
                 }
             }
         }
