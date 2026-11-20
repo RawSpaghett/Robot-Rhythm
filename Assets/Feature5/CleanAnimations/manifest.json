@@ -3544,6 +3544,86 @@
       "source": "Assets/Sprites/Robot Animations/Reactions/Reaction_Mid_spritesheet.png",
       "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/36363ec7395a66b45a2099fdde7b14fd",
       "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 497881,
+      "blended_pixels": 197023,
+      "blend_rms_error_99_percentile": 17.587875366210938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/W Cloud/gas w cloud GREEN.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/fec8a6d18b2a4fa43ab1f53f324ef014",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 497881,
+      "blended_pixels": 197144,
+      "blend_rms_error_99_percentile": 17.587875366210938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/W Cloud/gas w cloud RED.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/796a107c200cc774ba1c0de4589d4954",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 497881,
+      "blended_pixels": 197149,
+      "blend_rms_error_99_percentile": 17.587875366210938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/W Cloud/gas w cloud YELLOW.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/3b4f8d05c1809ce4d93c7374e59f0e39",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 497881,
+      "blended_pixels": 196845,
+      "blend_rms_error_99_percentile": 17.587875366210938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Accelerate/W Cloud/gas w cloud.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/12cf458d28cef274d8cf42e25387cb7b",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1187596,
+      "blended_pixels": 508956,
+      "blend_rms_error_99_percentile": 17.587875366210938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/W Cloud/brake w cloud GREEN.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/749c57cb25b7ad04298b805d953f29f9",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1187596,
+      "blended_pixels": 508792,
+      "blend_rms_error_99_percentile": 17.587875366210938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/W Cloud/brake w cloud RED.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/e92532a6db610b346b804da16ef110b7",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1187596,
+      "blended_pixels": 509058,
+      "blend_rms_error_99_percentile": 17.587875366210938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/W Cloud/brake w cloud YELLOW.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/c429bf95f71b56c4395ec8a773ac694c",
+      "maxTextureSize": 2048
+    },
+    {
+      "visible_pixels": 1187596,
+      "blended_pixels": 508542,
+      "blend_rms_error_99_percentile": 17.587875366210938,
+      "source_unchanged": true,
+      "mask_version": 2,
+      "source": "Assets/Sprites/Robot Animations/Brake/W Cloud/DEFAULT w cloud.png",
+      "folder": "Assets/Feature5/CleanAnimations/Resources/SkinAnimations/20b85c99795951440a1d5ebde0e22f4f",
+      "maxTextureSize": 2048
     }
   ]
 }

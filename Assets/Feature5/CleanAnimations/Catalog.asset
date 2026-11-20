@@ -773,3 +773,19 @@ MonoBehaviour:
     resourceFolder: SkinAnimations/4f4de4848d5c44440b914689d0845dcc
   - sourceName: Reaction_Mid_spritesheet
     resourceFolder: SkinAnimations/36363ec7395a66b45a2099fdde7b14fd
+  - sourceName: gas w cloud GREEN
+    resourceFolder: SkinAnimations/fec8a6d18b2a4fa43ab1f53f324ef014
+  - sourceName: gas w cloud RED
+    resourceFolder: SkinAnimations/796a107c200cc774ba1c0de4589d4954
+  - sourceName: gas w cloud YELLOW
+    resourceFolder: SkinAnimations/3b4f8d05c1809ce4d93c7374e59f0e39
+  - sourceName: gas w cloud
+    resourceFolder: SkinAnimations/12cf458d28cef274d8cf42e25387cb7b
+  - sourceName: brake w cloud GREEN
+    resourceFolder: SkinAnimations/749c57cb25b7ad04298b805d953f29f9
+  - sourceName: brake w cloud RED
+    resourceFolder: SkinAnimations/e92532a6db610b346b804da16ef110b7
+  - sourceName: brake w cloud YELLOW
+    resourceFolder: SkinAnimations/c429bf95f71b56c4395ec8a773ac694c
+  - sourceName: DEFAULT w cloud
+    resourceFolder: SkinAnimations/20b85c99795951440a1d5ebde0e22f4f
