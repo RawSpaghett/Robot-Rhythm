@@ -3,7 +3,7 @@
 Open Skins from the main menu. Swipe right for Accelerate and left for Brake, or use the arrows. Choose Use Skin to equip an unlocked robot. The selection saves on the device.
 
 - Classic is available from the start.
-- City unlocks Charcoal; Desert unlocks Sandstone; Ice unlocks Glacier Blue; Mountain Range unlocks Burnt Orange.
+- City unlocks Charcoal; Desert unlocks Sandstone; Ice unlocks Glacier Blue; Mountain Range unlocks Alpine Green.
 - Space unlocks Spectrum, the multicolor skin.
 - Prismatic Gold unlocks after perfect completion of every configured scored level. Tutorial does not count. Gold stays unlocked once earned.
 
