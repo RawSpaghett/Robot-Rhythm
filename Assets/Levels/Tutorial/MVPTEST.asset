@@ -50,7 +50,3 @@ MonoBehaviour:
     Beat: 165.75
   - Type: {fileID: 11400000, guid: 56d1d929b40caf748be76a1945179db3, type: 2}
     Beat: 181.25
-  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Beat: 24
-  - Type: {fileID: 11400000, guid: ed2bbcac56f0dbc42b566163f4b76fad, type: 2}
-    Beat: 20
