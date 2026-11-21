@@ -115,11 +115,18 @@ public class ObstacleSpawner : MonoBehaviour
 
     // A matching level entry owns both static art and animation for this spawn.
     // Unlisted obstacle types keep their prefab defaults.
+    public bool hideObstacles = false;
     private void ChangeSprite(GameObject instance, ObstacleType type)
     {
         SpriteRenderer spriteRenderer = instance.GetComponent<SpriteRenderer>();
         if (spriteRenderer == null || levelSprites == null) return;
 
+        if (hideObstacles) //for brutal
+        {
+            spriteRenderer.enabled = false;
+            return; 
+        }
+        
         for (int i = 0; i < levelSprites.Length; i++)
         {
             ObstacleSprite art = levelSprites[i];
